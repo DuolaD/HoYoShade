@@ -1,0 +1,1 @@
+Start-Process -FilePath inject.exe GenshinImpact.exe -verb RunAs
