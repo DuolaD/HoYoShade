@@ -11,4 +11,4 @@ A Unofficial Reshade For Genshin impact and Honkai:Star Rail
 如果你（原作者）觉得这个仓库冒犯了你自己，请与我联系，我会向你道歉并承诺会删除此仓库。
 电子邮箱：D_mou@outlook.com
 
-晚些时候我会将文件上传到这个仓库
+睡醒再搞Release和Readme.md吧，好困.......
