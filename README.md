@@ -12,3 +12,4 @@ A Unofficial Reshade For Genshin impact and Honkai:Star Rail
 电子邮箱：D_mou@outlook.com
 
 睡醒再搞Release和Readme.md吧，好困.......
+晚安
