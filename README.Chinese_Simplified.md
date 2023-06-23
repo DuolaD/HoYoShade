@@ -15,6 +15,7 @@
 - [怎样才能使用这个模组](#怎样才能使用这个模组)  
 - [模组效果展示](#模组效果展示)
   - [视频](#视频)
+- [显卡配置要求](#显卡配置要求)  
 - [联系我](#联系我)  
 
 ## 简介  
@@ -46,6 +47,8 @@
 然后按照zip压缩包内的教程操作即可  
 
 ## 模组效果展示  
+以下所有图片和视频全部使用的是[本仓库的发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)压缩包里的"Film Night.ini"预设  
+并且同时使用了[GIMI模组注入器](https://github.com/SilentNightSound/GI-Model-Importer)和[Remove UI](https://gamebanana.com/mods/424034)来隐藏UI
 ![Picture1](1.png)
 ![Picture2](2.png)
 ![Picture3](3.png)
@@ -57,6 +60,18 @@
 当你点击下面的链接时，网页会重定向至快手(中国内地一个短视频平台，类似抖音(TikTok))   
 [Video1](https://v.kuaishou.com/WKblMb).  
 [Video2](https://v.kuaishou.com/XjxMep).  
+
+## 显卡配置要求
+最低配置：GTX 1060 - 6GB 或同级别AMD显卡  
+画质调节建议：高画质，抗锯齿改为FSR  
+此硬件和画质设置下，在绝大多数场景稳定60FPS，深渊开启模组解锁器后一般都在50~80FPS，使用"Film Night.ini"预设可以在30FPS左右的情况下运行  
+
+推荐配置：RTX 2060 或同级别AMD显卡及以上(不包括RTX3050)  
+画质调节建议：无脑全部选项设置为最高  
+此硬件和画质设置下，游戏可以稳定60FPS，开启模组解锁器后一般都在120FPS，使用"Film Night.ini"预设"预计"可以在60FPS左右的情况下运行  
+
+需要注意的是，RTX3050的性能在最低配置要求和推荐配置要求之间  
+RTX3050 = GTX1660S + RTX + DLSS3  
 
 ## 联系我 
 请记住，如果你在使用此模组时有任何的问题，请先在本仓库创建一个issue。  
