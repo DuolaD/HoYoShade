@@ -2,6 +2,11 @@
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
 Readme.md/Chinese_traditional Readme.md/Chinese_Simplified Readme.md are still updating  
 
+## Read ReadMe.md in your best language
+What you are viewing now:[英语/英語/English]  
+[简体中文/簡體中文/Chinese_Simplified](README.Chinese_Simplified.md)  
+[繁体中文/繁體中文/Chinese_Traditional](README.Chinese_Traditional.md)  
+
 ## Directory
 - [Intro](#Intro)  
 - [About the original author](#About_the_original_author)
@@ -10,6 +15,7 @@ Readme.md/Chinese_traditional Readme.md/Chinese_Simplified Readme.md are still u
 - [How can I use this Mod?](#How_can_I_use_this_Mod?)  
 - [Mod effect show](#Mod_effect_show)
   - [Video](#Video)
+- [GPU configuration requirements](#GPU_configuration_requirements)  
 - [Contant ME](#Contant_ME)  
 
 ## Intro
@@ -41,6 +47,8 @@ unzip it.
 Follow the tutorial in zip.
 
 ## Mod effect show  
+All the pictures and videos below are all using the "Film Night.ini" preset in the compressed package of [Release page](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)  
+And used both [GIMI](https://github.com/SilentNightSound/GI-Model-Importer) and [Remove UI](https://github.com/SilentNightSound/GI-Model-Importer) to hide the UI.   
 ![Picture1](1.png)
 ![Picture2](2.png)
 ![Picture3](3.png)
@@ -53,7 +61,22 @@ When you click the link, It will be redirected to Kuai(a China Short video platf
 [Video1](https://v.kuaishou.com/WKblMb).  
 [Video2](https://v.kuaishou.com/XjxMep).  
 
+## GPU configuration requirements
+Minimum configuration: GTX 1060 - 6GB or equivalent AMD graphics card  
+Image quality adjustment suggestion: high image quality, change anti-aliasing to FSR  
+With this hardware and quality settings, it can run at around 30FPS using the "Film Night.ini" preset.  
+Use the "Normal Day.ini" or "Normal Night.ini" presets to run at around 50FPS.  
+
+Recommended configuration: RTX 2060 or AMD graphics card of the same level and above (excluding RTX3050)   
+Image quality adjustment suggestion: set all options to the highest  
+Under this hardware and image quality settings, the game can run at a stable 60FPS.  
+After opening FPS unlocker, it usually runs at 120FPS.  
+Using the "Film Night.ini" preset "estimated" can run at around 60FPS
+
+It should be noted that the performance of RTX3050 is between the minimum configuration requirements and the recommended configuration requirements  
+RTX3050 = GTX1660S + RTX + DLSS3 
+
 ## Contant ME  
 Remember,If you have any problem,please create issue first!  
 Email address:D_mou@outlook.com  
-[My HoyoLAB Account](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
+[My HoyoLAB Account(Not Mainland China's HoyoLAB)](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
