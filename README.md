@@ -5,8 +5,8 @@ A Unofficial Reshade For Genshin impact and Honkai:Star Rail
 - [Intro](#Intro)  
 - [About the original author](#)
 - [Notice](#Notice)  
- - [About Genshin impact CN Server](#)
-- [How can I use this Mod?](#)  
+ - [About Genshin impact CN Server](#About Genshin impact CN Server)
+- [How can I use this Mod?](#How can I use this Mod?)  
 
 
 
