@@ -4,7 +4,7 @@
 ## 用您最擅長的語言閱讀 ReadMe.md  
 [英语/英語/English](README.md)  
 [简体中文/簡體中文/Chinese_Simplified](README.Chinese_Simplified.md)  
-你现在正在查看的：[繁体中文/繁體中文/Chinese_Traditional]  
+你現在正在查看的：[繁体中文/繁體中文/Chinese_Traditional]  
 
 ## 重要信息!!!  
 如果您居住在中國大陸或者無法訪問 github.com  
