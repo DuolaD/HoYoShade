@@ -6,6 +6,11 @@ What you are viewing now:[英语/英語/English]
 [简体中文/簡體中文/Chinese_Simplified](README.Chinese_Simplified.md)  
 [繁体中文/繁體中文/Chinese_Traditional](README.Chinese_Traditional.md)  
 
+## IMPORTANT!!!  
+If you are live in china mindland or you can not visit github.com
+you can visit the [mirror repository on Gitee](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games).   
+When this repository is updated in Github.Gitee will Auto-Update it after 30 minutes to 1 hour.  
+
 ## Directory
 - [Intro](#Intro)  
 - [About the original author](#About_the_original_author)
