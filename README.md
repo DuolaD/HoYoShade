@@ -16,7 +16,7 @@ GitHub update speed always faster than Gitee.
 
 ## Directory
 - [Intro](#Intro)  
-- [About the original author](#About_the_original_author)
+- [About the original author](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/#About_the_original_author)
 - [Notice](#Notice)  
  - [About Genshin impact CN Server](#About_Genshin_impact_CN_Server)
 - [How can I use this Mod?](#How_can_I_use_this_Mod?)  
