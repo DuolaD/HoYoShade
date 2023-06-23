@@ -7,8 +7,9 @@ A Unofficial Reshade For Genshin impact and Honkai:Star Rail
 - [Notice](#Notice)  
  - [About Genshin impact CN Server](#About_Genshin_impact_CN_Server)
 - [How can I use this Mod?](#How_can_I_use_this_Mod?)  
-
-
+- [Mod effect show](#Mod_effect_show)
+  - [Video](#Video)
+- [Contant ME](#Contant_ME)  
 
 ## Intro
 An unofficial Reshade, suitable for Yuanshin and Bengtie: Interstellar Railway (other HoyoVerse games have not been tested)  
@@ -19,7 +20,7 @@ Therefore, an injected Reshade is needed to break through the blockade of HoyoVe
 The original file comes from the tutorial of installing Reshade Unofficial for Genshin impact shared by the master of BiliBili(China video platform) UP. Based on this file, I modified Reshade to a certain extent.  
 But the original author of the Reshade Unofficial of the original file did not leave his name in the file.  
 If you know who the original author is, or if you are the original author, please contact me.  
-If you (the original author) feel that repository offends yourself, please contact me, I will apologize to you and promise to delete this repository.  
+If you (the original author) feel that the repository offends you, please contact me, I will apologize to you and promise to delete this repository.  
 E-mail: D_mou@outlook.com
 
 ## Notice
@@ -37,3 +38,21 @@ Well......if you want to use any mod on CN Servers Genshin Impact,emm,Good Luck 
 Download this mod on [Releases Pages](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish).  
 unzip it.  
 Follow the tutorial in zip.
+
+## Mod effect show  
+![Picture1](1.png)
+![Picture2](2.png)
+![Picture3](3.png)
+![Picture4](4.png)
+![Picture5](5.png)
+![Picture6](6.png)
+### Video  
+I will make a youtube video link later.  
+When you click the link, It will be redirected to Kuai(a China Short video platform, like Tiktok)  
+[Video1](https://v.kuaishou.com/WKblMb).  
+[Video2](https://v.kuaishou.com/XjxMep).  
+
+## Contant ME  
+Remember,If you have any problem,please create issue first!  
+Email address:D_mou@outlook.com  
+[My HoyoLAB Account](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
