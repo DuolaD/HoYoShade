@@ -19,7 +19,7 @@ GitHub update speed always faster than Gitee.
 - [About the original author](#About-the-original-author)
 - [Notice](#Notice)  
  - [About Genshin impact CN Server](#About-Genshin-impact-CN-Server)
-- [How can I use this Mod?](#How-can-I-use-this-Mod?)  
+- [How can I use this Mod](#How-can-I-use-this-Mod)  
 - [Mod effect show](#Mod-effect-show)
   - [Video](#Video)
 - [GPU configuration requirements](#GPU-configuration-requirements)  
@@ -48,7 +48,7 @@ by the way.CN Servers Genshin Impact started on version 2.8 and connected to the
 This means any mod(s) are easier detection.   
 Well......if you want to use any mod on CN Servers Genshin Impact,emm,Good Luck XD  
 
-## How can I use this Mod?  
+## How can I use this Mod  
 Download this mod on [Releases Pages](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish).  
 unzip it.  
 Follow the tutorial in zip.
