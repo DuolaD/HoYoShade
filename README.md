@@ -28,12 +28,12 @@ In fact, no matter which mod you install, it may be detected and banned account 
 If you are really afraid of being banned account by HoyoVerse, please set up your own private server.  
 If you choose to run this mod on the official server, please be responsible for the consequences of your actions.  
 
-###About Genshin impact CN Server  
+### About Genshin impact CN Server  
 by the way.CN Servers Genshin Impact started on version 2.8 and connected to the Tencent Anti cheating.   
 This means any mod(s) are easier detection.   
 Well......if you want to use any mod on CN Servers Genshin Impact,emm,Good Luck XD  
 
-##How can I use this Mod?
+## How can I use this Mod?  
 Download this mod on [Releases Pages](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish).  
 unzip it.  
 Follow the tutorial in zip.
