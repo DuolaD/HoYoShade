@@ -15,7 +15,7 @@ An unofficial Reshade, suitable for Yuanshin and Bengtie: Interstellar Railway (
 Since HoyoVerse blocked the official Reshade after Genshin impact version 1.1 install in the game root and refuse to load it  
 Therefore, an injected Reshade is needed to break through the blockade of HoyoVerse and run  
 
-##About the original author
+## About the original author
 The original file comes from the tutorial of installing Reshade Unofficial for Genshin impact shared by the master of BiliBili(China video platform) UP. Based on this file, I modified Reshade to a certain extent.  
 But the original author of the Reshade Unofficial of the original file did not leave his name in the file.  
 If you know who the original author is, or if you are the original author, please contact me.  
