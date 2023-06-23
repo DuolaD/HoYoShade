@@ -6,6 +6,14 @@
 [简体中文/簡體中文/Chinese_Simplified](README.Chinese_Simplified.md)  
 你现在正在查看的：[繁体中文/繁體中文/Chinese_Traditional]  
 
+## 重要信息!!!  
+如果您居住在中國大陸或者無法訪問 github.com  
+您可以訪問Gitee上的[鏡像倉庫](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games).   
+當此存儲庫在 Github 中更新時，Gitee 將在 30 分鐘到 1 小時後自動更新。
+
+如果你現在訪問Gitee上的鏡像倉庫，可以嘗試訪問[Github上的主倉庫](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games).  
+GitHub的更新速度總是比Gitee快。
+
 ## 目錄
 - [簡介](#簡介)  
 - [關於原作者](#關於原作者)  
