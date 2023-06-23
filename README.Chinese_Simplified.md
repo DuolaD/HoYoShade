@@ -6,12 +6,12 @@
 ## 目录
 - [简介](#简介)  
 - [关于原作者](#关于原作者)
-- [注意](#Notice)  
- - [关于中国大陆服原神](#About_Genshin_impact_CN_Server)
-- [怎样才能食用这个模组？](#How_can_I_use_this_Mod?)  
-- [模组效果展示](#Mod_effect_show)
-  - [视频](#Video)
-- [联系我](#Contant_ME)  
+- [注意](#注意)  
+  - [关于中国大陆服原神](#关于中国大陆服原神)
+- [怎样才能使用这个模组](#怎样才能使用这个模组)  
+- [模组效果展示](#模组效果展示)
+  - [视频](#视频)
+- [联系我](#联系我)  
 
 ## 简介  
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
@@ -32,30 +32,29 @@
 如果您实在害怕被米哈游封禁账号，请自行搭建私人服务器。  
 如果您选择在官方服务器上运行本模组，请对您的行为后果负责。本人不会对封号造成的损失承担任何责任。   
 
-### About Genshin impact CN Server  
-by the way.CN Servers Genshin Impact started on version 2.8 and connected to the Tencent Anti cheating.   
-This means any mod(s) are easier detection.   
-Well......if you want to use any mod on CN Servers Genshin Impact,emm,Good Luck XD  
+### 关于中国大陆服原神  
+顺带一提，中国大陆服原神在2.8版本时就接入了腾讯反作弊系统。  
+这意味着所有模组都会更容易被米哈游检测
+还是和我上面所说的一样：请对您的行为后果负责。本人不会对封号造成的损失承担任何责任。  
 
-## How can I use this Mod?  
-Download this mod on [Releases Pages](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish).  
-unzip it.  
-Follow the tutorial in zip.
+## 怎样才能使用这个模组
+从[本仓库的发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)下载最新的zip包并解压  
+然后按照zip压缩包内的教程操作即可  
 
-## Mod effect show  
+## 模组效果展示  
 ![Picture1](1.png)
 ![Picture2](2.png)
 ![Picture3](3.png)
 ![Picture4](4.png)
 ![Picture5](5.png)
 ![Picture6](6.png)
-### Video  
-I will make a youtube video link later.  
-When you click the link, It will be redirected to Kuai(a China Short video platform, like Tiktok)  
+### 视频  
+晚些时候我会将视频上传到Youtube  
+当你点击下面的链接时，网页会重定向至快手(中国内地一个短视频平台，类似抖音(TikTok))   
 [Video1](https://v.kuaishou.com/WKblMb).  
 [Video2](https://v.kuaishou.com/XjxMep).  
 
-## Contant ME  
-Remember,If you have any problem,please create issue first!  
-Email address:D_mou@outlook.com  
-[My HoyoLAB Account](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
+## 联系我 
+请记住，如果你在使用此模组时有任何的问题，请先在本仓库创建一个issue。  
+我的个人邮箱地址:D_mou@outlook.com  
+[我的国际米游社账号(不是中国大陆米游社)](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
