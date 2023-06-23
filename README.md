@@ -1,15 +1,39 @@
 # Reshade_For_HoyoVerse_Games
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail
 
-一个非官方Reshade，适用与原神和崩铁：星穹铁道（其它米哈游游戏未测试）
-由于米哈游在原神1.1版本后封锁了官方Reshade直接安装在游戏根目录并拒绝加载
-所以就需要一个注入式的Reshade来突破米哈游封锁并运行
+## Directory
+- [Intro](#Intro)  
+- [About the original author](#)
+- [Notice](#Notice)  
+ - [About Genshin impact CN Server](#)
+- [How can I use this Mod?](#)  
 
-原文件来自于BiliBili UP主分享的给原神安装Reshade Unofficial的教程，本人基于此文件对Reshade进行了一定程度上的修改
-但是原文件的Reshade Unofficial的原作者并没有在文件中留下自己的名字
-如果你知道原作者是谁，或者你就是原作者，请与我联系。
-如果你（原作者）觉得这个仓库冒犯了你自己，请与我联系，我会向你道歉并承诺会删除此仓库。
-电子邮箱：D_mou@outlook.com
 
-睡醒再搞Release和Readme.md吧，好困.......
-晚安
+
+## Intro
+An unofficial Reshade, suitable for Yuanshin and Bengtie: Interstellar Railway (other HoyoVerse games have not been tested)  
+Since HoyoVerse blocked the official Reshade after Genshin impact version 1.1 install in the game root and refuse to load it  
+Therefore, an injected Reshade is needed to break through the blockade of HoyoVerse and run  
+
+##About the original author
+The original file comes from the tutorial of installing Reshade Unofficial for Genshin impact shared by the master of BiliBili(China video platform) UP. Based on this file, I modified Reshade to a certain extent.  
+But the original author of the Reshade Unofficial of the original file did not leave his name in the file.  
+If you know who the original author is, or if you are the original author, please contact me.  
+If you (the original author) feel that repository offends yourself, please contact me, I will apologize to you and promise to delete this repository.  
+E-mail: D_mou@outlook.com
+
+## Notice
+I don't recommend that you run this mod on the official HoyoVerse server, although it will work fine on the official server.   
+In fact, no matter which mod you install, it may be detected and banned account by HoyoVerse.   
+If you are really afraid of being banned account by HoyoVerse, please set up your own private server.  
+If you choose to run this mod on the official server, please be responsible for the consequences of your actions.  
+
+###About Genshin impact CN Server  
+by the way.CN Servers Genshin Impact started on version 2.8 and connected to the Tencent Anti cheating.   
+This means any mod(s) are easier detection.   
+Well......if you want to use any mod on CN Servers Genshin Impact,emm,Good Luck XD  
+
+##How can I use this Mod?
+Download this mod on [Releases Pages](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish).  
+unzip it.  
+Follow the tutorial in zip.
