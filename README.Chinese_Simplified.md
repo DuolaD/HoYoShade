@@ -2,7 +2,7 @@
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
 
 ## 用您最擅长的语言阅读 ReadMe.md
-[英语/英語/English](docs/README.md)  
+[英语/英語/English](README.md)  
 你现在正在查看的：[简体中文/簡體中文/Chinese_Simplified]  
 [繁体中文/繁體中文/Chinese_Traditional](README.Chinese_Traditional.md)
 
