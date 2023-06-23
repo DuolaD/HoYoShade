@@ -14,14 +14,10 @@
 - [联系我](#Contant_ME)  
 
 ## 简介  
-An unofficial Reshade, suitable for Yuanshin and Bengtie: Interstellar Railway (other HoyoVerse games have not been tested)  
-Since HoyoVerse blocked the official Reshade after Genshin impact version 1.1 install in the game root and refuse to load it  
-Therefore, an injected Reshade is needed to break through the blockade of HoyoVerse and run  
-
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
 米哈游在原神1.1版本之后就封锁了官方Reshade  
 并且如果在原神1.1之后的版本在游戏根目录下安装官方Reshade并启动游戏，游戏会拒绝加载Reshade  
-因此就需要一个注入式的Reshade来图片米哈游的封锁并运行Reshade  
+因此就需要一个注入式的Reshade来突破米哈游的封锁并运行Reshade  
 
 ## 关于原作者  
 原文件来自哔哩哔哩UP主分享的给原神安装Reshade教程。 基于这个文件，我对Reshade进行了一定程度的修改。  
