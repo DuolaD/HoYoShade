@@ -16,14 +16,14 @@ GitHub update speed always faster than Gitee.
 
 ## Directory
 - [Intro](#Intro)  
-- [About the original author](#About_the_original_author)
+- [About the original author](#About-the-original-author)
 - [Notice](#Notice)  
- - [About Genshin impact CN Server](#About_Genshin_impact_CN_Server)
-- [How can I use this Mod?](#How_can_I_use_this_Mod?)  
-- [Mod effect show](#Mod_effect_show)
+ - [About Genshin impact CN Server](#About-Genshin-impact-CN-Server)
+- [How can I use this Mod?](#How-can-I-use-this-Mod?)  
+- [Mod effect show](#Mod-effect-show)
   - [Video](#Video)
-- [GPU configuration requirements](#GPU_configuration_requirements)  
-- [Contant ME](#Contant_ME)  
+- [GPU configuration requirements](#GPU-configuration-requirements)  
+- [Contant ME](#Contant-ME)  
 
 ## Intro
 An unofficial Reshade, suitable for Yuanshin and Bengtie: Interstellar Railway (other HoyoVerse games have not been tested)  
