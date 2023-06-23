@@ -1,6 +1,5 @@
 # Reshade_For_HoyoVerse_Games
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
-Readme.md/Chinese_traditional Readme.md/Chinese_Simplified Readme.md are still updating  
 
 ## Read ReadMe.md in your best language
 What you are viewing now:[英语/英語/English]  
