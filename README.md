@@ -1,5 +1,6 @@
-# Reshade_For_HoyoVerse_Games/Reshade_For_MiHoYo_Games  
+# Reshade_For_HoyoVerse_Games
 
+Gitee Repository Name:Reshade_For_MiHoYo_Games  
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
 
 ## Read ReadMe.md in your most proficient language.  
