@@ -1,1 +1,0 @@
-Start-Process -FilePath inject.exe StarRail.exe -verb RunAs
