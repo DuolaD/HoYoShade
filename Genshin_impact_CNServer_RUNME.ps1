@@ -1,1 +1,0 @@
-Start-Process -FilePath inject.exe YuanShen.exe -verb RunAs
