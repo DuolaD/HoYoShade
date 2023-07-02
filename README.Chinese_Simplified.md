@@ -1,4 +1,6 @@
 # Reshade_For_HoyoVerse_Games 
+
+Gitee镜像仓库名：Reshade_For_MiHoYo_Games
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
 
 ## 用您最擅长的语言阅读 ReadMe.md
@@ -101,8 +103,7 @@ RTX3050 = GTX1660S + RTX + DLSS3
 由于我没有Visa/万事达银行卡和PayPal  
 因此暂时没有办法支持其它支付方式进行赞助  
 
-
 ## 联系我 
 请记住，如果你在使用此模组时有任何的问题，请先在本仓库创建一个issue。  
 我的个人邮箱地址:D_mou@outlook.com  
-[我的国际米游社账号(不是中国大陆米游社)](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
+[关注我的国际米游社账号(不是中国大陆米游社)](https://www.hoyolab.com/accountCenter/postList?id=192633110).  
