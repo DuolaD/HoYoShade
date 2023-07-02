@@ -98,8 +98,11 @@ RTX 3050 = GTX 1660S + RTX + DLSS3.
 *Added Readme.md update log, mod update log, and sponsorship details.  
 
 ## Mod update log  
-- 2023/07/02  
-*V1.1.0 stable version will be released soon!  
+- 2023/07/02 Update to V1.1.0  
+*Major update: This version includes the RTGI ray tracing pack that I purchased at my own expense. In other words, V1.1.0 now supports ray tracing!  
+*Added more Reshade presets for gameplay.  
+*Changed the .ps1 startup method in V1.0.0 to use a .bat file to start the injection program.  
+*Fixed the issue of not being able to start the injection program due to the inability to change Powershell group policies on OEM computers.  
 
 ## Donate Me
 If you can use WeChat Pay, you can scan this QR code to sponsor me.  
