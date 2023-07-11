@@ -102,7 +102,10 @@ RTX 3050 = GTX 1660S + RTX + DLSS3.
 *Major update: This version includes the RTGI ray tracing pack that I purchased at my own expense. In other words, V1.1.0 now supports ray tracing!  
 *Added more Reshade presets for gameplay.  
 *Changed the .ps1 startup method in V1.0.0 to use a .bat file to start the injection program.  
-*Fixed the issue of not being able to start the injection program due to the inability to change Powershell group policies on OEM computers.  
+*Fixed the issue of not being able to start the injection program due to the inability to change Powershell group policies on OEM computers.
+
+- 2023/07/09 Update to V1.1.1  
+*Updated the tutorial, added some common questions, and changed the usage of the current version of the injector.
 
 ## Donate Me
 If you can use WeChat Pay, you can scan this QR code to sponsor me.  
