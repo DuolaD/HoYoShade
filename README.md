@@ -98,14 +98,21 @@ RTX 3050 = GTX 1660S + RTX + DLSS3.
 *Added Readme.md update log, mod update log, and sponsorship details.  
 
 ## Mod update log  
-- 2023/07/02 Update to V1.1.0  
+- 2023/07/02 Update to V1.1.0 Stable  
 *Major update: This version includes the RTGI ray tracing pack that I purchased at my own expense. In other words, V1.1.0 now supports ray tracing!  
 *Added more Reshade presets for gameplay.  
 *Changed the .ps1 startup method in V1.0.0 to use a .bat file to start the injection program.  
 *Fixed the issue of not being able to start the injection program due to the inability to change Powershell group policies on OEM computers.
 
-- 2023/07/09 Update to V1.1.1  
+- 2023/07/09 Update to V1.1.1 Stable  
 *Updated the tutorial, added some common questions, and changed the usage of the current version of the injector.
+
+- 2023/07/11 Update to V1.2.0 Stable  
+*Major update: Spent two and a half days coding from scratch, providing a one-stop solution for injections, mod updates, and issue resolutions~  
+*Major update: Added support for Genshin Impact [Epic Games Launcher] and Honkai : Star Rail [Epic Games Launcher].  
+*Major update: Removed tedious configuration process and tutorial. The mod will automatically configure on the first launch, ready to use.  
+*Fixed an issue in previous versions where an error would occur when using the Dehaze.fx texture pack.  
+*Added a ScreenShot folder. Press the PrtSc key on your keyboard (located in different places on different keyboards), and the mod will take a screenshot in the ScreenShot folder located in the mod's root directory.  
 
 ## Donate Me
 If you can use WeChat Pay, you can scan this QR code to sponsor me.  
