@@ -38,9 +38,12 @@ If you install the official Reshade in the game directory and try to launch the 
 Therefore, an injectable Reshade is needed to bypass HoyoVerse's block and run Reshade.  
 
 ## About the original author
-The original file is a tutorial on how to install Reshade for Genshin Impact shared by a BiliBili UP.  
-Based on this file, I made some modifications to Reshade. However, the original author of Reshade Unofficial did not leave their name in the file.  
-If you know who the original author is, or if you are the original author, please contact me.  
+Currently, we know that all the files of this module are sourced from two repositories on GitHub.  
+However, due to my recent busyness and active preparation for the V2.0.0 Stable update,  
+so we will update the file sources of this repository when V2.0.0 Stable is released.  
+We will also change the label from 'About the Original Author' to 'File Sources'.  
+Thank you for your understanding and support.  
+  
 If you (the original author) feel offended by this repository, please contact me and I will apologize and promise to delete this repository.  
 Email: D_mou@outlook.com
 
