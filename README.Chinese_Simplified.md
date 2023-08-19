@@ -3,6 +3,10 @@
 Gitee镜像仓库名：Reshade_For_MiHoYo_Games  
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
 
+# 重要通知  
+接下来的1~2个月内Readme.md文件将会重写，感谢你的支持和等待。  
+在Readme.md重写完毕之前，请[关注我的HoYoLAB账号](https://www.hoyolab.com/accountCenter/postList?id=192633110)以获得最新消息。
+
 ## 用您最擅长的语言阅读 ReadMe.md
 [英语/英語/English](README.md)  
 你现在正在查看的：[简体中文/簡體中文/Chinese_Simplified]  
