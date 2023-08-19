@@ -1,4 +1,4 @@
-# Reshade_For_HoyoVerse_Games 
+# Reshade_For_HoYoVerse_Games 
 
 Gitee鏡像倉庫名：Reshade_For_MiHoYo_Games  
 這是一個非官方Reshade，使其能在突破米哈遊對於官方Reshade的封鎖下正常用於原神和崩壞:星穹鐵道(其它米哈遊遊戲未測試)    
@@ -6,6 +6,10 @@ Gitee鏡像倉庫名：Reshade_For_MiHoYo_Games
 # 重要通知！  
 在接下來的1~2個月内，Readme.md文件將會重寫，感謝你的支持和等待。  
 在Readme.md文件重寫完畢之前，請[追蹤我的HoYoLAB賬號](https://www.hoyolab.com/accountCenter/postList?id=192633110)以獲得最新消息。  
+
+中國大陸鏡像下載鏈接現已在[CYteam網盤](https://d.cyteam.cn/%E6%80%A8%E4%B8%8E%E6%8F%90%E7%93%A6%E7%89%B9%EF%BC%88Genshin%20Impact%EF%BC%89)可用。  
+當然，此網盤內還包含了HoYoLAB安卓安裝包和原神/崩壞：星穹鐵道國際服的安卓和PC端的安裝包。  
+感谢[CYteam](https://d.cyteam.cn/)对此仓库的支持。  
 
 ## 用您最擅長的語言閱讀 ReadMe.md  
 [英语/英語/English](README.md)  
