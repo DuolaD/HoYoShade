@@ -3,6 +3,12 @@
 Gitee Repository Name:Reshade_For_MiHoYo_Games  
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
 
+# Note  
+We will rewrite the Readme.md file in the next one to two months  
+thanks for supporting and waiting.  
+
+Please [Follow My HoYoLAB account](https://www.hoyolab.com/accountCenter/postList?id=192633110) for the latest news until the Readme.md file is rewritten.
+
 ## Read ReadMe.md in your most proficient language.  
 What you are viewing now:[英语/英語/English]  
 [简体中文/簡體中文/Chinese_Simplified](README.Chinese_Simplified.md)  
