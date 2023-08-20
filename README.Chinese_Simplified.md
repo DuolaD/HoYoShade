@@ -9,7 +9,7 @@ Gitee镜像仓库名：Reshade_For_MiHoYo_Games
 
 中国大陆镜像下载链接现已在[CYteam网盘](https://d.cyteam.cn/%E6%80%A8%E4%B8%8E%E6%8F%90%E7%93%A6%E7%89%B9%EF%BC%88Genshin%20Impact%EF%BC%89)可用。  
 当然，此网盘内还包含了HoYoLAB安卓安装包和原神/崩坏：星穹铁道国际服的安卓和PC端的安装包。  
-感谢[CYteam](https://d.cyteam.cn/)对此仓库的支持。  
+感谢[CYteam](https://www.cyteam.cn/)对此仓库的支持。  
 
 ## 用您最擅长的语言阅读 ReadMe.md
 [英语/英語/English](README.md)  
