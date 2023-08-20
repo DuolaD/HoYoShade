@@ -12,7 +12,7 @@ Please [Follow My HoYoLAB account](https://www.hoyolab.com/accountCenter/postLis
 Mirror Download link for Mainland China now available on [CYteam-Netdesk](https://d.cyteam.cn/%E6%80%A8%E4%B8%8E%E6%8F%90%E7%93%A6%E7%89%B9%EF%BC%88Genshin%20Impact%EF%BC%89)  
 It also have Genshin Impact and Honkai:Star Rail Globel Server install pack for Android and PC.  
 And......HoYoLAB install pack for Android.  
-Thank [CYteam](https://d.cyteam.cn/) to give this Repository support.  
+Thank [CYteam](https://www.cyteam.cn/) to give this Repository support.  
 
 ## Read ReadMe.md in your most proficient language.  
 What you are viewing now:[英语/英語/English]  
