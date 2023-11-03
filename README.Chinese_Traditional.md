@@ -1,6 +1,5 @@
-# Reshade_For_HoYoVerse_Games 
+# HoYoShade
 
-Gitee鏡像倉庫名：Reshade_For_MiHoYo_Games  
 這是一個非官方Reshade，使其能在突破米哈遊對於官方Reshade的封鎖下正常用於原神和崩壞:星穹鐵道(其它米哈遊遊戲未測試)    
 
 # 重要通知！  
@@ -18,10 +17,10 @@ Gitee鏡像倉庫名：Reshade_For_MiHoYo_Games
 
 ## 重要信息!!!  
 如果您居住在中國大陸或者無法訪問 github.com  
-您可以訪問Gitee上的[鏡像倉庫](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games).   
+您可以訪問Gitee上的[鏡像倉庫](https://gitee.com/DuolaD/HoYoShade).   
 當此存儲庫在 Github 中更新時，Gitee 將在 30 分鐘到 1 小時後自動更新。
 
-如果你現在訪問Gitee上的鏡像倉庫，可以嘗試訪問[Github上的主倉庫](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games).  
+如果你現在訪問Gitee上的鏡像倉庫，可以嘗試訪問[Github上的主倉庫](https://github.com/DuolaD/HoYoShade).  
 GitHub的更新速度總是比Gitee快。
 
 ## 目錄
@@ -33,8 +32,6 @@ GitHub的更新速度總是比Gitee快。
 - [模組效果展示](#模組效果展示)
   - [視頻](#視頻)
 - [顯卡配置要求](#顯卡配置要求)
-- [Readme更新日誌](#Readme更新日誌)
-- [模組更新日誌](#模組更新日誌)
 - [赞助我](#贊助我)  
 - [聯繫我](#聯繫我)  
 
@@ -65,11 +62,11 @@ GitHub的更新速度總是比Gitee快。
 還是和我上面所說的一樣：請對您的行為後果負責。本人不會對封號造成的損失承擔任何責任。  
 
 ## 怎樣才能使用這個模組  
-從[本倉庫的發行頁面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)下載最新的zip包並解壓  
+從[本倉庫的GitHub發行頁面](https://github.com/DuolaD/HoYoShade/releases)或者從[本倉庫的Gitee發行頁面](https://gitee.com/DuolaD/HoYoShade/releases)下載最新的zip包並解壓  
 然後按照zip壓縮包內的教程操作即可  
 
 ## 模組效果展示    
-以下所有圖片和視頻全部使用的是[本倉庫的發行頁面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)壓縮包裡的"Film Night.ini"預設  
+以下所有圖片和視頻全部使用的是[本倉庫的發行頁面](https://github.com/DuolaD/HoYoShade/releases)壓縮包裡的"Film Night.ini"預設  
 並且同時使用了[GIMI模組注入器](https://github.com/SilentNightSound/GI-Model-Importer)和[Remove UI](https://gamebanana.com/mods/424034)來隱藏UI
 ![Picture1](1.png)
 ![Picture2](2.png)
@@ -101,23 +98,6 @@ RTX3050 = GTX1660S + RTX + DLSS3
 *修改了所有語言版本的ReadMe.md文件的MarkDown語法錯誤。  
 *使用了ChatGPT和Grammarly更正英語版ReadMe.md文件的翻譯錯誤和語法錯誤（感謝OpenAI）。  
 *增加了Readme.md更新日誌,模組更新日誌和讚助詳情  
-
-## 模組更新日誌 
-- 2023/07/02  更新至V1.1.0 Stable  
-*重大更新：此版本涵蓋了本人自費購買的RTGI光追包。換句話說，V1.1.0現已支持光線追踪！  
-*增加了更多的Reshade預設可供遊玩  
-*將原本V1.0.0的.ps1啟動方式改為了使用.bat的形式啟動注入程序  
-*解決了由於OEM電腦無法更改Powershell組策略而導致的無法正常啟動注入程序  
-
-- 2023/07/09  更新至V1.1.1 Stable  
-*更新了一下教程，添加了一些常見問題，更改了現版本注入器的使用方式
-
-- 2023/07/11  更新至V1.2.0 Stable  
-*重大更新：兩天半純手擼爆肝聚合啟動器，注入/模組更新/問題解決一站式搞定~  
-*重大更新：新增對原神[Epic客戶端]和崩壞：星穹鐵道[Epic客戶端]的支持  
-*重大更新：去除繁瑣的配置流程，跳過教程。第一次開啟時模組會自動配置，開袋即食~  
-*修復了過往版本中使用Dehaze.fx材質包時會報錯的問題  
-*新增 ScreenShot截圖文件夾，按下鍵盤下的PrtSC(位於功能區的按鍵，每個鍵盤對於這個按鍵的寫法更有不同)，模組會截圖至模組根目錄下的ScreenShot文件夾]  
 
 ## 贊助我  
 如果你可以使用微信支付，你可以使用微信掃描這個二維碼對我進行贊助。  
