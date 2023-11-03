@@ -1,6 +1,5 @@
-# Reshade_For_HoYoVerse_Games 
-
-Gitee镜像仓库名：Reshade_For_MiHoYo_Games  
+# HoYoShade 
+ 
 这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于原神和崩坏:星穹铁道(其它米哈游游戏未测试)  
 
 # 重要通知  
@@ -18,10 +17,10 @@ Gitee镜像仓库名：Reshade_For_MiHoYo_Games
 
 ## 重要信息!!!  
 如果您居住在中国大陆或者无法访问 github.com  
-您可以访问Gitee上的[镜像仓库](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games).   
+您可以访问Gitee上的[镜像仓库](https://gitee.com/DuolaD/HoYoShade).   
 当此存储库在 Github 中更新时，Gitee 将在 30 分钟到 1 小时后自动更新。  
 
-如果你现在访问Gitee上的镜像仓库，可以尝试访问[Github上的主仓库](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games).  
+如果你现在访问Gitee上的镜像仓库，可以尝试访问[Github上的主仓库](https://github.com/DuolaD/HoYoShade).  
 GitHub的更新速度总是比Gitee快。
 
 ## 目录
@@ -33,8 +32,6 @@ GitHub的更新速度总是比Gitee快。
 - [模组效果展示](#模组效果展示)
   - [视频](#视频)
 - [显卡配置要求](#显卡配置要求)
-- [Readme更新日志](#Readme更新日志)
-- [模组更新日志](#模组更新日志)
 - [赞助我](#赞助我)  
 - [联系我](#联系我)  
 
@@ -65,11 +62,11 @@ GitHub的更新速度总是比Gitee快。
 还是和我上面所说的一样：请对您的行为后果负责。本人不会对封号造成的损失承担任何责任。  
 
 ## 怎样才能使用这个模组
-从[本仓库的发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)下载最新的zip包并解压  
+从[本仓库的GitHub发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)或者从[本仓库的Gitee发行界面](https://gitee.com/DuolaD/HoYoShade/releases)下载最新的zip包并解压或者从 
 然后按照zip压缩包内的教程操作即可  
 
 ## 模组效果展示  
-以下所有图片和视频全部使用的是[本仓库的发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)压缩包里的"Film Night.ini"预设  
+以下所有图片和视频全部使用的是[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases)压缩包里的"Film Night.ini"预设  
 并且同时使用了[GIMI模组注入器](https://github.com/SilentNightSound/GI-Model-Importer)和[Remove UI](https://gamebanana.com/mods/424034)来隐藏UI
 ![Picture1](1.png)
 ![Picture2](2.png)
@@ -94,30 +91,6 @@ GitHub的更新速度总是比Gitee快。
 
 需要注意的是，RTX3050的性能在最低配置要求和推荐配置要求之间  
 RTX3050 = GTX1660S + RTX + DLSS3  
-
-## Readme更新日志  
-- 2023/07/02  
-
-*修改了所有语言版本的ReadMe.md文件的MarkDown语法错误。  
-*使用了ChatGPT和Grammarly更正英语版ReadMe.md文件的翻译错误和语法错误（感谢OpenAI）。  
-*增加了Readme.md更新日志,模组更新日志和赞助详情  
-
-## 模组更新日志 
-- 2023/07/02  更新至V1.1.0 Stable  
-*重大更新：此版本涵盖了本人自费购买的RTGI光追包。换句话说，V1.1.0现已支持光线追踪！  
-*增加了更多的Reshade预设可供游玩  
-*将原本V1.0.0的.ps1启动方式改为了使用.bat的形式启动注入程序  
-*解决了由于OEM电脑无法更改Powershell组策略而导致的无法正常启动注入程序
-
-- 2023/07/09  更新至V1.1.1 Stable  
-*更新了一下教程，添加了一些常见问题，更改了现版本注入器的使用方式
-
-- 2023/07/11  更新至V1.2.0 Stable  
-*重大更新：两天半纯手撸爆肝聚合启动器，注入/模组更新/问题解决一站式搞定~  
-*重大更新：新增对原神[Epic客户端]和崩坏：星穹铁道[Epic客户端]的支持  
-*重大更新：去除繁琐的配置流程，跳过教程。第一次开启时模组会自动配置，开袋即食~  
-*修复了过往版本中使用Dehaze.fx材质包时会报错的问题  
-*新增 ScreenShot截图文件夹，按下键盘下的PrtSC(位于功能区的按键，每个键盘对于这个按键的写法更有不同)，模组会截图至模组根目录下的ScreenShot文件夹]  
 
 ## 赞助我  
 如果你可以使用微信支付，你可以使用微信扫描这个二维码对我进行赞助。  
