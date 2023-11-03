@@ -1,6 +1,5 @@
-# Reshade_For_HoYoVerse_Games
+# HoYoShade
 
-Gitee Repository Name:Reshade_For_MiHoYo_Games  
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
 
 # Note  
@@ -21,11 +20,11 @@ What you are viewing now:[英语/英語/English]
 
 ## IMPORTANT!!!  
 If you are residing in Mainland China or unable to access github.com  
-you can visit the [mirrored repository on Gitee](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games).   
+you can visit the [mirrored repository on Gitee](https://gitee.com/DuolaD/HoYoShade).   
 When this repository is updated on Github, Gitee will automatically update it after 30 minutes to 1 hour.   
 
 If you are currently accessing the mirrored repository on Gitee,   
-you can try visiting the [main repository on Github](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games).   
+you can try visiting the [main repository on Github]([https://gitee.com/DuolaD/HoYoShade](https://github.com/DuolaD/HoYoShade)).   
 GitHub's update speed is always faster than Gitee.
 
 ## Directory
@@ -37,8 +36,6 @@ GitHub's update speed is always faster than Gitee.
 - [Mod effect demonstration](#Mod-effect-demonstration)
   - [Video](#Video)
 - [Graphics card requirements](#Graphics-card-requirements)
-- [Readme.md update log](#Readme.md-update-log)
-- [Mod update log](#Mod-update-log)
 - [Donate Me](#Donate-Me)  
 - [Contant Me](#Contant-Me)  
 
@@ -70,7 +67,7 @@ This means that all mods are more likely to be detected by HoyoVerse.
 As I mentioned before, you are responsible for the consequences of your actions. I will not be responsible for any losses caused by account bans.  
 
 ## How to use this mod  
-Download this mod on [GitHub release page.](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish) or [Gitee release page.](https://gitee.com/DuolaD/Reshade_For_MiHoYo_Games/releases/tag/Publish).  
+Download this mod on [GitHub release page.](https://gitee.com/DuolaD/HoYoShade/releases) or [Gitee release page.](https://github.com/DuolaD/HoYoShade/releases).  
 unzip it.  
 Follow the tutorial in zip.  
 
@@ -103,30 +100,6 @@ Using the "Film Night.ini" preset, it is expected to run at around 60 FPS.
 
 It should be noted that the performance of the RTX 3050 is between the minimum and recommended requirements.  
 RTX 3050 = GTX 1660S + RTX + DLSS3.   
-
-## Readme.md update log  
-- 2023/07/02  
-
-*Fixed Markdown syntax errors in all language versions of ReadMe.md files.  
-*Used ChatGPT and Grammarly to correct translation and grammar errors in the English version of ReadMe.md file (thanks to OpenAI).  
-*Added Readme.md update log, mod update log, and sponsorship details.  
-
-## Mod update log  
-- 2023/07/02 Update to V1.1.0 Stable  
-*Major update: This version includes the RTGI ray tracing pack that I purchased at my own expense. In other words, V1.1.0 now supports ray tracing!  
-*Added more Reshade presets for gameplay.  
-*Changed the .ps1 startup method in V1.0.0 to use a .bat file to start the injection program.  
-*Fixed the issue of not being able to start the injection program due to the inability to change Powershell group policies on OEM computers.
-
-- 2023/07/09 Update to V1.1.1 Stable  
-*Updated the tutorial, added some common questions, and changed the usage of the current version of the injector.
-
-- 2023/07/11 Update to V1.2.0 Stable  
-*Major update: Spent two and a half days coding from scratch, providing a one-stop solution for injections, mod updates, and issue resolutions~  
-*Major update: Added support for Genshin Impact [Epic Games Launcher] and Honkai : Star Rail [Epic Games Launcher].  
-*Major update: Removed tedious configuration process and tutorial. The mod will automatically configure on the first launch, ready to use.  
-*Fixed an issue in previous versions where an error would occur when using the Dehaze.fx texture pack.  
-*Added a ScreenShot folder. Press the PrtSc key on your keyboard (located in different places on different keyboards), and the mod will take a screenshot in the ScreenShot folder located in the mod's root directory.  
 
 ## Donate Me
 If you can use WeChat Pay, you can scan this QR code to sponsor me.  
