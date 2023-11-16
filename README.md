@@ -3,7 +3,10 @@
 A Unofficial Reshade For Genshin impact and Honkai:Star Rail  
 
 # Note  
-We will rewrite the Readme.md file in the next one to two months  
+New Readme.md file will publish with V2.X.X Stable Version.  
+
+V2.X.X will Upgrades to latest Reshade/RTGI/More pay Addons From Pascal Gilcher for Free.  
+And V2.X.X will DEV with [阿向菌|AXBro](https://space.bilibili.com/436127696/video).  
 thanks for supporting and waiting.  
 
 Please [Follow My HoYoLAB account](https://www.hoyolab.com/accountCenter/postList?id=192633110) for the latest news until the Readme.md file is rewritten.  
