@@ -3,7 +3,8 @@
 這是一個非官方Reshade，使其能在突破米哈遊對於官方Reshade的封鎖下正常用於原神和崩壞:星穹鐵道(其它米哈遊遊戲未測試)    
 
 # 重要通知！  
-在接下來的1~2個月内，Readme.md文件將會重寫，感謝你的支持和等待。  
+新版的Readme.md檔案將會隨V2.X.X版本一起發布，感謝你的支持與等待。  
+V2.X.X版本將會和[阿向菌|AxBro](https://space.bilibili.com/436127696/video)一起製作，並將搭載最新版本的Reshade/RTGI/以及Pascal Gilcher的付費插件 （免費搭載）。   
 在Readme.md文件重寫完畢之前，請[追蹤我的HoYoLAB賬號](https://www.hoyolab.com/accountCenter/postList?id=192633110)以獲得最新消息。  
 
 中國大陸鏡像下載鏈接現已在[CYteam網盤](https://d.cyteam.cn/%E6%80%A8%E4%B8%8E%E6%8F%90%E7%93%A6%E7%89%B9%EF%BC%88Genshin%20Impact%EF%BC%89)可用。  
