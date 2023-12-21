@@ -53,6 +53,19 @@ In addition, HoYoShade recommends updating your graphics card and chipset driver
 
 ## 〢 Sources
 
+| Name | information | URL address |
+| --- | --- | --- |
+| ReShade Official | Always the latest releases | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
+| Easy configuration wizard | Safe and fast installation | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Prepare%20Stella) |
+| Unlocked ReShade | No depth buffer detection | [~~Repo~~](https://github.com/sefinek24/unlocked-reshade) |
+| Crosire's DLL injector | Just an injector | [View file](https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/Stella%20Mod%20Launcher/data/reshade/inject64.exe) |
+| 3DMigoto | Custom mods in game | [Repository](https://github.com/SilentNightSound/GI-Model-Importer) | 
+| FPS Unlocker | [Click here for more info](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock) |
+| Latest shaders | The best experience | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Shaders) |
+| Own presets for game | Best graphics quality | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets) |
+| Community presets | Presets created by our community | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets/1.%20Made%20by%20community) |
+| Presets with RT etc. | Available in Stella Mod Plus | [Subscribe now](https://sefinek.net/genshin-impact-reshade/subscription) |
+
 Thanks to your existence, mods can be born.    
 
 Reshade:[Reshade offical website](reshade.me) | [Reshade Github Repositories](https://github.com/crosire/reshade)  
