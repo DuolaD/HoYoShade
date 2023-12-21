@@ -1,4 +1,3 @@
-
 <div align="center">
   <h1 class="header">HoYoShade</h1>
   <h3>
@@ -8,7 +7,6 @@
 
   ![Compressed](Readme.md-image/compressed.jpg)
 
-
 EN|简体中文|繁體中文
 
 ## 〢 Directory
@@ -16,18 +14,15 @@ EN|简体中文|繁體中文
 - [Introduction](#〢-Introduction)
 - [Information](#〢-Information)  
 - [Sources](#〢-Sources)
-- [Requirements]()
-- [Supported systems]()
-- [How to install]()
-- [Tested game versions]()
-- [Recommended settings for game]()
+- [How to install?](#〢-How-to-install?)
+- [Recommended settings for the game](# 〢 Recommended settings for game)
 - [Screenshots]()
 - [Legend]()
 - [Contributors]()
 
 ## 〢 Introduction
 
-A Unofficial ReShade For All HoYoVerse Games on PC.
+An Unofficial ReShade For All HoYoVerse Games on PC.
 
 The working principle of Reshade is to intercept communication between the CPU and GPU and modify image information to improve image quality. This repository's ReShade integrates some open-source projects based on the official ReShade (for the specific list please check the [Sources Page](#〢-Sources)), making it compatible with all HoYoVerse games on PC and creating some targeted presets. In the future, it will support more HoYoVerse games.
 
@@ -54,3 +49,16 @@ In addition, HoYoShade recommends updating your graphics card and chipset driver
 | ReShade Official | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | Crosire's DLL injector | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
 | All Paid ReShade-Shaders by Pascal Gilcher| Available for all HoYoShade V2.X.X Version for free | [View his Patreon Page](https://www.patreon.com/mcflypg/posts) |
+
+## 〢 How to install?
+
+Old:
+Download this mod on [GitHub release page.](https://gitee.com/DuolaD/HoYoShade/releases) or [Gitee release page.](https://github.com/DuolaD/HoYoShade/releases).  
+unzip it.  
+Follow the tutorial in the zip.  
+
+New:(Still waiting for the GUI to be built completely.)
+
+## 〢 Recommended settings for game
+
+still update after I wake Up.Zzzzzzzzzzz.......
