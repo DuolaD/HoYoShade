@@ -1,22 +1,38 @@
-# Reshade_For_HoYoVerse_Games
 
-## Gitee Repository Name:Reshade_For_MiHoYo_Games
+<div align="center">
+  <h1 class="header">HoYoShade V2.X.X</h1>
+  <h3>
+    Reaching the peak of perfection together to see the Milky Way.
+  </h3>
+</div>
 
+  ![Compressed](Readme.md-image/compressed.jpg)
 
 
 EN|简体中文|繁體中文
 
-[Reshade_Logo_picture]
+## 〢 Directory
 
-## Into
+[How to use this mod?](#〢-Introduction)  
+- [Sources](#〢 Sources)
+- [✨ Requirements]()
+- [🔧 Supported systems]()
+- [📥 How to install]()
+- [🛠️ Tested game versions]()
+- [⚙️ Recommended settings for game]()
+- [📷 Other screenshots]()
+- [🧀 Legend]()
+- [🧶 Sources]
 
-A unoffical Games for Genshin Impact and Honkai:Star wail.
+## 〢 Introduction
 
-The principle of the Reshade is to intercept the communication between the CPU and the GPU to achieve the purpose of changing the image quality.I basic from [Sources](#Sources) to develop and make it supprt Genshin Impact and Honkai:Star Rail and make some presets.In the future, more HoYoVerse games will be supported.
+A Unofficial ReShade For All HoYoVerse Games on PC.
+
+The working principle of Reshade is to intercept communication between the CPU and GPU and modify image information to improve image quality. This repository's ReShade integrates some open-source projects based on the official ReShade (for the specific list please check the [Sources](#Sources)  page), making it compatible with all HoYoVerse games on PC and creating some targeted presets. In the future, it will support more HoYoVerse games.
 
 
 
-## Sources
+## 〢 Sources
 
 Thanks to your existence, mods can be born.    
 
