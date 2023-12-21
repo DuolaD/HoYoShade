@@ -35,45 +35,22 @@ Please refer to the [Contributors Page]() for information about contributors to 
 
 ## 〢 Information
 
-The Genshin Impact server in mainland China has integrated Tencent's anti-cheat system and strengthened mod recognition. This means that any mods or cheats are more likely to be detected by HoYoVerse, 
-which also increases the possibility of your account being banned or facing other serious consequences. 
-
-No mods or cheats can guarantee the absolute safety of your game account.
-While HoYoShade can run on the official HoYoVerse server, 
+The Genshin Impact game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
+and consequently, your account is more likely to be banned or face other serious consequences. 
+No mod or cheat can guarantee the absolute safety of your game account. 
+Although HoYoShade can run on the official servers of HoYoVerse games,
 it does not guarantee the absolute safety of your game account. 
-Therefore, if you are concerned about any consequences on your game account on the official server, 
-create a private server to ensure the absolute safety of your game account on the HoYoVerse official server.
-If you run HoYoShade on the official HoYoVerse server, the contributors to the HoYoShade repository and all contributors to any secondary development based on HoYoShade will not be held responsible for any consequences. 
 
-Before sharing game content with anyone else or broadcasting,
-HoYoShade suggests using other Mods to hide the game UID and user information,
-and not to show the HoYoShade and other mod interfaces to anyone else.
+Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
 
-In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to receive the latest support from your device manufacturer to minimize graphics-related issues and prevent game crashes.
+Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
+
+In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues and prevent game crashes, and to receive the latest support from your device manufacturer.
 
 ## 〢 Sources
 
 | Name | information | URL address |
 | --- | --- | --- |
-| ReShade Official | Always the latest releases | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
-| Easy configuration wizard | Safe and fast installation | [View folder](https://github.com/sefinek24/Genshin-Impact-ReShade/tree/main/Prepare%20Stella) |
-| Unlocked ReShade | No depth buffer detection | [~~Repo~~](https://github.com/sefinek24/unlocked-reshade) |
-| Crosire's DLL injector | Just an injector | [View file](https://github.com/sefinek24/Genshin-Impact-ReShade/blob/main/Stella%20Mod%20Launcher/data/reshade/inject64.exe) |
-| 3DMigoto | Custom mods in game | [Repository](https://github.com/SilentNightSound/GI-Model-Importer) | 
-| FPS Unlocker | [Click here for more info](https://github.com/sefinek24/genshin-fps-unlock#genshin-impact-fps-unlocker-modified-by-sefinek) | [Repository](https://github.com/sefinek24/genshin-fps-unlock) |
-| Latest shaders | The best experience | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Shaders) |
-| Own presets for game | Best graphics quality | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets) |
-| Community presets | Presets created by our community | [Visit repo](https://github.com/sefinek24/Stella-Mod-Resources/tree/main/public/resources/ReShade/Presets/1.%20Made%20by%20community) |
-| Presets with RT etc. | Available in Stella Mod Plus | [Subscribe now](https://sefinek.net/genshin-impact-reshade/subscription) |
-
-Thanks to your existence, mods can be born.    
-
-Reshade:[Reshade offical website](reshade.me) | [Reshade Github Repositories](https://github.com/crosire/reshade)  
-
-Reshade-Unlocked:[Reshade-Unlocked](https://github.com/Not-Smelly-Garbage/Reshade-Unlocked)  
-
-Genshin-Impact-ReShade:[Genshin-Impact-ReShade](https://github.com/shirooo39/Genshin-Impact-ReShade)  
-
-RTGI:[Pascal Gilcher's Patreon Page](https://www.patreon.com/mcflypg/posts)  | [Download For Free]()
-
-
+| ReShade Official | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
+| Crosire's DLL injector | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
+| All Paid ReShade-Shaders by Pascal Gilcher| Available for all HoYoShade V2.X.X Version for free | [View his Patreon Page](https://www.patreon.com/mcflypg/posts) |
