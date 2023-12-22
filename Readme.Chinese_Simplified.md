@@ -1,7 +1,7 @@
 <div align="center">
   <h1 class="header">HoYoShade</h1>
   <h3>
-    Reaching the peak of perfection together to see the Milky Way.
+    登峰造极，终抵银河。
   </h3>
 </div>
 
@@ -11,47 +11,43 @@ EN|简体中文|繁體中文
 
 ## 〢 Directory
 
-- [Introduction](#〢-Introduction)
-- [Information](#〢-Information)  
-- [Sources](#〢-Sources)
-- [How to install?](#〢-How-to-install?)
-- [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
-- [Screenshots](#〢-Screenshots)
-- [Contributors](#〢-Contributors)
+- [介绍](#〢-介绍)
+- [警告](#〢-警告)  
+- [来源](#〢-来源)
+- [如何安装?](#〢-如何安装?)
+- [推荐游戏图像设置](#〢-推荐游戏图像设置)
+- [截图展示](#〢-截图展示)
+- [贡献者](#〢-贡献者)
 
-## 〢 Introduction
+## 〢 介绍
 
-An Unofficial ReShade For All HoYoVerse Games on PC.
+这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于所有可在PC端运行的米哈游游戏。
 
-The working principle of Reshade is to intercept communication between the CPU and GPU and modify image information to improve image quality. This repository's ReShade integrates some open-source projects based on the official ReShade (for the specific list please check the [Sources Page](#〢-Sources)), making it compatible with all HoYoVerse games on PC and creating some targeted presets. In the future, it will support more HoYoVerse games.
+ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息以达到提高图像质量的目的。HoYoShade集成了一些基于官方ReShade的开源项目(具体列表请查看[来源页面](#〢-来源))并对其进行修改，使其与PC上所有的米哈游游戏兼容，并制作一些有针对性的预设。未来，它将支持更多的米哈游游戏。
 
-Please refer to the [Contributors Page]() for information about contributors to this repository.
+有关本仓库贡献者的信息，请访问[贡献者界面](#〢-贡献者)
 
-## 〢 Information
-
-> [!Warning]
-> The Genshin Impact game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
-and consequently, your account is more likely to be banned or face other serious consequences. 
-No mod or cheat can guarantee the absolute safety of your game account. 
-Although HoYoShade can run on the official servers of HoYoVerse games,
-it does not guarantee the absolute safety of your game account.
+## 〢 警告
 
 > [!Warning]
-> Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
+> 中国大陆服原神由于对接了腾讯的反作弊系统，并且针对性加强了对于模组识别。所以任何模组及外挂均有更大可能被米哈游识别，这也意味着你的账号更有可能会被封禁或导致其它严重后果。没有任何模组和外挂可以保证你的游戏账号可以绝对安全。HoYoShade虽然可以运行在官方服务器的米哈游游戏上，但并不保证你的你的游戏账号绝对安全。
+
+> [!Warning]
+> 在你将游戏内容发送至其它任何人或者进行直播之前，HoYoShade建议你先使用其它Mod隐藏游戏UID和用户信息，并且不要将HoYoShade及其它模组界面展示给其它任何人。
 
 > [!NOTE]
-> In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.
+> HoYoShade建议你将你的显卡和芯片组驱动更新至最新版本（如果可用），以获得来自你设备制造商的最新支持以尽可能减少与图形相关的问题，降低游戏崩溃的几率，并获得来自设备制造商的最新支持。
 
 > [!NOTE]
-> Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
+> 如果你在官方服务器的HoYoVerse游戏上运行HoYoShade，那么对于可能会发生的任何后果，HoYoShade仓库的所有贡献者及其所有基于HoYoShade二次开发的贡献者均不会为任何人承担任何责任。
 
-## 〢 Sources
+## 〢 来源
 
-| Name | information | URL address |
+| 名字 | 介绍 | 网址 |
 | --- | --- | --- |
-| **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
-| **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View Patreon Page](https://www.patreon.com/mcflypg/posts) |
+| **ReShade官方** | HoYoShade会保证最新发行版中的ReShade总是和ReShade最新版本保持一致 | [官方仓库](https://github.com/crosire/reshade),[官方网站](https://reshade.me/) |
+| **Crosire的ReShade注入器** | 这只是一个注入器 | [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
+| **全部来自Pascal Gilcher的付费ReShade效果库** | 免费提供在所有HoYoShade V2.X.X版本(无论是否赞助) | [查看他的Patreon页面](https://www.patreon.com/mcflypg/posts) |
 
 ## 〢 How to install?
 
