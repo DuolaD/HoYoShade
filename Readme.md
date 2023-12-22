@@ -8,6 +8,7 @@
   ![Compressed](Readme.md-image/compressed-with-watermark.jpg)
 
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
+[GitHub](https://github.com/DuolaD/HoYoShade)|[Gitee](https://gitee.com/DuolaD/HoYoShade)  
 
 ## 〢 Directory
 
