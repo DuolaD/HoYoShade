@@ -16,7 +16,7 @@ EN|简体中文|繁體中文
 - [Sources](#〢-Sources)
 - [How to install?](#〢-How-to-install?)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
-- [Screenshots]()
+- [Screenshots](#〢-Screenshots)
 - [Legend]()
 - [Contributors]()
 
@@ -30,17 +30,21 @@ Please refer to the [Contributors Page]() for information about contributors to 
 
 ## 〢 Information
 
-The Genshin Impact game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
+> [!Warning]
+> The Genshin Impact game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
 and consequently, your account is more likely to be banned or face other serious consequences. 
 No mod or cheat can guarantee the absolute safety of your game account. 
 Although HoYoShade can run on the official servers of HoYoVerse games,
-it does not guarantee the absolute safety of your game account. 
+it does not guarantee the absolute safety of your game account.
 
-Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
+> [!Warning]
+> Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
 
-Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
+> [!NOTE]
+> In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.
 
-In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.
+> [!NOTE]
+> Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
 
 ## 〢 Sources
 
@@ -48,7 +52,7 @@ In addition, HoYoShade recommends updating your graphics card and chipset driver
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View his Patreon Page](https://www.patreon.com/mcflypg/posts) |
+| **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View Patreon Page](https://www.patreon.com/mcflypg/posts) |
 
 ## 〢 How to install?
 
@@ -65,7 +69,7 @@ New:(Still waiting for the GUI to be built completely.)
 > The recommended graphics settings here are based on Genshin Impact as a reference. You can use these recommended graphics settings to modify the graphics settings of other HoYoVerse games, or you can also choose to customize the graphics settings yourself.
 
 > [!NOTE]
-> If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade.
+> If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade and FPS unlock.
 
 | Settings| A graphics card with lower performance than the NVIDIA GTX series | The NVIDIA GTX series or other graphics cards of the same level | The NVIDIA RTX series or other graphics cards of the same level |
 | --------------------------- | --------------------------------- |------------------------------------ |:------------------------------------ |
@@ -87,3 +91,9 @@ New:(Still waiting for the GUI to be built completely.)
 | **Co-Op Teammates Effects** | OFF | On | On |
 | **Subsurface Scattering** | OFF | Medium or High | High |
 | **Anisotropic Filtering** | 16x | 16x | 16x |
+
+> [!Warning]
+> Do not change FPS settings in the game if you are using FPS unlock.
+
+## 〢 Screenshots
+
