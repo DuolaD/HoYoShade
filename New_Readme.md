@@ -73,10 +73,10 @@ New:(Still waiting for the GUI to be built completely.)
 | **Brightness** | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.) | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.)|
 | **FPS** | 60 | 60 | 60 (Use FPS Unlocker or another similar Mod can get more FPS) |
 | **V-Sync** | OFF(If there is a tearing feeling in the picture, please enable this option.)| OFF(If there is a tearing feeling in the picture, please enable this option.) | OFF(If there is a tearing feeling in the picture, please enable this option.)|
-| **Render Resolution** | 0.6~1.0 | 0.6~1.1 | 1.5 (Set 1.1 if your game FPS can not be stable at 60 after set 1.5)|
+| **Render Resolution** | 0.6~1.0 | 0.6~1.1 | 1.5 (Set 1.1 or 1.0 if your game FPS can not be stable at 60 after set 1.5)|
 | **Shadow Quality** | Lowest or Low | Medium | High |
 | **Visual Effects** | Lowest or Low | Medium | High |
-| **SFX Quality** | | Medium | High |
+| **SFX Quality** | Lowest or Low | Medium | High |
 | **Environment Detail** | Lowest or Low | Medium or High | High or Highest |
 | **Anti-Aliasing** | OFF or FSR 2 | FSR 2 | SMAA/FXAA (Use FSR 2 if you have low FPS) |
 | **Volumetric Fog** | OFF | On(You can choose switch OFF) | On |
