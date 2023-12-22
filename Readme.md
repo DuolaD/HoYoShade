@@ -25,7 +25,7 @@ An Unofficial ReShade For All HoYoVerse Games on PC.
 
 The working principle of Reshade is to intercept communication between the CPU and GPU and modify image information to improve image quality. This repository's ReShade integrates some open-source projects based on the official ReShade (for the specific list please check the [Sources Page](#〢-Sources)), making it compatible with all HoYoVerse games on PC and creating some targeted presets. In the future, it will support more HoYoVerse games.
 
-Please refer to the [Contributors Page]() for information about contributors to this repository.
+Please refer to the [Contributors Page](#〢-Contributors) for information about contributors to this repository.
 
 ## 〢 Information
 
