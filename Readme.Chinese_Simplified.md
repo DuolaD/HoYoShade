@@ -39,7 +39,7 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 > HoYoShade建议你将你的显卡和芯片组驱动更新至最新版本（如果可用），以获得来自你设备制造商的最新支持以尽可能减少与图形相关的问题，降低游戏崩溃的几率，并获得来自设备制造商的最新支持。
 
 > [!NOTE]
-> 如果你在官方服务器的HoYoVerse游戏上运行HoYoShade，那么对于可能会发生的任何后果，HoYoShade仓库的所有贡献者及其所有基于HoYoShade二次开发的贡献者均不会为任何人承担任何责任。
+> 如果你在官方服务器的米哈游游戏上运行HoYoShade，那么对于可能会发生的任何后果，HoYoShade仓库的所有贡献者及其所有基于HoYoShade二次开发的贡献者均不会承担任何责任。
 
 ## 〢 来源
 
@@ -91,7 +91,7 @@ New:(等待GUI开发完成)
 
 ## 〢 截图展示
 <div align="center">
-  <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+  <h1 class="header">截图来自[Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
 </div>
 
 <div id="images">
@@ -100,8 +100,8 @@ New:(等待GUI开发完成)
   <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
 </div>
 
-## 〢 Contributors
-Thank you to all the collaborators for their dedication to the project!
+## 〢 贡献者
+谢谢所有贡献者对这个项目的付出！
 
 <div align="center">
     <h3>哆啦D夢|DuolaD</h3>
