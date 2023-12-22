@@ -108,10 +108,23 @@ New:(Still waiting for the GUI to be built completely.)
 ## 〢 Contributors
 Thank you to all the collaborators for their dedication to the project!
 
-<div align="center">
-    <h3>哆啦D夢|DuolaD</h3>
-	<a href="https://github.com/DuolaD">
-		<img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <br>
+<div align="center">  
+    <div style="display: inline-block;">  
+        <h3>哆啦D夢|DuolaD</h3>  
+        <a href="https://github.com/DuolaD">  
+            <img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">  
+        </a>  
+    </div>  
+    <div style="display: inline-block;">  
+        <h3>阿向菌|AXBro</h3>  
+        <a href="https://www.youtube.com/@AXBroCN">  
+            <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">  
+        </a>  
+    </div>  
+    <div style="display: inline-block;">  
+        <h3>REL</h3>  
+        <a href="https://github.com/34736384">  
+            <img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="REL">  
+        </a>  
+    </div>  
 </div>
