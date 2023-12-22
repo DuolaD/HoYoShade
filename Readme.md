@@ -17,6 +17,7 @@
 - [How to install?](#〢-How-to-install?)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
+- [Donate](#〢-Donate)
 - [Contributors](#〢-Contributors)
 
 ## 〢 Introduction
@@ -105,23 +106,71 @@ New:(Still waiting for the GUI to be built completely.)
   <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
 </div>
 
+## 〢 Donate
+If you can use WeChat Pay or AirPay, you can scan this QR code to sponsor me.  
+If you can use PayPal,You can [Click Me](https://www.paypal.com/paypalme/Dmou114514233) to Donate.  
+If you would like to sponsor HoYoShade in the long term,You can go to Check [Patreon Page(For oversea)](https://patreon.com/duolad) or Check [Afdian Page(For Mainland China)](https://afdian.net/a/DuolaD)
+
+The amount of sponsorship is up to you.  
+
+![WechatDonateCode](Readme.md-image/WechatDonateCode.JPG)  
+![AirPayDonateCode](Readme.md-image/AirPayDonateCode.png) 
+
+## 〢 Contant Me  
+
+> [!NOTE]
+> If you are located in mainland China, certain contact methods may not be available. Contact methods marked with an asterisk at the end '*' can ensure availability in mainland China and receive a quicker response and support.
+
+> [!NOTE]
+> If you have any questions while using this mod, please create an issue in this repository first.  
+
+My email address* : D_mou@outlook.com  
+[Click here to join HoYoShade Official Group in Tencent QQ*](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=yECCeLBMXBEl1t8MEyCPPVenwC6xPiDz&authKey=75cidtiq9%2Fmy6kstaP1AbnZ%2BUQEm9ZZ3WHZG5hdGFDeWfI%2F%2FfrviZpB4T%2F1q6bCE&noverify=0&group_code=377103253)  
+Search This Code in Tencent QQ to contact me directly(Please indicate the purpose of your visit)*:3484767759  
+[Click here to contact me directly in Telegram(Please indicate the purpose of your visit)](https://t.me/D_mou)  
+[Click here to Follow my international HoYoLab account](https://www.hoyolab.com/accountCenter/postList?id=192633110). 
+
 ## 〢 Contributors
 Thank you to all the collaborators for their dedication to the project!
 
 <div align="center">
-    <h3>哆啦D夢|DuolaD</h3>
-	<a href="https://github.com/DuolaD">
-		<img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
-    <h3>阿向菌|AXBro</h3>
-	<a href="https://www.youtube.com/@AXBroCN">
-		<img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
-    <h3>REL</h3>
-	<a href="https://github.com/34736384">
-		<img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
+    <table>
+        <tr>
+            <td>
+                <h3>哆啦D夢|DuolaD</h3>
+                <a href="https://github.com/DuolaD">
+                    <img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/DuolaD">GitHub Personal Pages</a><br>
+		<a href="https://www.hoyolab.com/accountCenter/postList?id=192633110">HoYoLAB Personal Pages</a><br>
+		<a href="https://www.youtube.com/@DuolaD_HK">YouTube Channel</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>阿向菌|AXBro</h3>
+                <a href="https://www.youtube.com/@AXBroCN">
+                    <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
+                </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/@AXBroCN">YouTube Channel</a><br>
+		<a href="https://space.bilibili.com/436127696">BiliBili Channel</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>REL</h3>
+                <a href="https://github.com/34736384">
+                    <img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="REL">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/34736384">GitHub Personal Pages</a><br>
+		<a href="https://space.bilibili.com/44434084?spm_id_from=333.337.0.0">BiliBili Channel</a>
+            </td>
+        </tr>
+    </table>
 </div>
