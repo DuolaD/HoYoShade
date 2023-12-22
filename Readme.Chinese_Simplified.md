@@ -7,7 +7,7 @@
 
   ![Compressed](Readme.md-image/compressed-with-watermark.jpg)
 
-EN|简体中文|繁體中文
+[EN](Readme.md)|**简体中文**|[繁體中文](Readme.Chinese_Traditional.md)
 
 ## 〢 Directory
 
