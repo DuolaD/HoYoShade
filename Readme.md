@@ -18,6 +18,7 @@
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
 - [Donate](#〢-Donate)
+- [Contant Me](#〢-Contant-Me)
 - [Contributors](#〢-Contributors)
 
 ## 〢 Introduction
