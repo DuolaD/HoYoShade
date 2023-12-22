@@ -17,8 +17,7 @@ EN|简体中文|繁體中文
 - [How to install?](#〢-How-to-install?)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
-- [Legend]()
-- [Contributors]()
+- [Contributors](#〢-Contributors)
 
 ## 〢 Introduction
 
@@ -96,4 +95,23 @@ New:(Still waiting for the GUI to be built completely.)
 > Do not change FPS settings in the game if you are using FPS unlock.
 
 ## 〢 Screenshots
+<div align="center">
+  <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+</div>
 
+<div id="images">
+  <img src="Readme.md-image/AXBro-1.jpg" alt="Screenshot1">
+  <img src="Readme.md-image/AXBro-2.jpg" alt="Screenshot2">
+  <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
+</div>
+
+## 〢 Contributors
+Thank you to all the collaborators for their dedication to the project!
+
+<div align="center">
+    <h3>哆啦D夢|DuolaD</h3>
+	<a href="https://github.com/DuolaD">
+		<img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
+	</a>
+    <br>
+</div>
