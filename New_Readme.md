@@ -15,7 +15,7 @@ EN|简体中文|繁體中文
 - [Information](#〢-Information)  
 - [Sources](#〢-Sources)
 - [How to install?](#〢-How-to-install?)
-- [Recommended settings for the game](# 〢 Recommended settings for game)
+- [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots]()
 - [Legend]()
 - [Contributors]()
@@ -40,15 +40,15 @@ Contributors to the HoYoShade repository and all contributors who have developed
 
 Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
 
-In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues and prevent game crashes, and to receive the latest support from your device manufacturer.
+In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.
 
 ## 〢 Sources
 
 | Name | information | URL address |
 | --- | --- | --- |
-| ReShade Official | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
-| Crosire's DLL injector | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| All Paid ReShade-Shaders by Pascal Gilcher| Available for all HoYoShade V2.X.X Version for free | [View his Patreon Page](https://www.patreon.com/mcflypg/posts) |
+| **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
+| **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
+| **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View his Patreon Page](https://www.patreon.com/mcflypg/posts) |
 
 ## 〢 How to install?
 
@@ -59,6 +59,31 @@ Follow the tutorial in the zip.
 
 New:(Still waiting for the GUI to be built completely.)
 
-## 〢 Recommended settings for game
+## 〢 Recommended Graphics settings for game
 
-still update after I wake Up.Zzzzzzzzzzz.......
+> [!NOTE]
+> The recommended graphics settings here are based on Genshin Impact as a reference. You can use these recommended graphics settings to modify the graphics settings of other HoYoVerse games, or you can also choose to customize the graphics settings yourself.
+
+> [!NOTE]
+> If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade.
+
+| Settings| A graphics card with lower performance than the NVIDIA GTX series | The NVIDIA GTX series or other graphics cards of the same level | The NVIDIA RTX series or other graphics cards of the same level |
+| --------------------------- | --------------------------------- |------------------------------------ |:------------------------------------ |
+| **Display Mode** | 1920x1080 (or higher) | 1920x1080 (or higher) | 1920x1080 (or higher) |
+| **Brightness** | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.) | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.)|
+| **FPS** | 60 | 60 | 60 (Use FPS Unlocker or another similar Mod can get more FPS) |
+| **V-Sync** | OFF(If there is a tearing feeling in the picture, please enable this option.)| OFF(If there is a tearing feeling in the picture, please enable this option.) | OFF(If there is a tearing feeling in the picture, please enable this option.)|
+| **Render Resolution** | 0.6~1.0 | 0.6~1.1 | 1.5 (Set 1.1 if your game FPS can not be stable at 60 after set 1.5)|
+| **Shadow Quality** | Lowest or Low | Medium | High |
+| **Visual Effects** | Lowest or Low | Medium | High |
+| **SFX Quality** | | Medium | High |
+| **Environment Detail** | Lowest or Low | Medium or High | High or Highest |
+| **Anti-Aliasing** | OFF or FSR 2 | FSR 2 | SMAA/FXAA (Use FSR 2 if you have low FPS) |
+| **Volumetric Fog** | OFF | On(You can choose switch OFF) | On |
+| **Reflections** | OFF | On(You can choose switch OFF) | On |
+| **Motion Blur** | OFF or Low| Low or High | High or Extreme |
+| **Bloom** | On(You can choose switch OFF) | On(You can choose switch OFF) | On(You can choose switch OFF) |
+| **Crowd Density** | Low | Low or High | High |
+| **Co-Op Teammates Effects** | OFF | On | On |
+| **Subsurface Scattering** | OFF | Medium or High | High |
+| **Anisotropic Filtering** | 16x | 16x | 16x |
