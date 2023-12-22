@@ -49,48 +49,47 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 | **Crosire的ReShade注入器** | 这只是一个注入器 | [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
 | **全部来自Pascal Gilcher的付费ReShade效果库** | 免费提供在所有HoYoShade V2.X.X版本(无论是否赞助) | [查看他的Patreon页面](https://www.patreon.com/mcflypg/posts) |
 
-## 〢 How to install?
+## 〢 如何安装?
 
-Old:
-Download this mod on [GitHub release page.](https://gitee.com/DuolaD/HoYoShade/releases) or [Gitee release page.](https://github.com/DuolaD/HoYoShade/releases).  
-unzip it.  
-Follow the tutorial in the zip.  
+旧版本:
+从[本仓库的GitHub发行页面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)或者从[本仓库的Gitee发行界面](https://gitee.com/DuolaD/HoYoShade/releases)下载最新的zip包并解压或者从 
+然后按照zip压缩包内的教程操作即可  
 
-New:(Still waiting for the GUI to be built completely.)
+New:(等待GUI开发完成)
 
-## 〢 Recommended Graphics settings for game
-
-> [!NOTE]
-> The recommended graphics settings here are based on Genshin Impact as a reference. You can use these recommended graphics settings to modify the graphics settings of other HoYoVerse games, or you can also choose to customize the graphics settings yourself.
+## 〢 推荐游戏图像设置
 
 > [!NOTE]
-> If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade and FPS unlock.
+> 这里推荐的图像设置是基于《原神》作为参考的。您可以使用这些推荐的图形设置来修改其他米哈游游戏的图像设置，或者您也可以选择自定义图像设置。
 
-| Settings| A graphics card with lower performance than the NVIDIA GTX series | The NVIDIA GTX series or other graphics cards of the same level | The NVIDIA RTX series or other graphics cards of the same level |
+> [!NOTE]
+> 如果您的显卡性能低于NVIDIA GTX系列水平，则不建议您使用HoYoShade和FPS解锁。
+
+| 设置 | 比NVIDIA GTX系列性能低的显卡 | 英伟达GTX系列或其他同等级别的显卡 | 英伟达RTX系列或其他同等级别的显卡 |
 | --------------------------- | --------------------------------- |------------------------------------ |:------------------------------------ |
-| **Display Mode** | 1920x1080 (or higher) | 1920x1080 (or higher) | 1920x1080 (or higher) |
-| **Brightness** | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.) | Default(You can choose to decrease the brightness by two to three points.)| Default(You can choose to decrease the brightness by two to three points.)|
-| **FPS** | 60 | 60 | 60 (Use FPS Unlocker or another similar Mod can get more FPS) |
-| **V-Sync** | OFF(If there is a tearing feeling in the picture, please enable this option.)| OFF(If there is a tearing feeling in the picture, please enable this option.) | OFF(If there is a tearing feeling in the picture, please enable this option.)|
-| **Render Resolution** | 0.6~1.0 | 0.6~1.1 | 1.5 (Set 1.1 or 1.0 if your game FPS can not be stable at 60 after set 1.5)|
-| **Shadow Quality** | Lowest or Low | Medium | High |
-| **Visual Effects** | Lowest or Low | Medium | High |
-| **SFX Quality** | Lowest or Low | Medium | High |
-| **Environment Detail** | Lowest or Low | Medium or High | High or Highest |
-| **Anti-Aliasing** | OFF or FSR 2 | FSR 2 | SMAA/FXAA (Use FSR 2 if you have low FPS) |
-| **Volumetric Fog** | OFF | On(You can choose switch OFF) | On |
-| **Reflections** | OFF | On(You can choose switch OFF) | On |
-| **Motion Blur** | OFF or Low| Low or High | High or Extreme |
-| **Bloom** | On(You can choose switch OFF) | On(You can choose switch OFF) | On(You can choose switch OFF) |
-| **Crowd Density** | Low | Low or High | High |
-| **Co-Op Teammates Effects** | OFF | On | On |
-| **Subsurface Scattering** | OFF | Medium or High | High |
-| **Anisotropic Filtering** | 16x | 16x | 16x |
+| **分辨率** | 1920x1080 (或更高) | 1920x1080 (或更高) | 1920x1080 (或更高) |
+| **亮度** | 默认值（您可以选择将亮度减少两到三个点） | 默认值（您可以选择将亮度减少两到三个点） | 默认值（您可以选择将亮度减少两到三个点）| 默认值（您可以选择将亮度减少两到三个点）|
+| **帧率** | 60 | 60 | 60 (使用FPS解锁器或其它类似的模组可以获得更高的帧率) |
+| **垂直同步** | 关闭（如果画面有撕裂感，请启用此选项） | 关闭（如果画面有撕裂感，请启用此选项） | 关闭（如果画面有撕裂感，请启用此选项）|
+| **渲染精度** | 0.6~1.0 | 0.6~1.1 | 1.5 (如果您的游戏帧率在设置为1.5后无法稳定在60，请将其设置为1.1或1.0) |
+| **阴影质量** | 极低 或 低 | 中 | 高 |
+| **后期效果** | 极低 或 低 | 中 | 高 |
+| **特效质量** | 极低 或 低 | 中 | 高 |
+| **场景细节** | 极低 或 低 | 中 或 高 | 高 或 极高 |
+| **抗锯齿** | 关闭 or FSR 2 | FSR 2 | SMAA/FXAA (如果您的帧率在选择SMAA/FXAA后偏低，请使用 FSR 2) |
+| **体积雾** | 关闭 | 开启(你可以选择关闭) | 开启 |
+| **反射** | 关闭 | 开启(你可以选择关闭) | 开启 |
+| **动态模糊** | 关闭 或 低 | 低 或 高 | 高 或 非常高 |
+| **Bloom** | 开启(你可以选择关闭) | 开启(你可以选择关闭) | 开启(你可以选择关闭) |
+| **人群密度** | 低 | 低 或 高 | 高 |
+| **多人游戏队友特效** | 完全屏蔽 | 打开 | 打开 |
+| **次表面散射** | 关闭 | 中 或 高 | 高 |
+| **各向异性采样** | 16x | 16x | 16x |
 
 > [!Warning]
-> Do not change FPS settings in the game if you are using FPS unlock.
+> 不要在使用FPS解锁器的情况下更改游戏中的帧率设置
 
-## 〢 Screenshots
+## 〢 截图展示
 <div align="center">
   <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
 </div>
