@@ -17,6 +17,8 @@
 - [如何安装?](#〢-如何安装?)
 - [推荐游戏图像设置](#〢-推荐游戏图像设置)
 - [截图展示](#〢-截图展示)
+- [赞助](#〢-赞助)
+- [联系我](#〢-联系我)
 - [贡献者](#〢-贡献者)
 
 ## 〢 介绍
@@ -100,23 +102,71 @@ New:(等待GUI开发完成)
   <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
 </div>
 
+## 〢 赞助
+如果你可以使用微信支付/支付宝，你可以使用微信扫描这个二维码对我进行赞助。
+如果你可以使用PayPal，你可以[点击链接](https://www.paypal.com/paypalme/Dmou114514233)进行赞助。  
+如果你想长期赞助HoYoShade，你可以去查看[Patreon页面(海外)](https://patreon.com/duolad)或者[爱发电页面(中国大陆地区)](https://afdian.net/a/DuolaD)
+
+赞助的金额由你自行设定。
+
+![WechatDonateCode](Readme.md-image/WechatDonateCode.JPG)  
+![AirPayDonateCode](Readme.md-image/AirPayDonateCode.png) 
+
+## 〢 联系我
+
+> [!NOTE]
+> 如果你处于中国大陆地区，则某些联系方式可能不可用。结尾带星号标识'*'的联系方式可以保证在中国大陆地区使用，并且可以获得更快速的响应和支持。
+
+> [!NOTE]
+> 如果你在使用此模组时有任何的问题，请先在本仓库创建一个issue。
+
+我的邮箱地址* : D_mou@outlook.com  
+[点我即可添加HoYoShade在腾讯QQ中的官方群组*](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=yECCeLBMXBEl1t8MEyCPPVenwC6xPiDz&authKey=75cidtiq9%2Fmy6kstaP1AbnZ%2BUQEm9ZZ3WHZG5hdGFDeWfI%2F%2FfrviZpB4T%2F1q6bCE&noverify=0&group_code=377103253)  
+在腾讯QQ中搜索QQ此代码来添加好友，以此和我交流(注明来意)*:3484767759  
+[点我即可在Telegram上和我交流(注明来意)](https://t.me/D_mou)  
+[点我即可关注我的HoYoLAB(国际米游社)账号](https://www.hoyolab.com/accountCenter/postList?id=192633110). 
+
 ## 〢 贡献者
-谢谢所有贡献者对这个项目的付出！
+感谢所有贡献者对本项目的奉献！
 
 <div align="center">
-    <h3>哆啦D夢|DuolaD</h3>
-	<a href="https://github.com/DuolaD">
-		<img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
-    <h3>阿向菌|AXBro</h3>
-	<a href="https://www.youtube.com/@AXBroCN">
-		<img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
-    <h3>REL</h3>
-	<a href="https://github.com/34736384">
-		<img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="DuolaD">
-	</a>
-    <be>
+    <table>
+        <tr>
+            <td>
+                <h3>哆啦D夢|DuolaD</h3>
+                <a href="https://github.com/DuolaD">
+                    <img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/DuolaD">GitHub个人主页</a><br>
+		<a href="https://www.hoyolab.com/accountCenter/postList?id=192633110">HoYoLAB个人主页</a><br>
+		<a href="https://www.youtube.com/@DuolaD_HK">YouTube频道</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>阿向菌|AXBro</h3>
+                <a href="https://www.youtube.com/@AXBroCN">
+                    <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
+                </a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
+		<a href="https://space.bilibili.com/436127696">BiliBili频道</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>REL</h3>
+                <a href="https://github.com/34736384">
+                    <img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="REL">
+                </a>
+            </td>
+            <td>
+                <a href="https://github.com/34736384">GitHub个人主页</a><br>
+		<a href="https://space.bilibili.com/44434084?spm_id_from=333.337.0.0">BiliBili频道</a>
+            </td>
+        </tr>
+    </table>
 </div>
