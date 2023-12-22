@@ -9,7 +9,7 @@
 
 [EN](Readme.md)|**简体中文**|[繁體中文](Readme.Chinese_Traditional.md)
 
-## 〢 Directory
+## 〢 目录
 
 - [介绍](#〢-介绍)
 - [警告](#〢-警告)  
