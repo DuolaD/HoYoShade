@@ -166,7 +166,7 @@ Thank you to all the collaborators for their dedication to the project!
         </tr>
         <tr>
             <td>
-                <h3>REL</h3>
+                <h3>REL(Ex_M)</h3>
                 <a href="https://github.com/34736384">
                     <img src="Readme.md-image/REL-Logo.jpg" width="70" style="border-radius: 50%" alt="REL">
                 </a>
