@@ -58,7 +58,7 @@ it does not guarantee the absolute safety of your game account.
 ## 〢 How to install?
 
 Old:
-Download this mod on [release page.](https://gitee.com/DuolaD/HoYoShade/releases)  
+Download this mod on [release page.](https://github.com/DuolaD/HoYoShade/releases/)  
 unzip it.  
 Follow the tutorial in the zip.  
 
