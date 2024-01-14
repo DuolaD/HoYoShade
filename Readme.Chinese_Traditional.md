@@ -8,7 +8,6 @@
   ![Compressed](Readme.md-image/compressed-with-watermark.jpg)
 
 [EN](Readme.md)|[簡體中文](Readme.Chinese_Simplified.md)|**繁體中文**  
-[GitHub](https://github.com/DuolaD/HoYoShade)|[Gitee](https://gitee.com/DuolaD/HoYoShade)  
 
 ## 〢 目錄
 
@@ -55,7 +54,7 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 ## 〢 如何安裝?
 
 舊版本:
-從[本倉庫的GitHub發行頁面](https://github.com/DuolaD/Reshade_For_HoyoVerse_Games/releases/tag/Publish)或者從[本倉庫的Gitee發行界面](https://gitee.com/DuolaD/HoYoShade/releases)下載最新的zip包並解壓或者從 
+從[本倉庫的發行頁面](https://github.com/DuolaD/HoYoShade/releases/)下載最新的zip包並解壓。  
 然後按照zip壓縮包內的教程操作即可  
 
 New:(等待GUI開發完成)
