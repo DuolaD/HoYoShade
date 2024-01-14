@@ -7,7 +7,7 @@
 
   ![Compressed](Readme.md-image/compressed-with-watermark.jpg)
 
-[EN](Readme.md)|[簡體中文](Readme.Chinese_Simplified.md)|**繁體中文**  
+[EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
 ## 〢 目錄
 
