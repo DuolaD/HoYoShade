@@ -146,8 +146,7 @@ Thank you to all the collaborators for their dedication to the project!
             </td>
             <td>
                 <a href="https://github.com/DuolaD">GitHub Personal Pages</a><br>
-		<a href="https://www.hoyolab.com/accountCenter/postList?id=192633110">HoYoLAB Personal Pages</a><br>
-		<a href="https://www.youtube.com/@DuolaD_HK">YouTube Channel</a>
+		<a>Links to other profiles pages are listed above</a><br>
             </td>
         </tr>
         <tr>
