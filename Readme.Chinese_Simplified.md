@@ -139,8 +139,7 @@ New:(等待GUI开发完成)
             </td>
             <td>
                 <a href="https://github.com/DuolaD">GitHub个人主页</a><br>
-		<a href="https://www.hoyolab.com/accountCenter/postList?id=192633110">HoYoLAB个人主页</a><br>
-		<a href="https://www.youtube.com/@DuolaD_HK">YouTube频道</a>
+		<a>其它个人主页链接见上</a><br>
             </td>
         </tr>
         <tr>
