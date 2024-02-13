@@ -137,7 +137,7 @@ New:(等待GUI開發完成)
                 </a>
 		<h3>也就是以下成員：</h3>
 		<h5>哆啦D夢|DuolaD & 琳尼特|LynetteNotFound</h5>
-		<a href="https://github.com/DuolaD"><img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD"></img> </a>
+		<a href="https://github.com/DuolaD"><img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD"></img></a>
 		<a href="https://github.com/LynetteNotFound">
                     <img src="https://avatars.githubusercontent.com/u/159673876?v=4" width="70" style="border-radius: 50%" alt="LynetteNotFound">
                 </a>
