@@ -155,8 +155,8 @@ Thank you to all the collaborators for their dedication to the project!
 		<a href="https://github.com/DuolaD">哆啦D夢|DuolaD's GitHub Personal Pages</a><br>
 		<a href="https://github.com/LynetteNotFound">琳尼特|LynetteNotFound's GitHub Personal Pages</a><br>
 		<br>
-		<a>Note:DuolaD's Links to other profiles pages are listed above;</a><br>
-		<a>LynetteNotFound does not publish her contact information</a>
+		<a>Note:哆啦D夢|DuolaD's Links to other profiles pages are listed above;</a><br>
+		<a>琳尼特|LynetteNotFound does not publish contact information</a>
             </td>
 	</tr>
         <tr>
