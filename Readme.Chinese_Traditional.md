@@ -131,16 +131,26 @@ New:(等待GUI開發完成)
     <table>
         <tr>
             <td>
-                <h3>哆啦D夢|DuolaD</h3>
-                <a href="https://github.com/DuolaD">
-                    <img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
+                <h3>DuolaDStudio Hong Kong Ltd.</h3>
+                <a href="https://github.com/DuolaDStudio">
+                    <img src="https://avatars.githubusercontent.com/u/152937804?s=200&v=4" width="70" style="border-radius: 50%" alt="DuolaDStudio Hong Kong Ltd.">
+                </a>
+		<h3>也就是以下成員：</h3>
+		<h5>哆啦D夢|DuolaD & 琳尼特|LynetteNotFound</h5>
+		<a href="https://github.com/DuolaD"><img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD"></img> </a>
+		<a href="https://github.com/LynetteNotFound">
+                    <img src="https://avatars.githubusercontent.com/u/159673876?v=4" width="70" style="border-radius: 50%" alt="LynetteNotFound">
                 </a>
             </td>
-            <td>
-                <a href="https://github.com/DuolaD">GitHub個人主頁</a><br>
-		<a>其它個人主頁連結見上</a><br>
+	    <td>
+                <a href="https://github.com/DuolaDStudio">組織的GitHub主頁</a><br>
+		<a href="https://github.com/DuolaD">哆啦D夢|DuolaD的GitHub個人主頁</a><br>
+		<a href="https://github.com/LynetteNotFound">琳尼特|LynetteNotFound的GitHub個人主頁</a><br>
+		<br>
+		<a>注意:哆啦D夢|DuolaD的其它個人主頁連結見上;</a><br>
+		<a>琳尼特|LynetteNotFound沒有公開聯係方式</a>
             </td>
-        </tr>
+	</tr>
         <tr>
             <td>
                 <h3>阿向菌|AXBro</h3>
