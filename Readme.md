@@ -152,10 +152,10 @@ Thank you to all the collaborators for their dedication to the project!
             </td>
 	    <td>
                 <a href="https://github.com/DuolaDStudio">Organizations GitHub Pages</a><br>
-		<a href="https://github.com/DuolaD">DuolaD GitHub Personal Pages</a><br>
-		<a href="https://github.com/LynetteNotFound">LynetteNotFound GitHub Personal Pages</a><br>
+		<a href="https://github.com/DuolaD">哆啦D夢|DuolaD's GitHub Personal Pages</a><br>
+		<a href="https://github.com/LynetteNotFound">琳尼特|LynetteNotFound's GitHub Personal Pages</a><br>
 		<br>
-		<a>Note:DuolaD's Links to other profiles pages are listed above</a><br>
+		<a>Note:DuolaD's Links to other profiles pages are listed above;</a><br>
 		<a>LynetteNotFound does not publish her contact information</a>
             </td>
 	</tr>
