@@ -139,16 +139,26 @@ Thank you to all the collaborators for their dedication to the project!
     <table>
         <tr>
             <td>
-                <h3>哆啦D夢|DuolaD</h3>
-                <a href="https://github.com/DuolaD">
-                    <img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD">
+                <h3>DuolaDStudio Hong Kong Ltd.</h3>
+                <a href="https://github.com/DuolaDStudio">
+                    <img src="https://avatars.githubusercontent.com/u/152937804?s=200&v=4" width="70" style="border-radius: 50%" alt="DuolaDStudio Hong Kong Ltd.">
+                </a>
+		<h3>With:</h3>
+		<h5>哆啦D夢|DuolaD & 琳尼特|LynetteNotFound</h5>
+		<a href="https://github.com/DuolaD"><img src="https://avatars.githubusercontent.com/u/110040721?v=4" width="70" style="border-radius: 50%" alt="DuolaD"></img></a>
+		<a href="https://github.com/LynetteNotFound">
+                    <img src="https://avatars.githubusercontent.com/u/159673876?v=4" width="70" style="border-radius: 50%" alt="LynetteNotFound">
                 </a>
             </td>
-            <td>
-                <a href="https://github.com/DuolaD">GitHub Personal Pages</a><br>
-		<a>Links to other profiles pages are listed above</a><br>
+	    <td>
+                <a href="https://github.com/DuolaDStudio">Organizations GitHub Pages</a><br>
+		<a href="https://github.com/DuolaD">DuolaD GitHub Personal Pages</a><br>
+		<a href="https://github.com/LynetteNotFound">LynetteNotFound GitHub Personal Pages</a><br>
+		<br>
+		<a>Note:DuolaD's Links to other profiles pages are listed above</a><br>
+		<a>LynetteNotFound does not publish her contact information</a>
             </td>
-        </tr>
+	</tr>
         <tr>
             <td>
                 <h3>阿向菌|AXBro</h3>
