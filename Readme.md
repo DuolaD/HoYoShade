@@ -155,9 +155,19 @@ New:(Still waiting for the GUI to be built completely.)
 </div>
 
 <div id="images">
-  <img src="Readme.md-image/AXBro-1.jpg" alt="Screenshot1">
-  <img src="Readme.md-image/AXBro-2.jpg" alt="Screenshot2">
-  <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
+  <img src="Readme.md-image/AXBro-1.jpg" alt="AXBro-Screenshot1">
+  <img src="Readme.md-image/AXBro-2.jpg" alt="AXBro-Screenshot2">
+  <img src="Readme.md-image/AXBro-3.jpg" alt="AXBro-Screenshot3">
+</div>
+
+<div align="center">
+  <h1 class="header">Shot by HoYoShade Users</h1>
+</div>
+
+<div id="images">
+  <img src="Readme.md-image/ScreenShot1.png" alt="Screenshot1">
+  <img src="Readme.md-image/ScreenShot2.jpg" alt="Screenshot2">
+  <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
 </div>
 
 ## 〢 Donate
