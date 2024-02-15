@@ -5,7 +5,7 @@
   </h3>
 </div>
 
-  ![Compressed](Readme.md-image/compressed-with-watermark.jpg)
+  ![Compressed](Readme.md-image/compressed.jpg)
 
 [EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
