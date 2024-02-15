@@ -34,11 +34,11 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 ## 〢 Information
 
 > [!Warning]
-> The Genshin Impact game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
+> The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
 and consequently, your account is more likely to be banned or face other serious consequences. 
 No mod or cheat can guarantee the absolute safety of your game account. 
 Although HoYoShade can run on the official servers of HoYoVerse games,
-it does not guarantee the absolute safety of your game account.
+it does not guarantee the absolute safety of your game account.If you are worried that your game account will be banned, please consider setting up a private server.
 
 > [!Warning]
 > Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
