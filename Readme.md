@@ -71,7 +71,7 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 
 *1:Do not open the ReShade control panel before the game success login account.  
 *2:HoYoShade Injector does not support those game path checks.  
-*3:Developed, Support will be provided one week before the public beta.
+*3:Developed, Inject Support will be provided one week before the public beta.
 
 ## 〢 Sources
 
