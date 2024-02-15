@@ -12,7 +12,7 @@
 ## 〢 Directory
 
 - [Introduction](#〢-Introduction)
-- [Information](#〢-Information)
+- [Pre-Warning](#〢-Pre-Warning)
 - [Support games list](#〢-Support-games-list)
 - [Sources](#〢-Sources)
 - [OpenHoYoShade and HoYoShade](#〢-OpenHoYoShade-and-HoYoShade)
@@ -31,7 +31,7 @@ The working principle of Reshade is to intercept communication between the CPU a
 
 Please refer to the [Contributors Page](#〢-Contributors) for information about contributors to this repository.
 
-## 〢 Information
+## 〢 Pre-Warning
 
 > [!Warning]
 > The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
