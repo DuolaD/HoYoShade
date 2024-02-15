@@ -14,7 +14,7 @@
 - [Introduction](#〢-Introduction)
 - [Information](#〢-Information)  
 - [Sources](#〢-Sources)
-- [How to install?](#〢-How-to-install?)
+- [How to install?](#〢-How-to-install)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
 - [Donate](#〢-Donate)
@@ -55,7 +55,7 @@ it does not guarantee the absolute safety of your game account.
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
 | **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View Patreon Page](https://www.patreon.com/mcflypg/posts) |
 
-## 〢 How to install?
+## 〢 How to install
 
 Old:
 Download this mod on [release page.](https://github.com/DuolaD/HoYoShade/releases/)  
