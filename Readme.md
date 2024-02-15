@@ -12,8 +12,10 @@
 ## 〢 Directory
 
 - [Introduction](#〢-Introduction)
-- [Information](#〢-Information)  
+- [Information](#〢-Information)
+- [Support games list](#〢-Support-games-list)
 - [Sources](#〢-Sources)
+- [OpenHoYoShade and HoYoShade](#〢-OpenHoYoShade-and-HoYoShade)
 - [How to install?](#〢-How-to-install)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
@@ -47,6 +49,33 @@ it does not guarantee the absolute safety of your game account.
 > [!NOTE]
 > Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
 
+## 〢 Support games list
+
+> [!NOTE]
+> For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.
+
+|  | Tested | Support | Version restrictions |
+| --- | --- | --- | --- |
+| **Genshin Impact/YuanShen(CN Server)** | Yes | Yes | Unlimited |
+| **Genshin Impact/YuanShen(BiliBili Server)** | Yes | Yes*1 | Unlimited |
+| **Genshin Impact/YuanShen(Global Server)** | Yes | Yes | Unlimited |
+| **Genshin Impact/YuanShen(Epic Version)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(CN Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(CN Steam Server)** | Yes | Yes*2 | Unlimited |
+| **Honkai Impact 3rd/BH3(Traditional Chinese Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(KR Server)** | Yes | Yes*2 | Unlimited |
+| **Honkai Impact 3rd/BH3(JP Steam Server)** | Yes | Yes*2 | Unlimited |
+| **Honkai Impact 3rd/BH3(SEA Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(Europe & Americas Servers)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail(CN Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail(Global Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail(Epic Version)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero(CN/OS 1st/2rd CBT)** | Yes | Yes*3 | Unlimited |
+
+*1:Do not open Reshade control panel before game success login account.  
+*2:HoYoShade Injector not support game path check.  
+*3:Support will be available one week before public.  
+
 ## 〢 Sources
 
 | Name | information | URL address |
@@ -54,6 +83,35 @@ it does not guarantee the absolute safety of your game account.
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
 | **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View Patreon Page](https://www.patreon.com/mcflypg/posts) |
+
+## 〢 OpenHoYoShade and HoYoShade
+
+Since we publish V2.012.2 Stable,we start publish OpenHoYoShade with HoYoShade.  
+
+OpenHoYoShade is the underlying basic framework of HoYoShade, which covers all the necessary files to inject ReShade into all miHoYo/HoYoverse games.  
+OpenHoYoShade storage footprint is smaller than HoYoShade,  
+However, OpenHoYoShade does not have a built-in ReShade effect library, presets, etc., which is suitable for secondary developers who want to redevelop HoYoShade. 
+
+If you just want to use reshade in the MiHoYo/HoYoVerse games, download HoYoShade.  
+If you want to develop your own reshade and hope it can work in the MiHoYo/HoYoVerse games, but you don't want to learn some peace of shit——  
+then,check OpenHoYoShade.  
+
+The only thing you need to do to make OpenHoYoShade work quickly is to put the effect library and presets in their respective places.  
+But if you want, you can develop more, such as injector,Reshade.ini Builder, etc. even Redistribution!(Long live open source!)  
+(By the way......make sure you comply with BSD-3 license when you Redistribution)
+
+also,If you want to get the old version of the injector/more information, click on the 'Code' button in the GitHub repository and select 'Download Zip'.  
+
+If you still can't understand what are the different between OpenHoYoShade and HoYoShade,then check the graph:  
+
+|  | OpenHoYoShade | HoYoShade |
+| --- | --- | --- |
+| **ReShade** | Yes | Yes |
+| **All the necessary files to inject ReShade into all miHoYo/HoYoverse games** | Yes | Yes |
+| **Program source code** | Yes | No |
+| **Reshade effect library(Contains Addons)** | No(Need to prepare yourself) | Yes |
+| **Presets** | No(Need to prepare yourself) | Yes |
+| **Who needs them?** | Secondary developer | Gamer |
 
 ## 〢 How to install
 
