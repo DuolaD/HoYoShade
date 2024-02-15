@@ -70,7 +70,7 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | **Honkai: Star Rail(CN Server)** | Yes | Yes | Unlimited |
 | **Honkai: Star Rail(Global Server)** | Yes | Yes | Unlimited |
 | **Honkai: Star Rail(Epic Version)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero(CN/OS 1st/2rd CBT)** | Yes | Yes*3 | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 1st/2rd CBT)** | Yes | Yes*3 | Unlimited |
 
 *1:Do not open Reshade control panel before game success login account.  
 *2:HoYoShade Injector not support game path check.  
