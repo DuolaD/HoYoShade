@@ -12,9 +12,11 @@
 ## 〢 目录
 
 - [介绍](#〢-介绍)
-- [警告](#〢-警告)  
+- [警告](#〢-警告)
+- [支持游戏列表](#〢-支持游戏列表)
 - [来源](#〢-来源)
-- [如何安装?](#〢-如何安装?)
+- [OpenHoYoShade和HoYoShade](#〢-OpenHoYoShade和HoYoShade)
+- [如何安装?](#〢-如何安装)
 - [推荐游戏图像设置](#〢-推荐游戏图像设置)
 - [截图展示](#〢-截图展示)
 - [赞助](#〢-赞助)
@@ -43,6 +45,33 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 > [!NOTE]
 > 如果你在官方服务器的米哈游游戏上运行HoYoShade，那么对于可能会发生的任何后果，HoYoShade仓库的所有贡献者及其所有基于HoYoShade二次开发的贡献者均不会承担任何责任。
 
+## 〢 支持游戏列表
+
+> [!NOTE]
+> 对于私服玩家来说，如果私服需要的对应客户端出现在支持的游戏列表中，则说明HoYoShade可以提供支持。
+
+|  | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
+| --- | --- | --- | --- |
+| **原神/YuanShen/Genshin Impact(中国大陆服客户端/天空岛客户端)** | 是 | 是 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(哔哩哔哩服客户端/世界树客户端)** | 是 | 是*1 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(国际服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(Epic客户端版本)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(中国大陆服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(中国大陆Steam服客户端)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(繁中服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(韩国服客户端)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(日本Steam服客户端)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(东南亚服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(欧美服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(中国大陆服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(国际服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(Epic客户端版本)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/第二次公测前内测客户端)** | 是 | 是*3 | 无游戏版本限制 |
+
+*1:请勿在游戏成功登录账号之前打开ReShade控制台  
+*2:HoYoShade注入器并不支持该客户端的游戏进程路径检测  
+*3:将会在公测前一周提供支持 
+
 ## 〢 来源
 
 | 名字 | 介绍 | 网址 |
@@ -51,7 +80,34 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 | **Crosire的ReShade注入器** | 这只是一个注入器 | [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
 | **全部来自Pascal Gilcher的付费ReShade效果库** | 免费提供在所有HoYoShade V2.X.X版本(无论是否赞助) | [查看他的Patreon页面](https://www.patreon.com/mcflypg/posts) |
 
-## 〢 如何安装?
+## 〢 OpenHoYoShade和HoYoShade
+
+我们自发行V2.012.2 Stable版本开始，会随着HoYoShade版本更新一并发布OpenHoYoShade。  
+
+OpenHoYoShade为HoYoShade底层基本框架，它涵盖了使ReShade注入至全系米哈游旗下游戏的所有必要文件。  
+OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReShade效果库，预设等，适用于想对HoYoShade进行二次开发的二次开发者。  
+
+如果你只是想在MiHoYo/HoYoVerse游戏下使用ReShade，请下载HoYoShade。  
+如果你想要开发一个可以在MiHoYo/HoYoVerse游戏下使用的ReShade，但是你又不想学习过多的东西，那么你可以选择下载OpenHoYoShade。  
+
+要使 OpenHoYoShade 快速工作，您唯一需要做的就是将效果库和预设放在各自正确的位置。  
+但如果你愿意，你可以进行进一步的开发，比如注入器、Reshade.ini构建器等等等等，甚至重新发行！（开源万岁！)  
+(哦对了......在你重新发行文件时，确保你重新发行的文件遵守了BSD-3开源协议)  
+
+当然了,如果你想要获得旧版注入程序/更多信息，请在GitHub仓库中点击‘Code’按钮，然后选择‘Download Zip’。  
+
+如果你还是不明白OpenHoYoShade和HoYoShade之间有什么不同，那么以下的图表也许可以很好的帮助你说明：
+
+|  | OpenHoYoShade | HoYoShade |
+| --- | --- | --- |
+| **ReShade** | 有 | 有 |
+| **使ReShade注入至全系米哈游旗下游戏的所有必要文件** | 有 | 有 |
+| **程序源代码** | 有 | 没有 |
+| **Reshade的效果库(包括插件)** | 没有(你需要自行准备) | 有 |
+| **预设** | 没有(你需要自行准备) | 有 |
+| **谁会需要他们？** | 二次开发者 | 普通游戏玩家 |
+
+## 〢 如何安装
 
 旧版本:
 从[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases/) 下载最新版本的HoYoShade.  
