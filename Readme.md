@@ -34,27 +34,24 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 ## 〢 Pre-Warning
 
 > [!Warning]
-> The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
+> ·The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
 and consequently, your account is more likely to be banned or face other serious consequences. 
 No mod or cheat can guarantee the absolute safety of your game account. 
 Although HoYoShade can run on the official servers of HoYoVerse games,
-it does not guarantee the absolute safety of your game account.If you are worried that your game account will be banned, please consider setting up a private server.
-
-> [!Warning]
-> Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
+it does not guarantee the absolute safety of your game account.If you are worried that your game account will be banned, please consider setting up a private server.  
+> ·Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
 
 > [!NOTE]
-> In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.
-
-> [!NOTE]
-> Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
+> ·In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.  
+> ·Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
 
 ## 〢 Support games list
 
 > [!NOTE]
-> For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.
+> ·For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.  
+> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.
 
-|  | Tested | Support | Version restrictions |
+| Client | Tested | Support | Game Version restrictions |
 | --- | --- | --- | --- |
 | **Genshin Impact/YuanShen(CN Server)** | Yes | Yes | Unlimited |
 | **Genshin Impact/YuanShen(BiliBili Server)** | Yes | Yes*1 | Unlimited |
@@ -72,9 +69,9 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | **Honkai: Star Rail(Epic Version)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 1st/2rd CBT)** | Yes | Yes*3 | Unlimited |
 
-*1:Do not open Reshade control panel before game success login account.  
-*2:HoYoShade Injector not support game path check.  
-*3:Support will be available one week before public.  
+*1:Do not open the ReShade control panel before the game success login account.  
+*2:HoYoShade Injector does not support those game path checks.  
+*3:Support will be provided one week before the public beta.
 
 ## 〢 Sources
 
@@ -125,10 +122,8 @@ New:(Still waiting for the GUI to be built completely.)
 ## 〢 Recommended Graphics settings for game
 
 > [!NOTE]
-> The recommended graphics settings here are based on Genshin Impact as a reference. You can use these recommended graphics settings to modify the graphics settings of other HoYoVerse games, or you can also choose to customize the graphics settings yourself.
-
-> [!NOTE]
-> If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade and FPS unlock.
+> ·The recommended graphics settings here are based on Genshin Impact as a reference. You can use these recommended graphics settings to modify the graphics settings of other HoYoVerse games, or you can also choose to customize the graphics settings yourself.  
+> ·If your graphics card performance is lower than the NVIDIA GTX series level, then it is not recommended for you to use HoYoShade and FPS unlock.
 
 | Settings| A graphics card with lower performance than the NVIDIA GTX series | The NVIDIA GTX series or other graphics cards of the same level | The NVIDIA RTX series or other graphics cards of the same level |
 | --------------------------- | --------------------------------- |------------------------------------ |:------------------------------------ |
@@ -152,7 +147,7 @@ New:(Still waiting for the GUI to be built completely.)
 | **Anisotropic Filtering** | 16x | 16x | 16x |
 
 > [!Warning]
-> Do not change FPS settings in the game if you are using FPS unlock.
+> Please note that in general, most FPS unlockers will ask you not to change the FPS settings in the game while using the FPS unlocker.
 
 ## 〢 Screenshots
 <div align="center">
@@ -177,10 +172,8 @@ The amount of sponsorship is up to you.
 ## 〢 Contant Me  
 
 > [!NOTE]
-> If you are located in mainland China, certain contact methods may not be available. Contact methods marked with an asterisk at the end '*' can ensure availability in mainland China and receive a quicker response and support.
-
-> [!NOTE]
-> If you have any questions while using this mod, please create an issue in this repository first.
+> ·If you are located in mainland China, certain contact methods may not be available. Contact methods marked with an asterisk at the end '*' can ensure availability in mainland China and receive a quicker response and support.  
+> ·If you have any questions while using this mod, please create an issue in this repository first.
 
  **Click the button to contact me:**
 
