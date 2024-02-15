@@ -47,23 +47,23 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 > ·对于私服玩家来说，如果私服需要的对应客户端出现在支持的游戏列表中，则说明HoYoShade可以提供支持。  
 > ·对于并未出现在支持游戏列表中的游戏，你可以自行尝试选择使用注入器中已支持的游戏/在开发者选项中选择自定义注入来尝试注入HoYoShade。
 
-|  | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
+| 客户端 | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
 | --- | --- | --- | --- |
-| **原神/YuanShen/Genshin Impact(中国大陆服客户端/天空岛客户端)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(哔哩哔哩服客户端/世界树客户端)** | 是 | 是*1 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(国际服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(Epic客户端版本)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(中国大陆服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(中国大陆Steam服客户端)** | 是 | 是*2 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(繁中服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(韩国服客户端)** | 是 | 是*2 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(日本Steam服客户端)** | 是 | 是*2 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(东南亚服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(欧美服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/Honkai: Star Rail(中国大陆服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/Honkai: Star Rail(国际服客户端)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/Honkai: Star Rail(Epic客户端版本)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/第二次公测前内测客户端)** | 是 | 是*3 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(中国大陆服/天空岛)** | 是 | 是 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(哔哩哔哩服/世界树)** | 是 | 是*1 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(国际服)** | 是 | 是 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(Epic版本)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(中国大陆Steam服)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(繁中服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(韩国服)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(日本Steam服)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(东南亚服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(欧美服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(国际服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(Epic版本)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/第二次公测前内测)** | 是 | 是*3 | 无游戏版本限制 |
 
 *1:请勿在游戏成功登录账号之前打开ReShade控制台  
 *2:HoYoShade注入器并不支持该客户端的游戏进程路径检测  
