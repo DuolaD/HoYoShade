@@ -153,6 +153,16 @@ New:(等待GUI開發完成)
   <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
 </div>
 
+<div align="center">
+  <h1 class="header">由HoYoShade用戶拍攝</h1>
+</div>
+
+<div id="images">
+  <img src="Readme.md-image/ScreenShot1.png" alt="Screenshot1">
+  <img src="Readme.md-image/ScreenShot2.jpg" alt="Screenshot2">
+  <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
+</div>
+
 ## 〢 贊助
 **點擊對應按鈕來贊助HoYoShade**  
 贊助的金額由你自行設定。
