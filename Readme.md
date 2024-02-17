@@ -9,6 +9,9 @@
 
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
 
+> [!NOTE]
+> Due to receiving a DMCA warning, HoYoShade will temporarily remove all Releases.
+
 ## 〢 Directory
 
 - [Introduction](#〢-Introduction)
