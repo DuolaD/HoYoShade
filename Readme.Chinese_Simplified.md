@@ -79,7 +79,6 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 | --- | --- | --- |
 | **ReShade官方** | HoYoShade会保证最新发行版中的ReShade总是和ReShade最新版本保持一致 | [官方仓库](https://github.com/crosire/reshade),[官方网站](https://reshade.me/) |
 | **Crosire的ReShade注入器** | 这只是一个注入器 | [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **全部来自Pascal Gilcher的付费ReShade效果库** | 免费提供在所有HoYoShade V2.X.X版本(无论是否赞助) | [查看他的Patreon页面](https://www.patreon.com/mcflypg/posts) |
 
 ## 〢 OpenHoYoShade和HoYoShade
 
