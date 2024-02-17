@@ -9,6 +9,9 @@
 
 [EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
+> [!NOTE]
+> 由於收到了DMCA警告，HoYoShade將會暫時移除所有Release。(OpenHoYoShade不受影響)
+
 ## 〢 目錄
 
 - [介紹](#〢-介紹)
