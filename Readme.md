@@ -82,7 +82,6 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **All Paid ReShade-Shaders by Pascal Gilcher** | Available for all HoYoShade V2.X.X Version for free | [View Patreon Page](https://www.patreon.com/mcflypg/posts) |
 
 ## 〢 OpenHoYoShade and HoYoShade
 
