@@ -10,7 +10,7 @@
 [EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
 > [!NOTE]
-> 由於收到了DMCA警告，HoYoShade將會暫時移除所有Release。(OpenHoYoShade不受影響)
+> 由於HoYoShade收到了DMCA警告，你無法再從Release介面下載低於V2.013.0 Stable版本的HoYoShade。  
 
 ## 〢 目錄
 
@@ -22,6 +22,7 @@
 - [如何安裝?](#〢-如何安裝)
 - [推薦遊戲畫面設置](#〢-推薦遊戲畫面設置)
 - [截圖展示](#〢-截圖展示)
+- [關於DMCA](#〢-關於DMCA)
 - [贊助](#〢-贊助)
 - [聯繫我](#〢-聯繫我)
 - [貢獻者](#〢-貢獻者)
@@ -164,6 +165,17 @@ New:(等待GUI開發完成)
   <img src="Readme.md-image/ScreenShot2.jpg" alt="Screenshot2">
   <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
 </div>
+
+> [!NOTE]
+> 截圖展示所使用的預設/效果庫可能經過了使用者自行新增/編輯。
+
+## 〢 關於DMCA
+由於HoYoShade收到了DMCA警告，你無法再從Release介面下載低於V2.013.0 Stable版本的HoYoShade。  
+
+不受到影響的內容有：  
+V1.0.0 Stable  
+OpenHoYoShade[All]  
+2.012.1_2.012.2_hdiff.zip  
 
 ## 〢 贊助
 **點擊對應按鈕來贊助HoYoShade**  
