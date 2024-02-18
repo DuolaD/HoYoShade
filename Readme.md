@@ -22,6 +22,7 @@
 - [How to install?](#〢-How-to-install)
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
+- [About DMCA](#〢-About-DMCA)
 - [Donate](#〢-Donate)
 - [Contant Me](#〢-Contant-Me)
 - [Contributors](#〢-Contributors)
@@ -171,6 +172,14 @@ New:(Still waiting for the GUI to be built completely.)
   <img src="Readme.md-image/ScreenShot2.jpg" alt="Screenshot2">
   <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
 </div>
+
+## 〢 About DMCA
+Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.
+
+Unaffected are:  
+V1.0.0 Stable  
+OpenHoYoShade[All]  
+2.012.1_2.012.2_hdiff.zip  
 
 ## 〢 Donate
 
