@@ -10,7 +10,7 @@
 [EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
 > [!NOTE]
-> 由於HoYoShade收到了DMCA警告，你無法再從Release介面下載低於V2.013.0 Stable版本的HoYoShade。  
+> 由於HoYoShade收到了DMCA警告，你無法再從Release介面下載低於V2.013.0 Stable版本的HoYoShade。有關詳細情況，請查看[關於DMCA](#〢-關於DMCA)介面
 
 ## 〢 目錄
 
