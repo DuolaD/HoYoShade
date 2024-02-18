@@ -173,6 +173,9 @@ New:(Still waiting for the GUI to be built completely.)
   <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
 </div>
 
+> [!NOTE]
+> The presets/effect libraries shown in the screenshots may have been added/edited by the users themselves.
+
 ## 〢 About DMCA
 Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.
 
