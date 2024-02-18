@@ -10,7 +10,7 @@
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
 
 > [!NOTE]
-> Due to receiving a DMCA warning, HoYoShade will temporarily remove all Releases.(OpenHoYoShade is not affected)
+> Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.
 
 ## 〢 Directory
 
