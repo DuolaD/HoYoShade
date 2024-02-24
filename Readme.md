@@ -83,7 +83,7 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | For Updater to download Version Note and package. | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
+| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages. | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade and HoYoShade
 
