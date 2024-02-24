@@ -79,6 +79,7 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 | --- | --- | --- |
 | **ReShade官方** | HoYoShade會保證最新發行版中的ReShade總是和ReShade最新版本保持一致 | [官方倉庫](https://github.com/crosire/reshade),[官方網站](https://reshade.me/) |
 | **Crosire的ReShade注入器** | 這只是一個注入器 | [前往ReShade官方倉庫查看源碼](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
+| **Aria2** | 用於非強製版本檢測器下載版本信息和最新Mod包 | [官方倉庫](https://github.com/aria2/aria2),[官方網站](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade和HoYoShade
 
