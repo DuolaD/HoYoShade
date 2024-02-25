@@ -23,6 +23,7 @@
 - [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
 - [Screenshots](#〢-Screenshots)
 - [About DMCA](#〢-About-DMCA)
+- [Thanks](#〢-Thanks)
 - [Donate](#〢-Donate)
 - [Contant Me](#〢-Contant-Me)
 - [Contributors](#〢-Contributors)
@@ -175,7 +176,7 @@ New:(Still waiting for the GUI to be built completely.)
 </div>
 
 > [!NOTE]
-> The presets/effect libraries shown in the screenshots may have been added/edited by the users themselves.
+> The presets/effect libraries shown in the screenshots may have been added/edited by the users.
 
 ## 〢 About DMCA
 Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.
@@ -184,6 +185,13 @@ Unaffected are:
 V1.0.0 Stable  
 OpenHoYoShade[All]  
 2.012.1_2.012.2_hdiff.zip  
+
+## 〢 Thanks
+Thank you for the support of the following partners.
+| Name | information | URL address |
+| --- | --- | --- |
+| **CY Team** | HoYoShade partner/Microsoft Enterprise Storage Plan provides/dynamic links into static links solution provide | [Official Website](https://www.cyteam.cn/) |
+| **Cloudflare, Inc.** | Domain hosting and management. | [Official Website](https://www.cloudflare.com/) |
 
 ## 〢 Donate
 
