@@ -10,6 +10,9 @@
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
 
 > [!NOTE]
+> The translation is not 100% accurate, as it is primarily based on OpenAI-GPT4T, Google Translate, and my proofreading. However, even so, the final result may still have some issues. If you find any problems or believe that there is an issue, please submit issues to help improve HoYoShade.  
+
+> [!NOTE]
 > Are you looking for an old version?we are developing [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) repo.Which when it done,you can download all old releases without all DMCA content. Sound good?
 
 > [!NOTE]
