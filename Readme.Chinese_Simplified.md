@@ -10,6 +10,9 @@
 [EN](Readme.md)|**简体中文**|[繁體中文](Readme.Chinese_Traditional.md)  
 
 > [!NOTE]
+> 翻译并非100%准确，翻译工作主要基于OpenAI-GPT4T，谷歌翻译和本人的校对组成。 但即使如此，最终成品也难免会产生一定的问题。 如果你发现或者你认为这是一个问题，请提交issues以帮助HoYoShade改进。  
+
+> [!NOTE]
 > 正在寻找旧版本吗？我们正在开发 [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) 仓库。完成后，您可以下载所有旧版本的Release，听起来不错？当然，重新发行的内容肯定会移除全部受到DMCA警告的内容的。  
 
 > [!NOTE]
