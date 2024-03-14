@@ -20,19 +20,19 @@
 
 ## 〢 Directory
 
-- [Introduction](#〢-Introduction)
-- [Pre-Warning](#〢-Pre-Warning)
-- [Support games list](#〢-Support-games-list)
-- [Sources](#〢-Sources)
-- [OpenHoYoShade and HoYoShade](#〢-OpenHoYoShade-and-HoYoShade)
-- [How to install?](#〢-How-to-install)
-- [Recommended Graphics settings for game](#〢-Recommended-Graphics-settings-for-game)
-- [Screenshots](#〢-Screenshots)
-- [About DMCA](#〢-About-DMCA)
-- [Thanks](#〢-Thanks)
-- [Donate](#〢-Donate)
-- [Contant Me](#〢-Contant-Me)
-- [Contributors](#〢-Contributors)
+- [**Introduction**](#〢-Introduction)
+- [**Pre-Warning**](#〢-Pre-Warning)
+- [**Support games list**](#〢-Support-games-list)
+- [**Sources**](#〢-Sources)
+- [**OpenHoYoShade and HoYoShade**](#〢-OpenHoYoShade-and-HoYoShade)
+- [**How to install?**](#〢-How-to-install)
+- [**Recommended Graphics settings for game**](#〢-Recommended-Graphics-settings-for-game)
+- [**Screenshots**](#〢-Screenshots)
+- [**About DMCA**](#〢-About-DMCA)
+- [**Thanks**](#〢-Thanks)
+- [**Donate**](#〢-Donate)
+- [**Contant Me**](#〢-Contant-Me)
+- [**Contributors**](#〢-Contributors)
 
 ## 〢 Introduction
 
