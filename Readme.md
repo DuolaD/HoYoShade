@@ -79,7 +79,8 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | **Honkai: Star Rail(Global Server)** | Yes | Yes | Unlimited |
 | **Honkai: Star Rail(Epic Version)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 1st/2rd CBT)(0.10,0.20)** | Yes | Yes*3 | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN Only 3rd CBT)(0.31)** | Yes | Yes*3 | - |
+| **Zenless Zone Zero/ZZZ(CN Only 3rd CBT)(0.3X)** | Yes | Yes*3 | - |
+| **Zenless Zone Zero/ZZZ(CN/OS 4th CBT)(0.3X)** | Yes | Yes*3 | - |
 
 *1:Do not open the ReShade control panel before the game success login account.  
 *2:HoYoShade Injector does not support those game path checks.  
@@ -205,7 +206,7 @@ Thank you for the support of the following partners.
  **Click the button to contact me,**  
 The amount of sponsorship is up to you.  
 
-<div align="center"><p><span ><a href="https://patreon.com/DuolaD"><img src="https://img.shields.io/badge/Patreon-000000.svg?logo=patreon" /></a> <a href="https://afdian.net/a/DuolaD"><img src="https://img.shields.io/badge/Afdian-a47ef7.svg?logo=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzcwN//AABEIACAAIAMBIgACEQEDEQH/xAAZAAEBAAMBAAAAAAAAAAAAAAAFBAEDBgD/xAAqEAACAQIFAQcFAAAAAAAAAAABAgMABAUREiExcRMUIjJBYcEGQlGx8P/EABYBAQEBAAAAAAAAAAAAAAAAAAEDBv/EABsRAAMAAgMAAAAAAAAAAAAAAAABAhEhAxJB/9oADAMBAAIRAxEAPwBq2hnunKW8TyMNzpHHWsXMU1rM0NwhSReVPpW7CMYbDw6ZNodg2pMtSkexBB/uKVVJbq2a+hntEhJOclzZRrv1ANaKuSpra0Wyc/rr2uq5sQt2mMc0MNxDx2scIhfqMvmpb6Hu0oCv2kTqHjfLLUp+eR1FUVZ00IfrpbGXdFjjRD3HSptmU+Hjc+7fnPegtdUWuI3VoCLa4kjVvMoOx6jg01LbTQm2GJ7iSOK1V5ZXG6heDn+sst6U+oY7SGO1S0ukl7FTEUVg33Fs8x7sfQcUVNjF9NGYnuXEbeZE8IPUDmo9dHWnSb8DB//Z" /></a> <a href="https://www.paypal.com/paypalme/Dmou114514233"><img src="https://img.shields.io/badge/PayPal-003087.svg?logo=paypal" /></a> <a href="Readme.md-image/WechatDonateCode.JPG"><img src="https://img.shields.io/badge/Wechat_Pay-07C160.svg?logo=wechat&logoColor=white" /></a> <a href="Readme.md-image/AirPayDonateCode.png"><img src="https://img.shields.io/badge/Alipay-1677FF.svg?logo=alipay&logoColor=white" /> </span></p></a></div>
+<div align="center"><p><span ><a href="https://www.paypal.com/paypalme/Dmou114514233"><img src="https://img.shields.io/badge/PayPal-003087.svg?logo=paypal" /></a> <a href="Readme.md-image/WechatDonateCode.JPG"><img src="https://img.shields.io/badge/Wechat_Pay-07C160.svg?logo=wechat&logoColor=white" /></a> <a href="Readme.md-image/AirPayDonateCode.png"><img src="https://img.shields.io/badge/Alipay-1677FF.svg?logo=alipay&logoColor=white" /> </span></p></a></div>
 
 
 
