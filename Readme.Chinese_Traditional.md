@@ -75,7 +75,8 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 | **崩壞:星穹鐵道/Honkai: Star Rail(國際服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞:星穹鐵道/Honkai: Star Rail(Epic版本)** | 是 | 是 | 無遊戲版本限制 |
 | **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第一次/第二次公測前內測)(0.10,0.20)** | 是 | 是*3 | 無遊戲版本限制 |
-| **絕區零/ZZZ/Zenless Zone Zero(中國大陸獨佔 第三次公測前內測)(0.31)** | 是 | 是*3 | - |
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸獨佔 第三次公測前內測)(0.3X)** | 是 | 是*3 | - |
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第四次公測前內測)(0.3X)** | 是 | 是*3 | - |
 
 *1:請勿在遊戲成功登入帳號前開啟ReShade控制台  
 *2:HoYoShade注入器並不支援該客戶端的遊戲進程路徑偵測  
@@ -197,7 +198,7 @@ OpenHoYoShade[All]
 **點擊對應按鈕來贊助HoYoShade**  
 贊助的金額由你自行設定。
 
-<div align="center"><p><span ><a href="https://patreon.com/DuolaD"><img src="https://img.shields.io/badge/Patreon-000000.svg?logo=patreon" /></a> <a href="https://afdian.net/a/DuolaD"><img src="https://img.shields.io/badge/愛發電-a47ef7.svg?logo=data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3NzcwN//AABEIACAAIAMBIgACEQEDEQH/xAAZAAEBAAMBAAAAAAAAAAAAAAAFBAEDBgD/xAAqEAACAQIFAQcFAAAAAAAAAAABAgMABAUREiExcRMUIjJBYcEGQlGx8P/EABYBAQEBAAAAAAAAAAAAAAAAAAEDBv/EABsRAAMAAgMAAAAAAAAAAAAAAAABAhEhAxJB/9oADAMBAAIRAxEAPwBq2hnunKW8TyMNzpHHWsXMU1rM0NwhSReVPpW7CMYbDw6ZNodg2pMtSkexBB/uKVVJbq2a+hntEhJOclzZRrv1ANaKuSpra0Wyc/rr2uq5sQt2mMc0MNxDx2scIhfqMvmpb6Hu0oCv2kTqHjfLLUp+eR1FUVZ00IfrpbGXdFjjRD3HSptmU+Hjc+7fnPegtdUWuI3VoCLa4kjVvMoOx6jg01LbTQm2GJ7iSOK1V5ZXG6heDn+sst6U+oY7SGO1S0ukl7FTEUVg33Fs8x7sfQcUVNjF9NGYnuXEbeZE8IPUDmo9dHWnSb8DB//Z" /></a> <a href="https://www.paypal.com/paypalme/Dmou114514233"><img src="https://img.shields.io/badge/PayPal-003087.svg?logo=paypal" /></a> <a href="Readme.md-image/WechatDonateCode.JPG"><img src="https://img.shields.io/badge/微信支付-07C160.svg?logo=wechat&logoColor=white" /></a> <a href="Readme.md-image/AirPayDonateCode.png"><img src="https://img.shields.io/badge/支付寶-1677FF.svg?logo=alipay&logoColor=white" /> </span></p></a></div>
+<div align="center"><p><span ><a href="https://www.paypal.com/paypalme/Dmou114514233"><img src="https://img.shields.io/badge/PayPal-003087.svg?logo=paypal" /></a> <a href="Readme.md-image/WechatDonateCode.JPG"><img src="https://img.shields.io/badge/微信支付-07C160.svg?logo=wechat&logoColor=white" /></a> <a href="Readme.md-image/AirPayDonateCode.png"><img src="https://img.shields.io/badge/支付寶-1677FF.svg?logo=alipay&logoColor=white" /> </span></p></a></div>
 
 ## 〢 聯繫我
 
