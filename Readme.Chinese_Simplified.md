@@ -65,25 +65,24 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 | 客户端 | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
 | --- | --- | --- | --- |
 | **原神/YuanShen/Genshin Impact(中国大陆服/天空岛)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(哔哩哔哩服/世界树)** | 是 | 是*1 | 无游戏版本限制 |
+| **原神/YuanShen/Genshin Impact(哔哩哔哩服/世界树)** | 是 | 是 | 无游戏版本限制 |
 | **原神/YuanShen/Genshin Impact(国际服)** | 是 | 是 | 无游戏版本限制 |
 | **原神/YuanShen/Genshin Impact(Epic版本)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(中国大陆Steam服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(繁中服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(韩国服)** | 是 | 是*2 | 无游戏版本限制 |
+| **崩坏3/BH3/Honkai Impact 3rd(韩国服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(日本Steam服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(东南亚服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏3/BH3/Honkai Impact 3rd(欧美服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏:星穹铁道/Honkai: Star Rail(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道/Honkai: Star Rail(哔哩哔哩服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏:星穹铁道/Honkai: Star Rail(国际服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏:星穹铁道/Honkai: Star Rail(Epic版本)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/第二次公测前内测)(0.10,0.20)** | 是 | 是*2 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆独占 第三次公测前内测)(0.3X)** | 是 | 是*2 | - |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第四次公测前内测)(0.3X)** | 是 | 是*2 | - |
-
-*1:请勿在游戏成功登录账号之前打开ReShade控制台  
-*2:已开发完成，将会在公测前一周提供注入支持 
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/公测前内测)(0.10)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第二次公测前内测)(0.20)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆独占 第三次公测前内测)(0.3X)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第四次公测前内测)(0.3X)** | 是 | 是 | 无游戏版本限制 |
 
 ## 〢 来源
 
