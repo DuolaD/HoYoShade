@@ -45,22 +45,22 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 ## 〢 Pre-Warning
 
 > [!Warning]
-> ·The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse,
-and consequently, your account is more likely to be banned or face other serious consequences. 
-No mod or cheat can guarantee the absolute safety of your game account. 
-Although HoYoShade can run on the official servers of HoYoVerse games,
-it does not guarantee the absolute safety of your game account.If you are worried that your game account will be banned, please consider setting up a private server.  
+> ·The Genshin Impact/Yuanshen game in mainland China has strengthened its identification of mods and cheats by connecting to Tencent's anti-cheating system. This means that any mods or cheats are more likely to be identified by HoYoVerse, and consequently, your account is more likely to be banned or face other serious consequences. No mod or cheat can guarantee the absolute safety of your game account. Although HoYoShade can run on the official servers of HoYoVerse games,it does not guarantee the absolute safety of your game account.If you are worried that your game account will be banned, please consider setting up a private server.  
 > ·Before sharing game content with anyone else or streaming, HoYoShade recommends using other mods to hide your game UID and user information, and not to display HoYoShade or other mod interfaces to anyone else.
 
 > [!NOTE]
-> ·In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.  
-> ·Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.
+> · In addition, HoYoShade recommends updating your graphics card and chipset drivers to the latest version (if available) to minimize graphics-related issues prevent game crashes, and receive the latest support from your device manufacturer.  
+> · We do not recommend running HoYoShade on official servers.  
+> · We do not recommend using the Beta client to run HoYoShade on official servers to avoid the risk of confidentiality agreement breaches/violations/illegal activities/economic losses for all HoYoShade developers/secondary developers and yourself.  
+> ·Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.  
 
 ## 〢 Support games list
 
 > [!NOTE]
 > ·For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.  
-> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.
+> ·For the Beta client of MiHoYo/HoYoVerse developers aimed at testers after the public test (usually the client version number is: current version number.5.X), HoYoShade can theoretically provide injection and operation support. However, we do not recommend using the Beta client to run HoYoShade on official servers to avoid the risk of confidentiality agreement breaches/violations/illegal activities/economic losses for all HoYoShade developers/secondary developers and yourself.  
+> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.  
+> ·HoYoShade supports simultaneous injection with other mainstream mods without any conflict issues. However, please note and ensure that there are no conflicts between other game mods.  
 
 | Client | Tested | Support | Game Version restrictions |
 | --- | --- | --- | --- |
@@ -69,22 +69,22 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | **Genshin Impact/YuanShen(Global Server)** | Yes | Yes | Unlimited |
 | **Genshin Impact/YuanShen(Epic Version)** | Yes | Yes | Unlimited |
 | **Honkai Impact 3rd/BH3(CN Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(CN Steam Server)** | Yes | Yes*2 | Unlimited |
+| **Honkai Impact 3rd/BH3(CN Steam Server)** | Yes | Yes | Unlimited |
 | **Honkai Impact 3rd/BH3(Traditional Chinese Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(KR Server)** | Yes | Yes*2 | Unlimited |
-| **Honkai Impact 3rd/BH3(JP Steam Server)** | Yes | Yes*2 | Unlimited |
+| **Honkai Impact 3rd/BH3(KR Server)** | Yes | Yes*1 | Unlimited |
+| **Honkai Impact 3rd/BH3(JP Steam Server)** | Yes | Yes | Unlimited |
 | **Honkai Impact 3rd/BH3(SEA Server)** | Yes | Yes | Unlimited |
 | **Honkai Impact 3rd/BH3(Europe & Americas Servers)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail(CN Server)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail(Global Server)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail(Epic Version)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 1st/2rd CBT)(0.10,0.20)** | Yes | Yes*3 | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN Only 3rd CBT)(0.3X)** | Yes | Yes*3 | - |
-| **Zenless Zone Zero/ZZZ(CN/OS 4th CBT)(0.3X)** | Yes | Yes*3 | - |
+| **Honkai: Star Rail/HSR(CN Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(BiliBili Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(Global Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(Epic Version)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes*1 | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 2rd CB)(0.20)** | Yes | Yes*1 | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes*1 | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes*1 | Unlimited |
 
-*1:Do not open the ReShade control panel before the game success login account.  
-*2:HoYoShade Injector does not support those game path checks.  
-*3:Developed, Inject Support will be provided one week before the public beta.
+*1:Developed, Inject Support will be provided one week before the public beta.
 
 ## 〢 Sources
 
@@ -92,7 +92,7 @@ it does not guarantee the absolute safety of your game account.If you are worrie
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages. | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
+| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages.(Only for V2.0131.0 Stable to V2.11.3 Stable) | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade and HoYoShade
 
@@ -164,7 +164,7 @@ New:(Still waiting for the GUI to be built completely.)
 
 ## 〢 Screenshots
 <div align="center">
-  <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+  <h1 class="header">Shot by [AXBro阿向菌]</h1>
 </div>
 
 <div id="images">
