@@ -49,38 +49,40 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 > ·在你將遊戲內容發送至其它任何人或者進行直播之前，HoYoShade建議你先使用其它Mod隱藏遊戲UID和用戶信息，並且不要將HoYoShade及其它模組界面展示給其它任何人。
 
 > [!NOTE]
-> ·HoYoShade建議你將你的顯卡和芯片組驅動更新至最新版本（如果可用），以獲得來自你設備製造商的最新支持以儘可能減少與圖形相關的問題，降低遊戲崩潰的幾率，並獲得來自設備製造商的最新支持。  
-> ·如果你在官方服務器的米哈遊遊戲上運行HoYoShade，那麼對於可能會發生的任何後果，HoYoShade倉庫的所有貢獻者及其所有基於HoYoShade二次開發的貢獻者均不會承擔任何責任。
+> ·HoYoShade建議你將你的顯示卡和晶片組驅動更新至最新版本（如果可用），以獲得來自你設備製造商的最新支持以盡可能減少與圖形相關的問題，降低遊戲崩潰的幾率，並獲得來自設備製造商的最新支援。  
+> ·我們不建議你在官方伺服器上運行HoYoShade。  
+> ·我們不建議你使用Beta客戶端在官方伺服器中運行HoYoShade，以免對HoYoShade全體開發者/全體二創開發者和你本人造成保密協議違約/違規/違法/經濟損失等風險。  
+> ·對於可能發生的任何後果，HoYoShade全體開發者/全體二創開發者均不會承擔任何責任。  
 
 ## 〢 支持游戲列表
 
 > [!NOTE]
-> ·對於私服玩家來說，如果私服需要的對應客戶端出現在支援的遊戲清單中，則表示HoYoShade可以提供支援。  
-> ·對於未出現在支援遊戲清單中的遊戲，你可以自行嘗試選擇使用注入器中已支援的遊戲/在開發者選項中選擇自定義注入來嘗試注入HoYoShade。
+> ·對於私服玩家來說，如果私服所需的對應客戶端出現在下方支援的遊戲清單中，則表示HoYoShade可以提供支援。  
+> ·對於MiHoYo/HoYoVerse開發商在公測後面向測試者的Beta版客戶端(通常客戶端版本號為:現行版本號.5.X)，HoYoShade理論上也可以提供注入和運行支援。但我們不建議你使用Beta客戶端在官方伺服器中運行HoYoShade，以免對HoYoShade全體開發者/二創開發者和你本人造成保密協議違約/違規/違法/經濟損失等風險。  
+> ·對於未出現在支援遊戲清單中的遊戲，你可以自行嘗試選擇使用注入器中已支援的遊戲/在開發者選項中選擇自訂注入來嘗試注入HoYoShade。  
+> ·HoYoShade支持同時於其它主流Mod一併注入，且不存在任何衝突問題。但請注意並確保其它遊戲Mod之間不會有衝突。  
 
 | 客戶端 | 是否已測試 | 是否支持 | 是否存在游戲版本限制 |
 | --- | --- | --- | --- |
 | **原神/YuanShen/Genshin Impact(中國大陸服/天空島)** | 是 | 是 | 無遊戲版本限制 |
-| **原神/YuanShen/Genshin Impact(嗶哩嗶哩服/世界樹)** | 是 | 是*1 | 無遊戲版本限制 |
+| **原神/YuanShen/Genshin Impact(嗶哩嗶哩服/世界樹)** | 是 | 是 | 無遊戲版本限制 |
 | **原神/YuanShen/Genshin Impact(國際服)** | 是 | 是 | 無遊戲版本限制 |
 | **原神/YuanShen/Genshin Impact(Epic版本)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞3/BH3/Honkai Impact 3rd(中國大陸服)** | 是 | 是 | 無遊戲版本限制 |
-| **崩壞3/BH3/Honkai Impact 3rd(中國大陸Steam服)** | 是 | 是*2 | 無遊戲版本限制 |
+| **崩壞3/BH3/Honkai Impact 3rd(中國大陸Steam服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞3/BH3/Honkai Impact 3rd(繁中服)** | 是 | 是 | 無遊戲版本限制 |
-| **崩壞3/BH3/Honkai Impact 3rd(韓國服)** | 是 | 是*2 | 無遊戲版本限制 |
-| **崩壞3/BH3/Honkai Impact 3rd(日本Steam服)** | 是 | 是*2 | 無遊戲版本限制 |
+| **崩壞3/BH3/Honkai Impact 3rd(韓國服)** | 是 | 是 | 無遊戲版本限制 |
+| **崩壞3/BH3/Honkai Impact 3rd(日本Steam服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞3/BH3/Honkai Impact 3rd(東南亞服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞3/BH3/Honkai Impact 3rd(歐美服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞:星穹鐵道/Honkai: Star Rail(中國大陸服)** | 是 | 是 | 無遊戲版本限制 |
+| **崩壞:星穹鐵道/Honkai: Star Rail(嗶哩嗶哩服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞:星穹鐵道/Honkai: Star Rail(國際服)** | 是 | 是 | 無遊戲版本限制 |
 | **崩壞:星穹鐵道/Honkai: Star Rail(Epic版本)** | 是 | 是 | 無遊戲版本限制 |
-| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第一次/第二次公測前內測)(0.10,0.20)** | 是 | 是*3 | 無遊戲版本限制 |
-| **絕區零/ZZZ/Zenless Zone Zero(中國大陸獨佔 第三次公測前內測)(0.3X)** | 是 | 是*3 | - |
-| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第四次公測前內測)(0.3X)** | 是 | 是*3 | - |
-
-*1:請勿在遊戲成功登入帳號前開啟ReShade控制台  
-*2:HoYoShade注入器並不支援該客戶端的遊戲進程路徑偵測  
-*3:已開發完成，將在公測前一週提供注入支持  
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第一次公測前內測)(0.10)** | 是 | 是 | 無遊戲版本限制 |
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第二次公測前內測)(0.20)** | 是 | 是 | 無遊戲版本限制 |
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸獨佔 第三次公測前內測)(0.3X)** | 是 | 是 | 無遊戲版本限制 |
+| **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第四次公測前內測)(0.3X)** | 是 | 是 | 無遊戲版本限制 |
 
 ## 〢 來源
 
@@ -88,7 +90,7 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 | --- | --- | --- |
 | **ReShade官方** | HoYoShade會保證最新發行版中的ReShade總是和ReShade最新版本保持一致 | [官方倉庫](https://github.com/crosire/reshade),[官方網站](https://reshade.me/) |
 | **Crosire的ReShade注入器** | 這只是一個注入器 | [前往ReShade官方倉庫查看源碼](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | 用於非強製版本檢測器下載版本信息和最新Mod包 | [官方倉庫](https://github.com/aria2/aria2),[官方網站](https://aria2.github.io/) |
+| **Aria2** | 用於非強製版本檢測器下載版本信息和最新Mod包(僅用於V2.0131.0 Stable至V2.11.3 Stable中) | [官方倉庫](https://github.com/aria2/aria2),[官方網站](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade和HoYoShade
 
@@ -157,7 +159,7 @@ New:(等待GUI開發完成)
 
 ## 〢 截圖展示
 <div align="center">
-  <h1 class="header">截圖來自[Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+  <h1 class="header">截圖來自[Youtube@AXBro阿向菌]</h1>
 </div>
 
 <div id="images">
@@ -203,14 +205,12 @@ OpenHoYoShade[All]
 ## 〢 聯繫我
 
 > [!NOTE]
-> ·如果你處於中國大陸地區，則某些聯繫方式可能不可用。結尾帶星號標識'*'的聯繫方式可以保證在中國大陸地區使用，並且可以獲得更快速的響應和支持。
-> ·如果你在使用此模組時有任何的問題，請先在本倉庫創建一個issue。
+> ·如果你處於中國大陸地區，則某些聯繫方式可能不可用。結尾帶星號標識'*'的聯繫方式可以保證在中國大陸地區使用，並且可以獲得更快速的響應和支持。  
+> ·如果你在使用此模組時有任何的問題，請先在本倉庫創建一個issue。  
 
 **點擊對應按鈕聯絡我：**
 
-<div align="center"><p><span ><a href="https://www.hoyolab.com/accountCenter/postList?id=192633110"><img src="https://img.shields.io/badge/HoYoLAB-可用-6680ff.svg?logo=data:image/png;base64,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" /></a> <a href="https://www.miyoushe.com"><img src="https://img.shields.io/badge/米遊社-由於無法完成中國大陸地區實名驗證,暫不可用-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACZElEQVR4AY2Rg5JdURBFp1IIiylX/ibFfEBs27Zt27ZtjM3nsT1zfe85O7tjZ7pqPRysPt2dNCQEoRvpR/qTqWQHuTY4hA/TYggfzXfrT70yzBNptpoSg+J6NfeXk15yuQ9ZQopJ+6AQAh4Af2NoGNhe5ONWqolEnY8T70zMjQE8I/udZJgIphBbLo2MAAuiGrOJCMZEgYPpNsrqfViuxplkE3O+C4QzIngsl8dFmC3fw5EXBvan2hjHy+PJYf6ubA7QamucS7F+FbwUQbEI1hQHuMGnljPbkfcWJvOySA5RkF4VILlJ4xIFC2L6R0GuCCqHMfuWbBdZMRcGMx3/YGEaL4/i+v4MB28THh7X8gXvTSyO/iSIi6BRBFtzXKREXEQ6WOsHNksOhoGdbOKZtyYOk5v5DlaVAcPCwJdG14qgY0iYggIfj3jgeRNwnoKVUYVZMeBIyMclZr741mAJJo6yvJ0lvjRcBK1JXyewLhTgZoaFc8XMyHFdLXZxhFnvca2g3ENda4B2U6GqycfpNwZWRpSUYorA5w/Mj7F2XrzI7NLMB5kWGtoCaEhAxgjT0ZDIibvYk2xjShyeCBSRurCnQuN2lo33JQ4ChZ8ii5cuvTMg4fkaF5hsT4mvRABBytgiZTC7UkBzp5Ks+BrtlkIam6y+LCU47sPPO/HtBUPDwI4CD28KbEjcZwlPcm38LTRJDjlaBHUEg8PA5pIAj7ItSNSz/uJKD/8KpdEsguWkRRq5jI2UJjqeRhfCU8BuEfQgAyjYNyuOB0ffmckcWRGAMg00kA7ikODr62VdAVvYor4fAfPaaUne+8MNAAAAAElFTkSuQmCC" /> </span></p></a>
-  
-<div align="center"><p><span ><a href="https://discordapp.com/users/960705009866137631"><img src="https://img.shields.io/badge/Discord-可用-5865F2.svg?logo=discord" /></a> <a href="https://v.kuaishou.com/iO8N0r"><img src="https://img.shields.io/badge/快手*-可用-ff4906.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAD/klEQVR4AbyWA+wkTRTE97Nt27Ztnm3btm3btm3btm39tfjdVF6Syd0is6dK3qIzPVWP3T5B4O/bb+av279xrK9j+xzzO8Y1Mj/2zr7iEJfPYHAW73CspGMHtOE6mzhKitPI/7njJmwhIebGP2517Bb450749x746zb4/Wb487b4RRhXSXHL+28d2x9zg0jyvwPdK8PsIbB4PEzoAvUzQtqHJQ73WRNqazHF7Re3BPSJSf73HdA0FxzcThhSkmDBKMj7pkVD0cnxMhT7FPK9Danul5hYIvpIwN6YYa+XEc6eBOH4AZg1GMZ2hLVzTICwfAqU+xHGdXKE7oBzJ+3ZJROg2t/w1x3RBOyVAH/UsGd+BjYvBWHLMij1Nfx9p4VZoe9WERLPQzAAZ45BKAQ45k+GYBCE08564xzRasXvi6LMQlozFaQkQ+I5qP4v/HbTpQL/vRum9wNwyfrXgyp/QquCsGMNAvu2QN633FpxjdgCOpdDYOdayPhkuBe/3wRNc5vnoaBFRCTa+5sPynwHJw8j0L64rV9zAc1yA1gKCn94adH9dy+smIbAyDZKXRjPtUvBhTNQ9nvXS5GlewQ2LUZgcBOJ8y4griI0wMyB2qM0mPedykByojlRN318KfDehiE4tl8k1g2bl8D4zjasEs4BWDume1ROeRfgeRDNHwXFP4cRrdxoGEzQyhlQ4D23A7wJ8DCKx3WGOukg1QPwqw/+uQuq/gWj28GC0TCtD7QqAJmecsnjEqCCUc707R5GqgEjy/oclPsBavwHNf+372r/6FvCrGgLvGvP/hmvAJGoh5vnhaKfojSYkNvshVpXayYnKMyRLZACp47ApO6Q4yWJ8ChARLXT2GbhxCELa9FPlAqNVWs5sGf2bYa9l9smOLTTPSvmjYyzCCd2A9CEM7MOUHWb56A8m6gsz0Y2ed2hJJw/A/4UaJDZaxveATP6g7BsMnQpB1uXQyAABkXAUvSbT15FNtWM0qXjWhjWXGseBUzv704vkcgjzfIdqxE031VgMarbnYY6okGzQ8LiFDC0qWrCXvSLDyr9BkkJN1DAkKaa//ai3K/ByNaq8BsgQDVgm4y4dw3Yv9UtyNPhJ1/UATalF4I6yftpOK0vdsQet3bSWS9y/T5/yv73qqbTUFGIbrobSjjoYIraBf6wOaCRa97q217SuybkeQOGtwQh4awqXGkJN50LujVrHoBmgy6pEhXxSrY3LGy6fAxqCEsnQa/qkPt1hc88yPKMHbv+ZDxB4jWqI0/CvZGu5W6x/HePbXQ3u3cBDZZRbWByz8g2oavdFy4uRQdf52UhUR0TTAfCekUsBNSAOyh4OyYYXTP6YETXbMA7pwPePQcAdZmNkkx/udgAAAAASUVORK5CYII=" /></a> <a href="https://www.douyin.com/user/MS4wLjABAAAAGUohNGixQiCHKSoHJy0Ae6WS3R7pMd7lSfi5O4A9zH7gdcEd4JEX787i-RFNH257"><img src="https://img.shields.io/badge/抖音*-可用-000000.svg?logo=tiktok" /></a> <a href="https://t.me/D_mou"><img src="https://img.shields.io/badge/Telegram-可用-26A5E4.svg?logo=telegram" /></a> <a href="mailto:D_mou@outlook.com"><img src="https://img.shields.io/badge/Email*-可用-0078D4.svg?logo=microsoftoutlook" /></a> <a href="https://qm.qq.com/q/njKy8OrUU8"><img src="https://img.shields.io/badge/QQ*-可用-EB1923.svg?logo=tencentqq" /> </span></p></a>
+<div align="center"><p><span ><a href="https://www.hoyolab.com/accountCenter/postList?id=192633110"><img src="https://img.shields.io/badge/HoYoLAB-可用-6680ff.svg?logo=data:image/png;base64,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" /></a> <a href="https://discordapp.com/users/960705009866137631"><img src="https://img.shields.io/badge/Discord-可用-5865F2.svg?logo=discord" /></a> <a href="https://www.douyin.com/user/MS4wLjABAAAAGUohNGixQiCHKSoHJy0Ae6WS3R7pMd7lSfi5O4A9zH7gdcEd4JEX787i-RFNH257"><img src="https://img.shields.io/badge/抖音*-可用-000000.svg?logo=tiktok" /></a> <a href="https://t.me/GitHub_DuolaD"><img src="https://img.shields.io/badge/Telegram-可用-26A5E4.svg?logo=telegram" /></a> <a href="mailto:D_mou@outlook.com"><img src="https://img.shields.io/badge/Email*-可用-0078D4.svg?logo=microsoftoutlook" /></a> <a href="https://qm.qq.com/q/njKy8OrUU8"><img src="https://img.shields.io/badge/QQ*-可用-EB1923.svg?logo=tencentqq" /></span></p></a>
 
 <div align="left">
 
@@ -244,15 +244,13 @@ OpenHoYoShade[All]
         <tr>
             <td>
                 <h3>阿向菌|AXBro</h3>
-                <a href="https://www.youtube.com/@AXBroCN">
+                <a>
                     <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
                 </a>
             </td>
             <td>
-		<a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB個人主頁</a><br>
-                <a href="https://www.youtube.com/@AXBroCN">YouTube頻道</a><br>
-		<a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok頻道</a><br>
-		<a href="https://space.bilibili.com/436127696">BiliBili頻道</a>
+		<a>由於我們的貢獻者'阿向菌|AXBro'決定出售自己公開的社群媒體帳號</a><br>
+		<a>我們已將其聯絡方式從本文檔中移除，以避免帳號交易後產生不必要的誤會。 </a>
             </td>
         </tr>
         <tr>
