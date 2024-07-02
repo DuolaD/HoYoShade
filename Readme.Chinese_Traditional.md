@@ -83,6 +83,8 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 | **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第二次公測前內測)(0.20)** | 是 | 是 | 無遊戲版本限制 |
 | **絕區零/ZZZ/Zenless Zone Zero(中國大陸獨佔 第三次公測前內測)(0.3X)** | 是 | 是 | 無遊戲版本限制 |
 | **絕區零/ZZZ/Zenless Zone Zero(中國大陸/海外 第四次公測前內測)(0.3X)** | 是 | 是 | 無遊戲版本限制 |
+| **絕區零/ZZZ/Zenless Zone Zero 中國大陸 1.0 公測客戶端** | 是 | 是 | - |
+| **絕區零/ZZZ/Zenless Zone Zero 海外 1.0 公測客戶端** | 是 | 是 | - |
 
 ## 〢 來源
 
