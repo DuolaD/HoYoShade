@@ -83,6 +83,7 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 | **Zenless Zone Zero/ZZZ(CN/OS 2rd CB)(0.20)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ CN/OS 1.0 REL** | Yes | Yes | - |
 
 ## 〢 Sources
 
