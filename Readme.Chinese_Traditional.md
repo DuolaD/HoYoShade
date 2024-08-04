@@ -10,13 +10,10 @@
 [EN](Readme.md)|[简体中文](Readme.Chinese_Simplified.md)|**繁體中文**  
 
 > [!NOTE]
-> 翻譯并非100%準確，翻譯工作主要基於OpenAI-GPT4T，谷歌翻譯和本人的校對組成。但即使如此，最終成品也難免會產生一定的問題。如果你發現或者你認爲這是一個問題，請提交issues以幫助HoYoShade改進。  
-
-> [!NOTE]
-> 正在尋找舊版本嗎？ 我們正在開發 [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) 倉庫。 完成後，您可以下載所有舊版本的Release，聽起來不錯？ 當然，重新發行的內容肯定會移除全部被DMCA警告的內容的。  
-
-> [!NOTE]
-> 由於HoYoShade收到了DMCA警告，你無法再從Release介面下載低於V2.013.0 Stable版本的HoYoShade。有關詳細情況，請查看[關於DMCA](#〢-關於DMCA)介面
+> ·我們深知您可能熟悉第二語言。但如果你來自於中國大陸地區,我們更加推薦你去閱讀[簡體中文版本的Readme.md](Readme.Chinese_Simplified.md)以獲得更多有關僅在中國大陸發布的另一款原神模組的資訊。  
+> ·翻譯並非100%準確，翻譯工作主要基於OpenAI-GPT4o，谷歌翻譯和本人的校對組成。 但即使如此，最終成品也難免會產生一定的問題。 如果你發現或者你認爲這是一個問題，請提交issues以幫助HoYoShade改進。  
+> ·正在尋找舊版本嗎？我們正在開發 [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) 倉庫。完成後，您可以下載所有舊版本的Release，聽起來不錯？當然，重新發行的內容肯定會移除全部受到DMCA警告的內容的。  
+> ·由於HoYoShade收到了DMCA警告，你無法再從Release界面下載低於V2.013.0 Stable版本的HoYoShade。有關詳細情況，請查看[關於DMCA](#〢-關於DMCA)界面。  
 
 ## 〢 目錄
 
