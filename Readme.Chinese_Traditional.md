@@ -15,6 +15,28 @@
 > ·正在尋找舊版本嗎？我們正在開發 [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) 倉庫。完成後，您可以下載所有舊版本的Release，聽起來不錯？當然，重新發行的內容肯定會移除全部受到DMCA警告的內容的。  
 > ·由於HoYoShade收到了DMCA警告，你無法再從Release界面下載低於V2.013.0 Stable版本的HoYoShade。有關詳細情況，請查看[關於DMCA](#〢-關於DMCA)界面。  
 
+## 〢 視頻演示
+
+<div align="center">
+  <h1 class="header">Shot by AXBro阿向菌</h1>
+  <h3>
+    Night,Diluc 雨夜，迪盧克實拍短片
+  </h3>
+  點擊下方圖片在<a href="https://www.youtube.com/watch?v=hNBKZw4eVBM"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a>觀看:
+</div>
+
+<div align="center">
+
+[![Rainy Night ,Diluc_雨夜，迪盧克實拍短片](https://res.cloudinary.com/marcomontalbano/image/upload/v1722753646/video_to_markdown/images/youtube--hNBKZw4eVBM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=hNBKZw4eVBM "Rainy Night ,Diluc_雨夜，迪盧克實拍短片")
+
+或者點擊此按鈕：<a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="https://img.shields.io/badge/在嗶哩嗶哩觀看-FFFFFF.svg?logo=bilibili" /></a>
+
+</div>
+
+> [!NOTE]
+> · 截圖展示所使用的預設/效果庫可能經過了用戶自行添加/編輯。  
+> · 本視頻中使用的其他模組未在中國大陸以外的地區發行，且 HoYoShade 不包含這些附加功能。  
+
 ## 〢 目錄
 
 - [**介紹**](#〢-介紹)
