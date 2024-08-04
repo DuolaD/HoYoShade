@@ -36,6 +36,7 @@ Or Click to: <a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="ht
 > [!NOTE]
 > · The presets/effect libraries shown in the screenshots may have been added/edited by the users.  
 > · The other mods used in this video are not released outside of mainland China, and HoYoShade does not include these additional features.  
+> · BiliBili provides 4K playback options. If you are in mainland China, we recommend you use BiliBili for playback.  
 
 ## 〢 Directory
 
