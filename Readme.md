@@ -15,6 +15,28 @@
 > · Are you looking for an old version?we are developing [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) repo.Which when it done,you can download all old releases without all DMCA content. Sound good?    
 > · Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.For more details, please check the [About DMCA](#〢-About-DMCA) page.  
 
+## 〢 Live Demo
+
+<div align="center">
+  <h1 class="header">Shot by AXBro阿向菌</h1>
+  <h3>
+    Night,Diluc 雨夜，迪卢克实拍短片
+  </h3>
+  Click to Watch on <img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a>:
+</div>
+
+<div align="center">
+
+[![Rainy Night ,Diluc_雨夜，迪卢克实拍短片](https://res.cloudinary.com/marcomontalbano/image/upload/v1722753646/video_to_markdown/images/youtube--hNBKZw4eVBM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=hNBKZw4eVBM "Rainy Night ,Diluc_雨夜，迪卢克实拍短片")
+
+Or Click to <a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="https://img.shields.io/badge/Watch_on-BiliBili-00A1D6.svg?logo=bilibili" /></a>
+
+</div>
+
+> [!NOTE]
+> · The presets/effect libraries shown in the screenshots may have been added/edited by the users.  
+> · The other mods used in this video are not released outside of mainland China, and HoYoShade does not include these additional features.  
+
 ## 〢 Directory
 
 - [**Introduction**](#〢-Introduction)
