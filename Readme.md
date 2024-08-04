@@ -10,13 +10,10 @@
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
 
 > [!NOTE]
-> The translation is not 100% accurate, as it is primarily based on OpenAI-GPT4T, Google Translate, and my proofreading. However, even so, the final result may still have some issues. If you find any problems or believe that there is an issue, please submit issues to help improve HoYoShade.  
-
-> [!NOTE]
-> Are you looking for an old version?we are developing [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) repo.Which when it done,you can download all old releases without all DMCA content. Sound good?
-
-> [!NOTE]
-> Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.For more details, please check the [About DMCA](#〢-About-DMCA) page.  
+> · We understand that you may be familiar with a second language. But if you are from mainland China, we recommend you to read the [simplified Chinese version of the Readme.md](Readme.Chinese_Simplified.md) to get more information about a another mod that is only released in mainland China.  
+> · The translation is not 100% accurate, as it is primarily based on OpenAI-GPT4o, Google Translate, and my proofreading. However, even so, the final result may still have some issues. If you find any problems or believe that there is an issue, please submit issues to help improve HoYoShade.  
+> · Are you looking for an old version?we are developing [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) repo.Which when it done,you can download all old releases without all DMCA content. Sound good?    
+> · Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.For more details, please check the [About DMCA](#〢-About-DMCA) page.  
 
 ## 〢 Directory
 
