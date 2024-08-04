@@ -89,7 +89,7 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
 | **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages.(Only for V2.0131.0 Stable to V2.11.3 Stable) | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
+| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages.(Only available in V2.0131.0 Stable to V2.11.3 Stable) | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade and HoYoShade
 
