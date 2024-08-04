@@ -22,14 +22,14 @@
   <h3>
     Night,Diluc 雨夜，迪卢克实拍短片
   </h3>
-  Click to Watch on <img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a>:
+  Click to Watch on<a href="https://www.youtube.com/watch?v=hNBKZw4eVBM"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a> :
 </div>
 
 <div align="center">
 
 [![Rainy Night ,Diluc_雨夜，迪卢克实拍短片](https://res.cloudinary.com/marcomontalbano/image/upload/v1722753646/video_to_markdown/images/youtube--hNBKZw4eVBM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=hNBKZw4eVBM "Rainy Night ,Diluc_雨夜，迪卢克实拍短片")
 
-Or Click to <a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="https://img.shields.io/badge/Watch_on-BiliBili-00A1D6.svg?logo=bilibili" /></a>
+Or Click to: <a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="https://img.shields.io/badge/Watch_on-BiliBili-00A1D6.svg?logo=bilibili" /></a>
 
 </div>
 
