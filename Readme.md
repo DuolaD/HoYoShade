@@ -100,7 +100,7 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 | **Honkai: Star Rail/HSR(Global Server)** | Yes | Yes | Unlimited |
 | **Honkai: Star Rail/HSR(Epic Version)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 2rd CB)(0.20)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ CN 1.0 REL Client** | Yes | Yes | - |
