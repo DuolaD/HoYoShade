@@ -79,8 +79,9 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 > [!NOTE]
 > ·For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.  
 > ·For the Beta client of MiHoYo/HoYoVerse developers aimed at testers after the public test (usually the client version number is: current version number.5.X), HoYoShade can theoretically provide injection and operation support. However, we do not recommend using the Beta client to run HoYoShade on official servers to avoid the risk of confidentiality agreement breaches/violations/illegal activities/economic losses for all HoYoShade developers/secondary developers and yourself.  
-> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.  
-> ·HoYoShade supports simultaneous injection with other mainstream mods without any conflict issues. However, please note and ensure that there are no conflicts between other game mods.  
+> ·For Beta version clients released to testers by MiHoYo/HoYoVerse after the official release (usually with a client version number of: current version number.5.X), HoYoShade only tests and supports leaked clients, which does not imply that all versions of beta clients can run HoYoShade. If the test server client you are using does not support running HoYoShade, and you are certain that this is not due to using the wrong injection option, please create a new issue on the [issues page](https://github.com/DuolaD/HoYoShade/issues) to help us with adaptation. Alternatively, you can use the launcher's developer features to try custom injection.  
+> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.    
+> ·HoYoShade supports simultaneous injection with other mainstream mods without any conflict issues. However, please note and ensure that there are no conflicts between other game mods.    
 
 | Client | Tested | Support | Game Version restrictions |
 | --- | --- | --- | --- |
@@ -107,7 +108,7 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 | **Zenless Zone Zero/ZZZ OS 1.0 REL Client** | Yes | Yes | - |
 | **Zenless Zone Zero/ZZZ(CN/OS 1.1 CB)(1.1.X)*** | Yes | Yes | Unlimited |
 
-*:Coming soon.
+*: Development completed, will be released with the ReShade version update (this injection solution can be used for all subsequent beta version clients).
 
 ## 〢 Sources
 
