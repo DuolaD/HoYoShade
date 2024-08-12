@@ -192,7 +192,7 @@ New:(等待GUI開發完成)
 
 ## 〢 截圖展示
 <div align="center">
-  <h1 class="header">截圖來自[Youtube@AXBro阿向菌]</h1>
+  <h1 class="header">截圖來自[Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
 </div>
 
 <div id="images">
@@ -277,13 +277,15 @@ OpenHoYoShade[All]
         <tr>
             <td>
                 <h3>阿向菌|AXBro</h3>
-                <a>
+                <a href="https://www.youtube.com/@AXBroCN">
                     <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
                 </a>
             </td>
             <td>
-		<a>由於我們的貢獻者'阿向菌|AXBro'決定出售自己公開的社群媒體帳號</a><br>
-		<a>我們已將其聯絡方式從本文檔中移除，以避免帳號交易後產生不必要的誤會。 </a>
+		<a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB個人主頁</a><br>
+                <a href="https://www.youtube.com/@AXBroCN">YouTube頻道</a><br>
+		<a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok頻道</a><br>
+		<a href="https://space.bilibili.com/436127696">BiliBili頻道</a>
             </td>
         </tr>
         <tr>
