@@ -153,6 +153,13 @@ OpenHoYoShade儲存佔用會比HoYoShade小,但OpenHoYoShade並沒有內建ReSha
 
 New:(等待GUI開發完成)
 
+<div align="left">
+ 對文字版教學感到困惑嗎？點選按鈕在<a href="https://youtu.be/jac99AOHXrE"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube"/></a>或者在<a href="https://www.bilibili.com/video/BV1jAYAe5EtA"><img src="https://img.shields.io/badge/嗶哩嗶哩-FFFFFF.svg?logo=bilibili"/></a>觀看影片版教學*。
+</div>
+
+
+*：僅提供簡體中文/繁體中文版本。
+
 ## 〢 推薦遊戲畫面設置
 
 > [!NOTE]
