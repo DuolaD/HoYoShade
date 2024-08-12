@@ -188,7 +188,7 @@ New:(Still waiting for the GUI to be built completely.)
 
 ## 〢 Screenshots
 <div align="center">
-  <h1 class="header">Shot by [AXBro阿向菌]</h1>
+  <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
 </div>
 
 <div id="images">
@@ -274,13 +274,15 @@ Thank you to all the collaborators for their dedication to the project!
         <tr>
             <td>
                 <h3>阿向菌|AXBro</h3>
-                <a>
+                <a href="https://www.youtube.com/@AXBroCN">
                     <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
                 </a>
             </td>
             <td>
-		<a>Due to our contributor '阿向菌|AXBro' deciding to sell their publicly available social media accounts,</a><br>
-		<a> we have removed their contact information from this document to avoid unnecessary misunderstandings after the account transaction.</a><br>
+		<a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB Personal Pages</a><br>
+		<a href="https://www.youtube.com/@AXBroCN">YouTube Channel</a><br>
+                <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok Channel</a><br>
+		<a href="https://space.bilibili.com/436127696">BiliBili Channel</a>
             </td>
         </tr>
         <tr>
