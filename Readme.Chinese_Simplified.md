@@ -153,6 +153,14 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
 
 新版本:(等待GUI开发完成)
 
+<div align="left">
+  对文字版教程感到困惑吗？点击按钮在<a href="https://youtu.be/jac99AOHXrE"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube"/></a>或者在<a href="https://www.bilibili.com/video/BV1jAYAe5EtA"><img src="https://img.shields.io/badge/哔哩哔哩-FFFFFF.svg?logo=bilibili" /></a>观看视频版教程*。  
+</div> 
+
+  
+
+*：仅提供简体中文/繁体中文版本。
+
 ## 〢 推荐游戏图像设置
 
 > [!NOTE]
