@@ -2,8 +2,59 @@
 
 chcp 936
 
-title HoYoShade Starter
+title HoYoShade启动器
 cls
+
+mkdir %SystemRoot%\temp\admin_check >nul 2>&1
+
+if exist %SystemRoot%\temp\admin_check (
+	rmdir %SystemRoot%\temp\admin_check
+	title HoYoShade启动器
+	cls
+	echo 欢迎使用HoYoShade启动器！
+	echo\
+	echo 模组版本：V2.3.1 Stable
+	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
+	echo\
+    echo 我们检测到启动器正在以管理员身份运行，这会导致注入器发生兼容问题。
+	echo 按下任意键后启动器将会退出运行。如果你想继续运行启动器，请以普通模式运行（直接双击运行即可）。
+	pause
+	exit
+)
+
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
+
+setlocal enabledelayedexpansion
+cd /d "%~dp0"
+
+set missing_file=0
+for %%f in %files_to_check% do (
+    if not exist %%~f (
+        set missing_file=1
+    )
+)
+
+if %missing_file% equ 1 (
+    title HoYoShade启动器
+	cls
+	echo 欢迎使用HoYoShade启动器！
+	echo\
+	echo 模组版本：V2.3.1 Stable
+	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
+	echo\
+    echo 我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。
+	echo\
+	echo 出现这个提示的原因可能有：
+	echo 1:你在解压压缩包时没有解压全部文件。
+	echo 2:你在进行覆盖更新操作的时候没有粘贴全部文件。
+	echo 3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。
+	echo 4:你无意/有意重命名了部分关键文件。
+	echo\
+	echo 按下任意键后启动器将会退出运行。
+	echo 如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。
+	pause
+	exit
+)
 
 set "filepath=%~dp0Reshade.ini"
 
@@ -37,7 +88,7 @@ if exist "%filepath%" (
 )
 
 :menu
-title HoYoShade Starter
+title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
@@ -56,8 +107,8 @@ echo [2]注入至原神（中国大陆/哔哩哔哩客户端）
 echo [3]注入至原神（国际客户端/Epic客户端）
 echo [4]注入至崩坏三(通用客户端)
 echo [5]注入至崩坏：星穹铁道(通用客户端)
-echo [6]注入至绝区零(通用公测客户端)
-echo [7]注入至绝区零(通用公测前内测客户端)
+echo [6]注入至绝区零(通用客户端)
+echo [7]切换至测试服客户端注入列表
 echo [8]其它选项
 echo [9]退出程序
 
@@ -81,7 +132,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "6" (
     powershell -command Start-Process -FilePath inject.exe ZenlessZoneZero.exe -Verb RunAs
 ) else if "%content%" == "7" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+    goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
     goto other
 ) else if "%content%" == "9" (
@@ -95,7 +146,7 @@ if "%content%" == "1" (
 exit
 
 :other
-title HoYoShade Starter
+title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
@@ -150,7 +201,7 @@ if "%content%" == "1" (
 goto other
 
 :develop
-title HoYoShade Starter(你已进入开发者选项！！！)
+title HoYoShade启动器(你已进入开发者选项！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
@@ -184,7 +235,7 @@ if "%content%" == "1" (
 goto develop@echo off
 
 :customize_inject
-title HoYoShade Starter(你已进入自定义注入界面！！！)
+title HoYoShade启动器(你已进入自定义注入界面！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
@@ -243,7 +294,7 @@ pause
 goto other
 
 :ini_Reset
-title HoYoShade Starter
+title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
@@ -293,3 +344,57 @@ if "%content%" == "1" (
     timeout /t 2
     goto ini_Reset
 )
+
+:beta_client_inject_choice_menu
+title HoYoShade启动器
+cls
+echo 欢迎使用HoYoShade启动器！
+echo\
+echo 模组版本：V2.3.1 Stable
+echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
+echo\
+echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
+echo\
+echo 本模组仅用于游戏画面调色使用，请遵守本Mod的用户协议和游戏及其开发/发行商相关条例。
+echo 你可以在模组根目录/Tutorial文件夹中查看用户协议和图文安装说明。
+echo 使用模组拍摄素材发布视频时，请备注:"该视频由GitHub@DuolaD/HoYoShade提供渲染支持"。
+echo 如因特殊原因无法备注，请通过"其它选项"中的联系方式联系开发者进行说明。
+echo\
+echo 以下客户端注入选项均只能用于注入至测试服客户端。
+echo\
+echo 如果你想使用的测试服客户端不在此列表，或者注入器未对游戏启动做出响应，则说明:
+echo 1:你想使用的测试服客户端注入选项与公开客户端注入选项通用，请先尝试使用公开客户端注入列表尝试注入。
+echo 2:HoYoShade暂未适配你目前正在使用的测试服客户端。
+echo 如需适配，请在我们的访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
+echo\
+echo [1]重置模组根目录中的ReShade.ini
+echo [2]注入至绝区零(通用公测前内测客户端)
+echo [3]注入至绝区零(通用公测后内测客户端)
+echo [4]切换至公开客户端注入列表
+echo [5]其它选项
+echo [6]退出程序
+
+echo\
+set /p "content=在此输入选项前面的数字："
+
+if "%content%" == "1" (
+    goto ini_Reset
+) else if "%content%" == "2" (
+    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	exit
+) else if "%content%" == "3" (
+    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
+    exit
+) else if "%content%" == "4" (
+    goto menu
+) else if "%content%" == "5" (
+    goto other
+) else if "%content%" == "6" (
+	exit
+) else (
+    echo\
+    echo 输入错误。
+    timeout /t 2
+    goto menu
+    )
+exit

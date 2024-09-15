@@ -5,6 +5,57 @@ chcp 936
 title HoYoShade Starter
 cls
 
+mkdir %SystemRoot%\temp\admin_check >nul 2>&1
+
+if exist %SystemRoot%\temp\admin_check (
+	rmdir %SystemRoot%\temp\admin_check
+	title HoYoShade啓動器
+	cls
+	echo 歡迎使用HoYoShade啓動器！
+	echo\
+	echo 模組版本：V2.3.1 Stable
+	echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
+	echo\
+    echo 我們檢測到啓動器正在以管理員身份運行，這會導致注入器發生兼容問題。
+	echo 按下任意鍵後啓動器將會退出運行。如果你想繼續運行啓動器，請以普通模式運行（直接雙擊運行即可）。
+	pause
+	exit
+)
+
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
+
+setlocal enabledelayedexpansion
+cd /d "%~dp0"
+
+set missing_file=0
+for %%f in %files_to_check% do (
+    if not exist %%~f (
+        set missing_file=1
+    )
+)
+
+if %missing_file% equ 1 (
+    title HoYoShade啓動器
+	cls
+	echo 歡迎使用HoYoShade啓動器！
+	echo\
+	echo 模組版本：V2.3.1 Stable
+	echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
+	echo\
+    echo 我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。
+	echo\
+	echo 出現這個提示的原因可能有：
+	echo 1:你在解壓壓縮包時沒有解壓全部文件。
+	echo 2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。
+	echo 3:你係統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別爲病毒，然後刪除了某些文件。
+	echo 4:你無意/有意重命名了部分關鍵文件。
+	echo\
+	echo 按下任意鍵後啓動器將會退出運行。
+	echo 如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓縮包，並解壓全部文件。
+	pause
+	exit
+)
+
 set "filepath=%~dp0Reshade.ini"
 
 if exist "%filepath%" (
@@ -57,9 +108,9 @@ echo [3]注入至原神（國際服客戶端/Epic客戶端）
 echo [4]注入至崩壞三(通用客戶端)
 echo [5]注入至崩壞：星穹鐵道(通用客戶端)
 echo [6]注入至絕區零(通用公測客戶端)
-echo [7]注入至絕區零(通用公測前內測客戶端)
-echo [7]其它選項
-echo [8]退出程序
+echo [7]切換至測試服客戶端注入列表
+echo [8]其它選項
+echo [9]退出程序
 
 echo\
 set /p "content=在此輸入選項前面的數字："
@@ -81,7 +132,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "6" (
     powershell -command Start-Process -FilePath inject.exe ZenlessZoneZero.exe -Verb RunAs
 ) else if "%content%" == "7" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+    goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
     goto other
 ) else if "%content%" == "9" (
@@ -293,3 +344,57 @@ if "%content%" == "1" (
     timeout /t 2
     goto ini_Reset
 )
+
+:beta_client_inject_choice_menu
+title HoYoShade啓動器
+cls
+echo 歡迎使用HoYoShade啓動器！
+echo\
+echo 模組版本：V2.3.1 Stable
+echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
+echo\
+echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
+echo\
+echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。
+echo 你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
+echo 使用模組拍攝素材發佈視頻時，請備註:"該視頻由GitHub@DuolaD/HoYoShade提供渲染支持"。
+echo 如因特殊原因無法備註，請通過"其它選項"中的聯繫方式聯繫開發者進行說明。
+echo\
+echo 以下客戶端注入選項均只能用於注入至測試服客戶端。
+echo\
+echo 如果你想使用的測試服客戶端不在此列表，或者注入器未對遊戲啓動做出響應，則說明:
+echo 1:你想使用的測試服客戶端注入選項與公開客戶端注入選項通用，請先嚐試使用公開客戶端注入列表嘗試注入。
+echo 2:HoYoShade暫未適配你目前正在使用的測試服客戶端。
+echo 如需適配，請在我們的訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）提交issues。
+echo\
+echo [1]重置模組根目錄中的ReShade.ini
+echo [2]注入至絕區零(通用公測前內測客戶端)
+echo [3]注入至絕區零(通用公測後內測客戶端)
+echo [4]切換至公開客戶端注入列表
+echo [5]其它選項
+echo [6]退出程序
+
+echo\
+set /p "content=在此輸入選項前面的數字："
+
+if "%content%" == "1" (
+    goto ini_Reset
+) else if "%content%" == "2" (
+    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	exit
+) else if "%content%" == "3" (
+    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
+    exit
+) else if "%content%" == "4" (
+    goto menu
+) else if "%content%" == "5" (
+    goto other
+) else if "%content%" == "6" (
+	exit
+) else (
+    echo\
+    echo 輸入錯誤。
+    timeout /t 2
+    goto menu
+    )
+exit

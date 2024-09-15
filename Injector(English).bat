@@ -5,6 +5,57 @@ chcp 936
 title HoYoShade Starter
 cls
 
+mkdir %SystemRoot%\temp\admin_check >nul 2>&1
+
+if exist %SystemRoot%\temp\admin_check (
+	rmdir %SystemRoot%\temp\admin_check
+	title HoYoShade Starter
+	cls
+	echo Welcome to use HoYoShade starter!
+	echo\
+	echo Mod Version:V2.3.1 Stable
+	echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+	echo\
+    echo We have detected that the launcher is running with administrator privileges, which can cause compatibility issues with the injector.
+	echo After pressing any key, the launcher will exit. If you want to continue running the launcher, please run it in normal mode £¨just double-click to run£©.
+	pause
+	exit
+)
+
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
+
+setlocal enabledelayedexpansion
+cd /d "%~dp0"
+
+set missing_file=0
+for %%f in %files_to_check% do (
+    if not exist %%~f (
+        set missing_file=1
+    )
+)
+
+if %missing_file% equ 1 (
+    title HoYoShade Starter
+	cls
+	echo Welcome to use HoYoShade starter!
+	echo\
+	echo Mod Version:V2.3.1 Stable
+	echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+	echo\
+    echo We have detected that the necessary files for £¨Open£©HoYoShade framework injection are missing.
+	echo\
+	echo Possible reasons for this message include:
+	echo 1:You did not extract all files from the compressed package.
+	echo 2:You did not paste all files during an update operation.
+	echo 3:Your antivirus software/other programs mistakenly identified £¨Open£©HoYoShade as a virus and deleted some files.
+	echo 4:You accidentally or intentionally renamed some critical files.
+	echo\
+	echo After pressing any key, the launcher will exit.
+	echo If you want to continue running £¨Open£©HoYoShade, please visit our GitHub repository £¨https://github.com/DuolaD/HoYoShade£© to re-download the latest compressed package from the Releases page and extract all files.
+	pause
+	exit
+)
+
 set "filepath=%~dp0Reshade.ini"
 
 if exist "%filepath%" ( 
@@ -61,7 +112,7 @@ echo [3]Inject into Genshin Impact (Global Server/Epic Games Store Version)
 echo [4]Inject into Honkai Impact 3 (Universal)
 echo [5]Inject into Honkai: Star Rail (Universal)
 echo [6]Inject into Zenless Zone Zero (Universal Public Beta Client)
-echo [7]Inject into Zenless Zone Zero (Universal CB Client Before Public Beta)
+echo [7]Switch to the test server client injection list.
 echo [8]Other options
 echo [9]Exit
 
@@ -85,7 +136,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "6" (
     powershell -command Start-Process -FilePath inject.exe ZenlessZoneZero.exe -Verb RunAs
 ) else if "%content%" == "7" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+    goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
     goto other
 ) else if "%content%" == "9" (
@@ -292,3 +343,59 @@ if "%content%" == "1" (
     pause
 	goto menu
 )
+
+:beta_client_inject_choice_menu
+title HoYoShade Starter
+cls
+echo Welcome to use HoYoShade starter!
+echo\
+echo Mod Version:V2.3.1 Stable
+echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo\
+echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
+echo\
+echo This mod is only for color grading in-game scenes.  
+echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
+echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
+echo When publishing videos using the mod to shoot footage, please note: "This video is rendered with support from GitHub@DuolaD/HoYoShade."
+echo If you are unable to add the note due to special reasons,  
+echo please contact the developer through the contact information in the "Other Options" section for an explanation.
+echo\
+echo The following client injection options can only be used for injecting into the test server client.
+echo\
+echo If the test server client you want to use is not on this list, or if the injector does not respond to game launch, it means that:
+echo 1:The test server client injection option you want to use is shared with the public client injection option. Please try using the public client injection list to attempt injection first.
+echo 2:HoYoShade has not yet been adapted to the test server client you are currently using.
+echo For adaptation, please visit our GitHub repository (https://github.com/DuolaD/HoYoShade) to submit issues.
+echo\
+echo [1]Reset the ReShade.ini in the mod's root directory.
+echo [2]Inject into Zenless Zone Zero (Universal CB Client Before Public Beta)
+echo [3]Inject into Zenless Zone Zero (Universal CB Client After Public Beta)
+echo [4]Switch to the public client injection list
+echo [5]Other options
+echo [6]Exit
+
+echo\
+set /p "content=Type the number here:"
+
+if "%content%" == "1" (
+    goto ini_Reset
+) else if "%content%" == "2" (
+    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	exit
+) else if "%content%" == "3" (
+    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
+    exit
+) else if "%content%" == "4" (
+    goto menu
+) else if "%content%" == "5" (
+    goto other
+) else if "%content%" == "6" (
+	exit
+) else (
+    echo\
+    echo Input error.
+    timeout /t 2
+    goto menu
+)
+exit
