@@ -17,7 +17,7 @@ if exist "%filepath%" (
     cls
     echo Welcome to use HoYoShade starter!
     echo\
-    echo Mod Version:V2.21.0 Stable
+    echo Mod Version:V2.3.1 Stable
     echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo We have detected that this is your first time using this mod. Reshade.ini has been generated in the root directory of the mod.
@@ -43,7 +43,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
@@ -103,7 +103,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo If you need to check for version updates, you can visit our repository to see if there are any new released versions.
@@ -158,7 +158,7 @@ title HoYoShade Starter (You have entered developer options!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Note! Developer options are only for debugging/error checking purposes. 
@@ -193,7 +193,7 @@ title HoYoShade Starter(You have entered the custom injection interface!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Note! This function is only for developers to test new games. This means there may be unknown risks/Bugs.
@@ -221,7 +221,7 @@ echo\
 echo DuolaDStudio X °¢Ïò¾úAXBro x Ex_M
 echo Joint contributions.
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo\
 echo HoYoShade is based on the official ReShade plugins and the OpenHoYoShade framework for secondary development. 
 echo All files except for effect libraries/presets are open-sourced on GitHub under the BSL-3 open-source license.
@@ -251,7 +251,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.21.0 Stable
+echo Mod Version:V2.3.1 Stable
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note: You only need to reset the ReShade.ini after moving the mod directory. 
@@ -272,7 +272,7 @@ if "%content%" == "1" (
 	cls
 	echo Welcome to use HoYoShade starter!
 	echo\
-	echo Mod Version:V2.21.0 Stable
+	echo Mod Version:V2.3.1 Stable
 	echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 	echo\
     echo Reset successful! The replaced ReShade.ini after the reset is now in the mod's root directory, replacing the old version of ReShade.ini.
