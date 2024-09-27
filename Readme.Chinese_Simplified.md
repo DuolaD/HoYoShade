@@ -102,7 +102,7 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 | **崩坏:星穹铁道/HSR/Honkai: Star Rail(哔哩哔哩服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏:星穹铁道/HSR/Honkai: Star Rail(国际服)** | 是 | 是 | 无游戏版本限制 |
 | **崩坏:星穹铁道/HSR/Honkai: Star Rail(Epic版本)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero 中国大陆/海外 REL(公测/公开)客户端** | 是 | 是 | 无游戏版本限制 |
+| **绝区零/ZZZ/Zenless Zone Zero (中国大陆服/国际服客户端)** | 是 | 是 | 无游戏版本限制 |
   
 内测(CB/CBT)客户端:    
   

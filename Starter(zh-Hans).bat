@@ -5,21 +5,10 @@ chcp 936
 title HoYoShade启动器
 cls
 
-mkdir %SystemRoot%\temp\admin_check >nul 2>&1
-
-if exist %SystemRoot%\temp\admin_check (
-	rmdir %SystemRoot%\temp\admin_check
-	title HoYoShade启动器
-	cls
-	echo 欢迎使用HoYoShade启动器！
-	echo\
-	echo 模组版本：Next-Version
-	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
-	echo\
-    echo 我们检测到启动器正在以管理员身份运行，这会导致注入器发生兼容问题。
-	echo 按下任意键后启动器将会退出运行。如果你想继续运行启动器，请以普通模式运行（直接双击运行即可）。
-	pause
-	exit
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
 )
 
 set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
@@ -104,10 +93,10 @@ echo 如因特殊原因无法备注，请通过"其它选项"中的联系方式联系开发者进行说明。
 echo\
 echo [1]重置模组根目录中的ReShade.ini
 echo [2]注入至原神（中国大陆/哔哩哔哩客户端）
-echo [3]注入至原神（国际客户端/Epic客户端）
-echo [4]注入至崩坏三(通用客户端)
-echo [5]注入至崩坏：星穹铁道(通用客户端)
-echo [6]注入至绝区零(通用客户端)
+echo [3]注入至原神（国际服客户端/Epic客户端）
+echo [4]注入至崩坏三（通用客户端）
+echo [5]注入至崩坏：星穹铁道（通用客户端）
+echo [6]注入至绝区零（通用客户端）
 echo [7]切换至测试服客户端注入列表
 echo [8]其它选项
 echo [9]退出程序
@@ -115,22 +104,45 @@ echo [9]退出程序
 echo\
 set /p "content=在此输入选项前面的数字："
 
+echo\
+
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    powershell -command Start-Process -FilePath inject.exe YuanShen.exe -Verb RunAs
+	echo 你选择的注入目标为:原神（中国大陆/哔哩哔哩客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe YuanShen.exe
 	exit
 ) else if "%content%" == "3" (
-    powershell -command Start-Process -FilePath inject.exe GenshinImpact.exe -Verb RunAs
+	echo 你选择的注入目标为:原神（国际服客户端/Epic客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-    powershell -command Start-Process -FilePath inject.exe BH3.exe -Verb RunAs
+	echo 你选择的注入目标为:崩坏三（通用客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-    powershell -command Start-Process -FilePath inject.exe StarRail.exe -Verb RunAs
+	echo 你选择的注入目标为:崩坏：星穹铁道（通用客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZero.exe -Verb RunAs
+	echo 你选择的注入目标为:绝区零（通用客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe ZenlessZoneZero.exe
+	exit
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
@@ -138,7 +150,6 @@ if "%content%" == "1" (
 ) else if "%content%" == "9" (
     exit
 ) else (
-    echo\
     echo 输入错误。
     timeout /t 2
     goto menu
@@ -250,11 +261,16 @@ echo 等待注入窗口界面弹出后启动目标程序即可。
 echo 输入'\exit'即可返回开发界面。
 echo\
 set /p "content=在此输入："
+echo\
 if "%content%" == "\exit" (
     goto develop
 ) else (
-    powershell -command Start-Process -FilePath inject.exe %content%.exe -Verb RunAs
-    exit
+	echo 你选择的注入目标为:%content%.exe
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe %content%.exe
+	exit
 )
 
 :about_HoYoShade
@@ -368,32 +384,38 @@ echo 2:HoYoShade暂未适配你目前正在使用的测试服客户端。
 echo 如需适配，请在我们的访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
 echo\
 echo [1]重置模组根目录中的ReShade.ini
-echo [2]注入至原神(部分公测前海外内测客户端)
-echo [3]注入至绝区零(通用公测前内测客户端)
-echo [4]注入至绝区零(通用公测后内测客户端)
-echo [5]切换至公开客户端注入列表
-echo [6]其它选项
-echo [7]退出程序
+echo [2]注入至绝区零（通用公测前内测客户端）
+echo [3]注入至绝区零（通用公测后内测客户端）
+echo [4]切换至公开客户端注入列表
+echo [5]其它选项
+echo [6]退出程序
 
 echo\
 set /p "content=在此输入选项前面的数字："
 
+echo\
+
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    powershell -command Start-Process -FilePath inject.exe Genshin.exe -Verb RunAs
+	echo 你选择的注入目标为:绝区零（通用公测前内测客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe ZZZ.exe
 	exit
 ) else if "%content%" == "3" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	echo 你选择的注入目标为:绝区零（通用公测后内测客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
 	exit
 ) else if "%content%" == "4" (
-    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
-    exit
-) else if "%content%" == "5" (
     goto menu
-) else if "%content%" == "6" (
+) else if "%content%" == "5" (
     goto other
-) else if "%content%" == "7" (
+) else if "%content%" == "6" (
 	exit
 ) else (
     echo\
