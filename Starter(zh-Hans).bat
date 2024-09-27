@@ -13,7 +13,7 @@ if exist %SystemRoot%\temp\admin_check (
 	cls
 	echo 欢迎使用HoYoShade启动器！
 	echo\
-	echo 模组版本：V2.3.1 Stable
+	echo 模组版本：Next-Version
 	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 	echo\
     echo 我们检测到启动器正在以管理员身份运行，这会导致注入器发生兼容问题。
@@ -39,7 +39,7 @@ if %missing_file% equ 1 (
 	cls
 	echo 欢迎使用HoYoShade启动器！
 	echo\
-	echo 模组版本：V2.3.1 Stable
+	echo 模组版本：Next-Version
 	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 	echo\
     echo 我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。
@@ -68,7 +68,7 @@ if exist "%filepath%" (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：V2.3.1 Stable
+    echo 模组版本：Next-Version
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我们检测到你是第一次使用本模组，Reshade.ini现已生成至模组根目录中。
@@ -92,7 +92,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
@@ -150,7 +150,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 如果你需要检查版本更新，可以去访问我们的仓库查看是否有发行更新版本
@@ -205,7 +205,7 @@ title HoYoShade启动器(你已进入开发者选项！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！开发者选项仅用于调试/检测错误需要。除非开发者明确要求你这样做，或者你很清楚知道自己在做什么，否则请勿轻易使用！
@@ -239,7 +239,7 @@ title HoYoShade启动器(你已进入自定义注入界面！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！此功能仅供开发者测试新游戏使用。这意味着可能会存在未知风险/Bug。
@@ -268,7 +268,7 @@ echo\
 echo DuolaDStudio X 阿向菌AXBro x Ex_M
 echo 联合巨献
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo\
 echo HoYoShade基于ReShade官方插件和OpenHoYoShade框架二次开发，除效果库/预设之外的所有文件均遵守BSL-3开源协议在GitHub上开源。
 echo 你可以在Reshade.me网站中查看ReShade官方资讯。
@@ -298,7 +298,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意：你只需要在模组目录移动后才需要重置ReShade.ini
@@ -319,7 +319,7 @@ if "%content%" == "1" (
 	cls
 	echo 欢迎使用HoYoShade启动器！
 	echo\
-	echo 模组版本：V2.3.1 Stable
+	echo 模组版本：Next-Version
 	echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 	echo\
     echo 重置成功！重置后的ReShade.ini现已替换模组根目录中的旧版ReShade.ini。
@@ -350,7 +350,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.3.1 Stable
+echo 模组版本：Next-Version
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
@@ -368,11 +368,12 @@ echo 2:HoYoShade暂未适配你目前正在使用的测试服客户端。
 echo 如需适配，请在我们的访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
 echo\
 echo [1]重置模组根目录中的ReShade.ini
-echo [2]注入至绝区零(通用公测前内测客户端)
-echo [3]注入至绝区零(通用公测后内测客户端)
-echo [4]切换至公开客户端注入列表
-echo [5]其它选项
-echo [6]退出程序
+echo [2]注入至原神(部分公测前海外内测客户端)
+echo [3]注入至绝区零(通用公测前内测客户端)
+echo [4]注入至绝区零(通用公测后内测客户端)
+echo [5]切换至公开客户端注入列表
+echo [6]其它选项
+echo [7]退出程序
 
 echo\
 set /p "content=在此输入选项前面的数字："
@@ -380,16 +381,19 @@ set /p "content=在此输入选项前面的数字："
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+    powershell -command Start-Process -FilePath inject.exe Genshin.exe -Verb RunAs
 	exit
 ) else if "%content%" == "3" (
+    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	exit
+) else if "%content%" == "4" (
     powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
     exit
-) else if "%content%" == "4" (
-    goto menu
 ) else if "%content%" == "5" (
-    goto other
+    goto menu
 ) else if "%content%" == "6" (
+    goto other
+) else if "%content%" == "7" (
 	exit
 ) else (
     echo\
