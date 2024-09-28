@@ -34,7 +34,7 @@ int main() {
     
         outfile<<"[ADDON]"<< std::endl;
     outfile<<"AddonPath="<< a <<"\\reshade-shaders\\Addons"<< std::endl;
-    outfile<<"DisabledAddons="<< std::endl;
+    outfile<<"DisabledAddons=AutoHDR@AutoHDR.addon64,Swap chain override@swapchain_override.addon64,srReshade_v1.0.0@srReshade_v1.0.0.addon64,Shader Toggler@ShaderToggler.addon64,Reshade Effect Shader Toggler@ReshadeEffectShaderToggler.addon64,UIBind@ReShade64-UIBind-By-seri14.addon64,Screenshot@ReShade64-Screenshot-By-seri14.addon64,Editor History@ReShade64-EditorHistory-By-seri14.addon64,AutoReload@ReShade64-AutoReload-By-seri14.addon64,Adjust Depth@ReShade64-AdjustDepth-By-seri14.addon64,OBS Capture@obs_capture.addon64,LiveSplit Overlay@livesplit_overlay_x64.addon64,FreePIE@freepie.addon64,Frame Capture@frame_capture.addon64,IGCS Connector@IgcsConnector.addon64"<< std::endl;
     outfile<<""<< std::endl;
 	outfile<<"[DEPTH]"<< std::endl;
 	outfile<<"DepthCopyAtClearIndex=0"<< std::endl;
@@ -79,7 +79,7 @@ int main() {
 	outfile<<"ClearAlpha=1"<< std::endl;
 	outfile<<"FileFormat=1"<< std::endl;
 	outfile<<"FileNamingFormat=0"<< std::endl;
-	outfile<<"JPEGQuality=90"<< std::endl;
+	outfile<<"JPEGQuality=100"<< std::endl;
 	outfile<<"SaveBeforeShot=0"<< std::endl;
 	outfile<<"SaveOverlayShot=0"<< std::endl;
 	outfile<<"SavePath="<< a <<"\\ScreenShot"<< std::endl;
