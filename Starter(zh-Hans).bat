@@ -384,11 +384,12 @@ echo 2:HoYoShade暂未适配你目前正在使用的测试服客户端。
 echo 如需适配，请在我们的访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
 echo\
 echo [1]重置模组根目录中的ReShade.ini
-echo [2]注入至绝区零（通用公测前内测客户端）
-echo [3]注入至绝区零（通用公测后内测客户端）
-echo [4]切换至公开客户端注入列表
-echo [5]其它选项
-echo [6]退出程序
+echo [2]注入至原神（部分公测前海外内测客户端）
+echo [3]注入至绝区零（通用公测前内测客户端）
+echo [4]注入至绝区零（通用公测后内测客户端）
+echo [5]切换至公开客户端注入列表
+echo [6]其它选项
+echo [7]退出程序
 
 echo\
 set /p "content=在此输入选项前面的数字："
@@ -398,24 +399,31 @@ echo\
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
+	echo 你选择的注入目标为:原神（部分公测前海外内测客户端）
+    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+	start "" /wait /b inject.exe Genshin.exe
+	exit
+) else if "%content%" == "3" (
 	echo 你选择的注入目标为:绝区零（通用公测前内测客户端）
     echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
 	start "" /wait /b inject.exe ZZZ.exe
 	exit
-) else if "%content%" == "3" (
+) else if "%content%" == "4" (
 	echo 你选择的注入目标为:绝区零（通用公测后内测客户端）
     echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
 	start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
 	exit
-) else if "%content%" == "4" (
-    goto menu
 ) else if "%content%" == "5" (
-    goto other
+    goto menu
 ) else if "%content%" == "6" (
+    goto other
+) else if "%content%" == "7" (
 	exit
 ) else (
     echo\
