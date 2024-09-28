@@ -52,7 +52,7 @@ if exist "%filepath%" (
 ) else (
     cls
     start "" /wait /b ".\InjectResource\INIBuild.exe"
-    start "" /b "convert_encoding.bat"
+    start "" "convert_encoding.bat"
     :FileCheck
     cls
     echo Welcome to use HoYoShade starter!
