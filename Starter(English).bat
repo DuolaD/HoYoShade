@@ -5,21 +5,10 @@ chcp 936
 title HoYoShade Starter
 cls
 
-mkdir %SystemRoot%\temp\admin_check >nul 2>&1
-
-if exist %SystemRoot%\temp\admin_check (
-	rmdir %SystemRoot%\temp\admin_check
-	title HoYoShade Starter
-	cls
-	echo Welcome to use HoYoShade starter!
-	echo\
-	echo Mod Version:Next-Version
-	echo Developer:DuolaDStudio X ∞¢œÚæ˙AXBro X Ex_M
-	echo\
-    echo We have detected that the launcher is running with administrator privileges, which can cause compatibility issues with the injector.
-	echo After pressing any key, the launcher will exit. If you want to continue running the launcher, please run it in normal mode £®just double-click to run£©.
-	pause
-	exit
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
 )
 
 set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
@@ -62,8 +51,8 @@ if exist "%filepath%" (
     goto menu
 ) else (
     cls
-    start "" /wait ".\InjectResource\INIBuild.exe"
-    start "" "convert_encoding.bat"
+    start "" /wait /b ".\InjectResource\INIBuild.exe"
+    start "" /b "convert_encoding.bat"
     :FileCheck
     cls
     echo Welcome to use HoYoShade starter!
@@ -107,11 +96,11 @@ echo If you are unable to add the note due to special reasons,
 echo please contact the developer through the contact information in the "Other Options" section for an explanation.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact (CN/BiliBil Server)
-echo [3]Inject into Genshin Impact (Global Server/Epic Games Store Version)
-echo [4]Inject into Honkai Impact 3 (Universal)
-echo [5]Inject into Honkai: Star Rail (Universal)
-echo [6]Inject into Zenless Zone Zero (Universal Public Beta Client)
+echo [2]Inject into Genshin Impact £®CN/BiliBil Server£©
+echo [3]Inject into Genshin Impact £®Global Server/Epic Games Store Version£©
+echo [4]Inject into Honkai Impact 3 £®Universal£©
+echo [5]Inject into Honkai: Star Rail £®Universal£©
+echo [6]Inject into Zenless Zone Zero £®Universal£©
 echo [7]Switch to the test server client injection list.
 echo [8]Other options
 echo [9]Exit
@@ -122,19 +111,45 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    powershell -command Start-Process -FilePath inject.exe YuanShen.exe -Verb RunAs
+	echo The injection target you selected is:Genshin Impact £®CN/BiliBil Server£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe YuanShen.exe
 	exit
 ) else if "%content%" == "3" (
-    powershell -command Start-Process -FilePath inject.exe GenshinImpact.exe -Verb RunAs
+	echo The injection target you selected is:Genshin Impact £®Global Server/Epic Games Store Version£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-    powershell -command Start-Process -FilePath inject.exe BH3.exe -Verb RunAs
+	echo The injection target you selected is:Honkai Impact 3 £®Universal£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-    powershell -command Start-Process -FilePath inject.exe StarRail.exe -Verb RunAs
+	echo The injection target you selected is:Honkai: Star Rail £®Universal£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZero.exe -Verb RunAs
+	echo The injection target you selected is:Zenless Zone Zero £®Universal£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe ZenlessZoneZero.exe
+	exit
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
@@ -259,8 +274,13 @@ set /p "content=Type here:"
 if "%content%" == "\exit" (
     goto develop
 ) else (
-    powershell -command Start-Process -FilePath inject.exe %content%.exe -Verb RunAs
-    exit
+	echo The injection target you selected is:%content%.exe
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe %content%.exe
+	exit
 )
 
 :about_HoYoShade
@@ -369,12 +389,12 @@ echo 2:HoYoShade has not yet been adapted to the test server client you are curr
 echo For adaptation, please visit our GitHub repository (https://github.com/DuolaD/HoYoShade) to submit issues.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact (Part of Oversea CB Client Before Public Beta)
-echo [2]Inject into Zenless Zone Zero (Universal CB Client Before Public Beta)
-echo [3]Inject into Zenless Zone Zero (Universal CB Client After Public Beta)
-echo [4]Switch to the public client injection list
-echo [5]Other options
-echo [6]Exit
+echo [2]Inject into Genshin Impact £®Part of Oversea CB Client Before Public Beta£©
+echo [3]Inject into Zenless Zone Zero £®Universal CB Client Before Public Beta£©
+echo [4]Inject into Zenless Zone Zero £®Universal CB Client After Public Beta£©
+echo [5]Switch to the public client injection list
+echo [6]Other options
+echo [7]Exit
 
 echo\
 set /p "content=Type the number here:"
@@ -382,14 +402,29 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    powershell -command Start-Process -FilePath inject.exe Genshin.exe -Verb RunAs
+	echo The injection target you selected is:Genshin Impact £®Part of Oversea CB Client Before Public Beta£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe Genshin.exe
 	exit
 ) else if "%content%" == "3" (
-    powershell -command Start-Process -FilePath inject.exe ZZZ.exe -Verb RunAs
+	echo The injection target you selected is:Zenless Zone Zero £®Universal CB Client Before Public Beta£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe ZZZ.exe
 	exit
 ) else if "%content%" == "4" (
-    powershell -command Start-Process -FilePath inject.exe ZenlessZoneZeroBeta.exe -Verb RunAs
-    exit
+	echo The injection target you selected is:Zenless Zone Zero £®Universal CB Client After Public Beta£©
+    echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
+	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+	start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
+	exit
 ) else if "%content%" == "5" (
     goto menu
 ) else if "%content%" == "6" (
@@ -398,7 +433,7 @@ if "%content%" == "1" (
 	exit
 ) else (
     echo\
-    echo  ‰»Î¥ÌŒÛ°£
+    echo Input error.
     timeout /t 2
     goto menu
     )
