@@ -51,8 +51,8 @@ if exist "%filepath%" (
     goto menu
 ) else (
     cls
-    start "" /wait ".\InjectResource\INIBuild.exe"
-    start "" "convert_encoding.bat"
+    start "" /wait /b ".\InjectResource\INIBuild.exe"
+    start "" /b "convert_encoding.bat"
     :FileCheck
     cls
     echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
