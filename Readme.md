@@ -108,7 +108,7 @@ CB/CBT(Close Beta Test)Client:
 > [!NOTE]
 > ·For private server players, if the corresponding client required by the private server appears in the supported games list below, then HoYoShade can provide support.    
 > ·MiHoYo/HoYoVerse's beta clients released to testers after the official release usually have client version numbers like: X.5.X, X.X.Y (where X is the current REL (Release) version number), X.X.Y0 (where X is the current REL (Releases) version number), etc. And they usually have different file encryption/launchers compared to REL (Release) clients. Please verify the version and source of the client you have.  
-> ·HoYoShade理論上也可以對Beta版(測試服)客戶端提供注入和運行支持，但我們對任何測試服客戶端的注入和運行支持不作成功性/功能性保證。  
+> ·HoYoShade theoretically can also provide injection and runtime support for the Beta version client, but we do not guarantee the success or functionality of injection and runtime support for any test server client.  
 > ·We do not recommend that you use the beta client to run HoYoShade on official servers, to avoid the risk of violating confidentiality agreements/regulations/laws/economic losses for all HoYoShade developers/secondary developers and yourself.  
 > ·Unless the option in the table below is "Yes," this indicates that HoYoShade has only been tested on some leaked clients of this type and has concluded that it is supported. This does not mean that all versions/types/sources of different game internal test clients can run HoYoShade. Please test it yourself.   
 > ·If the test server client you are using does not support running HoYoShade, and you are very sure that this is not caused by using the wrong injection option, please create a new issue on the [issues pages](https://github.com/DuolaD/HoYoShade/issues) to help us adapt. Or use the developer function of the launcher to try custom injection.  
@@ -126,42 +126,8 @@ CB/CBT(Close Beta Test)Client:
 | **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
 | **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
-| **絕區零/ZZZ/Zenless Zone Zero(CN/OS CB Client After Public Beta)(X.X.X/X.X.X0)** | Tested on some leaked clients | Tested and supported in some leaked clients | - | 
-
-> [!NOTE]
-> ·For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.  
-> ·For the Beta client of MiHoYo/HoYoVerse developers aimed at testers after the public test (usually the client version number is: current version number.5.X), HoYoShade can theoretically provide injection and operation support. However, we do not recommend using the Beta client to run HoYoShade on official servers to avoid the risk of confidentiality agreement breaches/violations/illegal activities/economic losses for all HoYoShade developers/secondary developers and yourself.  
-> ·For Beta version clients released to testers by MiHoYo/HoYoVerse after the official release (usually with a client version number of: current version number.5.X), HoYoShade only tests and supports leaked clients, which does not imply that all versions of beta clients can run HoYoShade. If the test server client you are using does not support running HoYoShade, and you are certain that this is not due to using the wrong injection option, please create a new issue on the [issues page](https://github.com/DuolaD/HoYoShade/issues) to help us with adaptation. Alternatively, you can use the launcher's developer features to try custom injection.  
-> ·For games that don't appear in the list of supported games, you can try to inject HoYoShade by choosing to use a game already supported in the injector or selecting Custom Inject in the developer options.    
-> ·HoYoShade supports simultaneous injection with other mainstream mods without any conflict issues. However, please note and ensure that there are no conflicts between other game mods.    
-
-| Client | Tested | Support | Game Version restrictions |
-| --- | --- | --- | --- |
-| **Genshin Impact/YuanShen(CN Server)** | Yes | Yes | Unlimited |
-| **Genshin Impact/YuanShen(BiliBili Server)** | Yes | Yes*1 | Unlimited |
-| **Genshin Impact/YuanShen(Global Server)** | Yes | Yes | Unlimited |
-| **Genshin Impact/YuanShen(Epic Version)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(CN Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(CN Steam Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(Traditional Chinese Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(KR Server)** | Yes | Yes*1 | Unlimited |
-| **Honkai Impact 3rd/BH3(JP Steam Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(SEA Server)** | Yes | Yes | Unlimited |
-| **Honkai Impact 3rd/BH3(Europe & Americas Servers)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail/HSR(CN Server)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail/HSR(BiliBili Server)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail/HSR(Global Server)** | Yes | Yes | Unlimited |
-| **Honkai: Star Rail/HSR(Epic Version)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ CN 1.0 REL Client** | Yes | Yes | - |
-| **Zenless Zone Zero/ZZZ OS 1.0 REL Client** | Yes | Yes | - |
-| **Zenless Zone Zero/ZZZ(CN/OS 1.1 CB)(1.1.X)*** | Yes | Yes | Unlimited |
-
-*: Development completed, will be released with the ReShade version update (this injection solution can be used for all subsequent beta version clients).
-
+| **Zenless Zone Zero/ZZZ(CN/OS CB Client After Public Beta)(X.X.X/X.X.X0)** | Tested on some leaked clients | Tested and supported in some leaked clients | - | 
+  
 ## 〢 Sources
 
 | Name | information | URL address |
