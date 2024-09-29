@@ -75,6 +75,58 @@ Please refer to the [Contributors Page](#〢-Contributors) for information about
 > ·Contributors to the HoYoShade repository and all contributors who have developed based on HoYoShade will not be responsible for any consequences that may occur when running HoYoShade on the official servers of HoYoVerse games.  
 
 ## 〢 Support games list
+  
+REL(Releases) Client：  
+  
+> [!NOTE]
+> ·For private server players, if the corresponding client required by the private server appears in the supported games list below, then HoYoShade can provide support.  
+> ·We do not recommend that you run HoYoShade on official servers.  
+> ·For games that do not appear in the supported games list, you can try to select a game that is already supported in the injector or choose custom injection in the developer options to try injecting HoYoShade.  
+> ·HoYoShade supports simultaneous injection with other mainstream mods and there are no conflict issues. However, please note and ensure that there are no conflicts between other game mods.   
+  
+| Client | Tested | Support | Game Version restrictions |
+| --- | --- | --- | --- |
+| **Genshin Impact/YuanShen(CN Server)** | Yes | Yes | Unlimited |
+| **Genshin Impact/YuanShen(BiliBili Server)** | Yes | Yes | Unlimited |
+| **Genshin Impact/YuanShen(Global Server)** | Yes | Yes | Unlimited |
+| **Genshin Impact/YuanShen(Epic Version)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(CN Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(CN Steam Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(Traditional Chinese Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(KR Server)** | Yes | Yes*1 | Unlimited |
+| **Honkai Impact 3rd/BH3(JP Steam Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(SEA Server)** | Yes | Yes | Unlimited |
+| **Honkai Impact 3rd/BH3(Europe & Americas Servers)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(CN Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(BiliBili Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(Global Server)** | Yes | Yes | Unlimited |
+| **Honkai: Star Rail/HSR(Epic Version)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ (CN/OS Server Client)** | Yes | Yes | Unlimited |
+  
+CB/CBT(Close Beta Test)Client:    
+  
+> [!NOTE]
+> ·For private server players, if the corresponding client required by the private server appears in the supported games list below, then HoYoShade can provide support.    
+> ·MiHoYo/HoYoVerse's beta clients released to testers after the official release usually have client version numbers like: X.5.X, X.X.Y (where X is the current REL (Release) version number), X.X.Y0 (where X is the current REL (Releases) version number), etc. And they usually have different file encryption/launchers compared to REL (Release) clients. Please verify the version and source of the client you have.  
+> ·HoYoShade理論上也可以對Beta版(測試服)客戶端提供注入和運行支持，但我們對任何測試服客戶端的注入和運行支持不作成功性/功能性保證。  
+> ·We do not recommend that you use the beta client to run HoYoShade on official servers, to avoid the risk of violating confidentiality agreements/regulations/laws/economic losses for all HoYoShade developers/secondary developers and yourself.  
+> ·Unless the option in the table below is "Yes," this indicates that HoYoShade has only been tested on some leaked clients of this type and has concluded that it is supported. This does not mean that all versions/types/sources of different game internal test clients can run HoYoShade. Please test it yourself.   
+> ·If the test server client you are using does not support running HoYoShade, and you are very sure that this is not caused by using the wrong injection option, please create a new issue on the [issues pages](https://github.com/DuolaD/HoYoShade/issues) to help us adapt. Or use the developer function of the launcher to try custom injection.  
+> ·For games that do not appear in the supported games list, you can try to select a game that is already supported in the injector or choose custom injection in the developer options to try injecting HoYoShade.  
+  
+| Client | Tested | Support | Game Version restrictions |
+| --- | --- | --- | --- |
+| **Genshin Impact/YuanShen(OS Part of Oversea CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Genshin Impact/YuanShen(CN CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Genshin Impact/YuanShen(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Honkai Impact 3rd/BH3(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
+| **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
+| **絕區零/ZZZ/Zenless Zone Zero(CN/OS CB Client After Public Beta)(X.X.X/X.X.X0)** | Tested on some leaked clients | Tested and supported in some leaked clients | - | 
 
 > [!NOTE]
 > ·For the Private Server player, If the corresponding client required by the private server appears in the list of supported games, that means HoYoShade can support it.  
