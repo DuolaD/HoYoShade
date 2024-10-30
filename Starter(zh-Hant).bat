@@ -88,8 +88,7 @@ echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
 echo\
 echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議及遊戲及其開發/發行商相關條例。
 echo 你可以在模組根目錄/Tutorial資料夾中查看使用者協定和圖文安裝說明。
-echo 使用模組拍攝素材發佈視頻時，請備註:"該視頻由GitHub@DuolaD/HoYoShade提供渲染支持"。
-echo 如因特殊原因無法備註，請通過"其它選項"中的聯繫方式聯繫開發者進行說明。
+REM 我還是更愿意當一個在背後默默付出的人 XD
 echo\
 echo [1]重置模組根目錄中的ReShade.ini
 echo [2]注入至原神（中國大陸服/嗶哩嗶哩服客戶端）
