@@ -25,24 +25,24 @@ for %%f in %files_to_check% do (
 
 if %missing_file% equ 1 (
     title HoYoShade Starter
-	cls
-	echo Welcome to use HoYoShade starter!
-	echo\
-	echo Mod Version:V2.3.3 Stable
-	echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
-	echo\
+    cls
+    echo Welcome to use HoYoShade starter!
+    echo\
+    echo Mod Version:Next-Version
+    echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+    echo\
     echo We have detected that the necessary files for £¨Open£©HoYoShade framework injection are missing.
-	echo\
-	echo Possible reasons for this message include:
-	echo 1:You did not extract all files from the compressed package.
-	echo 2:You did not paste all files during an update operation.
-	echo 3:Your antivirus software/other programs mistakenly identified £¨Open£©HoYoShade as a virus and deleted some files.
-	echo 4:You accidentally or intentionally renamed some critical files.
-	echo\
-	echo After pressing any key, the launcher will exit.
-	echo If you want to continue running £¨Open£©HoYoShade, please visit our GitHub repository £¨https://github.com/DuolaD/HoYoShade£© to re-download the latest compressed package from the Releases page and extract all files.
-	pause
-	exit
+    echo\
+    echo Possible reasons for this message include:
+    echo 1:You did not extract all files from the compressed package.
+    echo 2:You did not paste all files during an update operation.
+    echo 3:Your antivirus software/other programs mistakenly identified £¨Open£©HoYoShade as a virus and deleted some files.
+    echo 4:You accidentally or intentionally renamed some critical files.
+    echo\
+    echo After pressing any key, the launcher will exit.
+    echo If you want to continue running £¨Open£©HoYoShade, please visit our GitHub repository £¨https://github.com/DuolaD/HoYoShade£© to re-download the latest compressed package from the Releases page and extract all files.
+    pause
+    exit
 )
 
 set "filepath=%~dp0Reshade.ini"
@@ -57,25 +57,25 @@ if exist "%filepath%" (
     cls
     echo Welcome to use HoYoShade starter!
     echo\
-    echo Mod Version:V2.3.3 Stable
+    echo Mod Version:Next-Version
     echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo We have detected that this is your first time using this mod. Reshade.ini has been generated in the root directory of the mod.
     echo You need to copy Reshade.ini to the root directory of the game process before you can use this mod.
     echo\
-	echo How to find the root directory of the game process?
-	echo For HoYoPlay £¨HoYoVerse official new launcher£©:
-	echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
-	echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
-	echo\
-	echo For StarWard: Click the gear icon next to the Start button to view the root directory of the game process.
-	echo Click the game process root directory to open it using the file explorer.
-	echo\
-	echo Still not sure how to proceed?
-	echo You can check the user agreement and illustrated installation guide in the 'Tutorial' folder within the root directory of the mod.
-	echo\
+    echo How to find the root directory of the game process?
+    echo For HoYoPlay £¨HoYoVerse official new launcher£©:
+    echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
+    echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
+    echo\
+    echo For StarWard: Click the gear icon next to the Start button to view the root directory of the game process.
+    echo Click the game process root directory to open it using the file explorer.
+    echo\
+    echo Still not sure how to proceed?
+    echo You can check the user agreement and illustrated installation guide in the 'Tutorial' folder within the root directory of the mod.
+    echo\
     pause
-	goto menu
+    goto menu
 )
 
 :menu
@@ -83,7 +83,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
@@ -109,45 +109,57 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-	echo The injection target you selected is:Genshin Impact £¨CN/BiliBil Server£©
+    :YS_CheckProcess
+    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM YuanShen.exe /F >nul 2>&1
+        goto YS_CheckProcess
+    )
+    echo The injection target you selected is:Genshin Impact £¨CN/BiliBil Server£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe YuanShen.exe
-	exit
+    start "" /wait /b inject.exe YuanShen.exe
+    exit
 ) else if "%content%" == "3" (
-	echo The injection target you selected is:Genshin Impact £¨Global Server/Epic Games Store Version£©
+    :GI_CheckProcess
+    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM GenshinImpact.exe /F >nul 2>&1
+        goto GI_CheckProcess
+    )
+    echo The injection target you selected is:Genshin Impact £¨Global Server/Epic Games Store Version£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe GenshinImpact.exe
+    start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-	echo The injection target you selected is:Honkai Impact 3 £¨Universal£©
+    echo The injection target you selected is:Honkai Impact 3 £¨Universal£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe BH3.exe
+    start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-	echo The injection target you selected is:Honkai: Star Rail £¨Universal£©
+    echo The injection target you selected is:Honkai: Star Rail £¨Universal£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe StarRail.exe
+    start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-	echo The injection target you selected is:Zenless Zone Zero £¨Universal£©
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe ZenlessZoneZero.exe
-	exit
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    exit
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
@@ -167,7 +179,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo If you need to check for version updates, you can visit our repository to see if there are any new released versions.
@@ -222,7 +234,7 @@ title HoYoShade Starter (You have entered developer options!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Note! Developer options are only for debugging/error checking purposes. 
@@ -257,7 +269,7 @@ title HoYoShade Starter(You have entered the custom injection interface!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Note! This function is only for developers to test new games. This means there may be unknown risks/Bugs.
@@ -272,13 +284,13 @@ set /p "content=Type here:"
 if "%content%" == "\exit" (
     goto develop
 ) else (
-	echo The injection target you selected is:%content%.exe
+    echo The injection target you selected is:%content%.exe
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe %content%.exe
-	exit
+    start "" /wait /b inject.exe %content%.exe
+    exit
 )
 
 :about_HoYoShade
@@ -290,7 +302,7 @@ echo\
 echo DuolaDStudio X °¢Ïò¾úAXBro x Ex_M
 echo Joint contributions.
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo\
 echo HoYoShade is based on the official ReShade plugins and the OpenHoYoShade framework for secondary development. 
 echo All files except for effect libraries/presets are open-sourced on GitHub under the BSL-3 open-source license.
@@ -320,7 +332,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note: You only need to reset the ReShade.ini after moving the mod directory. 
@@ -337,29 +349,29 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     start "" /wait ".\InjectResource\INIBuild.exe"
     start "" "convert_encoding.bat"
-	:File_Reset
-	cls
-	echo Welcome to use HoYoShade starter!
-	echo\
-	echo Mod Version:V2.3.3 Stable
-	echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
-	echo\
+    :File_Reset
+    cls
+    echo Welcome to use HoYoShade starter!
+    echo\
+    echo Mod Version:Next-Version
+    echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+    echo\
     echo Reset successful! The replaced ReShade.ini after the reset is now in the mod's root directory, replacing the old version of ReShade.ini.
     echo You need to replace the ReShade.ini in the game process root directory with the reset ReShade.ini in order to use this mod.
     echo\
-	echo How to find the root directory of the game process?
-	echo For HoYoPlay £¨HoYoVerse official new launcher£©:
-	echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
-	echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
-	echo\
-	echo For StarWard: Click the gear icon next to the Start button to view the root directory of the game process.
-	echo Click the game process root directory to open it using the file explorer.
-	echo\
-	echo Still not sure how to proceed?
-	echo You can check the user agreement and illustrated installation guide in the 'Tutorial' folder within the root directory of the mod.
-	echo\
+    echo How to find the root directory of the game process?
+    echo For HoYoPlay £¨HoYoVerse official new launcher£©:
+    echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
+    echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
+    echo\
+    echo For StarWard: Click the gear icon next to the Start button to view the root directory of the game process.
+    echo Click the game process root directory to open it using the file explorer.
+    echo\
+    echo Still not sure how to proceed?
+    echo You can check the user agreement and illustrated installation guide in the 'Tutorial' folder within the root directory of the mod.
+    echo\
     pause
-	goto menu
+    goto menu
 )
 
 :beta_client_inject_choice_menu
@@ -367,7 +379,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V2.3.3 Stable
+echo Mod Version:Next-Version
 echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
@@ -400,35 +412,41 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-	echo The injection target you selected is:Genshin Impact £¨Part of Oversea CB Client Before Public Beta£©
+    :GICBT_CheckProcess
+    tasklist /FI "IMAGENAME eq Genshin.exe" | find /i "Genshin.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM Genshin.exe /F >nul 2>&1
+        goto GICBT_CheckProcess
+    )
+    echo The injection target you selected is:Genshin Impact £¨Part of Oversea CB Client Before Public Beta£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe Genshin.exe
-	exit
+    start "" /wait /b inject.exe Genshin.exe
+    exit
 ) else if "%content%" == "3" (
-	echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client Before Public Beta£©
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client Before Public Beta£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe ZZZ.exe
-	exit
+    start "" /wait /b inject.exe ZZZ.exe
+    exit
 ) else if "%content%" == "4" (
-	echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client After Public Beta£©
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client After Public Beta£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
-	echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-	start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
-	exit
+    start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
+    exit
 ) else if "%content%" == "5" (
     goto menu
 ) else if "%content%" == "6" (
     goto other
 ) else if "%content%" == "7" (
-	exit
+    exit
 ) else (
     echo\
     echo Input error.
