@@ -68,7 +68,6 @@ int main() {
 	outfile<<"SaveWindowState=0"<< std::endl;
 	outfile<<"ShowClock=0"<< std::endl;
 	outfile<<"ShowForceLoadEffectsButton=1"<< std::endl;
-	outfile<<"ShowFPS=0"<< std::endl;
 	outfile<<"ShowFrameTime=0"<< std::endl;
 	outfile<<"ShowScreenshotMessage=1"<< std::endl;
 	outfile<<"TutorialProgress=4"<< std::endl;
@@ -90,10 +89,10 @@ int main() {
 	outfile<<"ChildRounding=0.000000"<< std::endl;
 	outfile<<"ColFPSText=1.000000,1.000000,0.784314,1.000000"<< std::endl;
 	outfile<<"EditorFont="<< b << "\\msyhbd.ttc" <<std::endl;
-	outfile<<"EditorFontSize=13"<< std::endl;
+	outfile<<"EditorFontSize=17"<< std::endl;
 	outfile<<"EditorStyleIndex=0"<< std::endl;
 	outfile<<"Font="<< b << "\\msyhbd.ttc" << std::endl;
-	outfile<<"FontSize=13"<< std::endl;
+	outfile<<"FontSize=17"<< std::endl;
 	outfile<<"FPSScale=1.000000"<< std::endl;
 	outfile<<"FrameRounding=0.000000"<< std::endl;
 	outfile<<"GrabRounding=0.000000"<< std::endl;
