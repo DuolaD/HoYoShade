@@ -97,8 +97,9 @@ echo [4]注入至崩坏三（通用客户端）
 echo [5]注入至崩坏：星穹铁道（通用客户端）
 echo [6]注入至绝区零（通用客户端）
 echo [7]切换至测试服客户端注入列表
-echo [8]其它选项
-echo [9]退出程序
+echo [8]联动Blender/留影机插件注入至原神
+echo [9]其它选项
+echo [10]退出程序
 
 echo\
 set /p "content=在此输入选项前面的数字："
@@ -157,8 +158,10 @@ if "%content%" == "1" (
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
-    goto other
+    goto blender_hook_check
 ) else if "%content%" == "9" (
+    goto other
+) else if "%content%" == "10" (
     exit
 ) else (
     echo 输入错误。
@@ -449,3 +452,118 @@ if "%content%" == "1" (
     goto menu
     )
 exit
+
+
+:blender_hook_check
+
+if not exist "%~dp0loader.exe.lnk" (
+    echo\
+    echo 自检未通过，模组根目录下并没有找到名为loader.exe的快捷方式。
+    echo 请在模组根目录下创建一个指向Blender/留影机插件注入程序（loader.exe）的快捷方式，然后将其命名为loader.exe，然后再试一次。
+    pause
+    goto menu
+)
+
+curl --version >nul 2>&1
+if errorlevel 1 (
+    set missing_curl="1"
+    goto blender_hook_menu
+)
+
+set "apiUrl=fromcnornot.165683.xyz"
+for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
+    set "statusCode=%%i"
+)
+
+if "%statusCode%"=="403" (
+    :blender_hook_not_in_cn
+    cls
+    title HoYoShade启动器
+    cls
+    echo 欢迎使用HoYoShade启动器！
+    echo\
+    echo 模组版本：Next-Version
+    echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
+    echo\
+    echo 我们检测到当前你可能不在中国大陆地区，
+    echo 这可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整运行支持。
+    echo\
+    echo 是否确认尝试继续操作？
+    echo\
+    echo [1]是
+    echo [2]否（返回启动器主菜单）
+    echo\
+    set /p "content=在此输入选项前面的数字："
+    if "%content%" == "1" (
+        goto blender_hook_menu
+    ) else if "%content%" == "2" (
+        goto menu
+    ) else (
+        echo\
+        echo 输入错误。
+        timeout /t 2
+        goto blender_hook_not_in_cn
+    )
+)
+
+:blender_hook_menu
+cls
+title HoYoShade启动器
+cls
+echo 欢迎使用HoYoShade启动器！
+echo\
+echo 模组版本：Next-Version
+echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
+echo\
+if "%missing_curl%"=="1" (
+    echo 我们检测到当前操作系统中并不包含curl组件，这会导致地区检测功能无法工作。
+    echo\
+    echo 你仍然可以继续使用此Mod的联动注入功能。
+    echo 但如果你并不处于中国大陆，可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整运行支持。
+    echo\
+)
+echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
+echo\
+echo [1]联动Blender/留影机插件注入至原神（中国大陆/哔哩哔哩客户端）
+echo [2]联动Blender/留影机插件注入至原神（国际服客户端/Epic客户端）
+echo [3]仅启动Blender/留影机插件
+echo [4]返回主界面
+echo [5]退出程序
+set /p "choice=在此输入选项前面的数字："
+echo\
+if "%choice%"=="1" (
+    echo 你选择的注入目标为:原神（中国大陆/哔哩哔哩客户端）
+    echo\
+    echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
+    echo Blender/留影机插件注入器启动游戏后，ReShade将会自动注入并关闭该窗口。
+    echo 如果ReShade.ini复制到了正确的游戏进程根目录，那么ReShade将会正确设置并启动。
+    echo\
+    echo 如果你选择了错误的注入目标，只需关闭此窗口和Blender/留影机插件注入器窗口后重新运行启动器重新选择即可。
+    echo\
+    start "" "%~dp0loader.exe.lnk"
+    start "" /wait /b inject.exe YuanShen.exe
+    exit
+) else if "%choice%"=="2" (
+    echo 你选择的注入目标为:原神（国际服客户端/Epic 客户端）
+    echo\
+    echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
+    echo Blender/留影机插件注入器启动游戏后，ReShade将会自动注入并关闭该窗口。
+    echo 如果ReShade.ini复制到了正确的游戏进程根目录，那么ReShade将会正确设置并启动。
+    echo\
+    echo 如果你选择了错误的注入目标，只需关闭此窗口和Blender/留影机插件注入器窗口后重新运行启动器重新选择即可。
+    echo\
+    start "" "%~dp0loader.exe.lnk"
+    start "" /wait /b inject.exe GenshinImpact.exe
+    exit
+) else if "%choice%"=="3" (
+    start "" "%~dp0loader.exe.lnk"
+    exit
+) else if "%choice%"=="4" (
+    goto menu
+) else if "%choice%"=="5" (
+    exit
+) else (
+    echo 输入错误。
+    timeout /t 2
+    goto blender_hook_menu
+)
