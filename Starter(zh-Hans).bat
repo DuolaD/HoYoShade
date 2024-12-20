@@ -532,6 +532,12 @@ echo [5]退出程序
 set /p "choice=在此输入选项前面的数字："
 echo\
 if "%choice%"=="1" (
+    :YSBL_CheckProcess
+    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM YuanShen.exe /F >nul 2>&1
+        goto YSBL_CheckProcess
+    )
     echo 你选择的注入目标为:原神（中国大陆/哔哩哔哩客户端）
     echo\
     echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
@@ -544,6 +550,12 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="2" (
+    :GIBL_CheckProcess
+    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM GenshinImpact.exe /F >nul 2>&1
+        goto GIBL_CheckProcess
+    )
     echo 你选择的注入目标为:原神（国际服客户端/Epic 客户端）
     echo\
     echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
