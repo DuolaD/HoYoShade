@@ -485,8 +485,8 @@ if "%statusCode%"=="403" (
     echo 模组版本：Next-Version
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
-    echo 我们检测到当前你可能不在中国大陆地区，
-    echo 这可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整运行支持。
+    echo 我们检测到当前你可能不在中国大陆/港澳台地区，
+    echo 这可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整技术支持,或不予对你提供任何技术支持。
     echo\
     echo 是否确认尝试继续操作？
     echo\
@@ -523,15 +523,20 @@ if "%missing_curl%"=="1" (
     echo\
 )
 echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
+echo 如果这是你第一次启动Blender/留影机插件，请确保在此处选择的目标客户端和你接下来在Blender/留影机插件中绑定的目标客户端一致，否则ReShade无法正常注入。
 echo\
-echo [1]联动Blender/留影机插件注入至原神（中国大陆/哔哩哔哩客户端）
-echo [2]联动Blender/留影机插件注入至原神（国际服客户端/Epic客户端）
-echo [3]仅启动Blender/留影机插件
-echo [4]返回主界面
-echo [5]退出程序
+echo [1]重置模组根目录中的ReShade.ini
+echo [2]联动Blender/留影机插件注入至原神（中国大陆/哔哩哔哩客户端）
+echo [3]联动Blender/留影机插件注入至原神（国际服客户端/Epic客户端）
+echo [4]仅启动Blender/留影机插件
+echo [5]同步当前系统时间以修复系统时间不同步的提示
+echo [6]返回主界面
+echo [7]退出程序
 set /p "choice=在此输入选项前面的数字："
 echo\
 if "%choice%"=="1" (
+    goto ini_Reset
+) else if "%choice%"=="2" (
     :YSBL_CheckProcess
     tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
     if not errorlevel 1 (
@@ -549,7 +554,7 @@ if "%choice%"=="1" (
     start "" "%~dp0loader.exe.lnk"
     start "" /wait /b inject.exe YuanShen.exe
     exit
-) else if "%choice%"=="2" (
+) else if "%choice%"=="3" (
     :GIBL_CheckProcess
     tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
     if not errorlevel 1 (
@@ -567,12 +572,44 @@ if "%choice%"=="1" (
     start "" "%~dp0loader.exe.lnk"
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
-) else if "%choice%"=="3" (
+) else if "%choice%"=="4" (
     start "" "%~dp0loader.exe.lnk"
     exit
-) else if "%choice%"=="4" (
-    goto menu
 ) else if "%choice%"=="5" (
+    echo 同步系统时间的耗时取决于你当前的网络情况。
+    echo 如果当前网络较差，耗时可能会比预期较长。请耐心等待。
+    echo\
+    echo 正在检查并启动 Windows Time 服务...
+    net start w32time >nul 2>&1
+    echo\
+
+    for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
+        set "statusCode=%%i"
+    )
+    if "%statusCode%"=="201" (
+        w32tm /config /manualpeerlist:"ntp.ntsc.ac.cn" /syncfromflags:manual /reliable:YES /update >nul 2>&1
+        net stop w32time >nul 2>&1
+        net start w32time >nul 2>&1
+        echo 检测到你当前位于中国大陆，可能难以访问微软官方时间源同步服务器。
+        echo 当前你的操作系统同步时间源已更改为中国大陆科学院国家授时中心官方时间源同步服务器，以方便链接服务器同步时间。
+        echo\
+    )
+
+    echo 正在尝试同步时间...
+    w32tm /resync >nul 2>&1
+    if %errorlevel% == 0 (
+        echo 时间同步成功！可访问 https://time.is 以检测时间是否已同步，然后重新尝试运行Blender/留影机插件。
+    ) else (
+        echo 时间同步失败，可能是因为没有正确配置NTP时间服务器或其他错误。
+        echo 请确保NTP时间服务器设置正确，并且网络连接正常。
+        echo 你可以尝试稍后再试，或访问系统设置-时间和语言-日期和时间进行手动设置。
+    )
+    echo\
+    pause
+
+) else if "%choice%"=="6" (
+    goto menu
+) else if "%choice%"=="7" (
     exit
 ) else (
     echo 输入错误。
