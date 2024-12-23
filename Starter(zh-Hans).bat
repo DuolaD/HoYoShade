@@ -453,7 +453,6 @@ if "%content%" == "1" (
     )
 exit
 
-
 :blender_hook_check
 
 if not exist "%~dp0loader.exe.lnk" (
@@ -519,7 +518,7 @@ if "%missing_curl%"=="1" (
     echo 我们检测到当前操作系统中并不包含curl组件，这会导致地区检测功能无法工作。
     echo\
     echo 你仍然可以继续使用此Mod的联动注入功能。
-    echo 但如果你并不处于中国大陆，可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整运行支持。
+    echo 但如果你并不处于中国大陆/港澳台地区，可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整技术支持,或不予对你提供任何技术支持。
     echo\
 )
 echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
@@ -606,7 +605,7 @@ if "%choice%"=="1" (
     )
     echo\
     pause
-
+    goto blender_hook_menu
 ) else if "%choice%"=="6" (
     goto menu
 ) else if "%choice%"=="7" (

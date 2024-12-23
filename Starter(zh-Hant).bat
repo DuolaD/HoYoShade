@@ -97,8 +97,9 @@ echo [4]注入至崩壞三（通用客戶端）
 echo [5]注入至崩壞：星穹鐵道（通用客戶端）
 echo [6]注入至絕區零（通用客戶端）
 echo [7]切換至測試服客戶端注入列表
-echo [8]其它選項
-echo [9]退出程序
+echo [8]聯動Blender/留影機插件注入至原神
+echo [9]其它選項
+echo [10]退出程序
 
 echo\
 set /p "content=在此輸入選項前面的數字："
@@ -157,8 +158,10 @@ if "%content%" == "1" (
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
-    goto other
+    goto blender_hook_check
 ) else if "%content%" == "9" (
+    goto other
+) else if "%content%" == "10" (
     exit
 ) else (
     echo 輸入錯誤。
@@ -448,3 +451,167 @@ if "%content%" == "1" (
     goto menu
     )
 exit
+
+
+:blender_hook_check
+
+if not exist "%~dp0loader.exe.lnk" (
+    echo\
+    echo 自檢未通過，模組根目錄下並沒有找到名爲loader.exe的快捷方式。
+    echo 請在模組根目錄下創建一個指向Blender/留影機插件注入程序（loader.exe）的快捷方式，然後將其命名爲loader.exe，然後再試一次。
+    pause
+    goto menu
+)
+
+curl --version >nul 2>&1
+if errorlevel 1 (
+    set missing_curl="1"
+    goto blender_hook_menu
+)
+
+set "apiUrl=fromcnornot.165683.xyz"
+for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
+    set "statusCode=%%i"
+)
+
+if "%statusCode%"=="403" (
+    :blender_hook_not_in_cn
+    cls
+    title HoYoShade啓動器
+    cls
+    echo 歡迎使用HoYoShade啓動器！
+    echo\
+    echo 模組版本：Next-Version
+    echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
+    echo\
+    echo 我們檢測到當前你可能不在中國大陸/港澳臺地區，
+    echo 這可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
+    echo\
+    echo 是否確認嘗試繼續操作？
+    echo\
+    echo [1]是
+    echo [2]否（返回啓動器主菜單）
+    echo\
+    set /p "content=在此輸入選項前面的數字："
+    if "%content%" == "1" (
+        goto blender_hook_menu
+    ) else if "%content%" == "2" (
+        goto menu
+    ) else (
+        echo\
+        echo 輸入錯誤。
+        timeout /t 2
+        goto blender_hook_not_in_cn
+    )
+)
+
+:blender_hook_menu
+cls
+title HoYoShade啓動器
+cls
+echo 歡迎使用HoYoShade啓動器！
+echo\
+echo 模組版本：Next-Version
+echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
+echo\
+if "%missing_curl%"=="1" (
+    echo 我們檢測到當前操作系統中並不包含curl組件，這會導致地區檢測功能無法工作。
+    echo\
+    echo 你仍然可以繼續使用此Mod的聯動注入功能。
+    echo 但如果你並不處於中國大陸/港澳臺地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
+    echo\
+)
+echo 注意：如果你使用聯動注入功能，需要選擇你在Blender/留影機插件中綁定的對應服務器的客戶端，否則ReShade無法正常注入。
+echo 如果這是你第一次啓動Blender/留影機插件，請確保在此處選擇的目標客戶端和你接下來在Blender/留影機插件中綁定的目標客戶端一致，否則ReShade無法正常注入。
+echo\
+echo [1]重置模組根目錄中的ReShade.ini
+echo [2]聯動Blender/留影機插件注入至原神（中國大陸/嗶哩嗶哩客戶端）
+echo [3]聯動Blender/留影機插件注入至原神（國際服客戶端/Epic客戶端）
+echo [4]僅啓動Blender/留影機插件
+echo [5]同步當前系統時間以修復系統時間不同步的提示
+echo [6]返回主界面
+echo [7]退出程序
+set /p "choice=在此輸入選項前面的數字："
+echo\
+if "%choice%"=="1" (
+    goto ini_Reset
+) else if "%choice%"=="2" (
+    :YSBL_CheckProcess
+    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM YuanShen.exe /F >nul 2>&1
+        goto YSBL_CheckProcess
+    )
+    echo 你選擇的注入目標爲:原神（中國大陸/嗶哩嗶哩客戶端）
+    echo\
+    echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
+    echo Blender/留影機插件注入器啓動遊戲後，ReShade將會自動注入並關閉該窗口。
+    echo 如果ReShade.ini複製到了正確的遊戲進程根目錄，那麼ReShade將會正確設置並啓動。
+    echo\
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
+    echo\
+    start "" "%~dp0loader.exe.lnk"
+    start "" /wait /b inject.exe YuanShen.exe
+    exit
+) else if "%choice%"=="3" (
+    :GIBL_CheckProcess
+    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
+    if not errorlevel 1 (
+        taskkill /IM GenshinImpact.exe /F >nul 2>&1
+        goto GIBL_CheckProcess
+    )
+    echo 你選擇的注入目標爲:原神（國際服客戶端/Epic 客戶端）
+    echo\
+    echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
+    echo Blender/留影機插件注入器啓動遊戲後，ReShade將會自動注入並關閉該窗口。
+    echo 如果ReShade.ini複製到了正確的遊戲進程根目錄，那麼ReShade將會正確設置並啓動。
+    echo\
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
+    echo\
+    start "" "%~dp0loader.exe.lnk"
+    start "" /wait /b inject.exe GenshinImpact.exe
+    exit
+) else if "%choice%"=="4" (
+    start "" "%~dp0loader.exe.lnk"
+    exit
+) else if "%choice%"=="5" (
+    echo 同步系統時間的耗時取決於你當前的網絡情況。
+    echo 如果當前網絡較差，耗時可能會比預期較長。請耐心等待。
+    echo\
+    echo 正在檢查並啓動 Windows Time 服務...
+    net start w32time >nul 2>&1
+    echo\
+
+    for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
+        set "statusCode=%%i"
+    )
+    if "%statusCode%"=="201" (
+        w32tm /config /manualpeerlist:"ntp.ntsc.ac.cn" /syncfromflags:manual /reliable:YES /update >nul 2>&1
+        net stop w32time >nul 2>&1
+        net start w32time >nul 2>&1
+        echo 檢測到你當前位於中國大陸，可能難以訪問微軟官方時間源同步服務器。
+        echo 當前你的操作系統同步時間源已更改爲中國大陸科學院國家授時中心官方時間源同步服務器，以方便鏈接服務器同步時間。
+        echo\
+    )
+
+    echo 正在嘗試同步時間...
+    w32tm /resync >nul 2>&1
+    if %errorlevel% == 0 (
+        echo 時間同步成功！可訪問 https://time.is 以檢測時間是否已同步，然後重新嘗試運行Blender/留影機插件。
+    ) else (
+        echo 時間同步失敗，可能是因爲沒有正確配置NTP時間服務器或其他錯誤。
+        echo 請確保NTP時間服務器設置正確，並且網絡連接正常。
+        echo 你可以嘗試稍後再試，或訪問系統設置-時間和語言-日期和時間進行手動設置。
+    )
+    echo\
+    pause
+    goto blender_hook_menu
+) else if "%choice%"=="6" (
+    goto menu
+) else if "%choice%"=="7" (
+    exit
+) else (
+    echo 輸入錯誤。
+    timeout /t 2
+    goto blender_hook_menu
+)
