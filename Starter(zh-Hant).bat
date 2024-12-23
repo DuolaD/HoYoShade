@@ -531,6 +531,7 @@ echo [4]僅啓動Blender/留影機插件
 echo [5]同步當前系統時間以修復系統時間不同步的提示
 echo [6]返回主界面
 echo [7]退出程序
+echo\
 set /p "choice=在此輸入選項前面的數字："
 echo\
 if "%choice%"=="1" (
@@ -575,13 +576,13 @@ if "%choice%"=="1" (
     start "" "%~dp0loader.exe.lnk"
     exit
 ) else if "%choice%"=="5" (
+    cls
     echo 同步系統時間的耗時取決於你當前的網絡情況。
     echo 如果當前網絡較差，耗時可能會比預期較長。請耐心等待。
     echo\
     echo 正在檢查並啓動 Windows Time 服務...
     net start w32time >nul 2>&1
     echo\
-
     for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
         set "statusCode=%%i"
     )
@@ -593,8 +594,8 @@ if "%choice%"=="1" (
         echo 當前你的操作系統同步時間源已更改爲中國大陸科學院國家授時中心官方時間源同步服務器，以方便鏈接服務器同步時間。
         echo\
     )
-
     echo 正在嘗試同步時間...
+    echo\
     w32tm /resync >nul 2>&1
     if %errorlevel% == 0 (
         echo 時間同步成功！可訪問 https://time.is 以檢測時間是否已同步，然後重新嘗試運行Blender/留影機插件。
@@ -603,6 +604,19 @@ if "%choice%"=="1" (
         echo 請確保NTP時間服務器設置正確，並且網絡連接正常。
         echo 你可以嘗試稍後再試，或訪問系統設置-時間和語言-日期和時間進行手動設置。
     )
+    echo\
+    echo ========================
+    echo\
+    echo 注意：如果日後在使用過程中，Blender/留影機插件仍然經常性報錯系統時間不同步的提示/你需要經常性使用本功能來修復報錯/系統時間和現實時間經常性不符。
+    echo 你可以在下次出現提示前先前往 https://time.is 以檢測是否爲誤報，然後再使用本功能進行修復。
+    echo\
+    echo 如果這並不是誤報，那麼說明當前設備的時鐘電路極有可能未能在斷電/關機/休眠/睡眠的情況下正常工作。
+    echo 你可以優先檢查設備主板BIOS的電池電量（通常爲CR2032，電壓低於2V說明電池電量耗盡）。
+    echo 如果電壓過低，請嘗試更換全新的電池，並在BIOS中設置正確的時間，然後使用本功能同步系統時間。
+    echo\
+    echo 如果更換電池後故障依舊/當前設備因相關條款無法自行更換，請聯繫你的設備製造商/第三方維修機構尋求幫助。
+    echo\
+    echo ========================
     echo\
     pause
     goto blender_hook_menu
