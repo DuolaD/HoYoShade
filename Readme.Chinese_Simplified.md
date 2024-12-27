@@ -12,31 +12,62 @@
 > [!NOTE]
 > ·我们深知您可能熟悉第二语言。但如果你来自于中国大陆地区,我们更加推荐你去阅读[简体中文版本的Readme.md](Readme.Chinese_Simplified.md)来获得更多有关于原神原神无人机的信息。  
 > ·翻译并非100%准确，翻译工作主要基于OpenAI-GPT4o，谷歌翻译和本人的校对组成。 但即使如此，最终成品也难免会产生一定的问题。 如果你发现或者你认为这是一个问题，请提交issues以帮助HoYoShade改进。  
-> ·正在寻找旧版本吗？我们正在开发 [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) 仓库。完成后，您可以下载所有旧版本的Release，听起来不错？当然，重新发行的内容肯定会移除全部受到DMCA警告的内容的。  
-> ·由于HoYoShade收到了DMCA警告，你无法再从Release界面下载低于V2.013.0 Stable版本的HoYoShade。有关详细情况，请查看[关于DMCA](#〢-关于DMCA)界面。  
+> ·由于HoYoShade收到了DMCA警告，你无法再从Release界面下载低于V2.013.0 Stable版本的HoYoShade。有关详细情况，请查看[关于DMCA](#〢-关于DMCA)界面。   
+> ·对于Readme.md及HoYoShade在各平台的官方社群中所使用的所有来源于第三者的视频/图片展示均以获得创作者/有关第三者的授权。创作者/有关第三者均表示在创作过程中使用了HoYoShade，并知晓相关内容将会用于展示。
 
-## 〢 视频演示
+> [!IMPORTANT]
+> · 截至目前，HoYoShade唯一的盈利手段只有[**向开发者赞助**](#〢-赞助)。如果你从第三者/店铺/平台购买了本Mod，请立即[**向我们报告**](#〢-联系我)，并立刻要求该第三者/店铺/平台进行退款。如有必要，请保留/固定相关证据，并向你所在地区的执法/司法单位进行报案。
+
+## 〢 视频展示
 
 <div align="center">
-  <h1 class="header">Shot by AXBro阿向菌</h1>
+  <h1 class="header">来自 AXBro阿向菌</h1>
   <h3>
     Night,Diluc 雨夜，迪卢克实拍短片
   </h3>
-  点击下方图片在<a href="https://www.youtube.com/watch?v=hNBKZw4eVBM"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a>观看:
 </div>
+
+https://github.com/user-attachments/assets/a9c96088-66fe-4cb4-b189-d61c82eb3503
 
 <div align="center">
 
-[![Rainy Night ,Diluc_雨夜，迪卢克实拍短片](https://res.cloudinary.com/marcomontalbano/image/upload/v1722753646/video_to_markdown/images/youtube--hNBKZw4eVBM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=hNBKZw4eVBM "Rainy Night ,Diluc_雨夜，迪卢克实拍短片")
+点击按钮：<a href="https://www.youtube.com/watch?v=hNBKZw4eVBM"><img src="https://img.shields.io/badge/在YouTube观看-FF0000.svg?logo=youtube" /></a> <a href="https://www.bilibili.com/video/BV12u4y187mN"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU3nqayw"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
 
-或者点击此按钮：<a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a>
+</div>
+
+<div align="center">
+  <h3>
+    Amidst the tempest, a glimpse into the storm-swept realm of Inazuma. 于暴雨中 稻妻实机
+  </h3>
+</div>
+
+https://github.com/user-attachments/assets/968dc71c-5898-4472-a111-fa49d277a410
+
+<div align="center">
+
+点击按钮：<a href="https://v.douyin.com/iU376NNM"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
+
+</div>
+
+<div align="center">
+  <h3>
+    The art of rendering. 渲染的艺术
+  </h3>
+</div>
+
+https://github.com/user-attachments/assets/9143f492-d39e-4515-8ed6-c79924aa0cc5
+
+<div align="center">
+
+点击按钮：<a href="https://www.bilibili.com/video/BV1qm411D7TU"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU37P4aK"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
 
 </div>
 
 > [!NOTE]
-> · 截图展示所使用的预设/效果库可能经过了用户自行添加/编辑。  
-> · 本视频中使用的其他模组未在中国大陆以外的地区发行，且 HoYoShade 不包含这些附加功能。  
-> · 哔哩哔哩提供4K播放选项，如果你身处中国大陆，我们推荐你使用哔哩哔哩进行播放。  
+> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。  
+> · 本视频中使用的其他模组从未在中国大陆以外的地区发行，且 HoYoShade 不包含这些附加功能。  
+> · 展示所使用的预设/效果库/模组可能并未包含在HoYoShade Releases发行包中，如果你需要获取展示里所使用的预设/效果库/模组，你可能需要向该创作者获取相关内容。    
+> · 哔哩哔哩提供4K播放选项。如果你身处中国大陆，我们推荐你使用哔哩哔哩进行播放。  
 
 ## 〢 目录
 
@@ -169,17 +200,12 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
 
 ## 〢 如何安装
 
-旧版本:
-从[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases/)下载最新版本的HoYoShade.  
+从[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases/)下载最新版本的(Open)HoYoShade.  
 解压后按照zip压缩包内的教程操作即可  
-
-新版本:(等待GUI开发完成)
 
 <div align="left">
   对文字版教程感到困惑吗？点击按钮在<a href="https://youtu.be/jac99AOHXrE"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube"/></a>或者在<a href="https://www.bilibili.com/video/BV1jAYAe5EtA"><img src="https://img.shields.io/badge/哔哩哔哩-FFFFFF.svg?logo=bilibili" /></a>观看视频版教程*。  
 </div> 
-
-  
 
 *：仅提供简体中文/繁体中文版本。
 
@@ -215,7 +241,7 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
 
 ## 〢 截图展示
 <div align="center">
-  <h1 class="header">截图来自[YouTube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+  <h1 class="header">来自 AXBro阿向菌</h1>
 </div>
 
 <div id="images">
@@ -232,10 +258,68 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
   <img src="Readme.md-image/ScreenShot1.png" alt="Screenshot1">
   <img src="Readme.md-image/ScreenShot2.jpg" alt="Screenshot2">
   <img src="Readme.md-image/ScreenShot3.jpg" alt="Screenshot3">
+  <img src="Readme.md-image/ScreenShot4.jpg" alt="Screenshot4">
+  <img src="Readme.md-image/ScreenShot5.jpg" alt="Screenshot5">
+  <img src="Readme.md-image/ScreenShot6.png" alt="Screenshot6">
+  <img src="Readme.md-image/ScreenShot7.jpg" alt="Screenshot7">
+  <img src="Readme.md-image/ScreenShot8.jpg" alt="Screenshot8">
+  <img src="Readme.md-image/ScreenShot9.png" alt="Screenshot9">
+  <img src="Readme.md-image/ScreenShot10.jpg" alt="Screenshot10">
+  <img src="Readme.md-image/ScreenShot11.jpg" alt="Screenshot11">
+  <img src="Readme.md-image/ScreenShot12.jpg" alt="Screenshot12">
+  <img src="Readme.md-image/ScreenShot13.jpg" alt="Screenshot13">
+  <img src="Readme.md-image/ScreenShot14.jpg" alt="Screenshot14">
+  <img src="Readme.md-image/ScreenShot15.jpg" alt="Screenshot15">
+  <img src="Readme.md-image/ScreenShot16.jpg" alt="Screenshot16">
+  <img src="Readme.md-image/ScreenShot17.jpg" alt="Screenshot17">
+  <img src="Readme.md-image/ScreenShot18.jpg" alt="Screenshot18">
+  <img src="Readme.md-image/ScreenShot19.jpg" alt="Screenshot19">
 </div>
 
+感谢以下所有创作者对本项目的展示界面所做出的奉献！  
+
+（列表暂未完成）  
+
+<div align="center">
+    <table>
+    <tr>
+            <td>
+                <h3>阿向菌|AXBro</h3>
+                <a href="https://www.youtube.com/@AXBroCN">
+                    <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
+                <h6>创作内容：</h6>
+                <a href="https://www.youtube.com/watch?v=hNBKZw4eVBM">Rainy Night,Diluc_雨夜，迪卢克实拍短片</a><br>
+                </a>
+            </td>
+            <td>
+        <a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB个人主页</a><br>
+        <a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
+        <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok频道</a><br>
+        <a href="https://space.bilibili.com/436127696">BiliBili频道</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>WatchAndyTW</h3>
+                <a href="https://github.com/WatchAndyTW">
+                <img src="https://avatars.githubusercontent.com/u/51250139?v=4" width="70" style="border-radius: 50%" alt="WatchAndyTW">
+                </a>
+            </td>
+        <td>
+                <a href="https://github.com/WatchAndyTW">WatchAndyTW的GitHub主页</a><br>
+        </td>
+        <br>
+        <br>
+        </td>
+    </tr>
+    </table>
+</div> 
+
 > [!NOTE]
-> 截图展示所使用的预设/效果库可能经过了用户自行添加/编辑。
+> · 出于部分创作者的要求/MCN中间机构规定/mihoyo或hoyoverse合约创作者规定，除非得到明确答复，否则此名单中将仅展示同意进行展示的创作者。部分使用HoYoShade进行创作/展示的创作者将不会出现在此列表中。  
+> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。  
+> · 展示中所使用的其他模组可能并非来自 HoYoShade，且 HoYoShade 不包含这些附加功能。   
+> · 展示所使用的预设/效果库可能并未包含在HoYoShade Releases发行包中，如果你需要获取展示里所使用的预设/效果库/模组，你可能需要向该创作者获取相关内容。  
 
 ## 〢 关于DMCA
 由于HoYoShade收到了DMCA警告，你无法再从Release界面下载低于V2.013.0 Stable版本的HoYoShade。  
