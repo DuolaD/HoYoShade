@@ -276,9 +276,7 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
   <img src="Readme.md-image/ScreenShot19.jpg" alt="Screenshot19">
 </div>
 
-感谢以下所有创作者对本项目的展示界面所做出的奉献！  
-
-（列表暂未完成）  
+感谢以下所有创作者对本项目的展示界面所做出的奉献！   
 
 <div align="center">
     <table>
@@ -289,29 +287,71 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
                     <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
                 <h6>创作内容：</h6>
                 <a href="https://www.youtube.com/watch?v=hNBKZw4eVBM">Rainy Night,Diluc_雨夜，迪卢克实拍短片</a><br>
+		<a href="https://v.douyin.com/iU376NNM">Amidst the tempest, a glimpse into the storm-swept realm of Inazuma. 于暴雨中 稻妻实机</a><br>
+		<a href="https://v.douyin.com/iU37P4aK">The art of rendering. 渲染的艺术</a><br>
+		<a href="Readme.md-image/AXBro-1.jpg">截图展示1</a><br>
+		<a href="Readme.md-image/AXBro-2.jpg">截图展示2</a><br>
+		<a href="Readme.md-image/AXBro-3.jpg">截图展示3</a><br>
                 </a>
             </td>
             <td>
         <a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB个人主页</a><br>
         <a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
         <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok频道</a><br>
-        <a href="https://space.bilibili.com/436127696">BiliBili频道</a>
-            </td>
+        <a href="https://space.bilibili.com/436127696">哔哩哔哩频道</a>
+        </td>
         </tr>
         <tr>
-            <td>
-                <h3>WatchAndyTW</h3>
-                <a href="https://github.com/WatchAndyTW">
-                <img src="https://avatars.githubusercontent.com/u/51250139?v=4" width="70" style="border-radius: 50%" alt="WatchAndyTW">
-                </a>
-            </td>
-        <td>
-                <a href="https://github.com/WatchAndyTW">WatchAndyTW的GitHub主页</a><br>
-        </td>
+	<td>
+		<h3>WatchAndyTW</h3>
+		<a href="https://github.com/WatchAndyTW">
+		<img src="https://avatars.githubusercontent.com/u/51250139?v=4" width="70" style="border-radius: 50%" alt="WatchAndyTW">
+		<h6>创作内容：</h6>
+		<a href="Readme.md-image/ScreenShot1.png">截图展示1</a><br>
+		</a>
+	    </td>
+	<td>
+		<a href="https://github.com/WatchAndyTW">WatchAndyTW的GitHub主页</a><br>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<h3>摄影：枝枝</h3>
+		<h3>尘歌壶场景来源：衣贤珊、H小距离、风-笑尘、云端遇梦深、花镜</h3>
+		<a href="https://ti.qq.com/open_qq/index2.html?url=mqqapi%3a%2f%2fuserprofile%2ffriend_profile_card%3fsrc_type%3dweb%26version%3d1.0%26source%3d2%26uin%3d29153360"><img src="Readme.md-image/ZZ-Logo.png" width="70" style="border-radius: 50%" alt="ZZ"></a>
+		<a href="https://space.bilibili.com/510178318"><img src="Readme.md-image/YXS-Logo.png" width="70" style="border-radius: 50%" alt="衣贤珊"></a>
+		<a href="https://space.bilibili.com/23559567"><img src="Readme.md-image/HXJL-Logo.png" width="70" style="border-radius: 50%" alt="H小距离"></a>
+		<a href="https://space.bilibili.com/67158540"><img src="Readme.md-image/X-FC-Logo.png" width="70" style="border-radius: 50%" alt="风-笑尘"></a>
+		<a href="https://space.bilibili.com/1803227895"><img src="Readme.md-image/YDYMS-Logo.png" width="70" style="border-radius: 50%" alt="云端遇梦深"></a>
+		<h6>创作内容：</h6>
+		<a href="Readme.md-image/ScreenShot4.jpg">截图展示4</a><br>
+		<a href="Readme.md-image/ScreenShot5.jpg">截图展示5</a><br>
+		<a href="Readme.md-image/ScreenShot6.png">截图展示6</a><br>
+		<a href="Readme.md-image/ScreenShot7.jpg">截图展示7</a><br>
+		<a href="Readme.md-image/ScreenShot8.jpg">截图展示8</a><br>
+		<a href="Readme.md-image/ScreenShot9.png">截图展示9</a><br>
+		<a href="Readme.md-image/ScreenShot10.jpg">截图展示10</a><br>
+		<a href="Readme.md-image/ScreenShot11.jpg">截图展示11</a><br>
+		<a href="Readme.md-image/ScreenShot12.jpg">截图展示12</a><br>
+		<a href="Readme.md-image/ScreenShot13.jpg">截图展示13</a><br>
+		<a href="Readme.md-image/ScreenShot14.jpg">截图展示14</a><br>
+		<a href="Readme.md-image/ScreenShot15.jpg">截图展示15</a><br>
+		<a href="Readme.md-image/ScreenShot16.jpg">截图展示16</a><br>
+		<a href="Readme.md-image/ScreenShot17.jpg">截图展示17</a><br>
+		<a href="Readme.md-image/ScreenShot18.jpg">截图展示18</a><br>
+		<a href="Readme.md-image/ScreenShot19.jpg">截图展示19</a><br>
+		</a>
+	    </td>
+	<td>
+		<a href="https://user.qzone.qq.com/29153360">枝枝的QQ空间主页</a><br>
+		<a href="https://space.bilibili.com/510178318">衣贤珊的哔哩哔哩频道</a><br>
+		<a href="https://space.bilibili.com/23559567">H小距离的哔哩哔哩频道</a><br>
+		<a href="https://space.bilibili.com/1803227895">风-笑尘的哔哩哔哩频道</a><br>
+	</td>
+	</tr>
         <br>
         <br>
         </td>
-    </tr>
     </table>
 </div> 
 
@@ -393,7 +433,7 @@ OpenHoYoShade[All]
 		<a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB个人主页</a><br>
 		<a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
                 <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok频道</a><br>
-		<a href="https://space.bilibili.com/436127696">BiliBili频道</a>
+		<a href="https://space.bilibili.com/436127696">哔哩哔哩频道</a>
             </td>
         </tr>
         <tr>
