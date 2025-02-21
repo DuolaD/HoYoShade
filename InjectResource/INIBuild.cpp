@@ -1,8 +1,7 @@
 #include <iostream>  
 #include <fstream>  
 #include <string>  
-#include <cstdlib>  
-#include <unistd.h>  
+#include <cstdlib>   
 #ifdef _WIN32  
     #include <windows.h>  
 #else  
@@ -34,13 +33,14 @@ int main() {
     
         outfile<<"[ADDON]"<< std::endl;
     outfile<<"AddonPath="<< a <<"\\reshade-shaders\\Addons"<< std::endl;
-    outfile<<"DisabledAddons=AutoHDR@AutoHDR.addon64,Swap chain override@swapchain_override.addon64,srReshade_v1.0.0@srReshade_v1.0.0.addon64,Shader Toggler@ShaderToggler.addon64,Reshade Effect Shader Toggler@ReshadeEffectShaderToggler.addon64,UIBind@ReShade64-UIBind-By-seri14.addon64,Screenshot@ReShade64-Screenshot-By-seri14.addon64,Editor History@ReShade64-EditorHistory-By-seri14.addon64,AutoReload@ReShade64-AutoReload-By-seri14.addon64,Adjust Depth@ReShade64-AdjustDepth-By-seri14.addon64,OBS Capture@obs_capture.addon64,LiveSplit Overlay@livesplit_overlay_x64.addon64,FreePIE@freepie.addon64,Frame Capture@frame_capture.addon64,IGCS Connector@IgcsConnector.addon64"<< std::endl;
+    outfile<<"DisabledAddons=AutoHDR@AutoHDR.addon64,Swap chain override@swapchain_override.addon64,srReshade_v1.0.0@srReshade_v1.0.0.addon64,Shader Toggler@ShaderToggler.addon64,Reshade Effect Shader Toggler@ReshadeEffectShaderToggler.addon64,UIBind@ReShade64-UIBind-By-seri14.addon64,Editor History@ReShade64-EditorHistory-By-seri14.addon64,AutoReload@ReShade64-AutoReload-By-seri14.addon64,Adjust Depth@ReShade64-AdjustDepth-By-seri14.addon64,OBS Capture@obs_capture.addon64,LiveSplit Overlay@livesplit_overlay_x64.addon64,FreePIE@freepie.addon64,Frame Capture@frame_capture.addon64,IGCS Connector@IgcsConnector.addon64,Screenshot@ReShade64-Screenshot-By-seri14.addon64,LiveSplit Overlay@livesplit_overlay.addon64"<< std::endl;
+	outfile << "AddonPath=" << a << "\\reshade-shaders\\Addons" << std::endl;
     outfile<<""<< std::endl;
 	outfile<<"[DEPTH]"<< std::endl;
 	outfile<<"DepthCopyAtClearIndex=0"<< std::endl;
 	outfile<<"DepthCopyBeforeClears=0"<< std::endl;
 	outfile<<"UseAspectRatioHeuristics=1"<< std::endl;
-	outfile<<""<< std::endl;
+	outfile<<"OverlayCollapsed="<< std::endl;
 	outfile<<"[GENERAL]"<< std::endl;
 	outfile<<"EffectSearchPaths="<< a <<"\\reshade-shaders\\Shaders\\"<< std::endl;
 	outfile<<"PerformanceMode=0"<< std::endl;
@@ -66,11 +66,14 @@ int main() {
 	outfile<<"FPSPosition=1"<< std::endl;
 	outfile<<"NoFontScaling=0"<< std::endl;
 	outfile<<"SaveWindowState=0"<< std::endl;
-	outfile<<"ShowClock=0"<< std::endl;
+	outfile<<"ShowClock=2"<< std::endl;
 	outfile<<"ShowForceLoadEffectsButton=1"<< std::endl;
-	outfile<<"ShowFrameTime=0"<< std::endl;
+	outfile<<"ShowFPS=2" << std::endl;
+	outfile<<"ShowFrameTime=2"<< std::endl;
+	outfile<<"ShowPresetName = 2" << std::endl;
+	outfile<<"ShowPresetTransitionMessage=1" << std::endl;
 	outfile<<"ShowScreenshotMessage=1"<< std::endl;
-	outfile<<"TutorialProgress=4"<< std::endl;
+	outfile<<"TutorialProgress=0"<< std::endl;
 	outfile<<"VariableListHeight=300.000000"<< std::endl;
 	outfile<<"VariableListUseTabs=0"<< std::endl;
 	outfile<<""<< std::endl;
@@ -79,8 +82,8 @@ int main() {
 	outfile<<"FileFormat=1"<< std::endl;
 	outfile<<"FileNamingFormat=0"<< std::endl;
 	outfile<<"JPEGQuality=100"<< std::endl;
-	outfile<<"SaveBeforeShot=0"<< std::endl;
-	outfile<<"SaveOverlayShot=0"<< std::endl;
+	outfile<<"SaveBeforeShot=1"<< std::endl;
+	outfile<<"SaveOverlayShot=1"<< std::endl;
 	outfile<<"SavePath="<< a <<"\\ScreenShot"<< std::endl;
 	outfile<<"SavePresetFile=0"<< std::endl;
 	outfile<<""<< std::endl;
