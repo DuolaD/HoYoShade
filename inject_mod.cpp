@@ -10,6 +10,7 @@
 #include <TlHelp32.h>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
+#pragma comment(lib, "Advapi32.lib")
 
 struct loading_data
 {
@@ -54,7 +55,7 @@ static void update_acl_for_uwp(LPWSTR path)
 	SECURITY_INFORMATION siInfo = DACL_SECURITY_INFORMATION;
 
 	// Get the existing DACL for the file
-	if (GetNamedSecurityInfo(path, SE_FILE_OBJECT, DACL_SECURITY_INFORMATION, nullptr, nullptr, &old_acl, nullptr, &sd) != ERROR_SUCCESS)
+	if (GetNamedSecurityInfoW(path, SE_FILE_OBJECT, DACL_SECURITY_INFORMATION, nullptr, nullptr, &old_acl, nullptr, &sd) != ERROR_SUCCESS)
 		return;
 
 	// Get the SID for 'ALL_APPLICATION_PACKAGES'
@@ -72,7 +73,7 @@ static void update_acl_for_uwp(LPWSTR path)
 		// Update the DACL with the new entry
 		if (SetEntriesInAcl(1, &access, old_acl, &new_acl) == ERROR_SUCCESS)
 		{
-			SetNamedSecurityInfo(path, SE_FILE_OBJECT, siInfo, NULL, NULL, new_acl, NULL);
+			SetNamedSecurityInfoW(path, SE_FILE_OBJECT, siInfo, NULL, NULL, new_acl, NULL);
 			LocalFree(new_acl);
 		}
 
@@ -100,7 +101,13 @@ int wmain(int argc, wchar_t *argv[])
 		return 0;
 	}
 
-	wprintf(L"Waiting for a '%s' process to spawn ...\n", argv[1]);
+	const wchar_t *name = wcsrchr(argv[1], L'\\');
+	if (name)
+		name++; // Path separator in the argument, skip to the file name part
+	else
+		name = argv[1]; // No path separator in the argument, this is a file name
+
+	wprintf(L"Waiting for a '%s' process to start ...\n", name);
 
 	DWORD pid = 0;
 
@@ -112,7 +119,7 @@ int wmain(int argc, wchar_t *argv[])
 		PROCESSENTRY32W process = { sizeof(process) };
 		for (BOOL next = Process32FirstW(snapshot, &process); next; next = Process32NextW(snapshot, &process))
 		{
-			if (wcscmp(process.szExeFile, argv[1]) == 0)
+			if (_wcsicmp(process.szExeFile, name) == 0)
 			{
 				pid = process.th32ProcessID;
 				break;
@@ -122,7 +129,7 @@ int wmain(int argc, wchar_t *argv[])
 		Sleep(1); // Sleep a bit to not overburden the CPU
 	}
 
-	wprintf(L"Found a matching process with PID %lu! Injecting ReShade ... ", pid);
+	wprintf(L"Found a matching process with PID %lu! Injecting HoYoShade ... ", pid);
 
 	// Wait just a little bit for the application to initialize
 	Sleep(50);
@@ -149,7 +156,14 @@ int wmain(int argc, wchar_t *argv[])
 	}
 
 	loading_data arg;
+#if 0
 	GetCurrentDirectoryW(MAX_PATH, arg.load_path);
+#else
+	// Use module directory, since current directory points to target executable directory when drag'n'dropping a target executable onto the injector
+	GetModuleFileNameW(nullptr, arg.load_path, MAX_PATH);
+	if (wchar_t *const load_path_filename = wcsrchr(arg.load_path, L'\\'))
+		*load_path_filename = '\0';
+#endif
 	wcscat_s(arg.load_path, L"\\");
 	wcscat_s(arg.load_path, remote_is_wow64 ? L"ReShade32.dll" : L"ReShade64.dll");
 
@@ -204,7 +218,8 @@ int wmain(int argc, wchar_t *argv[])
 	VirtualFreeEx(remote_process, load_param, 0, MEM_RELEASE);
 
 	// Thread thread exit code will contain the module handle
-	if (DWORD exit_code; GetExitCodeThread(load_thread, &exit_code) &&
+	if (DWORD exit_code;
+		GetExitCodeThread(load_thread, &exit_code) &&
 #if RESHADE_LOADING_THREAD_FUNC
 		exit_code == ERROR_SUCCESS)
 #else
