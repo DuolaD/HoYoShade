@@ -28,7 +28,7 @@ if %missing_file% equ 1 (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.31.0 Stable
+    echo 模組版本：V2.4.0 Stable
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。
@@ -57,7 +57,7 @@ if exist "%filepath%" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.31.0 Stable
+    echo 模組版本：V2.4.0 Stable
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到你是第一次使用本模組，Reshade.ini現已生成至模組根目錄中。
@@ -81,7 +81,7 @@ title HoYoShade Starter
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -175,7 +175,7 @@ title HoYoShade Starter
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 如果你需要檢查版本更新，可以去訪問我們的倉庫查看是否有發行更新版本
@@ -230,7 +230,7 @@ title HoYoShade Starter(你已進入開發者選項！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！開發者選項僅用於調試/檢測錯誤需求。除非開發者明確要求你這樣做，或者你很清楚知道自己在做什麼，否則請勿輕易使用！
@@ -264,7 +264,7 @@ title HoYoShade Starter(你已進入自定義注入界面！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！此功能僅供開發者測試新遊戲使用。這意味着可能會存在未知風險/Bug。
@@ -297,7 +297,7 @@ echo\
 echo DuolaDStudio X 阿向菌AXBro x Ex_M
 echo 聯合鉅獻
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo\
 echo HoYoShade基於ReShade官方組件和OpenHoYoShade框架二次開發，除效果庫/預設之外的所有文件均遵守BSL-3開源協定在GitHub上開源。
 echo 你可以在Reshade.me網站中查看ReShade官方資訊。
@@ -327,7 +327,7 @@ title HoYoShade Starter
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意：你只需要在模組目錄移動後才需要重置ReShade.ini
@@ -348,7 +348,7 @@ if "%content%" == "1" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.31.0 Stable
+    echo 模組版本：V2.4.0 Stable
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 重置成功！重置後的ReShade.ini現已替換模組根目錄中的舊版ReShade.ini。
@@ -379,7 +379,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -481,7 +481,7 @@ if "%statusCode%"=="403" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.31.0 Stable
+    echo 模組版本：V2.4.0 Stable
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到當前你可能不在中國大陸/港澳臺地區，
@@ -511,7 +511,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.31.0 Stable
+echo 模組版本：V2.4.0 Stable
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 if "%missing_curl%"=="1" (
