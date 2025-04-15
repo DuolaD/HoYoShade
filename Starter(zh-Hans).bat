@@ -28,7 +28,7 @@ if %missing_file% equ 1 (
     cls
     echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
     echo\
-    echo Ä£×é°æ±¾£ºV2.4.1 Stable
+    echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
     echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒÃÇ¼ì²âµ½£¨Open£©HoYoShade¿ò¼Ü×¢ÈëËùÐèµÄ±ØÒªÎÄ¼þ²»´æÔÚ¡£
@@ -57,7 +57,7 @@ if exist "%filepath%" (
     cls
     echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
     echo\
-    echo Ä£×é°æ±¾£ºV2.4.1 Stable
+    echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
     echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒÃÇ¼ì²âµ½ÄãÊÇµÚÒ»´ÎÊ¹ÓÃ±¾Ä£×é£¬Reshade.iniÏÖÒÑÉú³ÉÖÁÄ£×é¸ùÄ¿Â¼ÖÐ¡£
@@ -81,21 +81,25 @@ title HoYoShadeÆô¶¯Æ÷
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Çë×¢Òâ£¬ÄãÐèÒª½«Reshade.ini¸´ÖÆµ½ÓÎÏ·½ø³Ì¸ùÄ¿Â¼£¬È»ºó²ÅÄÜÊ¹ÓÃ±¾Ä£×é¡£
+echo\
+echo µ±Ç°×¢ÈëÁÐ±í£º¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±í
 echo\
 echo ±¾Ä£×é½öÓÃÓÚÓÎÏ·»­Ãæµ÷É«Ê¹ÓÃ£¬Çë×ñÊØ±¾ModµÄÓÃ»§Ð­ÒéºÍÓÎÏ·¼°Æä¿ª·¢/·¢ÐÐÉÌÏà¹ØÌõÀý¡£
 echo Äã¿ÉÒÔÔÚÄ£×é¸ùÄ¿Â¼/TutorialÎÄ¼þ¼ÐÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ°²×°ËµÃ÷¡£
 REM ÎÒ»¹ÊÇ¸üÔ¸Òâµ±Ò»¸öÔÚ±³ºóÄ¬Ä¬¸¶³öµÄÈË XD
 echo\
+echo *:¸Ã×¢ÈëÑ¡ÏîÊÊÓÃÓÚBeta/´´×÷ÕßÌåÑé·þ£¬µ«Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+echo\
 echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨¿Í»§¶Ë£©
-echo [3]×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ¿Í»§¶Ë/Epic¿Í»§¶Ë£©
-echo [4]×¢ÈëÖÁ±À»µÈý£¨Í¨ÓÃ¿Í»§¶Ë£©
-echo [5]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ¿Í»§¶Ë£©
-echo [6]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ¿Í»§¶Ë£©
+echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª/Devkit/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [3]×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ/Epic ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [4]×¢ÈëÖÁ±À»µÈý£¨Í¨ÓÃ ¹«¿ª/Beta¿Í»§¶Ë£©*
+echo [5]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [6]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
 echo [7]ÇÐ»»ÖÁ²âÊÔ·þ¿Í»§¶Ë×¢ÈëÁÐ±í
 echo [8]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ
 echo [9]ÆäËüÑ¡Ïî
@@ -115,9 +119,22 @@ if "%content%" == "1" (
         taskkill /IM YuanShen.exe /F >nul 2>&1
         goto YS_CheckProcess
     )
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª/Devkit/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃÒ»¸öÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¨ÎÞÂÛÊÇ¹Ù·½Æô¶¯Æ÷»¹ÊÇµÚÈý·½Æô¶¯Æ÷£©£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò»á×¢ÈëÊ§°Ü¡£
+    echo\
+    echo\
+    echo ´Ë×¢ÈëÑ¡ÏîÖ§³Ö×¢ÈëHoYoShadeÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ Devkit/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´ËÀà¿Í»§¶ËÊ±£¬Äã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo Äã²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·£¬·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷ÇÒ×¢ÈëÊ§°Ü£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe YuanShen.exe
     exit
@@ -128,30 +145,75 @@ if "%content%" == "1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GI_CheckProcess
     )
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨¹ú¼Ê·þ¿Í»§¶Ë/Epic¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨¹ú¼Ê·þ/Epic ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃÒ»¸öÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¨ÎÞÂÛÊÇ¹Ù·½Æô¶¯Æ÷»¹ÊÇµÚÈý·½Æô¶¯Æ÷£©£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò»á×¢ÈëÊ§°Ü¡£
+    echo\
+    echo\
+    echo ´Ë×¢ÈëÑ¡ÏîÖ§³Ö×¢ÈëHoYoShadeÖÁÔ­Éñ£¨¹ú¼Ê·þ Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´ËÀà¿Í»§¶ËÊ±£¬Äã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo Äã²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·£¬·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷ÇÒ×¢ÈëÊ§°Ü£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:±À»µÈý£¨Í¨ÓÃ¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:±À»µÈý£¨Í¨ÓÃ ¹«¿ª/Beta¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃÒ»¸öÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¨ÎÞÂÛÊÇ¹Ù·½Æô¶¯Æ÷»¹ÊÇµÚÈý·½Æô¶¯Æ÷£©£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò»á×¢ÈëÊ§°Ü¡£
+    echo\
+    echo\
+    echo ´Ë×¢ÈëÑ¡ÏîÖ§³Ö×¢ÈëHoYoShadeÖÁ±À»µÈý£¨Í¨ÓÃ Beta¿Í»§¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´ËÀà¿Í»§¶ËÊ±£¬Äã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo Äã²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·£¬·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
+    echo\
     echo\
     start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃÒ»¸öÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¨ÎÞÂÛÊÇ¹Ù·½Æô¶¯Æ÷»¹ÊÇµÚÈý·½Æô¶¯Æ÷£©£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò»á×¢ÈëÊ§°Ü¡£
+    echo\
+    echo\
+    echo ´Ë×¢ÈëÑ¡ÏîÖ§³Ö×¢ÈëHoYoShadeÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´ËÀà¿Í»§¶ËÊ±£¬Äã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo Äã²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·£¬·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ¿Í»§¶Ë£©
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃÒ»¸öÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¨ÎÞÂÛÊÇ¹Ù·½Æô¶¯Æ÷»¹ÊÇµÚÈý·½Æô¶¯Æ÷£©£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò»á×¢ÈëÊ§°Ü¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢ÈëÑ¡Ïî²»ÊÊÓÃÓÚÈÎºÎ ¾øÇøÁã£¨¹«²âÇ°/ºóÄÚ²â£¨Beta£©£©¿Í»§¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´ËÀà¿Í»§¶Ë£¬Çë¹Ø±Õ´°¿Ú²¢ÖØÐÂÆô¶¯HoYoShadeÆô¶¯Æ÷£¬²¢ÔÚ¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±íÑ¡Ôñ¶ÔÓ¦µÄ¿Í»§¶Ë¡£
     echo\
     start "" /wait /b inject.exe ZenlessZoneZero.exe
     exit
@@ -175,7 +237,7 @@ title HoYoShadeÆô¶¯Æ÷
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Èç¹ûÄãÐèÒª¼ì²é°æ±¾¸üÐÂ£¬¿ÉÒÔÈ¥·ÃÎÊÎÒÃÇµÄ²Ö¿â²é¿´ÊÇ·ñÓÐ·¢ÐÐ¸üÐÂ°æ±¾
@@ -230,7 +292,7 @@ title HoYoShadeÆô¶¯Æ÷(ÄãÒÑ½øÈë¿ª·¢ÕßÑ¡Ïî£¡£¡£¡)
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo ×¢Òâ£¡¿ª·¢ÕßÑ¡Ïî½öÓÃÓÚµ÷ÊÔ/¼ì²â´íÎóÐèÒª¡£³ý·Ç¿ª·¢ÕßÃ÷È·ÒªÇóÄãÕâÑù×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²Ã´£¬·ñÔòÇëÎðÇáÒ×Ê¹ÓÃ£¡
@@ -264,7 +326,7 @@ title HoYoShadeÆô¶¯Æ÷(ÄãÒÑ½øÈë×Ô¶¨Òå×¢Èë½çÃæ£¡£¡£¡)
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo ×¢Òâ£¡´Ë¹¦ÄÜ½ö¹©¿ª·¢Õß²âÊÔÐÂÓÎÏ·Ê¹ÓÃ¡£ÕâÒâÎ¶×Å¿ÉÄÜ»á´æÔÚÎ´Öª·çÏÕ/Bug¡£
@@ -298,7 +360,7 @@ echo\
 echo DuolaDStudio X °¢Ïò¾úAXBro x Ex_M
 echo ÁªºÏ¾ÞÏ×
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo\
 echo HoYoShade»ùÓÚReShade¹Ù·½²å¼þºÍOpenHoYoShade¿ò¼Ü¶þ´Î¿ª·¢£¬³ýÐ§¹û¿â/Ô¤ÉèÖ®ÍâµÄËùÓÐÎÄ¼þ¾ù×ñÊØBSL-3¿ªÔ´Ð­ÒéÔÚGitHubÉÏ¿ªÔ´¡£
 echo Äã¿ÉÒÔÔÚReshade.meÍøÕ¾ÖÐ²é¿´ReShade¹Ù·½×ÊÑ¶¡£
@@ -328,7 +390,7 @@ title HoYoShadeÆô¶¯Æ÷
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Çë×¢Òâ£ºÄãÖ»ÐèÒªÔÚÄ£×éÄ¿Â¼ÒÆ¶¯ºó²ÅÐèÒªÖØÖÃReShade.ini
@@ -349,7 +411,7 @@ if "%content%" == "1" (
     cls
     echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
     echo\
-    echo Ä£×é°æ±¾£ºV2.4.1 Stable
+    echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
     echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÖØÖÃ³É¹¦£¡ÖØÖÃºóµÄReShade.iniÏÖÒÑÌæ»»Ä£×é¸ùÄ¿Â¼ÖÐµÄ¾É°æReShade.ini¡£
@@ -380,10 +442,12 @@ title HoYoShadeÆô¶¯Æ÷
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Çë×¢Òâ£¬ÄãÐèÒª½«Reshade.ini¸´ÖÆµ½ÓÎÏ·½ø³Ì¸ùÄ¿Â¼£¬È»ºó²ÅÄÜÊ¹ÓÃ±¾Ä£×é¡£
+echo\
+echo µ±Ç°×¢ÈëÁÐ±í£º²âÊÔ·þ¿Í»§¶Ë×¢ÈëÁÐ±í
 echo\
 echo ±¾Ä£×é½öÓÃÓÚÓÎÏ·»­Ãæµ÷É«Ê¹ÓÃ£¬Çë×ñÊØ±¾ModµÄÓÃ»§Ð­ÒéºÍÓÎÏ·¼°Æä¿ª·¢/·¢ÐÐÉÌÏà¹ØÌõÀý¡£
 echo Äã¿ÉÒÔÔÚÄ£×é¸ùÄ¿Â¼/TutorialÎÄ¼þ¼ÐÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ°²×°ËµÃ÷¡£
@@ -398,9 +462,9 @@ echo 2:HoYoShadeÔÝÎ´ÊÊÅäÄãÄ¿Ç°ÕýÔÚÊ¹ÓÃµÄ²âÊÔ·þ¿Í»§¶Ë¡£
 echo ÈçÐèÊÊÅä£¬ÇëÔÚÎÒÃÇµÄ·ÃÎÊÎÒÃÇµÄGitHub²Ö¿â£¨https://github.com/DuolaD/HoYoShade£©Ìá½»issues¡£
 echo\
 echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨²¿·Ö¹«²âÇ°º£ÍâÄÚ²â¿Í»§¶Ë£©
-echo [3]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ¹«²âÇ°ÄÚ²â¿Í»§¶Ë£©
-echo [4]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ¹«²âºóÄÚ²â¿Í»§¶Ë£©
+echo [2]×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ DevKit/¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
+echo [3]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
+echo [4]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âºóÄÚ²â£¨Beta£©/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
 echo [5]ÇÐ»»ÖÁ¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±í
 echo [6]ÆäËüÑ¡Ïî
 echo [7]ÍË³ö³ÌÐò
@@ -419,23 +483,53 @@ if "%content%" == "1" (
         taskkill /IM Genshin.exe /F >nul 2>&1
         goto GICBT_CheckProcess
     )
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨²¿·Ö¹«²âÇ°º£ÍâÄÚ²â¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ DevKit/¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢ÈëÑ¡Ïî²»ÊÊÓÃÓÚÈÎºÎ Ô­Éñ£¨¹«¿ª/¹«²âºóÄÚ²â£¨Beta£©£©¿Í»§¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´ËÀà¿Í»§¶Ë£¬Çë¹Ø±Õ´°¿Ú²¢ÖØÐÂÆô¶¯HoYoShadeÆô¶¯Æ÷£¬²¢ÔÚ¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±íÑ¡Ôñ¶ÔÓ¦µÄ¿Í»§¶Ë¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe Genshin.exe
     exit
 ) else if "%content%" == "3" (
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ¹«²âÇ°ÄÚ²â¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ ¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢ÈëÑ¡Ïî²»ÊÊÓÃÓÚÈÎºÎ ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª/¹«²âºóÄÚ²â/´´×÷ÕßÌåÑé·þ£©¿Í»§¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´ËÀà¿Í»§¶Ë£¬Çë¹Ø±Õ´°¿Ú²¢ÖØÐÂÆô¶¯HoYoShadeÆô¶¯Æ÷£¬²¢Ñ¡Ôñ¶ÔÓ¦µÄ¿Í»§¶Ë×¢ÈëÑ¡Ïî¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe ZZZ.exe
     exit
 ) else if "%content%" == "4" (
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ¹«²âºóÄÚ²â¿Í»§¶Ë£©
+    cls
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:¾øÇøÁã£¨Í¨ÓÃ ¹«²âºóÄÚ²â/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
     echo ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£È·±£ReShade.ini¸´ÖÆµ½ÕýÈ·µÄÓÎÏ·½ø³Ì¸ùÄ¿Â¼Ö®ºó£¬ÄãÏÖÔÚ¿ÉÒÔÊ¹ÓÃÆô¶¯Æ÷Æô¶¯ÓÎÏ·ÁË¡£×¢ÈëÆ÷»áÒ»²¢×¢Èë¡£
     echo Èç¹ûÄãÑ¡ÔñÁË´íÎóµÄ×¢ÈëÄ¿±ê£¬Ö»Ðè¹Ø±Õ´Ë´°¿ÚºóÖØÐÂÔËÐÐÆô¶¯Æ÷ÖØÐÂÑ¡Ôñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢ÈëÑ¡Ïî²»ÊÊÓÃÓÚÈÎºÎ ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª/¹«²âÇ°ÄÚ²â£©¿Í»§¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´ËÀà¿Í»§¶Ë£¬Çë¹Ø±Õ´°¿Ú²¢ÖØÐÂÆô¶¯HoYoShadeÆô¶¯Æ÷£¬²¢Ñ¡Ôñ¶ÔÓ¦µÄ¿Í»§¶Ë×¢ÈëÑ¡Ïî¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØÐëÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄÓÎÏ·Æô¶¯Æ÷À´Æô¶¯ÓÎÏ·£¬
+    echo ²»ÄÜÖ±½ÓË«»÷ÔËÐÐ½ø³Ì/½ø³Ì¿ì½Ý·½Ê½ÒÔÆô¶¯ÓÎÏ·¡£·ñÔò¿ÉÄÜ»áµ¼ÖÂ×¢ÈëÊ§°Ü¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©Æô¶¯Æ÷/ÄãÃ»ÓÐÆô¶¯Æ÷£¬Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
+    echo ´Ë²¹¶¡Îª±ÕÔ´²¹¶¡ÇÒ²¢²»ÄÚÖÃÓÚHoYoShadeÖÐ£¬ÄãÎÞ·¨Í¨¹ý¸ü¸ÄHoYoShadeÔ´´úÂëÀ´ÊµÏÖ×¢Èë¹¦ÄÜ¡£
+    echo ÓÐ¹Ø¸ü¶àÐÅÏ¢£¬ÇëÁªÏµ¿ª·¢Õß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ»ñÈ¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
     exit
@@ -481,7 +575,7 @@ if "%statusCode%"=="403" (
     cls
     echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
     echo\
-    echo Ä£×é°æ±¾£ºV2.4.1 Stable
+    echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
     echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒÃÇ¼ì²âµ½µ±Ç°Äã¿ÉÄÜ²»ÔÚÖÐ¹ú´óÂ½/¸Û°ÄÌ¨µØÇø£¬
@@ -511,7 +605,7 @@ title HoYoShadeÆô¶¯Æ÷
 cls
 echo »¶Ó­Ê¹ÓÃHoYoShadeÆô¶¯Æ÷£¡
 echo\
-echo Ä£×é°æ±¾£ºV2.4.1 Stable
+echo Ä£×é°æ±¾£ºV2.X.X Stable - NextVersion
 echo ¿ª·¢Õß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 if "%missing_curl%"=="1" (
@@ -525,8 +619,8 @@ echo ×¢Òâ£ºÈç¹ûÄãÊ¹ÓÃÁª¶¯×¢Èë¹¦ÄÜ£¬ÐèÒªÑ¡ÔñÄãÔÚBlender/ÁôÓ°»ú²å¼þÖÐ°ó¶¨µÄ¶ÔÓ¦·þÎ
 echo Èç¹ûÕâÊÇÄãµÚÒ»´ÎÆô¶¯Blender/ÁôÓ°»ú²å¼þ£¬ÇëÈ·±£ÔÚ´Ë´¦Ñ¡ÔñµÄÄ¿±ê¿Í»§¶ËºÍÄã½ÓÏÂÀ´ÔÚBlender/ÁôÓ°»ú²å¼þÖÐ°ó¶¨µÄÄ¿±ê¿Í»§¶ËÒ»ÖÂ£¬·ñÔòReShadeÎÞ·¨Õý³£×¢Èë¡£
 echo\
 echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨¿Í»§¶Ë£©
-echo [3]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ¿Í»§¶Ë/Epic¿Í»§¶Ë£©
+echo [2]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
+echo [3]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ°æ ¹ú¼Ê·þ/Epic ¹«¿ª ¿Í»§¶Ë£©
 echo [4]½öÆô¶¯Blender/ÁôÓ°»ú²å¼þ
 echo [5]Í¬²½µ±Ç°ÏµÍ³Ê±¼äÒÔÐÞ¸´ÏµÍ³Ê±¼ä²»Í¬²½µÄÌáÊ¾
 echo [6]·µ»ØÖ÷½çÃæ
@@ -543,7 +637,7 @@ if "%choice%"=="1" (
         taskkill /IM YuanShen.exe /F >nul 2>&1
         goto YSBL_CheckProcess
     )
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨¿Í»§¶Ë£©
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
     echo\
     echo ReShadeºÍBlender/ÁôÓ°»ú²å¼þ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£Çë²»Òª¹Ø±Õ±¾´°¿Ú¡£
     echo Blender/ÁôÓ°»ú²å¼þ×¢ÈëÆ÷Æô¶¯ÓÎÏ·ºó£¬ReShade½«»á×Ô¶¯×¢Èë²¢¹Ø±Õ¸Ã´°¿Ú¡£
@@ -561,7 +655,7 @@ if "%choice%"=="1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GIBL_CheckProcess
     )
-    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨¹ú¼Ê·þ¿Í»§¶Ë/Epic ¿Í»§¶Ë£©
+    echo ÄãÑ¡ÔñµÄ×¢ÈëÄ¿±êÎª:Ô­Éñ£¨Í¨ÓÃ°æ ¹ú¼Ê·þ/Epic ¹«¿ª ¿Í»§¶Ë£©
     echo\
     echo ReShadeºÍBlender/ÁôÓ°»ú²å¼þ×¢ÈëÆ÷ÏÖÒÑÆô¶¯¡£Çë²»Òª¹Ø±Õ±¾´°¿Ú¡£
     echo Blender/ÁôÓ°»ú²å¼þ×¢ÈëÆ÷Æô¶¯ÓÎÏ·ºó£¬ReShade½«»á×Ô¶¯×¢Èë²¢¹Ø±Õ¸Ã´°¿Ú¡£

@@ -88,17 +88,22 @@ echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\
+echo Current injection list: Public client injection list
+echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
 REM I still prefer to be a person who pays silently behind the scenes XD.
 echo\
+echo *: This injection option is applicable to the Beta/Creator Experience server, 
+echo but you may need to obtain a patch from the developers for injection.
+echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact £¨CN/BiliBil Server£©
-echo [3]Inject into Genshin Impact £¨Global Server/Epic Games Store Version£©
-echo [4]Inject into Honkai Impact 3 £¨Universal£©
-echo [5]Inject into Honkai: Star Rail £¨Universal£©
-echo [6]Inject into Zenless Zone Zero £¨Universal£©
+echo [2]Inject into Genshin Impact £¨CN/BiliBil Public(REL)/Devkit/Beta/Creator Experience Client£©*
+echo [3]Inject into Genshin Impact £¨Global/Epic Games Store Public(REL)/Beta/Creator Experience Client£©*
+echo [4]Inject into Honkai Impact 3 £¨Universal Public(REL)/Beta Client£©*
+echo [5]Inject into Honkai: Star Rail £¨Universal Public(REL)/Beta/Creator Experience Client£©*
+echo [6]Inject into Zenless Zone Zero £¨Universal Public(REL) Client£©
 echo [7]Switch to the test server client injection list.
 echo [8]Other options
 echo [9]Exit
@@ -115,10 +120,23 @@ if "%content%" == "1" (
         taskkill /IM YuanShen.exe /F >nul 2>&1
         goto YS_CheckProcess
     )
-    echo The injection target you selected is:Genshin Impact £¨CN/BiliBil Server£©
+    cls
+    echo The injection target you selected is:Genshin Impact £¨CN/BiliBil Public(REL)/Devkit/Beta/Creator Experience Client£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Important: You must use a game launcher to start the game (whether it is the official launcher or a third-party launcher),
+    echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
+    echo\
+    echo\
+    echo This injection option supports injecting HoYoShade into Genshin Impact (CN/BiliBil Devkit/Beta/Creator Experience Client).
+    echo\
+    echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
+    echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
+    echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe YuanShen.exe
     exit
@@ -129,35 +147,80 @@ if "%content%" == "1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GI_CheckProcess
     )
-    echo The injection target you selected is:Genshin Impact £¨Global Server/Epic Games Store Version£©
+    cls
+    echo The injection target you selected is:Genshin Impact £¨Global/Epic Games Store Public(REL)/Beta/Creator Experience Client£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Important: You must use a game launcher to start the game (whether it is the official launcher or a third-party launcher),
+    echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
+    echo\
+    echo\
+    echo This injection option supports injecting HoYoShade into Genshin Impact (Global Beta/Creator Experience Client).
+    echo\
+    echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
+    echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
+    echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-    echo The injection target you selected is:Honkai Impact 3 £¨Universal£©
+    cls
+    echo The injection target you selected is:Honkai Impact 3 £¨Universal Public(REL)/Beta Client£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Important: You must use a game launcher to start the game (whether it is the official launcher or a third-party launcher),
+    echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
+    echo\
+    echo\
+    echo This injection option supports injecting HoYoShade into Honkai Impact 3 £¨Universal Beta Client£©
+    echo\
+    echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
+    echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
+    echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-    echo The injection target you selected is:Honkai: Star Rail £¨Universal£©
+    cls
+    echo The injection target you selected is:Honkai: Star Rail £¨Universal Public(REL)/Beta/Creator Experience Client£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Important: You must use a game launcher to start the game (whether it is the official launcher or a third-party launcher),
+    echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
+    echo\
+    echo\
+    echo This injection option supports injecting HoYoShade into Honkai: Star Rail £¨Universal Beta/Creator Experience Client£©
+    echo\
+    echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
+    echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
+    echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    echo The injection target you selected is:Zenless Zone Zero £¨Universal£©
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal Public(REL) Client£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
+    echo Important: You must use a game launcher to start the game (whether it is the official launcher or a third-party launcher),
+    echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
+    echo\
+    echo Note: This injection option is not applicable to any Zenless Zone Zero (pre-public test (Beta)/internal test (Beta)) clients.
+    echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, and select the corresponding client in the public client injection list.
+    echo
     start "" /wait /b inject.exe ZenlessZoneZero.exe
     exit
 ) else if "%content%" == "7" (
@@ -384,6 +447,8 @@ echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\
+echo Current injection list: Test server client injection list
+echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
@@ -399,9 +464,9 @@ echo 2:HoYoShade has not yet been adapted to the test server client you are curr
 echo For adaptation, please visit our GitHub repository (https://github.com/DuolaD/HoYoShade) to submit issues.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact £¨Part of Oversea CB Client Before Public Beta£©
-echo [3]Inject into Zenless Zone Zero £¨Universal CB Client Before Public Beta£©
-echo [4]Inject into Zenless Zone Zero £¨Universal CB Client After Public Beta£©
+echo [2]Inject into Genshin Impact £¨Universal Global Devkit/Beta Client Before Public(REL) clients£©
+echo [3]Inject into Zenless Zone Zero £¨Universal Beta Client Before Public(REL)£©
+echo [4]Inject into Zenless Zone Zero £¨Universal Beta Client After Public(REL)£©
 echo [5]Switch to the public client injection list
 echo [6]Other options
 echo [7]Exit
@@ -418,26 +483,56 @@ if "%content%" == "1" (
         taskkill /IM Genshin.exe /F >nul 2>&1
         goto GICBT_CheckProcess
     )
-    echo The injection target you selected is:Genshin Impact £¨Part of Oversea CB Client Before Public Beta£©
+    cls
+    echo The injection target you selected is:Genshin Impact £¨Universal Global Devkit/Beta Client Before Public(REL) clients£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Note: This injection option is not applicable to any Genshin Impact (public(REL)/Beta after Public(REL)) clients.
+    echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, and select the corresponding client in the public client injection list.
+    echo\
+    echo Important: You must use the game launcher provided to you by the official source to start the game.
+    echo Do not directly double-click the process/process shortcut to start the game. Otherwise, it may lead to injection failure.
+    echo If the official source has not provided you with a launcher/you do not have a launcher, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe Genshin.exe
     exit
 ) else if "%content%" == "3" (
-    echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client Before Public Beta£©
+    cls
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal Beta Client Before Public(REL)£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
+    echo Note: This injection option is not applicable to any Zenless Zone Zero £¨Universal Beta Client After Public(REL)£©.
+    echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, and select the corresponding client in the public client injection list.
+    echo\
+    echo Important: You must use the game launcher provided to you by the official source to start the game.
+    echo Do not directly double-click the process/process shortcut to start the game. Otherwise, it may lead to injection failure.
+    echo If the official source has not provided you with a launcher/you do not have a launcher, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
+    echo\
     start "" /wait /b inject.exe ZZZ.exe
     exit
 ) else if "%content%" == "4" (
-    echo The injection target you selected is:Zenless Zone Zero £¨Universal CB Client After Public Beta£©
+    cls
+    echo The injection target you selected is:Zenless Zone Zero £¨Universal Beta Client After Public(REL)£©
     echo The injector has now started. Please ensure that ReShade.ini is copied to the root directory of the correct game process. 
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Note: This injection option is not applicable to any Zenless Zone Zero £¨Universal Beta Client Before Public(REL)£©.
+    echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, and select the corresponding client in the public client injection list.
+    echo\
+    echo Important: You must use the game launcher provided to you by the official source to start the game.
+    echo Do not directly double-click the process/process shortcut to start the game. Otherwise, it may lead to injection failure.
+    echo If the official source has not provided you with a launcher/you do not have a launcher, you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer ¶ßÀ²D‰ôDuolaD (https://github.com/DuolaD) to get more information.
     echo\
     start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
     exit

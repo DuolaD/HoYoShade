@@ -2,7 +2,7 @@
 
 chcp 936
 
-title HoYoShade Starter
+title HoYoShade†™„ÓÆ÷
 cls
 
 net session >nul 2>&1
@@ -28,7 +28,7 @@ if %missing_file% equ 1 (
     cls
     echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
     echo\
-    echo Ä£½M°æ±¾£ºV2.4.1 Stable
+    echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
     echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒ‚ƒ™zœyµ½£¨Open£©HoYoShade¿ò¼Ü×¢ÈëËùÐèµÄ±ØÒªÎÄ¼þ²»´æÔÚ¡£
@@ -57,45 +57,49 @@ if exist "%filepath%" (
     cls
     echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
     echo\
-    echo Ä£½M°æ±¾£ºV2.4.1 Stable
+    echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
     echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒ‚ƒ™zœyµ½ÄãÊÇµÚÒ»´ÎÊ¹ÓÃ±¾Ä£½M£¬Reshade.ini¬FÒÑÉú³ÉÖÁÄ£½M¸ùÄ¿ä›ÖÐ¡£
     echo ÄãÐèÒªŒ¢Reshade.iniÑ}Ñuµ½ß[‘òßM³Ì¸ùÄ¿ä›£¬È»áá²ÅÄÜÊ¹ÓÃ±¾Ä£½M¡£
     echo\
     echo ÈçºÎÕÒµ½ß[‘òßM³Ì¸ùÄ¿ä›£¿  
-    echo Œ¦ì¶HoYoPlay£¨Ã×¹þß[†¢„ÓÆ÷£©:üc“ôé_Ê¼†¢„Ó°´âoÅÔµÄ¸ü¶àˆD˜Ë-ß[‘òÔO¶¨¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
-    echo ücßx'é_†¢ËùÔÚÄ¿ä›'¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷é_†¢ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo Œ¦ì¶HoYoPlay£¨Ã×¹þß[†™„ÓÆ÷£©:üc“ôé_Ê¼†™„Ó°´âoÅÔß…µÄ¸ü¶àˆD˜Ë-ß[‘òÔOÖÃ¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo üc“ô'´òé_ËùÔÚÄ¿ä›'¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷´òé_ß[‘òßM³Ì¸ùÄ¿ä›¡£  
     echo\
-    echo Œ¦ì¶StarWard:üc“ôé_Ê¼†¢„Ó°´âoÅÔµÄýXÝ†ˆD˜Ë¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
-    echo ücßxß[‘òßM³Ì¸ùÄ¿ä›¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷é_†¢ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo Œ¦ì¶StarWard:üc“ôé_Ê¼†™„Ó°´âoÅÔß…µÄýXÝ†ˆD˜Ë¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo üc“ôß[‘òßM³Ì¸ùÄ¿ä›¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷´òé_ß[‘òßM³Ì¸ùÄ¿ä›¡£  
     echo\
-    echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÙYÁÏŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
+    echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÎÄ¼þŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
     echo\
     pause
     goto menu
 )
 
 :menu
-title HoYoShade Starter
+title HoYoShade†™„ÓÆ÷
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Õˆ×¢Òâ£¬ÄãÐèÒªŒ¢Reshade.iniÑ}Ñuµ½ß[‘òßM³Ì¸ùÄ¿ä›£¬È»áá²ÅÄÜÊ¹ÓÃ±¾Ä£½M¡£
 echo\
-echo ±¾Ä£½MƒHÓÃì¶ß[‘ò®‹ÃæÕ{É«Ê¹ÓÃ£¬Õˆ×ñÊØ±¾ModµÄÓÃ‘ô…f×h¼°ß[‘ò¼°Æäé_°l/°lÐÐÉÌÏàêP—lÀý¡£
-echo Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÙYÁÏŠAÖÐ²é¿´Ê¹ÓÃÕß…f¶¨ºÍˆDÎÄ°²ÑbÕfÃ÷¡£
-REM ÎÒß€ÊÇ¸üÔ¸Òâ®”Ò»‚€ÔÚ±³ááÄ¬Ä¬¸¶³öµÄÈË XD
+echo ®”Ç°×¢ÈëÁÐ±í£º¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±í
+echo\
+echo ±¾Ä£½MƒHÓÃì¶ß[‘ò®‹ÃæÕ{É«Ê¹ÓÃ£¬Õˆ×ñÊØ±¾ModµÄÓÃ‘ô…f×hºÍß[‘ò¼°Æäé_°l/°lÐÐÉÌÏàêP—lÀý¡£
+echo Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÎÄ¼þŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
+REM ÎÒß€ÊÇ¸üîŠÒâ®”Ò»‚€ÔÚ±³ááÄ¬Ä¬¸¶³öµÄÈË XD
+echo\
+echo *:Ô“×¢Èëßxí—ßmÓÃì¶Beta/„“×÷Õßówòž·þ£¬µ«Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
 echo\
 echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘·þ/†ôÁ¨†ôÁ¨·þ¿Í‘ô¶Ë£©
-echo [3]×¢ÈëÖÁÔ­Éñ£¨‡øëH·þ¿Í‘ô¶Ë/Epic¿Í‘ô¶Ë£©
-echo [4]×¢ÈëÖÁ±À‰ÄÈý£¨Í¨ÓÃ¿Í‘ô¶Ë£©
-echo [5]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ¿Í‘ô¶Ë£©
-echo [6]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ¿Í‘ô¶Ë£©
+echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_/Devkit/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [3]×¢ÈëÖÁÔ­Éñ£¨‡øëH·þ/Epic ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [4]×¢ÈëÖÁ±À‰ÄÈý£¨Í¨ÓÃ ¹«é_/Beta¿Í‘ô¶Ë£©*
+echo [5]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [6]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«é_¿Í‘ô¶Ë£©
 echo [7]ÇÐ“QÖÁœyÔ‡·þ¿Í‘ô¶Ë×¢ÈëÁÐ±í
 echo [8]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ
 echo [9]ÆäËüßxí—
@@ -115,9 +119,22 @@ if "%content%" == "1" (
         taskkill /IM YuanShen.exe /F >nul 2>&1
         goto YS_CheckProcess
     )
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:Ô­Éñ£¨ÖÐ‡ø´óê‘·þ/†ôÁ¨†ôÁ¨·þ¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_/Devkit/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃÒ»‚€ß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¨ŸoÕ“ÊÇ¹Ù·½†™„ÓÆ÷ß€ÊÇµÚÈý·½†™„ÓÆ÷£©£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t•þ×¢ÈëÊ§”¡¡£
+    echo\
+    echo\
+    echo ´Ë×¢Èëßxí—Ö§³Ö×¢ÈëHoYoShadeÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ Devkit/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´Ëî¿Í‘ô¶Ë•r£¬Äã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo Äã²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò£¬·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷ÇÒ×¢ÈëÊ§”¡£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe YuanShen.exe
     exit
@@ -128,30 +145,75 @@ if "%content%" == "1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GI_CheckProcess
     )
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:Ô­Éñ£¨‡øëH·þ¿Í‘ô¶Ë/Epic¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨‡øëH·þ/Epic ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃÒ»‚€ß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¨ŸoÕ“ÊÇ¹Ù·½†™„ÓÆ÷ß€ÊÇµÚÈý·½†™„ÓÆ÷£©£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t•þ×¢ÈëÊ§”¡¡£
+    echo\
+    echo\
+    echo ´Ë×¢Èëßxí—Ö§³Ö×¢ÈëHoYoShadeÖÁÔ­Éñ£¨‡øëH·þ Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´Ëî¿Í‘ô¶Ë•r£¬Äã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo Äã²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò£¬·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷ÇÒ×¢ÈëÊ§”¡£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:±À‰ÄÈý£¨Í¨ÓÃ¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:±À‰ÄÈý£¨Í¨ÓÃ ¹«é_/Beta¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃÒ»‚€ß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¨ŸoÕ“ÊÇ¹Ù·½†™„ÓÆ÷ß€ÊÇµÚÈý·½†™„ÓÆ÷£©£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t•þ×¢ÈëÊ§”¡¡£
+    echo\
+    echo\
+    echo ´Ë×¢Èëßxí—Ö§³Ö×¢ÈëHoYoShadeÖÁ±À‰ÄÈý£¨Í¨ÓÃ Beta¿Í‘ô¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´Ëî¿Í‘ô¶Ë•r£¬Äã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo Äã²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò£¬·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
+    echo\
     echo\
     start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃÒ»‚€ß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¨ŸoÕ“ÊÇ¹Ù·½†™„ÓÆ÷ß€ÊÇµÚÈý·½†™„ÓÆ÷£©£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t•þ×¢ÈëÊ§”¡¡£
+    echo\
+    echo\
+    echo ´Ë×¢Èëßxí—Ö§³Ö×¢ÈëHoYoShadeÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©¡£
+    echo\
+    echo ÔÚ×¢Èë´Ëî¿Í‘ô¶Ë•r£¬Äã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo Äã²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò£¬·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo µ«Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:½^…^Áã£¨Í¨ÓÃ¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:½^…^Áã£¨Í¨ÓÃ ¹«é_¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃÒ»‚€ß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¨ŸoÕ“ÊÇ¹Ù·½†™„ÓÆ÷ß€ÊÇµÚÈý·½†™„ÓÆ÷£©£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t•þ×¢ÈëÊ§”¡¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢Èëßxí—²»ßmÓÃì¶ÈÎºÎ ½^…^Áã£¨¹«œyÇ°/ááƒÈœy£¨Beta£©£©¿Í‘ô¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´Ëî¿Í‘ô¶Ë£¬ÕˆêPé]´°¿ÚKÖØÐÂ†™„ÓHoYoShade†™„ÓÆ÷£¬KÔÚ¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±íßx“ñŒ¦‘ªµÄ¿Í‘ô¶Ë¡£
     echo\
     start "" /wait /b inject.exe ZenlessZoneZero.exe
     exit
@@ -171,27 +233,27 @@ if "%content%" == "1" (
 exit
 
 :other
-title HoYoShade Starter
+title HoYoShade†™„ÓÆ÷
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Èç¹ûÄãÐèÒª™z²é°æ±¾¸üÐÂ£¬¿ÉÒÔÈ¥ÔL†–ÎÒ‚ƒµÄ‚}Žì²é¿´ÊÇ·ñÓÐ°lÐÐ¸üÐÂ°æ±¾
-echo ×¢Òâ£¡é_°lÕßßxí—ƒHÓÃì¶Õ{Ô‡/™zœyåeÕ`ÐèÇó¡£³ý·Çé_°lÕßÃ÷´_ÒªÇóÄãß@˜Ó×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²üN£¬·ñ„tÕˆÎðÝpÒ×Ê¹ÓÃ£¡
+echo ×¢Òâ£¡é_°lÕßßxí—ƒHÓÃì¶Õ{Ô‡/™zœyåeÕ`ÐèÒª¡£³ý·Çé_°lÕßÃ÷´_ÒªÇóÄãß@˜Ó×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²üN£¬·ñ„tÕˆÎðÝpÒ×Ê¹ÓÃ£¡
 echo\
-echo Ô]£ºCYteamÏÂÝdÕ¾³ýÁËÌá¹©±¾Ä£½MµÄçRÏñÏÂÝdÖ®Íâ£¬ß€ÔÚÖÐ‡ø´óê‘µØ…^Ìá¹©ÃâÙMµÄ‡øëH·þÔ­Éñ/±ÀèF/HoYoLAB°²Ñb°üºÍË½·þÙYÔ´¡£
-echo ³ý´ËÖ®Íâ£¬CYteamÒ²Ìá¹©Ò»Ð©°²×¿µÄ¸ã™CÙYÔ´¡£ÓÐÅdÈ¤µÄ¿ÉÒÔÈ¥¿´Ò»¿´~
+echo ×¢£ºCYteamÏÂÝdÕ¾³ýÁËÌá¹©±¾Ä£½MµÄçRÏñÏÂÝdÖ®Íâ£¬ß€ÔÚÖÐ‡ø´óê‘µØ…^Ìá¹©ÃâÙMµÄ‡øëH·þÔ­Éñ/±ÀèF/HoYoLAB°²Ñb°üºÍË½·þÙYÔ´¡£
+echo ³ý´ËÖ®Íâ£¬CYteamß€Ìá¹©Ò»Ð©°²×¿µÄ¸ã™CÙYÔ´¡£¸ÐÅdÈ¤µÄ¿ÉÒÔÈ¥¿´Ò»¿´~
 echo ¸ÐÖxCYteamÌá¹©µÄÏÂÝdÕ¾·þ„Õ
 echo\
 echo [1]ÔL†–ÎÒ‚ƒµÄGitHub‚}Žì
 echo [2]ÔL†–ÓÉCYteamÌá¹©µÄÏÂÝdÕ¾·þ„Õ
 echo [3]ÙÖú±¾Mod
-echo [4]Â“‚SÎÒ‚ƒ
+echo [4]Â“ÀMÎÒ‚ƒ
 echo [5]êPì¶HoYoShade
 echo [6]é_°lÕßßxí—
-echo [7]·µ»ØÖ÷½éÃæ
+echo [7]·µ»ØÖ÷½çÃæ
 echo [8]ÍË³ö³ÌÐò
 
 echo\
@@ -226,14 +288,14 @@ if "%content%" == "1" (
 goto other
 
 :develop
-title HoYoShade Starter(ÄãÒÑßMÈëé_°lÕßßxí—£¡£¡£¡)
+title HoYoShade†™„ÓÆ÷(ÄãÒÑßMÈëé_°lÕßßxí—£¡£¡£¡)
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
-echo ×¢Òâ£¡é_°lÕßßxí—ƒHÓÃì¶Õ{Ô‡/™zœyåeÕ`ÐèÇó¡£³ý·Çé_°lÕßÃ÷´_ÒªÇóÄãß@˜Ó×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²üN£¬·ñ„tÕˆÎðÝpÒ×Ê¹ÓÃ£¡
+echo ×¢Òâ£¡é_°lÕßßxí—ƒHÓÃì¶Õ{Ô‡/™zœyåeÕ`ÐèÒª¡£³ý·Çé_°lÕßÃ÷´_ÒªÇóÄãß@˜Ó×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²üN£¬·ñ„tÕˆÎðÝpÒ×Ê¹ÓÃ£¡
 echo\
 echo [1]×Ô¶¨Áx×¢Èë
 echo [2]·µ»ØÖ÷½çÃæ
@@ -260,11 +322,11 @@ if "%content%" == "1" (
 goto develop@echo off
 
 :customize_inject
-title HoYoShade Starter(ÄãÒÑßMÈë×Ô¶¨Áx×¢Èë½çÃæ£¡£¡£¡)
+title HoYoShade†™„ÓÆ÷(ÄãÒÑßMÈë×Ô¶¨Áx×¢Èë½çÃæ£¡£¡£¡)
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo ×¢Òâ£¡´Ë¹¦ÄÜƒH¹©é_°lÕßœyÔ‡ÐÂß[‘òÊ¹ÓÃ¡£ß@ÒâÎ¶×Å¿ÉÄÜ•þ´æÔÚÎ´ÖªïLëU/Bug¡£
@@ -275,12 +337,13 @@ echo µÈ´ý×¢Èë´°¿Ú½çÃæ—³öáá†™„ÓÄ¿˜Ë³ÌÐò¼´¿É¡£
 echo Ý”Èë'\exit'¼´¿É·µ»Øé_°l½çÃæ¡£
 echo\
 set /p "content=ÔÚ´ËÝ”Èë£º"
+echo\
 if "%content%" == "\exit" (
     goto develop
 ) else (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:%content%.exe
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:%content%.exe
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
     echo\
     start "" /wait /b inject.exe %content%.exe
     exit
@@ -297,37 +360,37 @@ echo\
 echo DuolaDStudio X °¢Ïò¾úAXBro x Ex_M
 echo Â“ºÏâ «I
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo\
-echo HoYoShade»ùì¶ReShade¹Ù·½½M¼þºÍOpenHoYoShade¿ò¼Ü¶þ´Îé_°l£¬³ýÐ§¹ûŽì/îAÔOÖ®ÍâµÄËùÓÐÎÄ¼þ¾ù×ñÊØBSL-3é_Ô´…f¶¨ÔÚGitHubÉÏé_Ô´¡£
+echo HoYoShade»ùì¶ReShade¹Ù·½²å¼þºÍOpenHoYoShade¿ò¼Ü¶þ´Îé_°l£¬³ýÐ§¹ûŽì/îAÔOÖ®ÍâµÄËùÓÐÎÄ¼þ¾ù×ñÊØBSL-3é_Ô´…f×hÔÚGitHubÉÏé_Ô´¡£
 echo Äã¿ÉÒÔÔÚReshade.me¾WÕ¾ÖÐ²é¿´ReShade¹Ù·½ÙYÓ¡£
 echo Modify By DuolaDStudio Hong Kong Ltd,All rights reserved.
 echo\
 echo Õˆ×¢Òâ£ºHoYoShade ‘ÃâÙMé_Ô´Mod£¬ReShade ‘ÃâÙMé_Ô´²å¼þ£¬OpenHoYoShade ‘ÃâÙMé_Ô´¿ò¼Ü¡£
-echo ËùÓÐÔ­Ê¼´a¶¼¿ÉÒÔÔÚGitHubÉÏ«@È¡£¬Èç¹ûÄãÊÇ¸¶ÙMÙÙIÁËÎ´½›ÐÞ¸Ä/¶þ´Îé_°lµÄ(Open)HoYoShade
+echo ËùÓÐÔ´´a¶¼¿ÉÒÔÔÚGitHubÉÏ«@È¡£¬Èç¹ûÄãÊÇ¸¶ÙMÙÙIÁËÎ´½›ÐÞ¸Ä/¶þ´Îé_°lµÄ(Open)HoYoShade
 echo ÕˆÁ¢¼´ÍË¿î£¡ÉÌ¼ÒÐÐ ‘ºÍËùÓÐé_°lÕßŸoêP£¡
 echo\
 echo Ô”¼šé_°lÃû†Î£º
 echo -DuolaDStudio Hong Kong Ltd.
 echo   ¡ª¡ª¶ßÀ²D‰ôDuolaD[REßmÅä/´ó°æ±¾¸üÐÂé_°l/†™„ÓÆ÷/îAÔO]
 echo   ¡ª¡ªÁÕÄÝÌØLynetteNotFound[HoYoShadeÐ¡°æ±¾¸üÐÂé_°l/¾S×o]
-echo -Ex_M[¼¼ÐgÖ§Ô®/Ö¸Œ§/GUIÑu×÷]
+echo -Ex_M[¼¼ÐgÖ§³Ö/Ö¸Œ§/GUIÑu×÷]
 echo -°¢Ïò¾úAXBro[Ðû‚÷/ÃæÏò¼¼ÐgÖ§³Ö]
 echo\
 echo øQÖx£º
-echo -CYTeam[HoYoShadeºÏ×÷»ï°é/Î¢Ü›Æó˜Iƒ¦´æÓ‹„Ìá¹©/„Ó‘BÞDìo‘BßB½Y½â›Q·½°¸]
-echo -Cloudflare, Inc.[¾WÓòÓš¹ÜÅc¹ÜÀí]
+echo -CYTeam[HoYoShadeºÏ×÷»ï°é/Î¢Ü›Æó˜Iƒ¦´æÓ‹„Ìá¹©/„Ó‘BÞDìo‘Bæœ½Ó½â›Q·½°¸]
+echo -Cloudflare, Inc.[ÓòÃûÓš¹ÜÅc¹ÜÀí]
 echo\
 echo ¸ÐÖxÓÐÄã£¡HoYoShadeÃ÷Ìì•þ¸üºÃ£¡
 pause
 goto other
 
 :ini_Reset
-title HoYoShade Starter
+title HoYoShade†™„ÓÆ÷
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Õˆ×¢Òâ£ºÄãÖ»ÐèÒªÔÚÄ£½MÄ¿ä›ÒÆ„Óáá²ÅÐèÒªÖØÖÃReShade.ini
@@ -348,20 +411,20 @@ if "%content%" == "1" (
     cls
     echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
     echo\
-    echo Ä£½M°æ±¾£ºV2.4.1 Stable
+    echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
     echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÖØÖÃ³É¹¦£¡ÖØÖÃááµÄReShade.ini¬FÒÑÌæ“QÄ£½M¸ùÄ¿ä›ÖÐµÄÅf°æReShade.ini¡£
     echo ÄãÐèÒªŒ¢ÖØÖÃááµÄReShade.iniÌæ“Qß[‘òßM³Ì¸ùÄ¿ä›Ô­ÓÐµÄReShade.ini£¬È»áá²ÅÄÜÊ¹ÓÃ±¾Ä£½M¡£
     echo\
     echo ÈçºÎÕÒµ½ß[‘òßM³Ì¸ùÄ¿ä›£¿  
-    echo Œ¦ì¶HoYoPlay£¨Ã×¹þß[†¢„ÓÆ÷£©:üc“ôé_Ê¼†¢„Ó°´âoÅÔµÄ¸ü¶àˆD˜Ë-ß[‘òÔO¶¨¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
-    echo ücßx'é_†¢ËùÔÚÄ¿ä›'¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷é_†¢ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo Œ¦ì¶HoYoPlay£¨Ã×¹þß[†™„ÓÆ÷£©:üc“ôé_Ê¼†™„Ó°´âoÅÔß…µÄ¸ü¶àˆD˜Ë-ß[‘òÔOÖÃ¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo üc“ô'´òé_ËùÔÚÄ¿ä›'¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷´òé_ß[‘òßM³Ì¸ùÄ¿ä›¡£  
     echo\
-    echo Œ¦ì¶StarWard:üc“ôé_Ê¼†¢„Ó°´âoÅÔµÄýXÝ†ˆD˜Ë¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
-    echo ücßxß[‘òßM³Ì¸ùÄ¿ä›¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷é_†¢ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo Œ¦ì¶StarWard:üc“ôé_Ê¼†™„Ó°´âoÅÔß…µÄýXÝ†ˆD˜Ë¼´¿É²é¿´ß[‘òßM³Ì¸ùÄ¿ä›¡£  
+    echo üc“ôß[‘òßM³Ì¸ùÄ¿ä›¼´¿ÉÊ¹ÓÃÙYÔ´¹ÜÀíÆ÷´òé_ß[‘òßM³Ì¸ùÄ¿ä›¡£  
     echo\
-    echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÙYÁÏŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
+    echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÎÄ¼þŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
     echo\
     pause
     goto menu
@@ -379,10 +442,12 @@ title HoYoShade†™„ÓÆ÷
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 echo Õˆ×¢Òâ£¬ÄãÐèÒªŒ¢Reshade.iniÑ}Ñuµ½ß[‘òßM³Ì¸ùÄ¿ä›£¬È»áá²ÅÄÜÊ¹ÓÃ±¾Ä£½M¡£
+echo\
+echo ®”Ç°×¢ÈëÁÐ±í£ºœyÔ‡·þ¿Í‘ô¶Ë×¢ÈëÁÐ±í
 echo\
 echo ±¾Ä£½MƒHÓÃì¶ß[‘ò®‹ÃæÕ{É«Ê¹ÓÃ£¬Õˆ×ñÊØ±¾ModµÄÓÃ‘ô…f×hºÍß[‘ò¼°Æäé_°l/°lÐÐÉÌÏàêP—lÀý¡£
 echo Äã¿ÉÒÔÔÚÄ£½M¸ùÄ¿ä›/TutorialÎÄ¼þŠAÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
@@ -397,9 +462,9 @@ echo 2:HoYoShade•ºÎ´ßmÅäÄãÄ¿Ç°ÕýÔÚÊ¹ÓÃµÄœyÔ‡·þ¿Í‘ô¶Ë¡£
 echo ÈçÐèßmÅä£¬ÕˆÔÚÎÒ‚ƒµÄÔL†–ÎÒ‚ƒµÄGitHub‚}Žì£¨https://github.com/DuolaD/HoYoShade£©Ìá½»issues¡£
 echo\
 echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨²¿·Ö¹«œyÇ°º£ÍâƒÈœy¿Í‘ô¶Ë£©
-echo [3]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ¹«œyÇ°ƒÈœy¿Í‘ô¶Ë£©
-echo [4]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ¹«œyááƒÈœy¿Í‘ô¶Ë£©
+echo [2]×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ‡øëH·þ DevKit/¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+echo [3]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+echo [4]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«œyááƒÈœy£¨Beta£©/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
 echo [5]ÇÐ“QÖÁ¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±í
 echo [6]ÆäËüßxí—
 echo [7]ÍË³ö³ÌÐò
@@ -418,23 +483,53 @@ if "%content%" == "1" (
         taskkill /IM Genshin.exe /F >nul 2>&1
         goto GICBT_CheckProcess
     )
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:Ô­Éñ£¨²¿·Ö¹«œyÇ°º£ÍâƒÈœy¿Í‘ô¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨Í¨ÓÃ ‡øëH·þ DevKit/¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢Èëßxí—²»ßmÓÃì¶ÈÎºÎ Ô­Éñ£¨¹«é_/¹«œyááƒÈœy£¨Beta£©£©¿Í‘ô¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´Ëî¿Í‘ô¶Ë£¬ÕˆêPé]´°¿ÚKÖØÐÂ†™„ÓHoYoShade†™„ÓÆ÷£¬KÔÚ¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±íßx“ñŒ¦‘ªµÄ¿Í‘ô¶Ë¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe Genshin.exe
     exit
 ) else if "%content%" == "3" (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:¾øÇøÁã£¨Í¨ÓÃ¹«²âÇ°ÄÚ²â¿Í»§¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:½^…^Áã£¨Í¨ÓÃ ¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢Èëßxí—²»ßmÓÃì¶ÈÎºÎ ½^…^Áã£¨Í¨ÓÃ ¹«é_/¹«œyááƒÈœy/„“×÷Õßówòž·þ£©¿Í‘ô¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´Ëî¿Í‘ô¶Ë£¬ÕˆêPé]´°¿ÚKÖØÐÂ†™„ÓHoYoShade†™„ÓÆ÷£¬Kßx“ñŒ¦‘ªµÄ¿Í‘ô¶Ë×¢Èëßxí—¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe ZZZ.exe
     exit
 ) else if "%content%" == "4" (
-    echo ÄãËùßx“ñµÄ×¢ÈëÄ¿˜Ëžé:¾øÇøÁã£¨Í¨ÓÃ¹«²âºóÄÚ²â¿Í»§¶Ë£©
-    echo ×¢ÈëÆ÷¬FÒÑ†¢„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†¢„ÓÆ÷†¢„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
-    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´ËÒ•´°ááÖØÐÂß\ÐÐ†¢„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:½^…^Áã£¨Í¨ÓÃ ¹«œyááƒÈœy/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£´_±£ReShade.iniÑ}Ñuµ½Õý´_µÄß[‘òßM³Ì¸ùÄ¿ä›Ö®áá£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ×¢Òâ£º´Ë×¢Èëßxí—²»ßmÓÃì¶ÈÎºÎ ½^…^Áã£¨Í¨ÓÃ ¹«é_/¹«œyÇ°ƒÈœy£©¿Í‘ô¶Ë£¬
+    echo ÈçÐè×¢ÈëÖÁ´Ëî¿Í‘ô¶Ë£¬ÕˆêPé]´°¿ÚKÖØÐÂ†™„ÓHoYoShade†™„ÓÆ÷£¬Kßx“ñŒ¦‘ªµÄ¿Í‘ô¶Ë×¢Èëßxí—¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
     echo\
     start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
     exit
@@ -451,7 +546,6 @@ if "%content%" == "1" (
     goto menu
     )
 exit
-
 
 :blender_hook_check
 
@@ -481,7 +575,7 @@ if "%statusCode%"=="403" (
     cls
     echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
     echo\
-    echo Ä£½M°æ±¾£ºV2.4.1 Stable
+    echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
     echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
     echo\
     echo ÎÒ‚ƒ™zœyµ½®”Ç°Äã¿ÉÄÜ²»ÔÚÖÐ‡ø´óê‘/¸Û°ÄÅ_µØ…^£¬
@@ -511,7 +605,7 @@ title HoYoShade†™„ÓÆ÷
 cls
 echo šgÓ­Ê¹ÓÃHoYoShade†™„ÓÆ÷£¡
 echo\
-echo Ä£½M°æ±¾£ºV2.4.1 Stable
+echo Ä£½M°æ±¾£ºV2.X.X Stable - NextVersion
 echo é_°lÕß£ºDuolaDStudio X °¢Ïò¾úAXBro X Ex_M
 echo\
 if "%missing_curl%"=="1" (
@@ -525,8 +619,8 @@ echo ×¢Òâ£ºÈç¹ûÄãÊ¹ÓÃÂ“„Ó×¢Èë¹¦ÄÜ£¬ÐèÒªßx“ñÄãÔÚBlender/ÁôÓ°™C²å¼þÖÐ½‰¶¨µÄŒ¦‘ª·þ„
 echo Èç¹ûß@ÊÇÄãµÚÒ»´Î†™„ÓBlender/ÁôÓ°™C²å¼þ£¬Õˆ´_±£ÔÚ´ËÌŽßx“ñµÄÄ¿˜Ë¿Í‘ô¶ËºÍÄã½ÓÏÂíÔÚBlender/ÁôÓ°™C²å¼þÖÐ½‰¶¨µÄÄ¿˜Ë¿Í‘ô¶ËÒ»ÖÂ£¬·ñ„tReShadeŸo·¨Õý³£×¢Èë¡£
 echo\
 echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨¿Í‘ô¶Ë£©
-echo [3]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ£¨‡øëH·þ¿Í‘ô¶Ë/Epic¿Í‘ô¶Ë£©
+echo [2]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
+echo [3]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ°æ ‡øëH·þ/Epic ¹«é_ ¿Í‘ô¶Ë£©
 echo [4]ƒH†™„ÓBlender/ÁôÓ°™C²å¼þ
 echo [5]Í¬²½®”Ç°Ïµ½y•régÒÔÐÞÍÏµ½y•rég²»Í¬²½µÄÌáÊ¾
 echo [6]·µ»ØÖ÷½çÃæ
@@ -543,7 +637,7 @@ if "%choice%"=="1" (
         taskkill /IM YuanShen.exe /F >nul 2>&1
         goto YSBL_CheckProcess
     )
-    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨¿Í‘ô¶Ë£©
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨Í¨ÓÃ ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
     echo\
     echo ReShadeºÍBlender/ÁôÓ°™C²å¼þ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£Õˆ²»ÒªêPé]±¾´°¿Ú¡£
     echo Blender/ÁôÓ°™C²å¼þ×¢ÈëÆ÷†™„Óß[‘òáá£¬ReShadeŒ¢•þ×Ô„Ó×¢ÈëKêPé]Ô“´°¿Ú¡£
@@ -561,7 +655,7 @@ if "%choice%"=="1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GIBL_CheckProcess
     )
-    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨‡øëH·þ¿Í‘ô¶Ë/Epic ¿Í‘ô¶Ë£©
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:Ô­Éñ£¨Í¨ÓÃ°æ ‡øëH·þ/Epic ¹«é_ ¿Í‘ô¶Ë£©
     echo\
     echo ReShadeºÍBlender/ÁôÓ°™C²å¼þ×¢ÈëÆ÷¬FÒÑ†™„Ó¡£Õˆ²»ÒªêPé]±¾´°¿Ú¡£
     echo Blender/ÁôÓ°™C²å¼þ×¢ÈëÆ÷†™„Óß[‘òáá£¬ReShadeŒ¢•þ×Ô„Ó×¢ÈëKêPé]Ô“´°¿Ú¡£
