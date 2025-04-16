@@ -12,7 +12,7 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "InjectResource\INIBuild.exe" "InjectResource\msyhbd.ttc")
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "LauncherResource\INIBuild.exe" "InjectResource\Fonts\msyhbd.ttc")
 
 setlocal enabledelayedexpansion
 cd /d "%~dp0"
@@ -52,7 +52,7 @@ if exist "%filepath%" (
     goto menu
 ) else (
     cls
-    start "" /wait /b ".\InjectResource\INIBuild.exe"
+    start "" /wait /b ".\LauncherResource\INIBuild.exe"
     start "" "convert_encoding.bat"
     :FileCheck
     cls
@@ -406,7 +406,7 @@ echo\
 set /p "content=在此输入选项前面的数字："
 
 if "%content%" == "1" (
-    start "" /wait ".\InjectResource\INIBuild.exe"
+    start "" /wait ".\LauncherResource\INIBuild.exe"
     start "" "convert_encoding.bat"
     :File_Reset
     cls
