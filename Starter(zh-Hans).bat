@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 
 chcp 936
 
@@ -557,9 +558,25 @@ if not exist "%~dp0loader.exe.lnk" (
     goto menu
 )
 
+set blender_path_error=0
+set missing_curl=0
+
+set "current_dir=%~dp0"
+set "shortcut=%current_dir%loader.exe.lnk"
+set "target="
+for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"%shortcut%\").TargetPath"') do (
+    set "target=%%i"
+)
+
+for %%i in ("!target!") do set "target_dir=%%~dpi"
+
+if not defined target_dir (
+    set blender_path_error=1
+)
+
 curl --version >nul 2>&1
 if errorlevel 1 (
-    set missing_curl="1"
+    set missing_curl=1
     goto blender_hook_menu
 )
 
@@ -608,7 +625,7 @@ echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
-if "%missing_curl%"=="1" (
+if "%missing_curl%" == "1" (
     echo 我们检测到当前操作系统中并不包含curl组件，这会导致地区检测功能无法工作。
     echo\
     echo 你仍然可以继续使用此Mod的联动注入功能。
@@ -618,13 +635,25 @@ if "%missing_curl%"=="1" (
 echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
 echo 如果这是你第一次启动Blender/留影机插件，请确保在此处选择的目标客户端和你接下来在Blender/留影机插件中绑定的目标客户端一致，否则ReShade无法正常注入。
 echo\
+if "%blender_path_error%" == "1" (
+    echo 由于启动器在加载过程中无法获取无人机注入器根目录路径，选项[6]和[7]将不可用。
+    echo\
+    echo 你仍然可以继续使用其它联动注入功能。
+) else (
+    echo 注意：选项[7]仅付费版/作者版无人机可用。
+)
+echo\
 echo [1]重置模组根目录中的ReShade.ini
 echo [2]联动Blender/留影机插件注入至原神（通用 中国大陆/哔哩哔哩 公开客户端）
 echo [3]联动Blender/留影机插件注入至原神（通用版 国际服/Epic 公开 客户端）
 echo [4]仅启动Blender/留影机插件
 echo [5]同步当前系统时间以修复系统时间不同步的提示
-echo [6]返回主界面
-echo [7]退出程序
+if "%blender_path_error%" == "0" (
+    echo [6]删除config文件以重新指向其它客户端
+    echo [7]删除cookies.json文件以修复注入时“账号未登录”的报错提示
+)
+echo [8]返回主界面
+echo [9]退出程序
 echo\
 set /p "choice=在此输入选项前面的数字："
 echo\
@@ -668,7 +697,7 @@ if "%choice%"=="1" (
     exit
 ) else if "%choice%"=="4" (
     start "" "%~dp0loader.exe.lnk"
-    exit
+    goto blender_hook_menu
 ) else if "%choice%"=="5" (
     cls
     echo 同步系统时间的耗时取决于你当前的网络情况。
@@ -715,11 +744,115 @@ if "%choice%"=="1" (
     pause
     goto blender_hook_menu
 ) else if "%choice%"=="6" (
+    if "%blender_path_error%"=="1" (
+        echo 该功能暂不可用。
+        echo\
+        echo 按下任意键后返回主菜单。
+        pause
+        goto blender_hook_menu
+    )
+    set "fileToDelete=config"
+    set "target_dir=!target_dir!\"
+    set "target_dir=!target_dir:~0,-1!"
+    set "filePath=!target_dir!\config"
+    if not exist "!filePath!" (
+      echo 自检失败，config文件不存在于无人机模组目录下。
+      echo 这可能是因为你暂未使用无人机绑定游戏客户端，或者你指向了一个错误的loader.exe文件。
+      echo\
+      echo 按下任意键后返回主菜单。
+      pause
+      goto blender_hook_menu
+    ) else (
+      :blender_delete_config
+      cls
+      echo 你确定你要继续删除config文件吗？
+      echo 删除后你需要重新启动一次客户端以此让无人机重新获取游戏进程根目录。
+      echo\
+      echo [1]是
+      echo [2]否（返回主菜单）
+      echo\
+      set /p "content=在此输入选项前面的数字："
+      if "!content!" == "1" (
+          echo\
+          echo\
+          del "!filePath!"
+          if exist "!filePath!" (
+              echo 删除失败，可能是文件被占用或路径错误。
+          ) else (
+              echo 已成功删除config文件。
+          )
+          echo\
+          echo 按下任意键后返回主菜单。
+          pause
+          goto blender_hook_menu
+      ) else if "!content!" == "2" (
+          goto blender_hook_menu
+      ) else (
+          echo\
+          echo 输入错误。
+          timeout /t 2
+          goto blender_delete_config
+      )
+    )
+) else if "%choice%"=="7" ( 
+    if "%blender_path_error%"=="1" (
+        echo 该功能暂不可用。
+        echo\
+        echo 按下任意键后返回主菜单。
+        pause
+        goto blender_hook_menu
+    )
+    set "fileToDelete=cookies.json"
+    set "target_dir=!target_dir!\"
+    set "target_dir=!target_dir:~0,-1!"
+    set "filePath=!target_dir!\cookies.json"
+    if not exist "!filePath!" (
+      echo 自检失败，cookies.json文件不存在于无人机模组目录下。
+      echo 这可能是因为你使用的是免费版无人机，或者你指向了一个错误的loader.exe文件。
+      echo\
+      echo 按下任意键后返回主菜单。
+      pause
+      goto blender_hook_menu
+    ) else (
+      :blender_delete_cookiesjson
+      cls
+      echo 你确定你要继续删除cookies.json文件吗？
+      echo 删除后你需要重新扫码以登录哔哩哔哩账号。
+      echo\
+      echo [1]是
+      echo [2]否（返回主菜单）
+      echo\
+      set /p "content=在此输入选项前面的数字："
+      if "!content!" == "1" (
+          echo\
+          echo\
+          del "!filePath!"
+          if exist "!filePath!" (
+              echo 删除失败，可能是文件被占用或路径错误。
+          ) else (
+              echo 已成功删除cookies.json文件。
+          )
+          echo\
+          echo 按下任意键后返回主菜单。
+          pause
+          goto blender_hook_menu
+      ) else if "!content!" == "2" (
+          goto blender_hook_menu
+      ) else (
+          echo\
+          echo 输入错误。
+          timeout /t 2
+          goto blender_delete_cookiesjson
+      )
+    )
+
+) else if "%choice%"=="8" (
     goto menu
-) else if "%choice%"=="7" (
+) else if "%choice%"=="9" (
     exit
 ) else (
     echo 输入错误。
     timeout /t 2
     goto blender_hook_menu
 )
+
