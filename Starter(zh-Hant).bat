@@ -452,8 +452,6 @@ echo 當前注入列表：測試服客戶端注入列表
 echo\
 echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。
 echo 你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
-echo 使用模組拍攝素材發佈視頻時，請備註:"該視頻由GitHub@DuolaD/HoYoShade提供渲染支持"。
-echo 如因特殊原因無法備註，請通過"其它選項"中的聯繫方式聯繫開發者進行說明。
 echo\
 echo 以下客戶端注入選項均只能用於注入至測試服客戶端。
 echo\
@@ -595,7 +593,7 @@ if "%statusCode%"=="403" (
     echo 模組版本：V2.5.0 Stable
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
-    echo 我們檢測到當前你可能不在中國大陸/港澳臺地區，
+    echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
     echo 這可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
     echo\
     echo 是否確認嘗試繼續操作？
@@ -629,7 +627,7 @@ if "%missing_curl%" == "1" (
     echo 我們檢測到當前操作系統中並不包含curl組件，這會導致地區檢測功能無法工作。
     echo\
     echo 你仍然可以繼續使用此Mod的聯動注入功能。
-    echo 但如果你並不處於中國大陸/港澳臺地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
+    echo 但如果你並不處於中国大陆/港澳台/新加坡地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
     echo\
 )
 echo 注意：如果你使用聯動注入功能，需要選擇你在Blender/留影機插件中綁定的對應服務器的客戶端，否則ReShade無法正常注入。

@@ -456,9 +456,6 @@ echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
-echo When publishing videos using the mod to shoot footage, please note: "This video is rendered with support from GitHub@DuolaD/HoYoShade."
-echo If you are unable to add the note due to special reasons,  
-echo please contact the developer through the contact information in the "Other Options" section for an explanation.
 echo\
 echo The following client injection options can only be used for injecting into the test server client.
 echo\
