@@ -643,7 +643,7 @@ if "%blender_path_error%" == "1" (
 echo\
 echo [1]重置模組根目錄中的ReShade.ini
 echo [2]聯動Blender/留影機插件注入至原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
-echo [3]聯動Blender/留影機插件注入至原神（通用版 國際服/Epic 公開 客戶端）
+echo [3]聯動Blender/留影機插件注入至原神（通用 國際服/Epic 公開 客戶端）
 echo [4]僅啓動Blender/留影機插件
 echo [5]同步當前系統時間以修復系統時間不同步的提示
 if "%blender_path_error%" == "0" (
@@ -682,7 +682,7 @@ if "%choice%"=="1" (
         taskkill /IM GenshinImpact.exe /F >nul 2>&1
         goto GIBL_CheckProcess
     )
-    echo 你選擇的注入目標爲:原神（通用版 國際服/Epic 公開 客戶端）
+    echo 你選擇的注入目標爲:原神（通用 國際服/Epic 公開 客戶端）
     echo\
     echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
     echo Blender/留影機插件注入器啓動遊戲後，ReShade將會自動注入並關閉該窗口。
