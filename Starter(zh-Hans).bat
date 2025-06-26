@@ -648,11 +648,23 @@ if "%missing_curl%" == "1" (
     echo 但如果你并不处于中国大陆/港澳台/新加坡地区，可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整技术支持,或不予对你提供任何技术支持。
     echo\
 )
+echo 当前已检测到的 Blender/留影机插件 注入器信息如下：
+if "!ys_loader_exist!"=="1" (
+    echo [原神版 Blender/留影机插件]：已加载
+) else (
+    echo [原神版 Blender/留影机插件]：未找到
+)
+if "!zzz_loader_exist!"=="1" (
+    echo [绝区零版 Blender/留影机插件]：已加载
+) else (
+    echo [绝区零版 Blender/留影机插件]：未找到
+)
+echo\
 echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
 echo 如果这是你第一次启动Blender/留影机插件，请确保在此处选择的目标客户端和你接下来在Blender/留影机插件中绑定的目标客户端一致，否则ReShade无法正常注入。
 echo\
 if "%blender_path_error%" == "1" (
-    echo 由于启动器在加载过程中无法获取无人机注入器根目录路径，选项[6]和[7]将不可用。
+    echo 由于启动器在加载过程中无法获取无人机注入器根目录路径，选项[8]和[9]将不可用。
     echo\
     echo 你仍然可以继续使用其它联动注入功能。
 ) else (
