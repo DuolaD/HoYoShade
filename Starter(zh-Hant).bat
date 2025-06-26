@@ -30,7 +30,7 @@ if %missing_file% equ 1 (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：VV2.X.X Stable - NextVersion
+    echo 模組版本：V2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。
@@ -63,7 +63,7 @@ if exist "%filepath%" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：VV2.X.X Stable - NextVersion
+    echo 模組版本：V2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到你是第一次使用本模組，Reshade.ini現已生成至模組根目錄中。
@@ -87,7 +87,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -107,7 +107,7 @@ echo [4]注入至崩壞三（通用 公開/Beta客戶端）*
 echo [5]注入至崩壞：星穹鐵道（通用 公開/Beta/創作者體驗服客戶端）*
 echo [6]注入至絕區零（通用 公開客戶端）
 echo [7]切換至測試服客戶端注入列表
-echo [8]聯動Blender/留影機插件注入至原神
+echo [8]聯動Blender/留影機插件注入至原神/絕區零（公開客戶端）
 echo [9]其它選項
 echo [10]退出程序
 
@@ -243,7 +243,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 如果你需要檢查版本更新，可以去訪問我們的倉庫查看是否有發行更新版本
@@ -298,7 +298,7 @@ title HoYoShade啓動器(你已進入開發者選項！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！開發者選項僅用於調試/檢測錯誤需要。除非開發者明確要求你這樣做，或者你很清楚知道自己在做什麼，否則請勿輕易使用！
@@ -332,7 +332,7 @@ title HoYoShade啓動器(你已進入自定義注入界面！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！此功能僅供開發者測試新遊戲使用。這意味着可能會存在未知風險/Bug。
@@ -366,7 +366,7 @@ echo\
 echo DuolaDStudio X 阿向菌AXBro x Ex_M
 echo 聯合鉅獻
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo\
 echo HoYoShade基於ReShade官方插件和OpenHoYoShade框架二次開發，除效果庫/預設之外的所有文件均遵守BSL-3開源協議在GitHub上開源。
 echo 你可以在Reshade.me網站中查看ReShade官方資訊。
@@ -396,7 +396,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意：你只需要在模組目錄移動後才需要重置ReShade.ini
@@ -417,7 +417,7 @@ if "%content%" == "1" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：VV2.X.X Stable - NextVersion
+    echo 模組版本：V2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 重置成功！重置後的ReShade.ini現已替換模組根目錄中的舊版ReShade.ini。
@@ -448,7 +448,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -553,12 +553,26 @@ exit
 
 :blender_hook_check
 
-if not exist "%~dp0ys_loader.exe.lnk" (
-    echo\
-    echo 自檢未通過，模組根目錄下並沒有找到名爲loader.exe的快捷方式。
-    echo 請在模組根目錄下創建一個指向Blender/留影機插件注入程序（loader.exe）的快捷方式，然後將其命名爲loader.exe，然後再試一次。
-    pause
-    goto menu
+setlocal enabledelayedexpansion
+
+set ys_loader_exist=0
+set zzz_loader_exist=0
+
+if exist "%~dp0ys_loader.exe.lnk" (
+    set ys_loader_exist=1
+)
+
+if exist "%~dp0zzz_loader.exe.lnk" (
+    set zzz_loader_exist=1
+)
+
+if "!ys_loader_exist!"=="0" (
+    if "!zzz_loader_exist!"=="0" (
+        echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名為 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk，然後再試一次。
+        pause
+        goto menu
+    )
 )
 
 set blender_path_error=0
@@ -595,7 +609,7 @@ if "%statusCode%"=="403" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：VV2.X.X Stable - NextVersion
+    echo 模組版本：V2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
@@ -625,7 +639,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：VV2.X.X Stable - NextVersion
+echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 if "%missing_curl%" == "1" (
@@ -643,20 +657,22 @@ if "%blender_path_error%" == "1" (
     echo\
     echo 你仍然可以繼續使用其它聯動注入功能。
 ) else (
-    echo 注意：選項[7]僅付費版/作者版無人機可用。
+    echo 注意：選項[9]僅付費版/作者版無人機可用。
 )
 echo\
 echo [1]重置模組根目錄中的ReShade.ini
-echo [2]聯動Blender/留影機插件注入至原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
-echo [3]聯動Blender/留影機插件注入至原神（通用 國際服/Epic 公開 客戶端）
-echo [4]僅啓動Blender/留影機插件
-echo [5]同步當前系統時間以修復系統時間不同步的提示
+echo [2]聯動 原神版 Blender/留影機插件 注入至 原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
+echo [3]聯動 原神版 Blender/留影機插件 注入至 原神（通用 國際服/Epic 公開 客戶端）
+echo [4]聯動 絕區零版 Blender/留影機插件 注入至 絕區零（通用 公開客戶端）
+echo [5]僅啓動 原神版 Blender/留影機插件
+echo [6]僅啓動 絕區零版 Blender/留影機插件
+echo [7]同步當前系統時間以修復系統時間不同步的提示
 if "%blender_path_error%" == "0" (
-    echo [6]刪除config文件以重新指向其它客戶端
-    echo [7]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示
+    echo [8]刪除config文件以重新指向其它客戶端
+    echo [9]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示
 )
-echo [8]返回主界面
-echo [9]退出程序
+echo [10]返回主界面
+echo [11]退出程序
 echo\
 set /p "choice=在此輸入選項前面的數字："
 echo\
@@ -699,9 +715,30 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%choice%"=="4" (
+    if "!zzz_loader_exist!"=="0" (
+        echo 自檢未通過，模組根目錄下並沒有找到名爲 zzz_loader.lnk 的快捷方式。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 zzz_loader.lnk ，然後退出並重新進入此界面，再試一次。
+        pause
+        goto blender_hook_menu
+    )
+    echo 你選擇的注入目標爲:絕區零（通用 公開客戶端）
+    echo\
+    echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
+    echo Blender/留影機插件注入器啓動遊戲後，ReShade將會自動注入並關閉該窗口。
+    echo 如果ReShade.ini複製到了正確的遊戲進程根目錄，那麼ReShade將會正確設置並啓動。
+    echo\
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
+    echo\
+    start "" "%~dp0zzz_loader.exe.lnk"
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    exit
+) else if "%choice%"=="5" (
     start "" "%~dp0ys_loader.exe.lnk"
     goto blender_hook_menu
-) else if "%choice%"=="5" (
+) else if "%choice%"=="6" (
+    start "" "%~dp0zzz_loader.exe.lnk"
+    goto blender_hook_menu
+) else if "%choice%"=="7" (
     cls
     echo 同步系統時間的耗時取決於你當前的網絡情況。
     echo 如果當前網絡較差，耗時可能會比預期較長。請耐心等待。
@@ -746,7 +783,7 @@ if "%choice%"=="1" (
     echo\
     pause
     goto blender_hook_menu
-) else if "%choice%"=="6" (
+) else if "%choice%"=="8" (
     if "%blender_path_error%"=="1" (
         echo 該功能暫不可用。
         echo\
@@ -797,7 +834,7 @@ if "%choice%"=="1" (
           goto blender_delete_config
       )
     )
-) else if "%choice%"=="7" ( 
+) else if "%choice%"=="9" ( 
     if "%blender_path_error%"=="1" (
         echo 該功能暫不可用。
         echo\
@@ -849,9 +886,9 @@ if "%choice%"=="1" (
       )
     )
 
-) else if "%choice%"=="8" (
+) else if "%choice%"=="10" (
     goto menu
-) else if "%choice%"=="9" (
+) else if "%choice%"=="11" (
     exit
 ) else (
     echo 輸入錯誤。

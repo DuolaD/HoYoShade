@@ -29,7 +29,7 @@ if %missing_file% equ 1 (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：VV2.X.X Stable - NextVersion
+    echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。
@@ -62,7 +62,7 @@ if exist "%filepath%" (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：VV2.X.X Stable - NextVersion
+    echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我们检测到你是第一次使用本模组，Reshade.ini现已生成至模组根目录中。
@@ -86,7 +86,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
@@ -106,7 +106,7 @@ echo [4]注入至崩坏三（通用 公开/Beta客户端）*
 echo [5]注入至崩坏：星穹铁道（通用 公开/Beta/创作者体验服客户端）*
 echo [6]注入至绝区零（通用 公开客户端）
 echo [7]切换至测试服客户端注入列表
-echo [8]联动Blender/留影机插件注入至原神
+echo [8]联动Blender/留影机插件注入至原神/绝区零（公开客户端）
 echo [9]其它选项
 echo [10]退出程序
 
@@ -242,7 +242,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 如果你需要检查版本更新，可以去访问我们的仓库查看是否有发行更新版本
@@ -297,7 +297,7 @@ title HoYoShade启动器(你已进入开发者选项！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！开发者选项仅用于调试/检测错误需要。除非开发者明确要求你这样做，或者你很清楚知道自己在做什么，否则请勿轻易使用！
@@ -331,7 +331,7 @@ title HoYoShade启动器(你已进入自定义注入界面！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！此功能仅供开发者测试新游戏使用。这意味着可能会存在未知风险/Bug。
@@ -365,7 +365,7 @@ echo\
 echo DuolaDStudio X 阿向菌AXBro x Ex_M
 echo 联合巨献
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo\
 echo HoYoShade基于ReShade官方插件和OpenHoYoShade框架二次开发，除效果库/预设之外的所有文件均遵守BSL-3开源协议在GitHub上开源。
 echo 你可以在Reshade.me网站中查看ReShade官方资讯。
@@ -395,7 +395,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意：你只需要在模组目录移动后才需要重置ReShade.ini
@@ -416,7 +416,7 @@ if "%content%" == "1" (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：VV2.X.X Stable - NextVersion
+    echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 重置成功！重置后的ReShade.ini现已替换模组根目录中的旧版ReShade.ini。
@@ -447,7 +447,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
@@ -552,12 +552,26 @@ exit
 
 :blender_hook_check
 
-if not exist "%~dp0ys_loader.exe.lnk" (
-    echo\
-    echo 自检未通过，模组根目录下并没有找到名为loader.exe的快捷方式。
-    echo 请在模组根目录下创建一个指向Blender/留影机插件注入程序（loader.exe）的快捷方式，然后将其命名为loader.exe，然后再试一次。
-    pause
-    goto menu
+setlocal enabledelayedexpansion
+
+set ys_loader_exist=0
+set zzz_loader_exist=0
+
+if exist "%~dp0ys_loader.exe.lnk" (
+    set ys_loader_exist=1
+)
+
+if exist "%~dp0zzz_loader.exe.lnk" (
+    set zzz_loader_exist=1
+)
+
+if "!ys_loader_exist!"=="0" (
+    if "!zzz_loader_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk，然后再试一次。
+        pause
+        goto menu
+    )
 )
 
 set blender_path_error=0
@@ -594,7 +608,7 @@ if "%statusCode%"=="403" (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：VV2.X.X Stable - NextVersion
+    echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我们检测到当前你可能不在中国大陆/港澳台/新加坡地区，
@@ -624,7 +638,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：VV2.X.X Stable - NextVersion
+echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 if "%missing_curl%" == "1" (
@@ -642,26 +656,34 @@ if "%blender_path_error%" == "1" (
     echo\
     echo 你仍然可以继续使用其它联动注入功能。
 ) else (
-    echo 注意：选项[7]仅付费版/作者版无人机可用。
+    echo 注意：选项[9]仅付费版/作者版无人机可用。
 )
 echo\
 echo [1]重置模组根目录中的ReShade.ini
-echo [2]联动Blender/留影机插件注入至原神（通用 中国大陆/哔哩哔哩 公开客户端）
-echo [3]联动Blender/留影机插件注入至原神（通用 国际服/Epic 公开 客户端）
-echo [4]仅启动Blender/留影机插件
-echo [5]同步当前系统时间以修复系统时间不同步的提示
+echo [2]联动 原神版 Blender/留影机插件 注入至 原神（通用 中国大陆/哔哩哔哩 公开客户端）
+echo [3]联动 原神版 Blender/留影机插件 注入至 原神（通用 国际服/Epic 公开 客户端）
+echo [4]联动 绝区零版 Blender/留影机插件 注入至 绝区零（通用 公开客户端）
+echo [5]仅启动 原神版 Blender/留影机插件
+echo [6]仅启动 绝区零版 Blender/留影机插件
+echo [7]同步当前系统时间以修复系统时间不同步的提示
 if "%blender_path_error%" == "0" (
-    echo [6]删除config文件以重新指向其它客户端
-    echo [7]删除cookies.json文件以修复注入时“账号未登录”的报错提示
+    echo [8]删除config文件以重新指向其它客户端
+    echo [9]删除cookies.json文件以修复注入时“账号未登录”的报错提示
 )
-echo [8]返回主界面
-echo [9]退出程序
+echo [10]返回主界面
+echo [11]退出程序
 echo\
 set /p "choice=在此输入选项前面的数字："
 echo\
 if "%choice%"=="1" (
     goto ini_Reset
 ) else if "%choice%"=="2" (
+    if "!ys_loader_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        pause
+        goto blender_hook_menu
+    )
     :YSBL_CheckProcess
     tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
     if not errorlevel 1 (
@@ -680,6 +702,12 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
+    if "!ys_loader_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        pause
+        goto blender_hook_menu
+    )
     :GIBL_CheckProcess
     tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
     if not errorlevel 1 (
@@ -698,9 +726,30 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%choice%"=="4" (
+    if "!zzz_loader_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 zzz_loader.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 zzz_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        pause
+        goto blender_hook_menu
+    )
+    echo 你选择的注入目标为:绝区零（通用 公开客户端）
+    echo\
+    echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
+    echo Blender/留影机插件注入器启动游戏后，ReShade将会自动注入并关闭该窗口。
+    echo 如果ReShade.ini复制到了正确的游戏进程根目录，那么ReShade将会正确设置并启动。
+    echo\
+    echo 如果你选择了错误的注入目标，只需关闭此窗口和Blender/留影机插件注入器窗口后重新运行启动器重新选择即可。
+    echo\
+    start "" "%~dp0zzz_loader.exe.lnk"
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    exit
+) else if "%choice%"=="5" (
     start "" "%~dp0ys_loader.exe.lnk"
     goto blender_hook_menu
-) else if "%choice%"=="5" (
+) else if "%choice%"=="6" (
+    start "" "%~dp0zzz_loader.exe.lnk"
+    goto blender_hook_menu
+) else if "%choice%"=="7" (
     cls
     echo 同步系统时间的耗时取决于你当前的网络情况。
     echo 如果当前网络较差，耗时可能会比预期较长。请耐心等待。
@@ -745,7 +794,7 @@ if "%choice%"=="1" (
     echo\
     pause
     goto blender_hook_menu
-) else if "%choice%"=="6" (
+) else if "%choice%"=="8" (
     if "%blender_path_error%"=="1" (
         echo 该功能暂不可用。
         echo\
@@ -796,7 +845,7 @@ if "%choice%"=="1" (
           goto blender_delete_config
       )
     )
-) else if "%choice%"=="7" ( 
+) else if "%choice%"=="9" ( 
     if "%blender_path_error%"=="1" (
         echo 该功能暂不可用。
         echo\
@@ -848,9 +897,9 @@ if "%choice%"=="1" (
       )
     )
 
-) else if "%choice%"=="8" (
+) else if "%choice%"=="10" (
     goto menu
-) else if "%choice%"=="9" (
+) else if "%choice%"=="11" (
     exit
 ) else (
     echo 输入错误。
