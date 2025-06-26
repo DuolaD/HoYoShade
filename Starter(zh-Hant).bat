@@ -568,11 +568,16 @@ if exist "%~dp0zzz_loader.exe.lnk" (
 
 if "!ys_loader_exist!"=="0" (
     if "!zzz_loader_exist!"=="0" (
+        set blender_recheck=0
         echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
         echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名為 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk，然後再試一次。
         pause
         goto menu
     )
+)
+
+if "!blender_recheck!"=="1" (
+    goto blender_hook_menu
 )
 
 set blender_path_error=0
@@ -636,6 +641,7 @@ if "%statusCode%"=="403" (
 :blender_hook_menu
 cls
 title HoYoShade啓動器
+set blender_recheck=0
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
@@ -649,7 +655,7 @@ if "%missing_curl%" == "1" (
     echo 但如果你並不處於中国大陆/港澳台/新加坡地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
     echo\
 )
-echo 當前已檢測到的 Blender/留影機插件 注入器信息如下：
+echo 當前 Blender/留影機插件 注入器检测信息如下：
 if "!ys_loader_exist!"=="1" (
     echo [原神版 Blender/留影機插件]：已加載
 ) else (
@@ -683,8 +689,9 @@ if "%blender_path_error%" == "0" (
     echo [8]刪除config文件以重新指向其它客戶端
     echo [9]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示
 )
-echo [10]返回主界面
-echo [11]退出程序
+echo [10]刷新 Blender/留影機插件 注入器檢測信息
+echo [11]返回主界面
+echo [12]退出程序
 echo\
 set /p "choice=在此輸入選項前面的數字："
 echo\
@@ -899,8 +906,11 @@ if "%choice%"=="1" (
     )
 
 ) else if "%choice%"=="10" (
-    goto menu
+    set blender_recheck=1
+    goto blender_hook_check
 ) else if "%choice%"=="11" (
+    goto menu
+) else if "%choice%"=="12" (
     exit
 ) else (
     echo 輸入錯誤。
