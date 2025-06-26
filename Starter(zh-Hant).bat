@@ -29,7 +29,7 @@ if %missing_file% equ 1 (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.5.1 Stable
+    echo 模組版本：VV2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。
@@ -58,7 +58,7 @@ if exist "%filepath%" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.5.1 Stable
+    echo 模組版本：VV2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到你是第一次使用本模組，Reshade.ini現已生成至模組根目錄中。
@@ -82,7 +82,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -238,7 +238,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 如果你需要檢查版本更新，可以去訪問我們的倉庫查看是否有發行更新版本
@@ -293,7 +293,7 @@ title HoYoShade啓動器(你已進入開發者選項！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！開發者選項僅用於調試/檢測錯誤需要。除非開發者明確要求你這樣做，或者你很清楚知道自己在做什麼，否則請勿輕易使用！
@@ -327,7 +327,7 @@ title HoYoShade啓動器(你已進入自定義注入界面！！！)
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 注意！此功能僅供開發者測試新遊戲使用。這意味着可能會存在未知風險/Bug。
@@ -361,7 +361,7 @@ echo\
 echo DuolaDStudio X 阿向菌AXBro x Ex_M
 echo 聯合鉅獻
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo\
 echo HoYoShade基於ReShade官方插件和OpenHoYoShade框架二次開發，除效果庫/預設之外的所有文件均遵守BSL-3開源協議在GitHub上開源。
 echo 你可以在Reshade.me網站中查看ReShade官方資訊。
@@ -391,7 +391,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意：你只需要在模組目錄移動後才需要重置ReShade.ini
@@ -412,7 +412,7 @@ if "%content%" == "1" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.5.1 Stable
+    echo 模組版本：VV2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 重置成功！重置後的ReShade.ini現已替換模組根目錄中的舊版ReShade.ini。
@@ -443,7 +443,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
@@ -548,7 +548,7 @@ exit
 
 :blender_hook_check
 
-if not exist "%~dp0loader.exe.lnk" (
+if not exist "%~dp0ys_loader.exe.lnk" (
     echo\
     echo 自檢未通過，模組根目錄下並沒有找到名爲loader.exe的快捷方式。
     echo 請在模組根目錄下創建一個指向Blender/留影機插件注入程序（loader.exe）的快捷方式，然後將其命名爲loader.exe，然後再試一次。
@@ -560,7 +560,7 @@ set blender_path_error=0
 set missing_curl=0
 
 set "current_dir=%~dp0"
-set "shortcut=%current_dir%loader.exe.lnk"
+set "shortcut=%current_dir%ys_loader.exe.lnk"
 set "target="
 for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"%shortcut%\").TargetPath"') do (
     set "target=%%i"
@@ -590,7 +590,7 @@ if "%statusCode%"=="403" (
     cls
     echo 歡迎使用HoYoShade啓動器！
     echo\
-    echo 模組版本：V2.5.1 Stable
+    echo 模組版本：VV2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
     echo\
     echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
@@ -620,7 +620,7 @@ title HoYoShade啓動器
 cls
 echo 歡迎使用HoYoShade啓動器！
 echo\
-echo 模組版本：V2.5.1 Stable
+echo 模組版本：VV2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X 阿向菌AXBro X Ex_M
 echo\
 if "%missing_curl%" == "1" (
@@ -672,7 +672,7 @@ if "%choice%"=="1" (
     echo\
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
     echo\
-    start "" "%~dp0loader.exe.lnk"
+    start "" "%~dp0ys_loader.exe.lnk"
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
@@ -690,11 +690,11 @@ if "%choice%"=="1" (
     echo\
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
     echo\
-    start "" "%~dp0loader.exe.lnk"
+    start "" "%~dp0ys_loader.exe.lnk"
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%choice%"=="4" (
-    start "" "%~dp0loader.exe.lnk"
+    start "" "%~dp0ys_loader.exe.lnk"
     goto blender_hook_menu
 ) else if "%choice%"=="5" (
     cls
