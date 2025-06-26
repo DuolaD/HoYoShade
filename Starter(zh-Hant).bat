@@ -24,6 +24,7 @@ for %%f in %files_to_check% do (
     )
 )
 
+
 if %missing_file% equ 1 (
     title HoYoShade啓動器
     cls
@@ -44,6 +45,10 @@ if %missing_file% equ 1 (
     echo 如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓縮包，並解壓全部文件。
     pause
     exit
+)
+
+if exist "%~dp0loader.exe.lnk" (
+    ren "%~dp0loader.exe.lnk" "ys_loader.exe.lnk"
 )
 
 set "filepath=%~dp0Reshade.ini"
