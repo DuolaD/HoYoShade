@@ -1,3 +1,8 @@
+/*
+* Copyright (C) 2025 DuolaD
+* SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #include <iostream>  
 #include <fstream>  
 #include <string>  
@@ -41,13 +46,13 @@ int main() {
 	outfile<<"UseAspectRatioHeuristics=1"<< std::endl;
 	outfile<<"OverlayCollapsed="<< std::endl;
 	outfile<<"[GENERAL]"<< std::endl;
-	outfile<<"EffectSearchPaths="<< a <<"\\reshade-shaders\\Shaders\\"<< std::endl;
+	outfile<<"EffectSearchPaths="<< a <<"\\reshade-shaders\\Shaders\\**"<< std::endl;
 	outfile<<"PerformanceMode=0"<< std::endl;
 	outfile<<"PreprocessorDefinitions=RESHADE_DEPTH_LINEARIZATION_FAR_PLANE=1000.0,RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN=1,RESHADE_DEPTH_INPUT_IS_REVERSED=1,RESHADE_DEPTH_INPUT_IS_LOGARITHMIC=0"<< std::endl;
 	outfile<<"PresetPath="<< a <<"\\Presets\\Mod OFF.ini"<< std::endl;
 	outfile<<"PresetTransitionDelay=995"<< std::endl;
 	outfile<<"SkipLoadingDisabledEffects=0"<< std::endl;
-	outfile<<"TextureSearchPaths="<< a <<"\\reshade-shaders\\Textures\\"<< std::endl;
+	outfile<<"TextureSearchPaths="<< a <<"\\reshade-shaders\\Textures\\**"<< std::endl;
 	outfile<<""<< std::endl;
 	outfile<<"[INPUT]"<< std::endl;
 	outfile<<"ForceShortcutModifiers=1"<< std::endl;
