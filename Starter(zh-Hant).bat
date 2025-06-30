@@ -12,7 +12,7 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "convert_encoding.bat" "LauncherResource\INIBuild.exe" "InjectResource\Fonts\msyhbd.ttc")
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "LauncherResource" "reshade-shaders" "Presets" "convert_encoding.bat" "LauncherResource\INIBuild.exe" "InjectResource\Fonts\msyhbd.ttc")
 
 setlocal enabledelayedexpansion
 cd /d "%~dp0"
