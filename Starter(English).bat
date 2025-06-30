@@ -29,7 +29,7 @@ if %missing_file% equ 1 (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V
-    echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+    echo Developer:DuolaDStudio X AXBro X Ex_M
     echo\
     echo We have detected that the necessary files for £¨Open£©HoYoShade framework injection are missing.
     echo\
@@ -58,7 +58,7 @@ if exist "%filepath%" (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V
-    echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+    echo Developer:DuolaDStudio X AXBro X Ex_M
     echo\
     echo We have detected that this is your first time using this mod. Reshade.ini has been generated in the root directory of the mod.
     echo You need to copy Reshade.ini to the root directory of the game process before you can use this mod.
@@ -84,7 +84,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\
@@ -247,7 +247,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo If you need to check for version updates, you can visit our repository to see if there are any new released versions.
 echo Note! Developer options are only for debugging/error checking purposes. 
@@ -302,7 +302,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo Note! Developer options are only for debugging/error checking purposes. 
 echo Unless developers explicitly ask you to do so, or you are very clear about what you are doing, please do not use it lightly!
@@ -337,7 +337,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo Note! This function is only for developers to test new games. This means there may be unknown risks/Bugs.
 echo Unless developers explicitly ask you to do so, or you are very clear about what you are doing, 
@@ -366,7 +366,7 @@ cls
 echo HoYoShade
 echo HoYo it,Great it.
 echo\
-echo DuolaDStudio X °¢Ïò¾úAXBro x Ex_M
+echo DuolaDStudio X AXBro x Ex_M
 echo Joint contributions.
 echo\
 echo Mod Version:V
@@ -384,7 +384,7 @@ echo -DuolaDStudio Hong Kong Ltd.
 echo   ¡ª¡ª¶ßÀ²D‰ôDuolaD[RE adaptation/major version update development/launcher/presets]
 echo   ¡ª¡ªÁÕÄÝÌØLynetteNotFound[HoYoShade minor version update development/maintenance.]
 echo Ex_M[Technical support/guidance/GUI develop]
-echo °¢Ïò¾úAXBro[Promotion/technical support-oriented]
+echo AXBro[Promotion/technical support-oriented]
 echo\
 echo Thanks£º
 echo -CYTeam[HoYoShade partners/Microsoft enterprise storage plan provision/dynamic to static linking solutions]
@@ -400,7 +400,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo Please note: You only need to reset the ReShade.ini after moving the mod directory. 
 echo In general, you do not need to perform a reset operation.
@@ -421,7 +421,7 @@ if "%content%" == "1" (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V
-    echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+    echo Developer:DuolaDStudio X AXBro X Ex_M
     echo\
     echo Reset successful! The replaced ReShade.ini after the reset is now in the mod's root directory, replacing the old version of ReShade.ini.
     echo You need to replace the ReShade.ini in the game process root directory with the reset ReShade.ini in order to use this mod.
@@ -447,7 +447,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V
-echo Developer:DuolaDStudio X °¢Ïò¾úAXBro X Ex_M
+echo Developer:DuolaDStudio X AXBro X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\
