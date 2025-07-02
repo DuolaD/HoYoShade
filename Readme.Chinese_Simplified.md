@@ -9,19 +9,48 @@
 
 [EN](Readme.md)|**简体中文**|[繁體中文](Readme.Chinese_Traditional.md)  
 
+<!-- 让孩子恰点饭吧，孩子想赚点钱玩Cosplay，还想去上海原神FES QAQ；感谢家人们。 -->  
+
+> [!TIP]
+> 嗨！你是miHoYo（米哈游）/ HoYoverse官方合约创作者吗？
+> 
+> 如果你在使用后认为HoYoShade对你的创作之路非常有帮助，你可以选择购买我们的**创作者计划（CREATOR PERMIUM）**，以此让你的HoYoShade在游戏内获得更加强大的功能，同时这也是我们获得收入的另一种渠道，也是你向HoYoShade贡献者表达支持的另一种方式。助你的创作之路更加顺利！
+>
+> 如需购买，**请使用中国大陆地区可用的联系方式（最好是QQ）：**[**联系我们**](#〢-联系我)
+>
+> 请注意：**创作者计划（CREATOR PERMIUM）** 所提供的HoYoShade均为闭源+加密代码，而非本仓库的开源源码。你不可以通过**创作者计划（CREATOR PERMIUM）** 所提供的HoYoShade进行源代码的二次开发/发行/分发。
+
+> [!TIP]
+> 需要在其它反作弊系统严格的游戏中可靠的注入ReShade？我们开发了更加抗封锁及抗检测的注入内核。截至目前，已获得部分其他游戏厂商官方合约创作者/博主的支持，且已经历时间的检验。你可以选择购买此注入内核的使用权以此实现你的目的，同时这也是我们获得收入的另一种渠道，也是你向HoYoShade贡献者表达支持的另一种方式。
+>
+> 如需购买，**请使用中国大陆地区可用的联系方式（最好是QQ）：**[**联系我们**](#〢-联系我)
+>
+> 请注意：**此项付费增值服务**所提供的ReShade均为闭源+加密代码，而非本仓库的开源源码。你不可以通过**此项付费增值服务**所提供的ReShade进行源代码的二次开发/发行/分发。
+
+<!-- 让孩子恰点饭吧，孩子想赚点钱玩Cosplay，还想去上海原神FES QAQ；感谢家人们。 -->  
+
 > [!NOTE]
 > ·我们深知您可能熟悉第二语言。但如果你来自于中国大陆地区,我们更加推荐你去阅读[简体中文版本的Readme.md](Readme.Chinese_Simplified.md)来获得更多有关于原神原神无人机的信息。  
-> ·翻译并非100%准确，翻译工作主要基于OpenAI-GPT4o，谷歌翻译和本人的校对组成。 但即使如此，最终成品也难免会产生一定的问题。 如果你发现或者你认为这是一个问题，请提交issues以帮助HoYoShade改进。  
+> 
+> ·翻译并非100%准确，翻译工作主要基于OpenAI-GPT4o，谷歌翻译和本人的校对组成。 但即使如此，最终成品也难免会产生一定的问题。 如果你发现或者你认为这是一个问题，请提交issues以帮助HoYoShade改进。 
+>  
 > ·由于HoYoShade收到了DMCA警告，你无法再从Release界面下载低于V2.013.0 Stable版本的HoYoShade。有关详细情况，请查看[关于DMCA](#〢-关于DMCA)界面。   
+> 
 > ·对于Readme.md及HoYoShade在各平台的官方社群中所使用的所有来源于第三者的视频/图片展示均以获得创作者/有关第三者的授权。创作者/有关第三者均表示在创作过程中使用了HoYoShade，并知晓相关内容将会用于展示。
 
 > [!IMPORTANT]
-> · 截至目前，HoYoShade唯一的盈利手段只有[**向开发者赞助**](#〢-赞助)。如果你从第三者/店铺/平台购买了本Mod，请立即[**向我们报告**](#〢-联系我)，并立刻要求该第三者/店铺/平台进行退款。如有必要，请保留/固定相关证据，并向你所在地区的执法/司法单位进行报案。
+> · 截至目前，HoYoShade唯一的盈利手段只有以下手段：
+> 
+> - [**向开发者赞助**](#〢-赞助)
+> - [**向开发者购买HoYoShade创作者计划（CREATOR PERMIUM）**](#〢-联系我)
+> - [**向开发者购买友商游戏注入内核使用权**](#〢-联系我)
+> 
+> 如果你从第三者/店铺/平台购买了本Mod，请立即[**向我们报告**](#〢-联系我)，并立刻要求该第三者/店铺/平台进行退款。如有必要，请保留/固定相关证据，并向你所在地区的执法/司法单位进行报案。
 
 ## 〢 视频展示
 
 <div align="center">
-  <h1 class="header">来自 AXBro阿向菌</h1>
+  <h1 class="header">来自 阿向菌|AXBro</h1>
   <h3>
     Night,Diluc 雨夜，迪卢克实拍短片
   </h3>
@@ -44,12 +73,6 @@ https://github.com/user-attachments/assets/a9c96088-66fe-4cb4-b189-d61c82eb3503
 https://github.com/user-attachments/assets/968dc71c-5898-4472-a111-fa49d277a410
 
 <div align="center">
-
-点击按钮：<a href="https://v.douyin.com/iU376NNM"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
-
-</div>
-
-<div align="center">
   <h3>
     The art of rendering. 渲染的艺术
   </h3>
@@ -59,109 +82,195 @@ https://github.com/user-attachments/assets/9143f492-d39e-4515-8ed6-c79924aa0cc5
 
 <div align="center">
 
-点击按钮：<a href="https://www.bilibili.com/video/BV1qm411D7TU"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU37P4aK"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
+点击按钮：<a href="https://www.bilibili.com/video/BV1qm411D7TU"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU37P4aK"></a>
+
+</div>
+
+<div align="center">
+  <h1 class="header">来自 白枝雪鸽|HoYo_Siraeda</h1>
+  <h3>
+    Just Another Day at the Section 6 | Fan-made short video | Zenless Zone Zero 绝区零同人实机短片 | 只是对空六课再平凡不过的一天...
+  </h3>
+</div>
+
+https://github.com/user-attachments/assets/1829bd7e-4330-4d29-9373-53cc131bcf99
+
+<div align="center">
+
+点击按钮：<a href="https://www.youtube.com/watch?v=zZKg6ep4Kvg"><img src="https://img.shields.io/badge/在YouTube观看-FF0000.svg?logo=youtube" /></a> <a href="https://www.bilibili.com/video/BV1LX68YnEwC"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/BOBKrVcfpQw"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
 
 </div>
 
 > [!NOTE]
-> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。  
+> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。
+>   
 > · 本视频中使用的其他模组从未在中国大陆以外的地区发行，且 HoYoShade 不包含这些附加功能。  
+> 
 > · 展示所使用的预设/效果库/模组可能并未包含在HoYoShade Releases发行包中，如果你需要获取展示里所使用的预设/效果库/模组，你可能需要向该创作者获取相关内容。    
+> 
 > · 哔哩哔哩提供4K播放选项。如果你身处中国大陆，我们推荐你使用哔哩哔哩进行播放。  
 
 ## 〢 目录
 
-- [**介绍**](#〢-介绍)
-- [**警告**](#〢-警告)
-- [**支持游戏列表**](#〢-支持游戏列表)
-- [**来源**](#〢-来源)
-- [**OpenHoYoShade和HoYoShade**](#〢-OpenHoYoShade和HoYoShade)
-- [**如何安装?**](#〢-如何安装)
-- [**推荐游戏图像设置**](#〢-推荐游戏图像设置)
-- [**截图展示**](#〢-截图展示)
-- [**关于DMCA**](#〢-关于DMCA)
-- [**鸣谢**](#〢-鸣谢)
-- [**赞助**](#〢-赞助)
-- [**联系我**](#〢-联系我)
-- [**贡献者**](#〢-贡献者)
+- [〢 视频展示](#〢-视频展示)
+- [〢 目录](#〢-目录)
+- [〢 介绍](#〢-介绍)
+- [〢 警告](#〢-警告)
+- [〢 支持游戏列表](#〢-支持游戏列表)
+- [〢 来源](#〢-来源)
+- [〢 OpenHoYoShade和HoYoShade](#〢-openhoyoshade和hoyoshade)
+- [〢 如何安装](#〢-如何安装)
+- [〢 推荐游戏图像设置](#〢-推荐游戏图像设置)
+- [〢 截图展示](#〢-截图展示)
+- [〢 关于DMCA](#〢-关于dmca)
+- [〢 鸣谢](#〢-鸣谢)
+- [〢 赞助](#〢-赞助)
+- [〢 联系我](#〢-联系我)
+- [〢 贡献者](#〢-贡献者)
 
 ## 〢 介绍
 
-这是一个非官方Reshade，使其能在突破米哈游对于官方Reshade的封锁下正常用于所有可在PC端运行的米哈游游戏。
+HoYoShade是一个基于官方ReShade二次开发的版本。
 
-ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息以达到提高图像质量的目的。HoYoShade集成了一些基于官方ReShade的开源项目(具体列表请查看[来源页面](#〢-来源))并对其进行修改，使其与PC上所有的米哈游游戏兼容，并制作一些有针对性的预设。未来，它将支持更多的米哈游游戏。
+相较于官方ReShade，HoYoShade：
+
+- 为miHoYo（米哈游）/HoYoverse旗下的所有游戏及客户端添加了额外的支持，提供了可靠和可量化的统一注入方案，避免了用户因绕过反作弊系统/二改/不同配置下的分享的而付出额外的学习成本。
+- 理论无视任何由miHoYo（米哈游）/HoYoverse官方对旗下所有游戏客户端发行的大版本更新/热更新。更新后可直接继续使用HoYoShade。
+- 为大中华区内的国家及地区（中国大陆，香港，澳门，台湾，新加坡）乃至亚太地区/亚洲提供了优秀的本土化、独家功能及额外支持。
+- 与众多miHoYo（米哈游）/HoYoverse官方合约创作者展开合作，创建了由众多miHoYo（米哈游）/HoYoverse官方合约创作者/原摄爱好者/玩家构成的社区。
+- 针对miHoYo（米哈游）/HoYoverse旗下的所有游戏及客户端的热门模组，均针对性的进行了兼容/联动开发工作。
+- 针对miHoYo（米哈游）/HoYoverse旗下的所有游戏及客户端制作了一些预设。（Presets）。
+- 在某些国际网络受限的国家及地区提供了相较于官方ReShade更高的可靠性和可用性。
+- 尽可能在文件结构和使用体验保持与官方ReShade一致，降低用户学习成本。
+
+ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息以达到提高图像质量的目的。
+
+未来，HoYoShade将会支持更多的米哈游游戏。
+
+HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改，具体列表请查看[来源页面](#〢-来源)。
 
 有关本仓库贡献者的信息，请访问[贡献者界面](#〢-贡献者)
 
 ## 〢 警告
 
 > [!Warning]
-> ·中国大陆服原神由于对接了腾讯的反作弊系统，并且针对性加强了对于模组识别。所以任何模组及外挂均有更大可能被米哈游识别，这也意味着你的账号更有可能会被封禁或导致其它严重后果。没有任何模组和外挂可以保证你的游戏账号可以绝对安全。HoYoShade虽然可以运行在官方服务器的米哈游游戏上，但并不保证你的你的游戏账号绝对安全。如果您担心您的游戏账号会被封禁，请考虑搭建私服。  
+> ·受中国大陆地区当局政府的监管审查要求及政策因素，相较于国际服客户端，由miHoYo（米哈游）向中国大陆地区发行的专供客户端针对性加强了对于模组和外挂的识别及检测。所以，任何模组及外挂均有更大可能被米哈游识别，这也意味着你的账号更有可能会被封禁或导致其它严重后果。**没有任何模组和外挂可以保证你的游戏账号可以绝对安全**。HoYoShade虽然可以运行在官方服务器的miHoYo（米哈游）/HoYoverse游戏上，但并不保证你的游戏账号绝对安全。如果您担心您的游戏账号会被封禁，请考虑转而在相对监测力度较低的国际服客户端进行游玩（由HoYoverse发行），或考虑搭建私服进行游玩。  
+> 
 > ·在你将游戏内容发送至其它任何人或者进行直播之前，HoYoShade建议你先使用其它Mod隐藏游戏UID和用户信息，并且不要将HoYoShade及其它模组界面展示给其它任何人。
 
 > [!NOTE]
 > ·HoYoShade建议你将你的显卡和芯片组驱动更新至最新版本（如果可用），以获得来自你设备制造商的最新支持以尽可能减少与图形相关的问题，降低游戏崩溃的几率，并获得来自设备制造商的最新支持。  
+> 
 > ·我们不建议你在官方服务器上运行HoYoShade。  
+> 
 > ·我们不建议你使用Beta(测试服)客户端在官方服务器中运行HoYoShade，以免对HoYoShade全体开发者/全体二创开发者和你本人造成保密协议违约/违规/违法/经济损失等风险。  
+> 
 > ·对于可能会发生的任何后果，HoYoShade全体开发者/全体二创开发者均不会承担任何责任。  
 
 ## 〢 支持游戏列表
   
-公开(REL)客户端：  
+**公开(REL)客户端：**  
   
 > [!NOTE]
-> ·对于私服玩家来说，如果私服所需的对应客户端出现在下方支持的游戏列表中，则说明HoYoShade可以提供支持。  
+> ·对于私服来说，如果私服所需的对应客户端出现在下方支持的游戏列表中，则说明HoYoShade可以提供支持。无需查看本地端是否支持ReShade/HoYoShade。  
+> 
 > ·我们不建议你在官方服务器上运行HoYoShade。  
+> 
 > ·对于并未出现在支持游戏列表中的游戏，你可以自行尝试选择使用注入器中已支持的游戏/在开发者选项中选择自定义注入来尝试注入HoYoShade。  
-> ·HoYoShade支持同时与其它主流Mod一并注入，且不存在任何冲突问题。但请注意并确保其它游戏Mod之间不会有冲突（例：原神无人机与GIMI，3DMingo和甜瓜）。  
-> ·原神无人机在每次原神游戏版本更新后均需要等待适配
+> 
+> ·HoYoShade支持同时与其它主流/热门Mod一并注入，且不存在任何冲突问题。但请注意并确保其它游戏Mod之间不会有冲突（例：原神无人机与GIMI，3DMingo/GIMI和甜瓜）。  
+>
+> ·受某些国家及地区当局政府的监管审查要求及政策因素，在中国大陆地区除外的某些国家和地区中（例如：越南），你所获得的国际服客户端可能并非由HoYoverse发行，而是HoYoverse与当地游戏发行商联合发行/由当地游戏发行商发行。此类客户端除发行信息外，与正常由HoYoverse发行的国际服客户端基本无异，并不会影响HoYoShade的注入支持。
+> 
+> ·原神无人机在每次原神游戏版本更新后均需要等待适配，而HoYoShade理论无视游戏版本更新。此问题与HoYoShade无关。
   
 | 客户端 | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
 | --- | --- | --- | --- |
-| **原神/YuanShen/Genshin Impact(中国大陆服/天空岛)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(哔哩哔哩服/世界树)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(国际服)** | 是 | 是 | 无游戏版本限制 |
-| **原神/YuanShen/Genshin Impact(Epic版本)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(中国大陆Steam服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(繁中服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(韩国服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(日本Steam服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(东南亚服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏3/BH3/Honkai Impact 3rd(欧美服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(哔哩哔哩服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(国际服)** | 是 | 是 | 无游戏版本限制 |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(Epic版本)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero (中国大陆服/国际服客户端)** | 是 | 是 | 无游戏版本限制 |
+| **原神(中国大陆服/天空岛)** | 是 | 是 | 无游戏版本限制 |
+| **原神(哔哩哔哩服/世界树)** | 是 | 是 | 无游戏版本限制 |
+| **原神(国际服)** | 是 | 是 | 无游戏版本限制 |
+| **原神(Epic游戏商店版本)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(中国大陆Steam服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(繁中服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(韩国服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(日本Steam服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(东南亚服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏3(欧美服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道(中国大陆服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道(哔哩哔哩服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道(国际服)** | 是 | 是 | 无游戏版本限制 |
+| **崩坏:星穹铁道(Epic版本)** | 是 | 是 | 无游戏版本限制 |
+| **绝区零(中国大陆服/国际服客户端)** | 是 | 是 | 无游戏版本限制 |
   
-内测(CB/CBT)客户端:    
+**内测(CB/CBT/Beta)客户端:**    
   
 > [!NOTE]
-> ·对于私服玩家来说，如果私服所需的对应客户端出现在下方支持的游戏列表中，则说明HoYoShade可以提供支持。  
-> ·MiHoYo/HoYoVerse在公测后面向测试者的Beta版(测试服)客户端通常客户端版本号为:X.5.X，X.X.Y(此处的X为现行REL(公测/公开)版本号)，X.X.Y0(此处的X为现行REL(公测/公开)版本号)等，且通常会在文件加密/启动器中有别于REL(公测/公开)客户端，请自行甄别你所持有的客户端的版本及来源。  
-> ·HoYoShade理论上也可以对Beta版(测试服)客户端提供注入和运行支持，但我们对任何测试服客户端的注入和运行支持不作成功性/功能性保证。  
-> ·我们不建议你使用Beta客户端在官方服务器中运行HoYoShade，以免对HoYoShade全体开发者/二创开发者和阁下本人造成保密协议违约/违规/违法/经济损失等风险。  
+> ·对于私服来说，如果私服所需的对应客户端出现在下方支持的游戏列表中，则说明HoYoShade可以提供支持。无需查看本地端是否支持ReShade/HoYoShade。  
+>
+> 通常来说，除版本号外，创作者体验服(Creator Experience/CE/KOL)客户端通常和同一版本时期下最后一个版本的Beta(测试服)/客户端无异。
+> 
+> ·miHoYo（米哈游）/HoYoverse在公测后面向测试者的Beta(测试服)/创作者体验服客户端通常客户端版本号为:X.5.X，X.X.Y(此处的X为现行REL(公测/公开)版本号)，X.X.Y0(此处的X为现行REL(公测/公开)版本号)等/通常会在文件加密/启动器中有别于REL(公测/公开)客户端/在版本号前缀有别于与REL(公测/公开)客户端，请自行甄别你所持有的客户端的版本及来源。  
+> 
+> ·HoYoShade理论上也可以对Beta(测试服)/创作者体验服客户端提供注入和运行支持，但我们对任何测试服客户端的注入和运行支持不作成功性/功能性保证。  
+> 
+> ·我们不建议你使用Beta(测试服)/创作者体验服客户端在官方服务器中运行HoYoShade，以免对HoYoShade全体开发者/二创开发者和阁下本人造成保密协议违约/违规/违法/经济损失等风险。   
+> 
 > ·除非下列表格中的选项为"是"，否则这说明HoYoShade仅对该类型下被泄露出来的部分客户端进行了测试并得出了支持的结论。这不代表所有版本/类型/来源的不同游戏的内测客户端均可运行HoYoShade，请自行测试。  
-> ·如果你正在使用的测试服客户端并不支持运行HoYoShade，并且你非常确定这并非是使用了错误的注入选项导致的问题，请在[issues界面](https://github.com/DuolaD/HoYoShade/issues)新建issues以帮助我们适配。或者使用启动器的开发者功能尝试自定义注入。  
+> 
+> ·如果你正在使用的Beta(测试服)/创作者体验服客户端并不支持运行HoYoShade，并且你非常确定这并非是使用了错误的注入选项导致的问题，请在[issues界面](https://github.com/DuolaD/HoYoShade/issues)新建issues以帮助我们适配。或者使用启动器的开发者功能尝试自定义注入。  
+> 
 > ·对于并未出现在支持游戏列表中的游戏，你可以自行尝试选择使用注入器中已支持的游戏/在开发者选项中选择自定义注入来尝试注入HoYoShade。    
-> ·原神无人机不可用于任何测试服客户端。  
+> 
+> ·原神无人机不可用于任何测试服客户端。此问题与HoYoShade无关。  
   
 | 客户端 | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
 | --- | --- | --- | --- |
-| **原神/YuanShen/Genshin Impact(海外 部分公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **原神/YuanShen/Genshin Impact(中国大陆 全部公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **原神/YuanShen/Genshin Impact(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **崩坏3/BH3/Honkai Impact 3rd(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(中国大陆/海外 公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **崩坏:星穹铁道/HSR/Honkai: Star Rail(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第一次/公测前内测)(0.10)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第二次公测前内测)(0.20)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆独占 第三次公测前内测)(0.3X)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 第四次公测前内测)(0.3X)** | 是 | 是 | 无游戏版本限制 |
-| **绝区零/ZZZ/Zenless Zone Zero(中国大陆/海外 公测后内测客户端)(X.X.X/X.X.X0)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持 | - |
+| **原神(海外 部分公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **原神(中国大陆 全部公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **原神(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **崩坏3(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **崩坏:星穹铁道(中国大陆/海外 公测前内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **崩坏:星穹铁道(中国大陆/海外 公测后内测客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **绝区零(中国大陆/海外 第一次/公测前内测)(0.10)** | 是 | 是* | 无游戏版本限制 |
+| **绝区零(中国大陆/海外 第二次公测前内测)(0.20)** | 是 | 是* | 无游戏版本限制 |
+| **绝区零(中国大陆独占 第三次公测前内测)(0.3X)** | 是 | 是* | 无游戏版本限制 |
+| **绝区零(中国大陆/海外 第四次公测前内测)(0.3X)** | 是 | 是* | 无游戏版本限制 |
+| **绝区零(中国大陆/海外 公测后内测客户端)(X.X.X/X.X.X0)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+
+*:可能需要向开发者获取额外补丁方可注入。
+
+**创作者体验服(Creator Experience/CE/KOL)客户端:**    
+  
+> [!NOTE]
+> ·对于私服来说，如果私服所需的对应客户端出现在下方支持的游戏列表中，则说明HoYoShade可以提供支持。无需查看本地端是否支持ReShade/HoYoShade。  
+>
+> 通常来说，除版本号外，创作者体验服(Creator Experience/CE/KOL)客户端通常和同一版本时期下最后一个版本的Beta(测试服)/客户端无异。
+>
+> ·miHoYo（米哈游）/HoYoverse在公测后面向测试者的Beta(测试服)/创作者体验服客户端通常客户端版本号为:X.5.X，X.X.Y(此处的X为现行REL(公测/公开)版本号)，X.X.Y0(此处的X为现行REL(公测/公开)版本号)等/通常会在文件加密/启动器中有别于REL(公测/公开)客户端/在版本号前缀有别于与REL(公测/公开)客户端，请自行甄别你所持有的客户端的版本及来源。  
+> 
+> ·HoYoShade理论上也可以对Beta(测试服)/创作者体验服客户端提供注入和运行支持，但我们对任何测试服客户端的注入和运行支持不作成功性/功能性保证。  
+> 
+> ·我们不建议你使用Beta(测试服)/创作者体验服客户端在官方服务器中运行HoYoShade，以免对HoYoShade全体开发者/二创开发者和阁下本人造成保密协议违约/违规/违法/经济损失等风险。  
+> 
+> ·除非下列表格中的选项为"是"，否则这说明HoYoShade仅对该类型下被泄露出来的部分客户端进行了测试并得出了支持的结论。这不代表所有版本/类型/来源的不同游戏的内测客户端均可运行HoYoShade，请自行测试。  
+> 
+> ·如果你正在使用的Beta(测试服)/创作者体验服客户端并不支持运行HoYoShade，并且你非常确定这并非是使用了错误的注入选项导致的问题，请在[issues界面](https://github.com/DuolaD/HoYoShade/issues)新建issues以帮助我们适配。或者使用启动器的开发者功能尝试自定义注入。  
+> 
+> ·对于并未出现在支持游戏列表中的游戏，你可以自行尝试选择使用注入器中已支持的游戏/在开发者选项中选择自定义注入来尝试注入HoYoShade。    
+> 
+> ·原神无人机不可用于任何创作者体验服客户端。此问题与HoYoShade无关。  
+  
+| 客户端 | 是否已测试 | 是否支持 | 是否存在游戏版本限制 |
+| --- | --- | --- | --- |
+| **原神(中国大陆/海外 创作者体验服客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **崩坏:星穹铁道(中国大陆/海外 创作者体验服客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+| **绝区零(中国大陆/海外 创作者体验服客户端)** | 已在部分被泄露的客户端测试 | 已在部分被泄露的客户端中测试并支持* | - |
+
+*:可能需要向开发者获取额外补丁方可注入。
 
 <!-- 问题不大，如果不支持的话我应该也会第一时间知道消息的 XD。 -->  
+<!-- 针对DevKit客户端的支持...就没啥写的必要了吧...... -->  
 
 ## 〢 来源
 
@@ -175,36 +284,41 @@ ReShade的工作原理是拦截CPU和GPU之间的通信，并修改渲染信息�
 
 我们自发行V2.012.2 Stable版本开始，会随着HoYoShade版本更新一并发布OpenHoYoShade。  
 
-OpenHoYoShade为HoYoShade底层基本框架，它涵盖了使ReShade注入至全系米哈游旗下游戏的所有必要文件。  
-OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReShade效果库，预设等，适用于想对HoYoShade进行二次开发的二次开发者。  
+相较于HoYoShade：
 
-如果你只是想在MiHoYo/HoYoVerse游戏下使用ReShade，请下载HoYoShade。  
-如果你想要开发一个可以在MiHoYo/HoYoVerse游戏下使用的ReShade，但是你又不想学习过多的东西，那么你可以选择下载OpenHoYoShade。  
+- OpenHoYoShade为HoYoShade底层基本框架，它涵盖了使ReShade注入至miHoYo（米哈游）/HoYoverse旗下的所有游戏及客户端的所有必要文件。  
+- OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReShade效果库，预设等，适用于想对HoYoShade进行二次开发的二次开发者。  
+
+如果你只是想在miHoYo（米哈游）/HoYoverse游戏下使用ReShade，请下载HoYoShade。    
+
+如果你想要开发一个可以在miHoYo（米哈游）/HoYoverse游戏下使用的ReShade，但是你又不想学习过多的东西，那么你可以选择下载OpenHoYoShade。  
 
 要使 OpenHoYoShade 快速工作，您唯一需要做的就是将效果库和预设放在各自正确的位置。  
-但如果你愿意，你可以进行进一步的开发，比如注入器、Reshade.ini构建器等等等等，甚至重新发行！（开源万岁！)  
-(哦对了......在你重新发行文件时，确保你重新发行的文件遵守了BSD-3开源协议)  
+但如果你愿意，你可以进行进一步的开发，比如注入器、Reshade.ini构建器等，甚至重新发行！（开源万岁！)  
 
-当然了,如果你想要获得旧版注入程序/更多信息，请在GitHub仓库中点击‘Code’按钮，然后选择‘Download Zip’。  
+**在你重新发行文件时，确保你重新发行的文件遵守了BSD-3开源协议**
 
-如果你还是不明白OpenHoYoShade和HoYoShade之间有什么不同，那么以下的图表也许可以很好的帮助你说明：
+当然了,如果你想要获得旧版注入程序/更多信息，请查看Commit历史记录，或拉取本仓库。
+
+如果你还是不明白OpenHoYoShade和HoYoShade之间有什么不同，  
+那么以下的图表也许可以很好的帮助你说明：
 
 |  | OpenHoYoShade | HoYoShade |
 | --- | --- | --- |
 | **ReShade** | 有 | 有 |
 | **使ReShade注入至全系米哈游旗下游戏的所有必要文件** | 有 | 有 |
-| **程序源代码** | 有 | 没有 |
+| **程序源代码** | 有 | 没有（但源代码将与HoYoShade仓库及OpenHoYoShade内的源代码文件保持一直） |
 | **Reshade的效果库(包括插件)** | 没有(你需要自行准备) | 有 |
 | **预设** | 没有(你需要自行准备) | 有 |
 | **谁会需要他们？** | 二次开发者 | 普通游戏玩家 |
 
 ## 〢 如何安装
 
-从[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases/)下载最新版本的(Open)HoYoShade.  
+从[本仓库的发行页面](https://github.com/DuolaD/HoYoShade/releases/latest)下载最新版本的(Open)HoYoShade.  
 解压后按照zip压缩包内的教程操作即可  
 
 <div align="left">
-  对文字版教程感到困惑吗？点击按钮在<a href="https://youtu.be/jac99AOHXrE"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube"/></a>或者在<a href="https://www.bilibili.com/video/BV1jAYAe5EtA"><img src="https://img.shields.io/badge/哔哩哔哩-FFFFFF.svg?logo=bilibili" /></a>观看视频版教程*。  
+  对文字版教程感到困惑吗？点击按钮在<a href="https://www.youtube.com/@GitHub_DuolaD"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube"/></a>或者在<a href="https://space.bilibili.com/1368497107/"><img src="https://img.shields.io/badge/哔哩哔哩-FFFFFF.svg?logo=bilibili" /></a>观看视频版教程*。  
 </div> 
 
 *：仅提供简体中文/繁体中文版本。
@@ -276,7 +390,7 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
   <img src="Readme.md-image/ScreenShot19.jpg" alt="Screenshot19">
 </div>
 
-感谢以下所有创作者对本项目的展示界面所做出的奉献！   
+感谢以下所有创作者对本项目的展示界面所做出的贡献！   
 
 <div align="center">
     <table>
@@ -302,6 +416,21 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
         </td>
         </tr>
         <tr>
+	<td>
+  	<h3>白枝雪鸽|HoYo_Siraeda</h3>
+		<a href="https://space.bilibili.com/375807068">
+		<img src="Readme.md-image/HoYo_Siraeda-Logo.png" width="70" style="border-radius: 50%" alt="WatchAndyTW">
+		<h6>创作内容：</h6>
+		<a href="https://www.youtube.com/watch?v=zZKg6ep4Kvg">Just Another Day at the Section 6 | Fan-made short video | Zenless Zone Zero 绝区零同人实机短片 | 只是对空六课再平凡不过的一天...</a><br>
+		</a>
+    </td>
+    <td>
+        <a href="https://www.youtube.com/@HoYo_Siraeda">YouTube频道</a><br>
+        <a href="https://v.douyin.com/_0oRPA6kJ2A">抖音频道</a><br>
+        <a href="https://space.bilibili.com/375807068">哔哩哔哩频道</a>
+	  </td>
+    </tr>
+    <tr>
 	<td>
 		<h3>WatchAndyTW</h3>
 		<a href="https://github.com/WatchAndyTW">
@@ -356,9 +485,12 @@ OpenHoYoShade存储占用会比HoYoShade小, 但OpenHoYoShade并没有内置ReSh
 </div> 
 
 > [!NOTE]
-> · 出于部分创作者的要求/MCN中间机构规定/mihoyo或hoyoverse合约创作者规定，除非得到明确答复，否则此名单中将仅展示同意进行展示的创作者。部分使用HoYoShade进行创作/展示的创作者将不会出现在此列表中。  
-> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。  
+> · 出于部分创作者的要求/MCN中间机构规定/miHoYo（米哈游）或HoYoverse合约创作者规定，除非得到明确答复，否则此名单中将仅展示同意进行展示的创作者。部分使用HoYoShade进行创作/展示的创作者将不会出现在此列表中。  
+> 
+> · 展示所使用的预设/效果库可能经过了用户自行添加/编辑。
+>   
 > · 展示中所使用的其他模组可能并非来自 HoYoShade，且 HoYoShade 不包含这些附加功能。   
+> 
 > · 展示所使用的预设/效果库可能并未包含在HoYoShade Releases发行包中，如果你需要获取展示里所使用的预设/效果库/模组，你可能需要向该创作者获取相关内容。  
 
 ## 〢 关于DMCA
@@ -381,22 +513,21 @@ OpenHoYoShade[All]
  **点击对应按钮来赞助HoYoShade**  
 赞助的金额由你自行设定。
 
-<div align="center"><p><span ><a href="https://www.paypal.com/paypalme/Dmou114514233"><img src="https://img.shields.io/badge/PayPal-003087.svg?logo=paypal" /></a> <a href="Readme.md-image/WechatDonateCode.JPG"><img src="https://img.shields.io/badge/微信支付-07C160.svg?logo=wechat&logoColor=white" /></a> <a href="Readme.md-image/AirPayDonateCode.png"><img src="https://img.shields.io/badge/支付宝-1677FF.svg?logo=alipay&logoColor=white" /> </span></p></a></div>
+[**点击前往我的GitHub个人首页Readme.md向我提供赞助**](https://github.com/DuolaD/DuolaD/blob/main/Readme.Chinese_Simplified.md)
 
 ## 〢 联系我
 
 > [!NOTE]
 > ·如果你处于中国大陆地区，则某些联系方式可能不可用。结尾带星号标识'*'的联系方式可以保证在中国大陆地区使用，并且可以获得更快速的响应和支持。  
-> ·如果你在使用此模组时有任何的问题，请先在本仓库创建一个issue。
+> 
+> ·如果你在使用此模组时有任何的问题，我们建议先在本仓库创建一个issue。
 
- **点击对应按钮来联系我：**
-
-<div align="center"><p><span > <a href="https://discordapp.com/users/960705009866137631"><img src="https://img.shields.io/badge/Discord-FFFFFF.svg?logo=discord" /></a> <a href="https://www.hoyolab.com/accountCenter/postList?id=192633110"><img src="https://img.shields.io/badge/HoYoLAB-FFFFFF.svg?logo=data:image/png;base64,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" /></a> <a href="https://t.me/GitHub_DuolaD"><img src="https://img.shields.io/badge/Telegram-FFFFFF.svg?logo=telegram" /></a> <a href="https://space.bilibili.com/1368497107"><img src="https://img.shields.io/badge/哔哩哔哩-FFFFFF.svg?logo=bilibili" /></a> <a href="https://www.douyin.com/user/MS4wLjABAAAAGUohNGixQiCHKSoHJy0Ae6WS3R7pMd7lSfi5O4A9zH7gdcEd4JEX787i-RFNH257"><img src="https://img.shields.io/badge/抖音-000000.svg?logo=tiktok" /></a> <a href="https://www.youtube.com/@GitHub_DuolaD"><img src="https://img.shields.io/badge/YouTube-FF0000.svg?logo=youtube" /></a> <a href="https://qm.qq.com/q/njKy8OrUU8"><img src="https://img.shields.io/badge/QQ-FFFFFF.svg?logo=tencentqq" /></a> <a href="https://www.miyoushe.com/ys/accountCenter/postList?id=395704368"><img src="https://img.shields.io/badge/米游社-FFFFFF.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACZElEQVR4AY2Rg5JdURBFp1IIiylX/ibFfEBs27Zt27ZtjM3nsT1zfe85O7tjZ7pqPRysPt2dNCQEoRvpR/qTqWQHuTY4hA/TYggfzXfrT70yzBNptpoSg+J6NfeXk15yuQ9ZQopJ+6AQAh4Af2NoGNhe5ONWqolEnY8T70zMjQE8I/udZJgIphBbLo2MAAuiGrOJCMZEgYPpNsrqfViuxplkE3O+C4QzIngsl8dFmC3fw5EXBvan2hjHy+PJYf6ubA7QamucS7F+FbwUQbEI1hQHuMGnljPbkfcWJvOySA5RkF4VILlJ4xIFC2L6R0GuCCqHMfuWbBdZMRcGMx3/YGEaL4/i+v4MB28THh7X8gXvTSyO/iSIi6BRBFtzXKREXEQ6WOsHNksOhoGdbOKZtyYOk5v5DlaVAcPCwJdG14qgY0iYggIfj3jgeRNwnoKVUYVZMeBIyMclZr741mAJJo6yvJ0lvjRcBK1JXyewLhTgZoaFc8XMyHFdLXZxhFnvca2g3ENda4B2U6GqycfpNwZWRpSUYorA5w/Mj7F2XrzI7NLMB5kWGtoCaEhAxgjT0ZDIibvYk2xjShyeCBSRurCnQuN2lo33JQ4ChZ8ii5cuvTMg4fkaF5hsT4mvRABBytgiZTC7UkBzp5Ks+BrtlkIam6y+LCU47sPPO/HtBUPDwI4CD28KbEjcZwlPcm38LTRJDjlaBHUEg8PA5pIAj7ItSNSz/uJKD/8KpdEsguWkRRq5jI2UJjqeRhfCU8BuEfQgAyjYNyuOB0ffmckcWRGAMg00kA7ikODr62VdAVvYor4fAfPaaUne+8MNAAAAAElFTkSuQmCC" /></a> <a href="mailto:D_mou@outlook.com"><img src="https://img.shields.io/badge/邮箱-FFFFFF.svg?logo=gmail" /></a> </span></p></a>
-
-<div align="left">
+[**点击前往我的GitHub个人首页Readme.md联系我**](https://github.com/DuolaD/DuolaD/blob/main/Readme.Chinese_Simplified.md)
 
 ## 〢 贡献者
-感谢所有贡献者对本项目的奉献！
+我们真诚的感谢以下所有出色的贡献者，以及与我们进行合作的miHoYo（米哈游）/HoYoverse官方合约创作者，各赞助商/赞助者，还有各位使用HoYoShade的你们。HoYoShade因你们而精彩！
+
+感谢所有贡献者对本项目的无私贡献！
 
 <div align="center">
     <table>
