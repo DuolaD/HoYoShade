@@ -40,19 +40,21 @@
 
 ## 〢 目錄
 
-- [**介紹**](#〢-介紹)
-- [**警告**](#〢-警告)
-- [**支持游戲列表**](#〢-支持游戲列表)
-- [**來源**](#〢-來源)
-- [**OpenHoYoShade和HoYoShade**](#〢-OpenHoYoShade和HoYoShade)
-- [**如何安裝?**](#〢-如何安裝)
-- [**推薦遊戲畫面設置**](#〢-推薦遊戲畫面設置)
-- [**截圖展示**](#〢-截圖展示)
-- [**關於DMCA**](#〢-關於DMCA)
-- [**鳴謝**](#〢-鳴謝)
-- [**贊助**](#〢-贊助)
-- [**聯繫我**](#〢-聯繫我)
-- [**貢獻者**](#〢-貢獻者)
+- [〢 視頻演示](#〢-視頻演示)
+- [〢 目錄](#〢-目錄)
+- [〢 介紹](#〢-介紹)
+- [〢 警告](#〢-警告)
+- [〢 支持遊戲列表](#〢-支持遊戲列表)
+- [〢 來源](#〢-來源)
+- [〢 OpenHoYoShade和HoYoShade](#〢-openhoyoshade和hoyoshade)
+- [〢 如何安裝](#〢-如何安裝)
+- [〢 推薦遊戲畫面設置](#〢-推薦遊戲畫面設置)
+- [〢 截圖展示](#〢-截圖展示)
+- [〢 關於DMCA](#〢-關於dmca)
+- [〢 鳴謝](#〢-鳴謝)
+- [〢 贊助](#〢-贊助)
+- [〢 聯繫我](#〢-聯繫我)
+- [〢 貢獻者](#〢-貢獻者)
 
 ## 〢 介紹
 
@@ -132,11 +134,21 @@ ReShade的工作原理是攔截CPU和GPU之間的通信，並修改渲染信息�
 
 ## 〢 來源
 
+**當前正在使用的資源：**
+
 | 名字 | 介紹 | 網址 |
 | --- | --- | --- |
-| **ReShade官方** | HoYoShade會保證最新發行版中的ReShade總是和ReShade最新版本保持一致 | [官方倉庫](https://github.com/crosire/reshade),[官方網站](https://reshade.me/) |
-| **Crosire的ReShade注入器** | 這只是一個注入器 | [前往ReShade官方倉庫查看源碼](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | 用於非強製版本檢測器下載版本信息和最新Mod包(僅用於V2.0131.0 Stable至V2.11.3 Stable中) | [官方倉庫](https://github.com/aria2/aria2),[官方網站](https://aria2.github.io/) |
+| **ReShade官方** | HoYoShade會保證最新發行版中的ReShade總是和ReShade最新版本保持一致 | [官方倉庫](https://github.com/crosire/reshade) \ [官方網站](https://reshade.me) |
+| **來自Crosire的ReShade注入器（經過修改）** | 一個支持 ReShade 注入到 miHoYo/HoYoverse 遊戲客戶端的注入器。並進行修改以使其更易於使用。 | [官方倉庫](https://github.com/crosire/reshade) \ [前往ReShade官方倉庫查看源碼](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [前往HoYoShade倉庫查看經過我們修改後的源碼](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
+| **MiSans系列字體** | HoYoShade默認字體，版權歸小米集團所有。  | [官方網站](https://www.mi.com) \ [MiSans系列字體官方網站](https://hyperos.mi.com/font/) |
+
+
+**已過時的資源：**
+
+| 名字 | 介紹 | 網址 |
+| --- | --- | --- |
+| **微軟雅黑** | HoYoShade V2.5.1 Stable以更早版本的默認字體，版權歸微軟集團所有。由於版本問題，現已棄用。(僅用於V2.5.1 Stable和更早版本) | [官方網站](https://www.microsoft.com) |
+| **Aria2** | 用於非強制版本檢測器下載版本信息和最新Mod包。由於版本信息同步問題，現已棄用。(僅用於V2.0131.0 Stable至V2.11.3 Stable中) | [官方倉庫](https://github.com/aria2/aria2) \ [官方網站](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade和HoYoShade
 

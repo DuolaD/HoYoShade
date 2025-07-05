@@ -274,11 +274,21 @@ HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改�
 
 ## 〢 来源
 
+**当前正在使用的资源：**
+
 | 名字 | 介绍 | 网址 |
 | --- | --- | --- |
-| **ReShade官方** | HoYoShade会保证最新发行版中的ReShade总是和ReShade最新版本保持一致 | [官方仓库](https://github.com/crosire/reshade),[官方网站](https://reshade.me/) |
-| **Crosire的ReShade注入器** | 这只是一个注入器 | [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | 用于非强制版本检测器下载版本信息和最新Mod包(仅用于V2.0131.0 Stable至V2.11.3 Stable中) | [官方仓库](https://github.com/aria2/aria2),[官方网站](https://aria2.github.io/) |
+| **ReShade官方** | HoYoShade会保证最新发行版中的ReShade总是和ReShade最新版本保持一致 | [官方仓库](https://github.com/crosire/reshade) \ [官方网站](https://reshade.me) |
+| **来自Crosire的ReShade注入器（经过修改）** | 一个支持 ReShade 注入到 miHoYo/HoYoverse 游戏客户端的注入器。并进行修改以使其更易于使用。 | [官方仓库](https://github.com/crosire/reshade) \ [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [前往HoYoShade仓库查看经过我们修改后的源码](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
+| **MiSans系列字体** | HoYoShade默认字体，版权归小米集团所有。  | [官方网站](https://www.mi.com) \ [MiSans系列字体官方网站](https://hyperos.mi.com/font/) |
+
+
+**已过时的资源：**
+
+| 名字 | 介绍 | 网址 |
+| --- | --- | --- |
+| **微软雅黑** | HoYoShade V2.5.1 Stable以更早版本的默认字体，版权归微软集团所有。由于版本问题，现已弃用。(仅用于V2.5.1 Stable和更早版本) | [官方网站](https://www.microsoft.com) |
+| **Aria2** | 用于非强制版本检测器下载版本信息和最新Mod包。由于版本信息同步问题，现已弃用。(仅用于V2.0131.0 Stable至V2.11.3 Stable中) | [官方仓库](https://github.com/aria2/aria2) \ [官方网站](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade和HoYoShade
 

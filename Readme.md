@@ -40,19 +40,21 @@ Or Click to: <a href="https://www.bilibili.com/video/BV12u4y187mN/"><img src="ht
 
 ## 〢 Directory
 
-- [**Introduction**](#〢-Introduction)
-- [**Pre-Warning**](#〢-Pre-Warning)
-- [**Support games list**](#〢-Support-games-list)
-- [**Sources**](#〢-Sources)
-- [**OpenHoYoShade and HoYoShade**](#〢-OpenHoYoShade-and-HoYoShade)
-- [**How to install?**](#〢-How-to-install)
-- [**Recommended Graphics settings for game**](#〢-Recommended-Graphics-settings-for-game)
-- [**Screenshots**](#〢-Screenshots)
-- [**About DMCA**](#〢-About-DMCA)
-- [**Thanks**](#〢-Thanks)
-- [**Donate**](#〢-Donate)
-- [**Contant Me**](#〢-Contant-Me)
-- [**Contributors**](#〢-Contributors)
+- [〢 Live Demo](#〢-live-demo)
+- [〢 Directory](#〢-directory)
+- [〢 Introduction](#〢-introduction)
+- [〢 Pre-Warning](#〢-pre-warning)
+- [〢 Support games list](#〢-support-games-list)
+- [〢 Sources](#〢-sources)
+- [〢 OpenHoYoShade and HoYoShade](#〢-openhoyoshade-and-hoyoshade)
+- [〢 How to install](#〢-how-to-install)
+- [〢 Recommended Graphics settings for game](#〢-recommended-graphics-settings-for-game)
+- [〢 Screenshots](#〢-screenshots)
+- [〢 About DMCA](#〢-about-dmca)
+- [〢 Thanks](#〢-thanks)
+- [〢 Donate](#〢-donate)
+- [〢 Contant Me](#〢-contant-me)
+- [〢 Contributors](#〢-contributors)
 
 ## 〢 Introduction
 
@@ -130,11 +132,20 @@ CB/CBT(Close Beta Test)Client:
   
 ## 〢 Sources
 
+**Current resources:**
+
 | Name | information | URL address |
 | --- | --- | --- |
-| **ReShade Official** | Always the latest Version | [Official Repository](https://github.com/crosire/reshade),[Official Website](https://reshade.me/) |
-| **Crosire's DLL injector** | Just an injector | [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) |
-| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages.(Only available in V2.0131.0 Stable to V2.11.3 Stable) | [Official Repository](https://github.com/aria2/aria2),[Official Website](https://aria2.github.io/) |
+| **ReShade Official** | Always the latest Version. | [Official Repository](https://github.com/crosire/reshade) \ [Official Website](https://reshade.me/) |
+| **Crosire's DLL injector with modded** | an injector to support ReShade inject to miHoYo/HoYoverse's game client. and modify to make it more easy to use.  | [Official Repository](https://github.com/crosire/reshade) \ [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [View our modded version source code in HoYoShde Repository](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
+| **MiSans series fonts** | HoYoShade default fonts, Copyright by  Xiaomi Corporation.  | [Official Website](https://www.mi.com) \ [MiSans series fonts official website](https://hyperos.mi.com/font/) |
+
+**Outdated resources:**
+
+| Name | information | URL address |
+| --- | --- | --- |
+| **Microsoft YaHei** | HoYoShade default fonts in V2.5.1 Stable or older, Copyright by Microsoft Corporation. Deprecated due copyright issues. (Only available in V2.5.1 Stable or lower.) | [Official Website](http://microsoft.com) |
+| **Aria2** | For the non-compulsory version detector to download version information and the latest Mod packages. Deprecated due version detail sync issues.(Only available in V2.0131.0 Stable to V2.11.3 Stable) | [Official Repository](https://github.com/aria2/aria2) \ [Official Website](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade and HoYoShade
 
