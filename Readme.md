@@ -10,7 +10,6 @@
 **EN**|[简体中文](Readme.Chinese_Simplified.md)|[繁體中文](Readme.Chinese_Traditional.md)  
 
 > [!NOTE]
-> · We understand that you may be familiar with a second language. But if you are from mainland China, we recommend you to read the [Simplified Chinese version of the Readme.md](Readme.Chinese_Simplified.md) to get more information about a another Genshin Impact mod that is only released in mainland China.   
 > · The translation is not 100% accurate, as it is primarily based on OpenAI-GPT4o, Google Translate, and my proofreading. However, even so, the final result may still have some issues. If you find any problems or believe that there is an issue, please submit issues to help improve HoYoShade.  
 > · Are you looking for an old version?we are developing [HoYoShade-RePublish](https://github.com/DuolaD/HoYoShade-RePublish) repo.Which when it done,you can download all old releases without all DMCA content. Sound good?    
 > · Due to a DMCA warning received by HoYoShade, you can no longer download versions of HoYoShade lower than V2.013.0 Stable from the Release page.For more details, please check the [About DMCA](#〢-About-DMCA) page.  
@@ -137,8 +136,11 @@ CB/CBT(Close Beta Test)Client:
 | Name | information | URL address |
 | --- | --- | --- |
 | **ReShade Official** | Always the latest Version. | [Official Repository](https://github.com/crosire/reshade) \ [Official Website](https://reshade.me/) |
-| **Crosire's DLL injector with modded** | an injector to support ReShade inject to miHoYo/HoYoverse's game client. and modify to make it more easy to use.  | [Official Repository](https://github.com/crosire/reshade) \ [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [View our modded version source code in HoYoShde Repository](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
-| **MiSans series fonts** | HoYoShade default fonts, Copyright by  Xiaomi Corporation.  | [Official Website](https://www.mi.com) \ [MiSans series fonts official website](https://hyperos.mi.com/font/) |
+| **Crosire's DLL injector with modded** | an injector to support ReShade inject to miHoYo/HoYoverse's game client. and modify to make it more easy to use.  | [Official Repository](https://github.com/crosire/reshade) \ [View source code in ReShade Official Repository](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [View our modded version source code in HoYoShade Repository](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
+| **MiSans series fonts** | HoYoShade default fonts, Copyright by Xiaomi Corporation.  | [Official Website](https://www.mi.com) \ [MiSans series fonts official website](https://hyperos.mi.com/font/) |
+| **Fonts from miHoYo / HoYoVerse's game client** | HoYoShade build-in optional fonts, Copyright by miHoYo / HoYoVerse.  | [miHoYo official website](https://www.mihoyo.com) \ [HoYoverse official website](https://www.hoyoverse.com) | |
+
+
 
 **Outdated resources:**
 
@@ -217,7 +219,7 @@ New:(Still waiting for the GUI to be built completely.)
 
 ## 〢 Screenshots
 <div align="center">
-  <h1 class="header">Shot by [Youtube@AXBro阿向菌](https://www.youtube.com/@AXBroCN)</h1>
+  <h1 class="header">Shot by AXBro</h1>
 </div>
 
 <div id="images">

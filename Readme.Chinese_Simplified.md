@@ -30,8 +30,6 @@
 <!-- 让孩子恰点饭吧，孩子想赚点钱玩Cosplay，还想去上海原神FES QAQ；感谢家人们。 -->  
 
 > [!NOTE]
-> ·我们深知您可能熟悉第二语言。但如果你来自于中国大陆地区,我们更加推荐你去阅读[简体中文版本的Readme.md](Readme.Chinese_Simplified.md)来获得更多有关于原神原神无人机的信息。  
-> 
 > ·翻译并非100%准确，翻译工作主要基于OpenAI-GPT4o，谷歌翻译和本人的校对组成。 但即使如此，最终成品也难免会产生一定的问题。 如果你发现或者你认为这是一个问题，请提交issues以帮助HoYoShade改进。 
 >  
 > ·由于HoYoShade收到了DMCA警告，你无法再从Release界面下载低于V2.013.0 Stable版本的HoYoShade。有关详细情况，请查看[关于DMCA](#〢-关于DMCA)界面。   
@@ -130,7 +128,7 @@ https://github.com/user-attachments/assets/dc353d89-d479-43aa-b466-239a41e0173e
 
 ## 〢 介绍
 
-HoYoShade是一个基于官方ReShade二次开发的版本。
+HoYoShade是一个基于官方ReShade二次开发的开源版本。
 
 相较于官方ReShade，HoYoShade：
 
@@ -279,15 +277,16 @@ HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改�
 | 名字 | 介绍 | 网址 |
 | --- | --- | --- |
 | **ReShade官方** | HoYoShade会保证最新发行版中的ReShade总是和ReShade最新版本保持一致 | [官方仓库](https://github.com/crosire/reshade) \ [官方网站](https://reshade.me) |
-| **来自Crosire的ReShade注入器（经过修改）** | 一个支持 ReShade 注入到 miHoYo/HoYoverse 游戏客户端的注入器。并进行修改以使其更易于使用。 | [官方仓库](https://github.com/crosire/reshade) \ [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [前往HoYoShade仓库查看经过我们修改后的源码](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
+| **来自Crosire的ReShade注入器（经过修改）** | 一个支持 ReShade 注入到 miHoYo（米哈游）/HoYoverse 游戏客户端的注入器。并进行修改以使其更易于使用。 | [官方仓库](https://github.com/crosire/reshade) \ [前往ReShade官方仓库查看源码](https://github.com/crosire/reshade/blob/main/tools/injector.cpp) \ [前往HoYoShade仓库查看经过我们修改后的源码](https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/inject_mod.cpp) |
 | **MiSans系列字体** | HoYoShade默认字体，版权归小米集团所有。  | [官方网站](https://www.mi.com) \ [MiSans系列字体官方网站](https://hyperos.mi.com/font/) |
+| **miHoYo（米哈游）/ HoYoverse旗下游戏客户端字体** | HoYoShade内置可选字体，从游戏客户端中提取。版权归miHoYo（米哈游）/ HoYoverse所有。  | [miHoYo官方网站](https://www.mihoyo.com) \ [HoYoverse官方网站](https://www.hoyoverse.com) |
 
 
 **已过时的资源：**
 
 | 名字 | 介绍 | 网址 |
 | --- | --- | --- |
-| **微软雅黑** | HoYoShade V2.5.1 Stable以更早版本的默认字体，版权归微软集团所有。由于版本问题，现已弃用。(仅用于V2.5.1 Stable和更早版本) | [官方网站](https://www.microsoft.com) |
+| **微软雅黑** | HoYoShade V2.5.1 Stable以及更早版本的默认字体，版权归微软集团所有。由于潜在的版权风险问题，现已弃用。(仅用于V2.5.1 Stable和更早版本) | [官方网站](https://www.microsoft.com) |
 | **Aria2** | 用于非强制版本检测器下载版本信息和最新Mod包。由于版本信息同步问题，现已弃用。(仅用于V2.0131.0 Stable至V2.11.3 Stable中) | [官方仓库](https://github.com/aria2/aria2) \ [官方网站](https://aria2.github.io/) |
 
 ## 〢 OpenHoYoShade和HoYoShade
@@ -365,7 +364,7 @@ HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改�
 
 ## 〢 截图展示
 <div align="center">
-  <h1 class="header">来自 AXBro阿向菌</h1>
+  <h1 class="header">来自 阿向菌|AXBro</h1>
 </div>
 
 <div id="images">
