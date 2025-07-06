@@ -602,40 +602,49 @@ if errorlevel 1 (
     goto blender_hook_menu
 )
 
-set "apiUrl=fromcnornot.165683.xyz"
-for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
-    set "statusCode=%%i"
+set "country_code="
+
+for /f "usebackq delims=" %%A in (`curl -s https://www.canva.cn/cdn-cgi/trace`) do (
+    set "line=%%A"
+    echo !line! | findstr /b "loc=" >nul
+    if !errorlevel! == 0 (
+        set "country_code=!line:~4!"
+    )
 )
 
-if "%statusCode%"=="403" (
-    :blender_hook_not_in_cn
-    cls
-    title HoYoShade啓動器
-    cls
-    echo 歡迎使用HoYoShade啓動器！
+if /i "%country_code%"=="CN" goto :blender_hook_menu
+if /i "%country_code%"=="HK" goto :blender_hook_menu
+if /i "%country_code%"=="MO" goto :blender_hook_menu
+if /i "%country_code%"=="TW" goto :blender_hook_menu
+if /i "%country_code%"=="SG" goto :blender_hook_menu
+
+:blender_hook_not_in_cn
+cls
+title HoYoShade啓動器
+cls
+echo 歡迎使用HoYoShade啓動器！
+echo\
+echo 模組版本：V2.X.X Stable - NextVersion
+echo 開發者：DuolaDStudio X AXBro X Ex_M
+echo\
+echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
+echo 這可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
+echo\
+echo 是否確認嘗試繼續操作？
+echo\
+echo [1]是
+echo [2]否（返回啓動器主菜單）
+echo\
+set /p "content=在此輸入選項前面的數字："
+if "%content%" == "1" (
+    goto blender_hook_menu
+) else if "%content%" == "2" (
+    goto menu
+) else (
     echo\
-    echo 模組版本：V2.X.X Stable - NextVersion
-    echo 開發者：DuolaDStudio X AXBro X Ex_M
-    echo\
-    echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
-    echo 這可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
-    echo\
-    echo 是否確認嘗試繼續操作？
-    echo\
-    echo [1]是
-    echo [2]否（返回啓動器主菜單）
-    echo\
-    set /p "content=在此輸入選項前面的數字："
-    if "%content%" == "1" (
-        goto blender_hook_menu
-    ) else if "%content%" == "2" (
-        goto menu
-    ) else (
-        echo\
-        echo 輸入錯誤。
-        timeout /t 2
-        goto blender_hook_not_in_cn
-    )
+    echo 輸入錯誤。
+    timeout /t 2
+    goto blender_hook_not_in_cn
 )
 
 :blender_hook_menu

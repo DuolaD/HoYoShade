@@ -601,40 +601,50 @@ if errorlevel 1 (
     goto blender_hook_menu
 )
 
-set "apiUrl=fromcnornot.165683.xyz"
-for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
-    set "statusCode=%%i"
+set "country_code="
+
+for /f "usebackq delims=" %%A in (`curl -s https://www.canva.cn/cdn-cgi/trace`) do (
+    set "line=%%A"
+    echo !line! | findstr /b "loc=" >nul
+    if !errorlevel! == 0 (
+        set "country_code=!line:~4!"
+    )
 )
 
-if "%statusCode%"=="403" (
-    :blender_hook_not_in_cn
-    cls
-    title HoYoShade启动器
-    cls
-    echo 欢迎使用HoYoShade启动器！
+if /i "%country_code%"=="CN" goto :blender_hook_menu
+if /i "%country_code%"=="HK" goto :blender_hook_menu
+if /i "%country_code%"=="MO" goto :blender_hook_menu
+if /i "%country_code%"=="TW" goto :blender_hook_menu
+if /i "%country_code%"=="SG" goto :blender_hook_menu
+
+:blender_hook_not_in_cn
+cls
+title HoYoShade启动器
+cls
+echo 欢迎使用HoYoShade启动器！
+echo\
+echo 模组版本：V2.X.X Stable - NextVersion
+echo 开发者：DuolaDStudio X AXBro X Ex_M
+echo\
+echo 我们检测到当前你可能不在中国大陆/港澳台/新加坡地区，
+echo 当前我们检测到你的所在国家/地区为：%country_code% 。
+echo 这可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整技术支持,或不予对你提供任何技术支持。
+echo\
+echo 是否确认尝试继续操作？
+echo\
+echo [1]是
+echo [2]否（返回启动器主菜单）
+echo\
+set /p "content=在此输入选项前面的数字："
+if "%content%" == "1" (
+    goto blender_hook_menu
+) else if "%content%" == "2" (
+    goto menu
+) else (
     echo\
-    echo 模组版本：V2.X.X Stable - NextVersion
-    echo 开发者：DuolaDStudio X AXBro X Ex_M
-    echo\
-    echo 我们检测到当前你可能不在中国大陆/港澳台/新加坡地区，
-    echo 这可能会导致本Mod的联动注入功能和Blender/留影机插件无法在你所在的国家及地区获得完整技术支持,或不予对你提供任何技术支持。
-    echo\
-    echo 是否确认尝试继续操作？
-    echo\
-    echo [1]是
-    echo [2]否（返回启动器主菜单）
-    echo\
-    set /p "content=在此输入选项前面的数字："
-    if "%content%" == "1" (
-        goto blender_hook_menu
-    ) else if "%content%" == "2" (
-        goto menu
-    ) else (
-        echo\
-        echo 输入错误。
-        timeout /t 2
-        goto blender_hook_not_in_cn
-    )
+    echo 输入错误。
+    timeout /t 2
+    goto blender_hook_not_in_cn
 )
 
 :blender_hook_menu
