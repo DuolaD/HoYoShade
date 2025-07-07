@@ -34,49 +34,65 @@ struct language_strings
     const wchar_t* failed_allocate;
     const wchar_t* failed_execute;
     const wchar_t* failed_load;
+    const wchar_t* process_dir;
+    const wchar_t* copy_ini_success;
+    const wchar_t* copy_ini_fail;
+    const wchar_t* ini_exists;
 };
 
 // Language string table
 static const language_strings english_strings = {
-    L"usage: %s <exe name>",
-    L"Waiting for a '%s' process to start ...",
+    L"usage: %s <exe name>\n",
+    L"Waiting for a '%s' process to start ...\n",
     L"Found a matching process with PID %lu! Injecting HoYoShade ... ",
     L"Injecting HoYoShade ... ",
-    L"Succeeded!",
+    L"Succeeded!\n",
     L"\nFailed to open target application process!",
     L"\nProcess architecture does not match injection tool! Cannot continue.",
-    L"\nFailed to find ReShade at \"%s\"!",
-    L"\nFailed to allocate and write 'LoadLibrary' argument in target application!",
-    L"\nFailed to execute 'LoadLibrary' in target application!",
-    L"\nFailed to load ReShade in target application! Error code is 0x%x."
+    L"\nFailed to find ReShade at \"%s\"!\n",
+    L"\nFailed to allocate and write 'LoadLibrary' argument in target application!\n",
+    L"\nFailed to execute 'LoadLibrary' in target application!\n",
+    L"\nFailed to load ReShade in target application! Error code is 0x%x.\n",
+    L"\nTarget process root directory: %s\n",
+    L"\nReShade.ini copied to target process directory.\n",
+    L"\nWarning: Failed to copy ReShade.ini (error code: %lu).\n",
+    L"\nReShade.ini already exists in target process directory, no need to copy.\n"
 };
 
 static const language_strings simplified_chinese_strings = {
-    L"用法: %s <可执行文件名>",
-    L"正在等待 '%s' 进程启动...",
+    L"用法: %s <可执行文件名>\n",
+    L"正在等待 '%s' 进程启动...\n",
     L"找到匹配的进程 PID %lu! 正在注入 HoYoShade ... ",
     L"正在注入 HoYoShade ... ",
-    L"成功!",
+    L"成功!\n",
     L"\n无法打开目标应用程序进程!",
     L"\n进程架构与注入工具不匹配! 无法继续。",
-    L"\n无法在 \"%s\" 找到 ReShade!",
-    L"\n无法在目标应用程序中分配和写入'LoadLibrary'参数!",
-    L"\n无法在目标应用程序中执行'LoadLibrary'!",
-    L"\n无法在目标应用程序中加载 ReShade! 错误代码: 0x%x。"
+    L"\n无法在 \"%s\" 找到 ReShade!\n",
+    L"\n无法在目标应用程序中分配和写入'LoadLibrary'参数!\n",
+    L"\n无法在目标应用程序中执行'LoadLibrary'!\n",
+    L"\n无法在目标应用程序中加载 ReShade! 错误代码: 0x%x。\n",
+    L"\n目标进程根目录: %s\n",
+    L"\n已自动复制 ReShade.ini 到目标进程目录。\n",
+    L"\n警告: 无法复制 ReShade.ini（错误码: %lu）。\n",
+    L"\n目标进程目录已存在 ReShade.ini，无需复制。\n"
 };
 
 static const language_strings traditional_chinese_strings = {
-    L"用法: %s <可執行文件名>",
-    L"正在等待 '%s' 進程啟動...",
+    L"用法: %s <可執行文件名>\n",
+    L"正在等待 '%s' 進程啓動...\n",
     L"找到匹配的進程 PID %lu! 正在注入 HoYoShade ... ",
     L"正在注入 HoYoShade ... ",
-    L"成功!",
-    L"\n無法打開目標應用程式進程!",
+    L"成功!\n",
+    L"\n無法打開目標應用程序進程!",
     L"\n進程架構與注入工具不匹配! 無法繼續。",
-    L"\n無法在 \"%s\" 找到 ReShade!",
-    L"\n無法在目標應用程式中分配和寫入'LoadLibrary'參數!",
-    L"\n無法在目標應用程式中執行'LoadLibrary'!",
-    L"\n無法在目標應用程式中加載 ReShade! 錯誤代碼: 0x%x。"
+    L"\n無法在 \"%s\" 找到 ReShade!\n",
+    L"\n無法在目標應用程序中分配和寫入'LoadLibrary'參數!\n",
+    L"\n無法在目標應用程序中執行'LoadLibrary'!\n",
+    L"\n無法在目標應用程序中加載 ReShade! 錯誤代碼: 0x%x。\n",
+    L"\n目標進程根目錄: %s\n",
+    L"\n已自動複製 ReShade.ini 到目標進程目錄。\n",
+    L"\n警告: 無法複製 ReShade.ini（錯誤碼: %lu）。\n",
+    L"\n目標進程目錄已存在 ReShade.ini，無需複製。\n"
 };
 
 // Get the language strings corresponding to current system language settings
@@ -222,6 +238,44 @@ int wmain(int argc, wchar_t* argv[])
     }
 
     wprintf(lang->found, pid);
+
+    // Get the target process root directory
+    WCHAR process_path[MAX_PATH] = { 0 };
+    WCHAR process_dir[MAX_PATH] = { 0 };
+    HANDLE hProcess = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, pid);
+    if (hProcess) {
+        DWORD size = MAX_PATH;
+        if (QueryFullProcessImageNameW(hProcess, 0, process_path, &size)) {
+            wcscpy_s(process_dir, process_path);
+            WCHAR* last_slash = wcsrchr(process_dir, L'\\');
+            if (last_slash) *last_slash = L'\0';
+            wprintf(lang->process_dir, process_dir);
+        }
+        CloseHandle(hProcess);
+    }
+
+    // Check and automatically copy ReShade.ini
+    WCHAR target_ini[MAX_PATH] = { 0 };
+    WCHAR source_ini[MAX_PATH] = { 0 };
+    swprintf_s(target_ini, L"%s\\ReShade.ini", process_dir);
+
+    // Get the injector root directory
+    WCHAR injector_dir[MAX_PATH] = { 0 };
+    GetModuleFileNameW(nullptr, injector_dir, MAX_PATH);
+    WCHAR* last_slash = wcsrchr(injector_dir, L'\\');
+    if (last_slash) *last_slash = L'\0';
+    swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
+
+    if (GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
+        // There is no ReShade.ini in the target directory. Try copying
+        if (CopyFileW(source_ini, target_ini, FALSE)) {
+            wprintf(lang->copy_ini_success);
+        } else {
+            wprintf(lang->copy_ini_fail, GetLastError());
+        }
+    } else {
+        wprintf(lang->ini_exists);
+    }
 
     // Wait just a little bit for the application to initialize
     Sleep(50);

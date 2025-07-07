@@ -65,8 +65,17 @@ if exist "%filepath%" (
     echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X AXBro X Ex_M
     echo\
+    echo 恭喜！你已成功安装HoYoShade！
     echo 我们检测到你是第一次使用本模组，Reshade.ini现已生成至模组根目录中。
-    echo 你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
+    echo\
+    echo 如果这是你第一次在 miHoYo（米哈游）/ HoYoverse 游戏中使用ReShade，你现在可以继续了。
+    echo 注入器会自动检测并复制配置文件（ReShade.ini）到游戏进程根目录。
+    echo\
+    echo 但如果你曾经在 miHoYo（米哈游）/ HoYoverse 游戏中使用过ReShade，
+    echo 你可能需要先删除ReShade.ini（必须）和 ReShade.log（非必须，但建议删除）。
+    echo 例如：
+    echo ·你曾经使用过 HoYoShade V2.5.1 Stable 及以下的版本。
+    echo ·你曾经使用过其他人/自行基于官方ReShade/HoYoShade二次开发的ReShade。
     echo\
     echo 如何找到游戏进程根目录？  
     echo 对于HoYoPlay（米哈游启动器）:点击开始启动按钮旁边的更多图标-游戏设置即可查看游戏进程根目录。  
@@ -75,7 +84,7 @@ if exist "%filepath%" (
     echo 对于StarWard:点击开始启动按钮旁边的齿轮图标即可查看游戏进程根目录。  
     echo 点击游戏进程根目录即可使用资源管理器打开游戏进程根目录。  
     echo\
-    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文安装说明。
+    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文/视频安装说明。
     echo\
     pause
     goto menu
@@ -88,8 +97,6 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X AXBro X Ex_M
-echo\
-echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
 echo\
 echo 当前注入列表：公开客户端注入列表
 echo\
@@ -126,7 +133,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你选择的注入目标为:原神（中国大陆/哔哩哔哩 公开/Devkit/Beta/创作者体验服客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 重要：你必须要使用一个游戏启动器来启动游戏（无论是官方启动器还是第三方启动器），
@@ -152,7 +159,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你选择的注入目标为:原神（国际服/Epic 公开/Beta/创作者体验服客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 重要：你必须要使用一个游戏启动器来启动游戏（无论是官方启动器还是第三方启动器），
@@ -172,7 +179,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "4" (
     cls
     echo 你选择的注入目标为:崩坏三（通用 公开/Beta客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 重要：你必须要使用一个游戏启动器来启动游戏（无论是官方启动器还是第三方启动器），
@@ -192,7 +199,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "5" (
     cls
     echo 你选择的注入目标为:崩坏：星穹铁道（通用 公开/Beta/创作者体验服客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 重要：你必须要使用一个游戏启动器来启动游戏（无论是官方启动器还是第三方启动器），
@@ -211,7 +218,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "6" (
     echo 你选择的注入目标为:绝区零（通用 公开客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 重要：你必须要使用一个游戏启动器来启动游戏（无论是官方启动器还是第三方启动器），
@@ -347,7 +354,7 @@ if "%content%" == "\exit" (
     goto develop
 ) else (
     echo 你选择的注入目标为:%content%.exe
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     start "" /wait /b inject.exe %content%.exe
@@ -398,10 +405,13 @@ echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X AXBro X Ex_M
 echo\
-echo 请注意：你只需要在模组目录移动后才需要重置ReShade.ini
-echo 除此之外，一般情况下你都不需要进行重置操作。
+echo 注意！一般只有以下两种情况，你才需要重置ReShade.ini配置文件：
+echo ·你移动了模组目录，或者你对目录中的文件夹进行了重命名操作。
+echo ·仓库Releases界面中明确写明了建议/必须重置ReShade.ini配置文件，以此开启新功能/修复Bug。
 echo\
-echo 重置完毕后，你需要重新复制ReShade.ini至游戏进程根目录
+echo 除此之外，一般情况下你都不需要进行重置ReShade.ini操作。
+echo\
+echo 重置完毕后，你需要重新删除已经复制到游戏进程根目录下的ReShade.ini配置文件，否则HoYoShade将无法按照预期正常工作。
 echo 是否继续重置操作？
 echo\
 echo [1]是
@@ -420,7 +430,7 @@ if "%content%" == "1" (
     echo 开发者：DuolaDStudio X AXBro X Ex_M
     echo\
     echo 重置成功！重置后的ReShade.ini现已替换模组根目录中的旧版ReShade.ini。
-    echo 你需要将重置后的ReShade.ini替换游戏进程根目录原有的ReShade.ini，然后才能使用本模组。
+    echo 你需要重新删除已经复制到游戏进程根目录下的ReShade.ini配置文件，否则HoYoShade将无法按照预期正常工作。
     echo\
     echo 如何找到游戏进程根目录？  
     echo 对于HoYoPlay（米哈游启动器）:点击开始启动按钮旁边的更多图标-游戏设置即可查看游戏进程根目录。  
@@ -429,7 +439,7 @@ if "%content%" == "1" (
     echo 对于StarWard:点击开始启动按钮旁边的齿轮图标即可查看游戏进程根目录。  
     echo 点击游戏进程根目录即可使用资源管理器打开游戏进程根目录。  
     echo\
-    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文安装说明。
+    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文/视频安装说明。
     echo\
     pause
     goto menu
@@ -449,8 +459,6 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X AXBro X Ex_M
-echo\
-echo 请注意，你需要将Reshade.ini复制到游戏进程根目录，然后才能使用本模组。
 echo\
 echo 当前注入列表：测试服客户端注入列表
 echo\
@@ -488,7 +496,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你选择的注入目标为:原神（通用 国际服 DevKit/公测前内测（Beta）客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 注意：此注入选项不适用于任何 原神（公开/公测后内测（Beta））客户端，
@@ -505,7 +513,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "3" (
     cls
     echo 你选择的注入目标为:绝区零（通用 公测前内测（Beta）客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 注意：此注入选项不适用于任何 绝区零（通用 公开/公测后内测/创作者体验服）客户端，
@@ -522,7 +530,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "4" (
     cls
     echo 你选择的注入目标为:绝区零（通用 公测后内测/创作者体验服客户端）
-    echo 注入器现已启动。确保ReShade.ini复制到正确的游戏进程根目录之后，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
     echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
     echo\
     echo 注意：此注入选项不适用于任何 绝区零（通用 公开/公测前内测）客户端，

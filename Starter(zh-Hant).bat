@@ -66,8 +66,17 @@ if exist "%filepath%" (
     echo 模組版本：V2.X.X Stable - NextVersion
     echo 開發者：DuolaDStudio X AXBro X Ex_M
     echo\
+    echo 恭喜！你已成功安裝HoYoShade！
     echo 我們檢測到你是第一次使用本模組，Reshade.ini現已生成至模組根目錄中。
-    echo 你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
+    echo\
+    echo 如果這是你第一次在 miHoYo（米哈遊）/ HoYoverse 遊戲中使用ReShade，你現在可以繼續了。
+    echo 注入器會自動檢測並複製配置文件（ReShade.ini）到遊戲進程根目錄。
+    echo\
+    echo 但如果你曾經在 miHoYo（米哈遊）/ HoYoverse 遊戲中使用過ReShade
+    echo 你可能需要先刪除ReShade.ini（必須）和 ReShade.log（非必須，但建議刪除）。
+    echo 例如：
+    echo ·你曾經使用過 HoYoShade V2.5.1 Stable 及以下的版本。
+    echo ·你曾經使用過其他人/自行基於官方ReShade/HoYoShade二次開發的ReShade。
     echo\
     echo 如何找到遊戲進程根目錄？  
     echo 對於HoYoPlay（米哈遊啓動器）:點擊開始啓動按鈕旁邊的更多圖標-遊戲設置即可查看遊戲進程根目錄。  
@@ -90,7 +99,6 @@ echo\
 echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X AXBro X Ex_M
 echo\
-echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
 echo\
 echo 當前注入列表：公開客戶端注入列表
 echo\
@@ -127,7 +135,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你選擇的注入目標爲:原神（中國大陸/嗶哩嗶哩 公開/Devkit/Beta/創作者體驗服客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 重要：你必須要使用一個遊戲啓動器來啓動遊戲（無論是官方啓動器還是第三方啓動器），
@@ -153,7 +161,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你選擇的注入目標爲:原神（國際服/Epic 公開/Beta/創作者體驗服客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 重要：你必須要使用一個遊戲啓動器來啓動遊戲（無論是官方啓動器還是第三方啓動器），
@@ -173,7 +181,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "4" (
     cls
     echo 你選擇的注入目標爲:崩壞三（通用 公開/Beta客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 重要：你必須要使用一個遊戲啓動器來啓動遊戲（無論是官方啓動器還是第三方啓動器），
@@ -193,7 +201,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "5" (
     cls
     echo 你選擇的注入目標爲:崩壞：星穹鐵道（通用 公開/Beta/創作者體驗服客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 重要：你必須要使用一個遊戲啓動器來啓動遊戲（無論是官方啓動器還是第三方啓動器），
@@ -212,7 +220,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "6" (
     echo 你選擇的注入目標爲:絕區零（通用 公開客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 重要：你必須要使用一個遊戲啓動器來啓動遊戲（無論是官方啓動器還是第三方啓動器），
@@ -348,7 +356,7 @@ if "%content%" == "\exit" (
     goto develop
 ) else (
     echo 你選擇的注入目標爲:%content%.exe
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     start "" /wait /b inject.exe %content%.exe
@@ -399,10 +407,13 @@ echo\
 echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X AXBro X Ex_M
 echo\
-echo 請注意：你只需要在模組目錄移動後才需要重置ReShade.ini
-echo 除此之外，一般情況下你都不需要進行重置操作。
+echo 注意！一般只有以下兩種情況，你才需要重置ReShade.ini配置文件：
+echo ·你移動了模組目錄，或者你對目錄中的文件夾進行了重命名操作。
+echo ·倉庫Releases界面中明確寫明瞭建議/必須重置ReShade.ini配置文件，以此開啓新功能/修復Bug。
 echo\
-echo 重置完畢後，你需要重新複製ReShade.ini至遊戲進程根目錄
+echo 除此之外，一般情況下你都不需要進行重置ReShade.ini操作。
+echo\
+echo 重置完畢後，你需要重新刪除已經複製到遊戲進程根目錄下的ReShade.ini配置文件，否則HoYoShade將無法按照預期正常工作。
 echo 是否繼續重置操作？
 echo\
 echo [1]是
@@ -421,7 +432,7 @@ if "%content%" == "1" (
     echo 開發者：DuolaDStudio X AXBro X Ex_M
     echo\
     echo 重置成功！重置後的ReShade.ini現已替換模組根目錄中的舊版ReShade.ini。
-    echo 你需要將重置後的ReShade.ini替換遊戲進程根目錄原有的ReShade.ini，然後才能使用本模組。
+    echo 你需要重新刪除已經複製到遊戲進程根目錄下的ReShade.ini配置文件，否則HoYoShade將無法按照預期正常工作。
     echo\
     echo 如何找到遊戲進程根目錄？  
     echo 對於HoYoPlay（米哈遊啓動器）:點擊開始啓動按鈕旁邊的更多圖標-遊戲設置即可查看遊戲進程根目錄。  
@@ -450,8 +461,6 @@ echo 歡迎使用HoYoShade啓動器！
 echo\
 echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X AXBro X Ex_M
-echo\
-echo 請注意，你需要將Reshade.ini複製到遊戲進程根目錄，然後才能使用本模組。
 echo\
 echo 當前注入列表：測試服客戶端注入列表
 echo\
@@ -489,7 +498,7 @@ if "%content%" == "1" (
     )
     cls
     echo 你選擇的注入目標爲:原神（通用 國際服 DevKit/公測前內測（Beta）客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 注意：此注入選項不適用於任何 原神（公開/公測後內測（Beta））客戶端，
@@ -506,7 +515,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "3" (
     cls
     echo 你選擇的注入目標爲:絕區零（通用 公測前內測（Beta）客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 注意：此注入選項不適用於任何 絕區零（通用 公開/公測後內測/創作者體驗服）客戶端，
@@ -523,7 +532,7 @@ if "%content%" == "1" (
 ) else if "%content%" == "4" (
     cls
     echo 你選擇的注入目標爲:絕區零（通用 公測後內測/創作者體驗服客戶端）
-    echo 注入器現已啓動。確保ReShade.ini複製到正確的遊戲進程根目錄之後，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
     echo\
     echo 注意：此注入選項不適用於任何 絕區零（通用 公開/公測前內測）客戶端，
