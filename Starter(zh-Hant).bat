@@ -637,6 +637,7 @@ echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X AXBro X Ex_M
 echo\
 echo 我們檢測到當前你可能不在中国大陆/港澳台/新加坡地區，
+echo 當前我們檢測到你的所在國家/地區爲：%country_code% 。
 echo 這可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
 echo\
 echo 是否確認嘗試繼續操作？
@@ -684,6 +685,8 @@ if "!zzz_loader_exist!"=="1" (
 ) else (
     echo [絕區零版 Blender/留影機插件]：未找到
 )
+echo\
+echo 當前我們檢測到你的所在國家/地區爲：%country_code% 。
 echo\
 echo 注意：如果你使用聯動注入功能，需要選擇你在Blender/留影機插件中綁定的對應服務器的客戶端，否則ReShade無法正常注入。
 echo 如果這是你第一次啓動Blender/留影機插件，請確保在此處選擇的目標客戶端和你接下來在Blender/留影機插件中綁定的目標客戶端一致，否則ReShade無法正常注入。

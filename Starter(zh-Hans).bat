@@ -684,6 +684,8 @@ if "!zzz_loader_exist!"=="1" (
     echo [绝区零版 Blender/留影机插件]：未找到
 )
 echo\
+echo 当前我们检测到你的所在国家/地区为：%country_code% 。
+echo\
 echo 注意：如果你使用联动注入功能，需要选择你在Blender/留影机插件中绑定的对应服务器的客户端，否则ReShade无法正常注入。
 echo 如果这是你第一次启动Blender/留影机插件，请确保在此处选择的目标客户端和你接下来在Blender/留影机插件中绑定的目标客户端一致，否则ReShade无法正常注入。
 echo\
