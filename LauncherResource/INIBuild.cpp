@@ -80,6 +80,7 @@ int main() {
 	outfile<<"TutorialProgress=0"<< std::endl;
 	outfile<<"VariableListHeight=300.000000"<< std::endl;
 	outfile<<"VariableListUseTabs=0"<< std::endl;
+	outfile<<"Window=[Window][###home],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,0,[Window][###addons],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,2,[Window][###settings],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,3,[Window][###statistics],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,4,[Window][###log],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,5,[Window][###about],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,6,[Window][###editor],Collapsed=0,DockId=0x00000002,[Window][Viewport],Pos=0,,0,Size=1280,,720,Collapsed=0,[Window][ReGrade+],Pos=8,,8,Size=447,,704,Collapsed=0,DockId=0x00000001,,1,[Window][Debug##Default],Pos=60,,60,Size=400,,400,Collapsed=0"<< std::endl;
 	outfile<<""<< std::endl;
 	outfile<<"[SCREENSHOT]"<< std::endl;
 	outfile<<"ClearAlpha=1"<< std::endl;
