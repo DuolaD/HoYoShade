@@ -589,7 +589,6 @@ if "!blender_recheck!"=="1" (
     goto blender_hook_menu
 )
 
-set blender_path_error=0
 set missing_curl=0
 
 set "current_dir=%~dp0"
@@ -600,10 +599,6 @@ for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject
 )
 
 for %%i in ("!target!") do set "target_dir=%%~dpi"
-
-if not defined target_dir (
-    set blender_path_error=1
-)
 
 curl --version >nul 2>&1
 if errorlevel 1 (
@@ -691,13 +686,7 @@ echo\
 echo 注意：如果你使用聯動注入功能，需要選擇你在Blender/留影機插件中綁定的對應服務器的客戶端，否則ReShade無法正常注入。
 echo 如果這是你第一次啓動Blender/留影機插件，請確保在此處選擇的目標客戶端和你接下來在Blender/留影機插件中綁定的目標客戶端一致，否則ReShade無法正常注入。
 echo\
-if "%blender_path_error%" == "1" (
-    echo 由於啓動器在加載過程中無法獲取無人機注入器根目錄路徑，選項[8]和[9]將不可用。
-    echo\
-    echo 你仍然可以繼續使用其它聯動注入功能。
-) else (
-    echo 注意：選項[9]僅付費版/作者版無人機可用。
-)
+echo 注意：選項[9]僅付費版/作者版無人機可用。
 echo\
 echo [1]重置模組根目錄中的ReShade.ini
 echo [2]聯動 原神版 Blender/留影機插件 注入至 原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
@@ -706,10 +695,8 @@ echo [4]聯動 絕區零版 Blender/留影機插件 注入至 絕區零（通用 公開客戶端）
 echo [5]僅啓動 原神版 Blender/留影機插件
 echo [6]僅啓動 絕區零版 Blender/留影機插件
 echo [7]同步當前系統時間以修復系統時間不同步的提示
-if "%blender_path_error%" == "0" (
-    echo [8]刪除config文件以重新指向其它客戶端
-    echo [9]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示
-)
+echo [8]刪除config文件以重新指向其它客戶端（暫時僅支持對 原神版 Blender/留影機插件 進行操作）
+echo [9]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示（暫時僅支持對 原神版 Blender/留影機插件 進行操作）
 echo [10]刷新 Blender/留影機插件 注入器檢測信息
 echo [11]返回主界面
 echo [12]退出程序
@@ -821,13 +808,6 @@ if "%choice%"=="1" (
     pause
     goto blender_hook_menu
 ) else if "%choice%"=="8" (
-    if "%blender_path_error%"=="1" (
-        echo 該功能暫不可用。
-        echo\
-        echo 按下任意鍵後返回主菜單。
-        pause
-        goto blender_hook_menu
-    )
     set "fileToDelete=config"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
@@ -872,13 +852,6 @@ if "%choice%"=="1" (
       )
     )
 ) else if "%choice%"=="9" ( 
-    if "%blender_path_error%"=="1" (
-        echo 該功能暫不可用。
-        echo\
-        echo 按下任意鍵後返回主菜單。
-        pause
-        goto blender_hook_menu
-    )
     set "fileToDelete=cookies.json"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
