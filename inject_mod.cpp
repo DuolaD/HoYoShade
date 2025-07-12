@@ -39,6 +39,8 @@ struct language_strings
     const wchar_t* copy_ini_success;
     const wchar_t* copy_ini_fail;
     const wchar_t* ini_exists;
+    const wchar_t* invalid_param;
+    const wchar_t* missing_exe_suffix;
 };
 
 // Language string table
@@ -57,7 +59,9 @@ static const language_strings english_strings = {
     L"\nTarget process root directory: %s\n",
     L"\nReShade.ini copied to target process directory.\n",
     L"\nWarning: Failed to copy ReShade.ini (error code: %lu).\n",
-    L"\nReShade.ini already exists in target process directory, no need to copy.\n"
+    L"\nReShade.ini already exists in target process directory, no need to copy.\n",
+    L"\nError: Invalid parameter! Please use a valid shortcut or specify a process name ending with .exe.\n",
+    L"\nError: Custom process name must end with .exe!\n"
 };
 
 static const language_strings simplified_chinese_strings = {
@@ -75,7 +79,9 @@ static const language_strings simplified_chinese_strings = {
     L"\n目标进程根目录: %s\n",
     L"\n已自动复制 ReShade.ini 到目标进程目录。\n",
     L"\n警告: 无法复制 ReShade.ini（错误码: %lu）。\n",
-    L"\n目标进程目录已存在 ReShade.ini，无需复制。\n"
+    L"\n目标进程目录已存在 ReShade.ini，无需复制。\n",
+    L"\n错误：参数无效！请使用有效的快捷方式或指定以.exe结尾的进程名。\n",
+    L"\n错误：自定义进程名必须以.exe结尾！\n"
 };
 
 static const language_strings traditional_chinese_strings = {
@@ -93,7 +99,9 @@ static const language_strings traditional_chinese_strings = {
     L"\n目標進程根目錄: %s\n",
     L"\n已自動複製 ReShade.ini 到目標進程目錄。\n",
     L"\n警告: 無法複製 ReShade.ini（錯誤碼: %lu）。\n",
-    L"\n目標進程目錄已存在 ReShade.ini，無需複製。\n"
+    L"\n目標進程目錄已存在 ReShade.ini，無需複製。\n",
+    L"\n錯誤：參數無效！請使用有效的快捷方式或指定以.exe結尾的進程名。\n",
+    L"\n錯誤：自定義進程名必須以.exe結尾！\n"
 };
 
 // Get the language strings corresponding to current system language settings
@@ -207,25 +215,39 @@ int wmain(int argc, wchar_t* argv[])
 
     const wchar_t* name = nullptr;
     bool is_shortcut = false;
+    bool valid_param = false;
     if (argc != 2)
     {
         wprintf(lang->usage, argv[0]);
         return 0;
     }
-    // 参数数量为2，处理快捷参数和原有方式
-    if (_wcsicmp(argv[1], L"-YS") == 0) { name = L"YuanShen.exe"; is_shortcut = true; }
-    else if (_wcsicmp(argv[1], L"-GI") == 0) { name = L"GenshinImpact.exe"; is_shortcut = true; }
-    else if (_wcsicmp(argv[1], L"-HSR") == 0) { name = L"StarRail.exe"; is_shortcut = true; }
-    else if (_wcsicmp(argv[1], L"-ZZZ") == 0) { name = L"ZenlessZoneZero.exe"; is_shortcut = true; }
-    else if (_wcsicmp(argv[1], L"-BH3") == 0) { name = L"BH3.exe"; is_shortcut = true; }
+    // Parameter self-check: shortcut or custom process name
+    if (_wcsicmp(argv[1], L"-YS") == 0) { name = L"YuanShen.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-GI") == 0) { name = L"GenshinImpact.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-HSR") == 0) { name = L"StarRail.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-ZZZ") == 0) { name = L"ZenlessZoneZero.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-BH3") == 0) { name = L"BH3.exe"; is_shortcut = true; valid_param = true; }
     else {
         const wchar_t* temp = wcsrchr(argv[1], L'\\');
         if (temp)
             name = temp + 1;
         else
             name = argv[1];
+        // Check if the custom process name ends with .exe
+        size_t len = wcslen(name);
+        if (len > 4 && _wcsicmp(name + len - 4, L".exe") == 0)
+            valid_param = true;
+        else {
+            wprintf(lang->missing_exe_suffix);
+            return 0;
+        }
     }
-    // 快捷参数完整性检测
+    // Check whether the parameters are legal
+    if (!valid_param) {
+        wprintf(lang->invalid_param);
+        return 0;
+    }
+    // Quick parameter integrity check
     if (is_shortcut)
     {
         WCHAR root_dir[MAX_PATH] = {0};
