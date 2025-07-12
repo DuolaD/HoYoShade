@@ -786,10 +786,7 @@ if "%choice%"=="1" (
     echo 正在檢查並啓動 Windows Time 服務...
     net start w32time >nul 2>&1
     echo\
-    for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
-        set "statusCode=%%i"
-    )
-    if "%statusCode%"=="201" (
+    if /i "%country_code%"=="CN" (
         w32tm /config /manualpeerlist:"ntp.ntsc.ac.cn" /syncfromflags:manual /reliable:YES /update >nul 2>&1
         net stop w32time >nul 2>&1
         net start w32time >nul 2>&1
@@ -800,7 +797,7 @@ if "%choice%"=="1" (
     echo 正在嘗試同步時間...
     echo\
     w32tm /resync >nul 2>&1
-    if %errorlevel% == 0 (
+    if !errorlevel! == 0 (
         echo 時間同步成功！可訪問 https://time.is 以檢測時間是否已同步，然後重新嘗試運行Blender/留影機插件。
     ) else (
         echo 時間同步失敗，可能是因爲沒有正確配置NTP時間服務器或其他錯誤。

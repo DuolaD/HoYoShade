@@ -719,7 +719,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="2" (
     if "!ys_loader_exist!"=="0" (
         echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -743,7 +743,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="3" (
     if "!ys_loader_exist!"=="0" (
         echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -767,7 +767,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="4" (
     if "!zzz_loader_exist!"=="0" (
         echo 自检未通过，模组根目录下并没有找到名为 zzz_loader.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 zzz_loader.lnk ，然后退出并重新进入此界面，再试一次。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 zzz_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -796,10 +796,7 @@ if "%choice%"=="1" (
     echo 正在检查并启动 Windows Time 服务...
     net start w32time >nul 2>&1
     echo\
-    for /f "tokens=* delims=" %%i in ('curl -s -o nul -w "%%{http_code}" %apiUrl%') do (
-        set "statusCode=%%i"
-    )
-    if "%statusCode%"=="201" (
+    if /i "%country_code%"=="CN" (
         w32tm /config /manualpeerlist:"ntp.ntsc.ac.cn" /syncfromflags:manual /reliable:YES /update >nul 2>&1
         net stop w32time >nul 2>&1
         net start w32time >nul 2>&1
@@ -810,7 +807,7 @@ if "%choice%"=="1" (
     echo 正在尝试同步时间...
     echo\
     w32tm /resync >nul 2>&1
-    if %errorlevel% == 0 (
+    if !errorlevel! == 0 (
         echo 时间同步成功！可访问 https://time.is 以检测时间是否已同步，然后重新尝试运行Blender/留影机插件。
     ) else (
         echo 时间同步失败，可能是因为没有正确配置NTP时间服务器或其他错误。
@@ -827,7 +824,7 @@ if "%choice%"=="1" (
     echo 你可以优先检查设备主板BIOS的电池电量（通常为CR2032，电压低于2V说明电池电量耗尽）。
     echo 如果电压过低，请尝试更换全新的电池，并在BIOS中设置正确的时间，然后使用本功能同步系统时间。
     echo\
-    echo 如果更换电池后故障依旧/当前设备因相关条款无法自行更换，请联系你的设备制造商/第三方维修机构寻求帮助。
+    echo 如果更换电池后故障依旧/当前设备因相关条款无法自行更换，请联系Blender/留影机插件开发者/你的设备制造商/第三方维修机构寻求帮助。
     echo\
     echo ========================
     echo\
