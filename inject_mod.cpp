@@ -16,6 +16,7 @@
 #include <TlHelp32.h>
 #include <fcntl.h>
 #include <io.h>
+#include <conio.h>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
@@ -203,17 +204,78 @@ int wmain(int argc, wchar_t* argv[])
     // Get the string table for current language
     const language_strings* lang = get_language_strings();
 
+
+    const wchar_t* name = nullptr;
+    bool is_shortcut = false;
     if (argc != 2)
     {
         wprintf(lang->usage, argv[0]);
         return 0;
     }
-
-    const wchar_t* name = wcsrchr(argv[1], L'\\');
-    if (name)
-        name++; // Path separator in the argument, skip to the file name part
-    else
-        name = argv[1]; // No path separator in the argument, this is a file name
+    // 参数数量为2，处理快捷参数和原有方式
+    if (_wcsicmp(argv[1], L"-YS") == 0) { name = L"YuanShen.exe"; is_shortcut = true; }
+    else if (_wcsicmp(argv[1], L"-GI") == 0) { name = L"GenshinImpact.exe"; is_shortcut = true; }
+    else if (_wcsicmp(argv[1], L"-HSR") == 0) { name = L"StarRail.exe"; is_shortcut = true; }
+    else if (_wcsicmp(argv[1], L"-ZZZ") == 0) { name = L"ZenlessZoneZero.exe"; is_shortcut = true; }
+    else if (_wcsicmp(argv[1], L"-BH3") == 0) { name = L"BH3.exe"; is_shortcut = true; }
+    else {
+        const wchar_t* temp = wcsrchr(argv[1], L'\\');
+        if (temp)
+            name = temp + 1;
+        else
+            name = argv[1];
+    }
+    // 快捷参数完整性检测
+    if (is_shortcut)
+    {
+        WCHAR root_dir[MAX_PATH] = {0};
+        GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
+        WCHAR* last_slash = wcsrchr(root_dir, L'\\');
+        if (last_slash) *last_slash = L'\0';
+        const wchar_t* check_files[] = {
+            L"inject.exe",
+            L"ReShade64.dll",
+            L"InjectResource",
+            L"LauncherResource",
+            L"reshade-shaders",
+            L"Presets",
+            L"convert_encoding.exe",
+            L"LauncherResource\\INIBuild.exe",
+            L"InjectResource\\Fonts\\MiSans-Bold.ttf"
+        };
+        bool missing = false;
+        for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
+        {
+            WCHAR full_path[MAX_PATH*2] = {0};
+            swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
+            if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
+            {
+                missing = true;
+                break;
+            }
+        }
+        if (missing)
+        {
+            LANGID langID = GetUserDefaultUILanguage();
+            if (PRIMARYLANGID(langID) == LANG_CHINESE)
+            {
+                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
+                {
+                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X AXBro X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n按下任意键后注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
+                }
+                else
+                {
+                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X AXBro X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓縮包，並解壓全部文件。\n\n");
+                }
+            }
+            else
+            {
+                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X AXBro X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nPress any key to exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
+            }
+            _getwch();
+            return 0;
+        }
+    }
 
     wprintf(lang->waiting, name);
 
@@ -266,14 +328,45 @@ int wmain(int argc, wchar_t* argv[])
     if (last_slash) *last_slash = L'\0';
     swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
 
-    if (GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
-        // There is no ReShade.ini in the target directory. Try copying
+    // Check if both tool files exist
+    WCHAR inibuild_path[MAX_PATH] = { 0 };
+    WCHAR convert_path[MAX_PATH] = { 0 };
+    swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", injector_dir);
+    swprintf_s(convert_path, L"%s\\convert_encoding.exe", injector_dir);
+    bool skip_ini_gen = false;
+    if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES || GetFileAttributesW(convert_path) == INVALID_FILE_ATTRIBUTES) {
+        skip_ini_gen = true;
+    }
+
+    if (!skip_ini_gen && GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
+        // ReShade.ini does not exist, run two programs to generate it first
+        const wchar_t* tools[] = {
+            L"LauncherResource\\INIBuild.exe",
+            L"convert_encoding.exe"
+        };
+
+        for (int i = 0; i < 2; ++i) {
+            WCHAR tool_path[MAX_PATH] = { 0 };
+            swprintf_s(tool_path, L"%s\\%s", injector_dir, tools[i]);
+
+            STARTUPINFOW si = { sizeof(si) };
+            PROCESS_INFORMATION pi = {};
+
+            // Start the program
+            if (CreateProcessW(tool_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+                WaitForSingleObject(pi.hProcess, INFINITE);
+                CloseHandle(pi.hProcess);
+                CloseHandle(pi.hThread);
+            }
+        }
+
+        // Try copying ReShade.ini again
         if (CopyFileW(source_ini, target_ini, FALSE)) {
             wprintf(lang->copy_ini_success);
         } else {
             wprintf(lang->copy_ini_fail, GetLastError());
         }
-    } else {
+    } else if (!skip_ini_gen) {
         wprintf(lang->ini_exists);
     }
 
@@ -285,6 +378,7 @@ int wmain(int argc, wchar_t* argv[])
     if (remote_process == nullptr)
     {
         wprintf(lang->failed_open);
+        wprintf(L"\nDebug: GetLastError: %lu\n", GetLastError());
         return GetLastError();
     }
 
