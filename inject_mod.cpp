@@ -247,6 +247,38 @@ int wmain(int argc, wchar_t* argv[])
         wprintf(lang->invalid_param);
         return 0;
     }
+
+    // Blacklist of forbidden process names
+    const wchar_t* process_blacklist[] = {
+        L"explorer.exe",
+        L"cmd.exe",
+        L"powershell.exe",
+        L"conhost.exe",
+        L"taskmgr.exe",
+        L"svchost.exe",
+        L"lsass.exe",
+        L"csrss.exe",
+        L"wininit.exe",
+        L"winlogon.exe",
+        L"Client-Win64-Shipping.exe"
+    };
+    const int blacklist_count = sizeof(process_blacklist) / sizeof(process_blacklist[0]);
+    for (int i = 0; i < blacklist_count; ++i) {
+        if (_wcsicmp(name, process_blacklist[i]) == 0) {
+            LANGID langID = GetUserDefaultUILanguage();
+            if (PRIMARYLANGID(langID) == LANG_CHINESE) {
+                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED) {
+                    wprintf(L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n按下任意键退出。\n", name);
+                } else {
+                    wprintf(L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n按下任意鍵退出。\n", name);
+                }
+            } else {
+                wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again. \n\nPress any key to exit. \n", name);
+            }
+            _getwch();
+            return 0;
+        }
+    }
     // Quick parameter integrity check
     if (is_shortcut)
     {
@@ -287,7 +319,7 @@ int wmain(int argc, wchar_t* argv[])
                 }
                 else
                 {
-                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X AXBro X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓縮包，並解壓全部文件。\n\n");
+                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X AXBro X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
                 }
             }
             else
