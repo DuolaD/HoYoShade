@@ -11,7 +11,7 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "LauncherResource" "reshade-shaders" "Presets" "convert_encoding.exe" "LauncherResource\INIBuild.exe" "InjectResource\Fonts\MiSans-Bold.ttf")
+set files_to_check=("inject.exe" "ReShade64.dll" "InjectResource" "LauncherResource" "reshade-shaders" "Presets" "LauncherResource\INIBuild.exe" "InjectResource\Fonts\MiSans-Bold.ttf")
 
 setlocal enabledelayedexpansion
 cd /d "%~dp0"
@@ -52,7 +52,6 @@ if exist "%filepath%" (
 ) else (
     cls
     start "" /wait /b ".\LauncherResource\INIBuild.exe"
-    start "" "convert_encoding.exe"
     :FileCheck
     cls
     echo Welcome to use HoYoShade starter!
@@ -426,7 +425,6 @@ set /p "content=Type the number here:"
 
 if "%content%" == "1" (
     start "" /wait ".\LauncherResource\INIBuild.exe"
-    start "" "convert_encoding.exe"
     :File_Reset
     cls
     echo Welcome to use HoYoShade starter!

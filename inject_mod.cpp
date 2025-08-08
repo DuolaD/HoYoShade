@@ -293,7 +293,6 @@ int wmain(int argc, wchar_t* argv[])
             L"LauncherResource",
             L"reshade-shaders",
             L"Presets",
-            L"convert_encoding.exe",
             L"LauncherResource\\INIBuild.exe",
             L"InjectResource\\Fonts\\MiSans-Bold.ttf"
         };
@@ -386,7 +385,6 @@ int wmain(int argc, wchar_t* argv[])
     WCHAR inibuild_path[MAX_PATH] = { 0 };
     WCHAR convert_path[MAX_PATH] = { 0 };
     swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", injector_dir);
-    swprintf_s(convert_path, L"%s\\convert_encoding.exe", injector_dir);
     bool skip_ini_gen = false;
     if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES || GetFileAttributesW(convert_path) == INVALID_FILE_ATTRIBUTES) {
         skip_ini_gen = true;
@@ -396,7 +394,6 @@ int wmain(int argc, wchar_t* argv[])
         // ReShade.ini does not exist, run two programs to generate it first
         const wchar_t* tools[] = {
             L"LauncherResource\\INIBuild.exe",
-            L"convert_encoding.exe"
         };
 
         for (int i = 0; i < 2; ++i) {
