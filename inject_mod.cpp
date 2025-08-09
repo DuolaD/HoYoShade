@@ -383,10 +383,9 @@ int wmain(int argc, wchar_t* argv[])
 
     // Check if both tool files exist
     WCHAR inibuild_path[MAX_PATH] = { 0 };
-    WCHAR convert_path[MAX_PATH] = { 0 };
     swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", injector_dir);
     bool skip_ini_gen = false;
-    if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES || GetFileAttributesW(convert_path) == INVALID_FILE_ATTRIBUTES) {
+    if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES) {
         skip_ini_gen = true;
     }
 
