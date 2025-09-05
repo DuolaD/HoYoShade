@@ -48,43 +48,6 @@
 ## 〢 视频展示
 
 <div align="center">
-  <h1 class="header">来自 阿向菌|AXBro</h1>
-  <h3>
-    Night,Diluc 雨夜，迪卢克实拍短片
-  </h3>
-</div>
-
-https://github.com/user-attachments/assets/a9c96088-66fe-4cb4-b189-d61c82eb3503
-
-<div align="center">
-
-点击按钮：<a href="https://www.youtube.com/watch?v=hNBKZw4eVBM"><img src="https://img.shields.io/badge/在YouTube观看-FF0000.svg?logo=youtube" /></a> <a href="https://www.bilibili.com/video/BV12u4y187mN"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU3nqayw"><img src="https://img.shields.io/badge/在抖音观看-000000.svg?logo=tiktok" /></a>
-
-</div>
-
-<div align="center">
-  <h3>
-    Amidst the tempest, a glimpse into the storm-swept realm of Inazuma. 于暴雨中 稻妻实机
-  </h3>
-</div>
-
-https://github.com/user-attachments/assets/968dc71c-5898-4472-a111-fa49d277a410
-
-<div align="center">
-  <h3>
-    The art of rendering. 渲染的艺术
-  </h3>
-</div>
-
-https://github.com/user-attachments/assets/9143f492-d39e-4515-8ed6-c79924aa0cc5
-
-<div align="center">
-
-点击按钮：<a href="https://www.bilibili.com/video/BV1qm411D7TU"><img src="https://img.shields.io/badge/在哔哩哔哩观看-FFFFFF.svg?logo=bilibili" /></a> <a href="https://v.douyin.com/iU37P4aK"></a>
-
-</div>
-
-<div align="center">
   <h1 class="header">来自 白枝雪鸽|HoYo_Siraeda</h1>
   <h3>
     Just Another Day at the Section 6 | Fan-made short video | Zenless Zone Zero 绝区零同人实机短片 | 只是对空六课再平凡不过的一天...
@@ -363,15 +326,6 @@ HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改�
 > 请注意，在一般情况下，大多数的FPS解锁器都会要求你不要在使用FPS解锁器的情况下更改游戏中的帧率设置。
 
 ## 〢 截图展示
-<div align="center">
-  <h1 class="header">来自 阿向菌|AXBro</h1>
-</div>
-
-<div id="images">
-  <img src="Readme.md-image/AXBro-1.jpg" alt="Screenshot1">
-  <img src="Readme.md-image/AXBro-2.jpg" alt="Screenshot2">
-  <img src="Readme.md-image/AXBro-3.jpg" alt="Screenshot3">
-</div>
 
 <div align="center">
   <h1 class="header">由HoYoShade用户拍摄</h1>
@@ -404,27 +358,6 @@ HoYoShade集成了一些基于官方ReShade的开源项目并对其进行修改�
 <div align="center">
     <table>
     <tr>
-            <td>
-                <h3>阿向菌|AXBro</h3>
-                <a href="https://www.youtube.com/@AXBroCN">
-                    <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
-                <h6>创作内容：</h6>
-                <a href="https://www.youtube.com/watch?v=hNBKZw4eVBM">Rainy Night,Diluc_雨夜，迪卢克实拍短片</a><br>
-		<a href="https://v.douyin.com/iU376NNM">Amidst the tempest, a glimpse into the storm-swept realm of Inazuma. 于暴雨中 稻妻实机</a><br>
-		<a href="https://v.douyin.com/iU37P4aK">The art of rendering. 渲染的艺术</a><br>
-		<a href="Readme.md-image/AXBro-1.jpg">截图展示1</a><br>
-		<a href="Readme.md-image/AXBro-2.jpg">截图展示2</a><br>
-		<a href="Readme.md-image/AXBro-3.jpg">截图展示3</a><br>
-                </a>
-            </td>
-            <td>
-        <a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB个人主页</a><br>
-        <a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
-        <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok频道</a><br>
-        <a href="https://space.bilibili.com/436127696">哔哩哔哩频道</a>
-        </td>
-        </tr>
-        <tr>
 	<td>
   	<h3>白枝雪鸽|HoYo_Siraeda</h3>
 		<a href="https://space.bilibili.com/375807068">
@@ -564,16 +497,16 @@ OpenHoYoShade[All]
 	</tr>
         <tr>
             <td>
-                <h3>阿向菌|AXBro</h3>
-                <a href="https://www.youtube.com/@AXBroCN">
-                    <img src="Readme.md-image/AXBro-Logo.jpg" width="70" style="border-radius: 50%" alt="AXBro">
+                <h3>渊麒|ZelbertYQ</h3>
+                <a href="https://space.bilibili.com/435289515">
+                    <img src="Readme.md-image/ZelbertYQ-Logo.jpg" width="70" style="border-radius: 50%" alt="ZelbertYQ">
                 </a>
             </td>
             <td>
-		<a href="https://www.hoyolab.com/accountCenter/postList?id=368916437">HoYoLAB个人主页</a><br>
-		<a href="https://www.youtube.com/@AXBroCN">YouTube频道</a><br>
-                <a href="https://www.tiktok.com/@axbrocn?_r=1&_d=eaij8279i83mcl&sec_uid=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&share_author_id=7293608271650030634&sharer_language=en&source=h5_m&u_code=eaij8b3012e2l5&ug_btm=b8727%2Cb0&sec_user_id=MS4wLjABAAAAv9yK1VQOks5sB_wbFyXogwDO909TuxhAZ-e-qnpFlMiZ1B4FTIGrh9jdg5KTsuMr&utm_source=copy&social_share_type=4&utm_campaign=client_share&utm_medium=ios&tt_from=copy&user_id=7293608271650030634&share_link_id=9E0D9FA7-E376-4EAA-B1A1-21F25EE8A746&share_app_id=1233">TikTok频道</a><br>
-		<a href="https://space.bilibili.com/436127696">哔哩哔哩频道</a>
+    <a href="https://github.com/ZelbertYQ">GitHub个人主页</a><br>
+		<a href="https://space.bilibili.com/435289515">哔哩哔哩频道</a>
+    <a href="https://v.douyin.com/gah7b4ZwQqo">抖音频道</a>
+    <a href="https://www.xiaohongshu.com/user/profile/660ad54b000000001701a61c">小红书频道</a>
             </td>
         </tr>
         <tr>

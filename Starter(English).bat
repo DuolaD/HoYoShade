@@ -29,7 +29,7 @@ if %missing_file% equ 1 (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V2.X.X Stable - NextVersion
-    echo Developer:DuolaDStudio X AXBro X Ex_M
+    echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo\
     echo We have detected that the necessary files for £¨Open£©HoYoShade framework injection are missing.
     echo\
@@ -57,7 +57,7 @@ if exist "%filepath%" (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V2.X.X Stable - NextVersion
-    echo Developer:DuolaDStudio X AXBro X Ex_M
+    echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo\
     echo Congratulations£¡You have successfully installed HoYoShade£¡
     echo We have detected that this is your first time using this mod. Reshade.ini has been generated in the root directory of the mod.
@@ -91,7 +91,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo Current injection list: Public client injection list
 echo\
@@ -252,7 +252,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo If you need to check for version updates, you can visit our repository to see if there are any new released versions.
 echo Note! Developer options are only for debugging/error checking purposes. 
@@ -307,7 +307,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo Note! Developer options are only for debugging/error checking purposes. 
 echo Unless developers explicitly ask you to do so, or you are very clear about what you are doing, please do not use it lightly!
@@ -342,7 +342,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo Note! This function is only for developers to test new games. This means there may be unknown risks/Bugs.
 echo Unless developers explicitly ask you to do so, or you are very clear about what you are doing, 
@@ -371,7 +371,7 @@ cls
 echo HoYoShade
 echo HoYo it,Great it.
 echo\
-echo DuolaDStudio X AXBro x Ex_M
+echo DuolaDStudio X ZelbertYQ x Ex_M
 echo Joint contributions.
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
@@ -389,7 +389,7 @@ echo -DuolaDStudio Hong Kong Ltd.
 echo   ¡ª¡ªDuolaD[RE adaptation/major version update development/launcher/presets]
 echo   ¡ª¡ªÁÕÄÝÌØLynetteNotFound[HoYoShade minor version update development/maintenance.]
 echo Ex_M[Technical support/guidance/GUI develop]
-echo AXBro[Promotion/technical support-oriented]
+echo ZelbertYQ[Documentation Website Technical Support]
 echo\
 echo Thanks£º
 echo -CYTeam[HoYoShade partners/Microsoft enterprise storage plan provision/dynamic to static linking solutions]
@@ -405,7 +405,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo Note! Generally, you only need to reset the ReShade.ini configuration file in the following two situations:
 echo - You moved the mod directory, or you renamed a folder within it.
@@ -430,7 +430,7 @@ if "%content%" == "1" (
     echo Welcome to use HoYoShade starter!
     echo\
     echo Mod Version:V2.X.X Stable - NextVersion
-    echo Developer:DuolaDStudio X AXBro X Ex_M
+    echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo\
     echo Reset successful! The replaced ReShade.ini after the reset is now in the mod's root directory, replacing the old version of ReShade.ini.
     echo After the reset is complete, you will need to delete the ReShade.ini configuration file that you copied to the game process root directory,
@@ -457,7 +457,7 @@ cls
 echo Welcome to use HoYoShade starter!
 echo\
 echo Mod Version:V2.X.X Stable - NextVersion
-echo Developer:DuolaDStudio X AXBro X Ex_M
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\

@@ -314,16 +314,16 @@ int wmain(int argc, wchar_t* argv[])
             {
                 if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
                 {
-                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X AXBro X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n按下任意键后注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
+                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n按下任意键后注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
                 }
                 else
                 {
-                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X AXBro X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
                 }
             }
             else
             {
-                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X AXBro X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nPress any key to exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
+                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nPress any key to exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
             }
             _getwch();
             return 0;
