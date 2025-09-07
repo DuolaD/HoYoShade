@@ -173,7 +173,7 @@ If you still can't understand what are the different between OpenHoYoShade and H
 | **ReShade** | Yes | Yes |
 | **All the necessary files to inject ReShade into all miHoYo/HoYoverse games** | Yes | Yes |
 | **Program source code** | Yes | No |
-| **Reshade effect library(Contains Addons)** | No(Need to prepare yourself) | Yes |
+| **Reshade effect library(Contains Addons)** | No(Need to prepare yourself) | No(Need to prepare yourself) |
 | **Presets** | No(Need to prepare yourself) | Yes |
 | **Who needs them?** | Secondary developer | Gamer |
 
