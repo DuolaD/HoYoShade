@@ -31,6 +31,7 @@ if %missing_file% equ 1 (
     echo\
     echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+    echo 由[幻港之蝶]注入内核驱动
     echo\
     echo 我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。
     echo\
@@ -63,6 +64,7 @@ if exist "%filepath%" (
     echo\
     echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+    echo 由[幻港之蝶]注入内核驱动
     echo\
     echo 恭喜！你已成功安装HoYoShade！
     echo 我们检测到你是第一次使用本模组，Reshade.ini现已生成至模组根目录中。
@@ -96,6 +98,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 当前注入列表：公开客户端注入列表
 echo\
@@ -238,6 +241,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 如果你需要检查版本更新，可以去访问我们的仓库查看是否有发行更新版本
 echo 注意！开发者选项仅用于调试/检测错误需要。除非开发者明确要求你这样做，或者你很清楚知道自己在做什么，否则请勿轻易使用！
@@ -293,6 +297,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 注意！开发者选项仅用于调试/检测错误需要。除非开发者明确要求你这样做，或者你很清楚知道自己在做什么，否则请勿轻易使用！
 echo\
@@ -327,6 +332,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 注意！此功能仅供开发者测试新游戏使用。这意味着可能会存在未知风险/Bug。
 echo 除非开发者明确要求你这样做，或者你很清楚知道自己在做什么，否则请不要擅自使用此功能注入Reshade至其它游戏内。
@@ -391,6 +397,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 注意！一般只有以下两种情况，你才需要重置ReShade.ini配置文件：
 echo ·你移动了模组目录，或者你对目录中的文件夹进行了重命名操作。
@@ -414,6 +421,7 @@ if "%content%" == "1" (
     echo\
     echo 模组版本：V2.X.X Stable - NextVersion
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+    echo 由[幻港之蝶]注入内核驱动
     echo\
     echo 重置成功！重置后的ReShade.ini现已替换模组根目录中的旧版ReShade.ini。
     echo 你需要重新删除已经复制到游戏进程根目录下的ReShade.ini配置文件，否则HoYoShade将无法按照预期正常工作。
@@ -445,6 +453,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 当前注入列表：测试服客户端注入列表
 echo\
@@ -608,6 +617,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 我们检测到当前你可能不在中国大陆/港澳台/新加坡地区，
 echo 当前我们检测到你的所在国家/地区为：%country_code% 。
@@ -639,6 +649,7 @@ echo 欢迎使用HoYoShade启动器！
 echo\
 echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入内核驱动
 echo\
 if "%missing_curl%" == "1" (
     echo 我们检测到当前操作系统中并不包含curl组件，这会导致地区检测功能无法工作。
