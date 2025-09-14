@@ -279,6 +279,30 @@ int wmain(int argc, wchar_t* argv[])
             return 0;
         }
     }
+
+
+    while (true) {
+        bool found = false;
+        DWORD found_pid = 0;
+        const scoped_handle snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+        PROCESSENTRY32W process = { sizeof(process) };
+        for (BOOL next = Process32FirstW(snapshot, &process); next; next = Process32NextW(snapshot, &process)) {
+            if (_wcsicmp(process.szExeFile, name) == 0) {
+                found = true;
+                found_pid = process.th32ProcessID;
+                break;
+            }
+        }
+        if (!found) break;
+        // Try to kill process
+        HANDLE hProc = OpenProcess(PROCESS_TERMINATE, FALSE, found_pid);
+        if (hProc) {
+            TerminateProcess(hProc, 0);
+            CloseHandle(hProc);
+        }
+        Sleep(1); // Sleep a bit to not overburden the CPU
+    }
+
     // Quick parameter integrity check
     if (is_shortcut)
     {
