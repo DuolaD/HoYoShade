@@ -124,12 +124,6 @@ echo\
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :YS_CheckProcess
-    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM YuanShen.exe /F >nul 2>&1
-        goto YS_CheckProcess
-    )
     cls
     echo 你选择的注入目标为:原神（中国大陆/哔哩哔哩 公开/Devkit/Beta/创作者体验服客户端）
     echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
@@ -150,12 +144,6 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%content%" == "3" (
-    :GI_CheckProcess
-    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM GenshinImpact.exe /F >nul 2>&1
-        goto GI_CheckProcess
-    )
     cls
     echo 你选择的注入目标为:原神（国际服/Epic 公开/Beta/创作者体验服客户端）
     echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
@@ -486,12 +474,6 @@ echo\
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :GICBT_CheckProcess
-    tasklist /FI "IMAGENAME eq Genshin.exe" | find /i "Genshin.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM Genshin.exe /F >nul 2>&1
-        goto GICBT_CheckProcess
-    )
     cls
     echo 你选择的注入目标为:原神（通用 国际服 DevKit/公测前内测（Beta）客户端）
     echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
@@ -708,12 +690,6 @@ if "%choice%"=="1" (
         pause
         goto blender_hook_menu
     )
-    :YSBL_CheckProcess
-    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM YuanShen.exe /F >nul 2>&1
-        goto YSBL_CheckProcess
-    )
     echo 你选择的注入目标为:原神（通用 中国大陆/哔哩哔哩 公开客户端）
     echo\
     echo ReShade和Blender/留影机插件注入器现已启动。请不要关闭本窗口。
@@ -731,12 +707,6 @@ if "%choice%"=="1" (
         echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
-    )
-    :GIBL_CheckProcess
-    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM GenshinImpact.exe /F >nul 2>&1
-        goto GIBL_CheckProcess
     )
     echo 你选择的注入目标为:原神（通用 国际服/Epic 公开 客户端）
     echo\

@@ -119,12 +119,6 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :YS_CheckProcess
-    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM YuanShen.exe /F >nul 2>&1
-        goto YS_CheckProcess
-    )
     echo The injection target you selected is:Genshin Impact £¨CN/BiliBil Public£¨REL£©/Devkit/Beta/Creator Experience Client£©
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
@@ -146,12 +140,6 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%content%" == "3" (
-    :GI_CheckProcess
-    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM GenshinImpact.exe /F >nul 2>&1
-        goto GI_CheckProcess
-    )
     cls
     echo The injection target you selected is:Genshin Impact £¨Global/Epic Games Store Public£¨REL£©/Beta/Creator Experience Client£©
     echo The injector has now started.
@@ -489,12 +477,6 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :GICBT_CheckProcess
-    tasklist /FI "IMAGENAME eq Genshin.exe" | find /i "Genshin.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM Genshin.exe /F >nul 2>&1
-        goto GICBT_CheckProcess
-    )
     cls
     echo The injection target you selected is:Genshin Impact £¨Universal Global Devkit/Beta Client Before Public£¨REL£©£©
     echo The injector has now started.

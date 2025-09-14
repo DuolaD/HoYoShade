@@ -126,12 +126,6 @@ echo\
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :YS_CheckProcess
-    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM YuanShen.exe /F >nul 2>&1
-        goto YS_CheckProcess
-    )
     cls
     echo 你選擇的注入目標爲:原神（中國大陸/嗶哩嗶哩 公開/Devkit/Beta/創作者體驗服客戶端）
     echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
@@ -152,12 +146,6 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%content%" == "3" (
-    :GI_CheckProcess
-    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM GenshinImpact.exe /F >nul 2>&1
-        goto GI_CheckProcess
-    )
     cls
     echo 你選擇的注入目標爲:原神（國際服/Epic 公開/Beta/創作者體驗服客戶端）
     echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
@@ -488,12 +476,6 @@ echo\
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    :GICBT_CheckProcess
-    tasklist /FI "IMAGENAME eq Genshin.exe" | find /i "Genshin.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM Genshin.exe /F >nul 2>&1
-        goto GICBT_CheckProcess
-    )
     cls
     echo 你選擇的注入目標爲:原神（通用 國際服 DevKit/公測前內測（Beta）客戶端）
     echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
@@ -704,12 +686,6 @@ echo\
 if "%choice%"=="1" (
     goto ini_Reset
 ) else if "%choice%"=="2" (
-    :YSBL_CheckProcess
-    tasklist /FI "IMAGENAME eq YuanShen.exe" | find /i "YuanShen.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM YuanShen.exe /F >nul 2>&1
-        goto YSBL_CheckProcess
-    )
     echo 你選擇的注入目標爲:原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
     echo\
     echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
@@ -722,12 +698,6 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
-    :GIBL_CheckProcess
-    tasklist /FI "IMAGENAME eq GenshinImpact.exe" | find /i "GenshinImpact.exe" >nul
-    if not errorlevel 1 (
-        taskkill /IM GenshinImpact.exe /F >nul 2>&1
-        goto GIBL_CheckProcess
-    )
     echo 你選擇的注入目標爲:原神（通用 國際服/Epic 公開 客戶端）
     echo\
     echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
