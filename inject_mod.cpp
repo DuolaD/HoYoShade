@@ -15,7 +15,6 @@
 
 /*
 * Project:The butterfly of Hong Kong
-* Version: 25.9.14 DEV
 */
 
 /*
@@ -38,6 +37,7 @@
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
+#pragma comment(lib, "User32.lib")
 
 // Structure for multilingual support
 struct language_strings
@@ -223,6 +223,15 @@ static DWORD WINAPI loading_thread_func(loading_data* arg)
 
 int wmain(int argc, wchar_t* argv[])
 {
+    if (GetConsoleWindow() == NULL) {
+        AllocConsole();
+        FILE* fp;
+        freopen_s(&fp, "CONOUT$", "w", stdout);
+        freopen_s(&fp, "CONOUT$", "w", stderr);
+        freopen_s(&fp, "CONIN$", "r", stdin);
+    }
+    ShowWindow(GetConsoleWindow(), SW_SHOW);
+
     // Set console output to Unicode mode
     _setmode(_fileno(stdout), _O_U16TEXT);
     _setmode(_fileno(stderr), _O_U16TEXT);
