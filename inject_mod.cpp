@@ -9,6 +9,24 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+/*
+* This source code is modded version. If you want to use the original version, please visit: https://github.com/crosire/reshade/blob/main/tools/injector.cpp
+*/
+
+/*
+* Project:The butterfly of Hong Kong
+* Version: 25.9.14 DEV
+*/
+
+/*
+* ⌈The butterfly of Hong Kong⌋ is a official ReShade injector-based injector. Depth development for all miHoYo/HoYoverse Corporation public/non-public game client.
+* Developers: DuolaDStudio X ZelbertYQ X Ex_M
+* Based on BSD-3-Clause license. 
+* 
+* Re-distribution in the name of the original author without the written consent of the main contributor, or failure to comply with the BSD-3 open source agreement,
+* may result in the relevant person receiving a warning under the US DMCA or applicable laws in other countries and regions.
+*/
+
 #include <stdio.h>
 #include <Windows.h>
 #include <sddl.h>
