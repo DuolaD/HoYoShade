@@ -473,9 +473,10 @@ echo [1]重置模組根目錄中的ReShade.ini
 echo [2]注入至原神（通用 國際服 DevKit/公測前內測（Beta）客戶端）
 echo [3]注入至絕區零（通用 公測前內測（Beta）客戶端）
 echo [4]注入至絕區零（通用 公測後內測（Beta）/創作者體驗服客戶端）
-echo [5]切換至公開客戶端注入列表
-echo [6]其它選項
-echo [7]退出程序
+echo [5]注入至崩壞：因緣精靈（通用 中國大陸/國際服 CB1 客戶端）
+echo [6]切換至公開客戶端注入列表
+echo [7]其它選項
+echo [8]退出程序
 
 echo\
 set /p "content=在此輸入選項前面的數字："
@@ -536,10 +537,24 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
     exit
 ) else if "%content%" == "5" (
-    goto menu
+    cls
+    echo 你選擇的注入目標爲:崩壞：因緣精靈（通用 中國大陸/國際服 CB1 客戶端）
+    echo 注入器現已啓動，你現在可以使用啓動器啓動遊戲了。注入器會一併注入。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口後重新運行啓動器重新選擇即可。
+    echo\
+    echo 重要：你必須要使用官方向你提供的遊戲啓動器來啓動遊戲，
+    echo 不能直接雙擊運行進程/進程快捷方式以啓動遊戲。否則可能會導致注入失敗。
+    echo 如果官方未向你提供啓動器/你沒有啓動器，你可能需要向開發者獲取補丁方可注入。
+    echo 此補丁爲閉源補丁且並不內置於HoYoShade中，你無法通過更改HoYoShade源代碼來實現注入功能。
+    echo 有關更多信息，請聯繫開發者 哆啦D夢DuolaD （https://github.com/DuolaD） 以獲取更多信息。
+    echo\
+    start "" /wait /b inject.exe NexusAnima.exe
+    exit
 ) else if "%content%" == "6" (
-    goto other
+    goto menu
 ) else if "%content%" == "7" (
+    goto other
+) else if "%content%" == "8" (
     exit
 ) else (
     echo\
