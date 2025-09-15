@@ -116,17 +116,20 @@ CB/CBT(Close Beta Test)Client:
   
 | Client | Tested | Support | Game Version restrictions |
 | --- | --- | --- | --- |
-| **Genshin Impact/YuanShen(OS Part of Oversea CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Genshin Impact/YuanShen(CN CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Genshin Impact/YuanShen(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Honkai Impact 3rd/BH3(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients | - |
-| **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes | Unlimited |
-| **Zenless Zone Zero/ZZZ(CN/OS CB Client After Public Beta)(X.X.X/X.X.X0)** | Tested on some leaked clients | Tested and supported in some leaked clients | - | 
+| **Genshin Impact/YuanShen(OS Part of Oversea CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Genshin Impact/YuanShen(CN CB Client Before Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Genshin Impact/YuanShen(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Honkai Impact 3rd/BH3(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Honkai: Star Rail/HSR(CN/OS CB Client After Public Beta)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Zenless Zone Zero/ZZZ(CN/OS 1st CB)(0.10)** | Yes | Yes* | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 2nd CB)(0.20)** | Yes | Yes* | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN Only 3rd CB)(0.3X)** | Yes | Yes* | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS 4th CB)(0.3X)** | Yes | Yes* | Unlimited |
+| **Zenless Zone Zero/ZZZ(CN/OS CB Client After Public Beta)(X.X.X/X.X.X0)** | Tested on some leaked clients | Tested and supported in some leaked clients* | - |
+| **Honkai: Nexus Anima(CN/OS CB1 Client)** | Yes | Yes* | Unlimited |
+
+*:You may need to obtain additional patches from the developer before you can inject.
   
 ## 〢 Sources
 
