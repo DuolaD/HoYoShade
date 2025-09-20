@@ -91,8 +91,6 @@ if %missing_reshade_config% equ 1(
     goto menu
 )
 
-start "" /wait /b ".\LauncherResource\INIBuild.exe"
-
 :menu
 title HoYoShade†™„ÓÆ÷
 cls
