@@ -323,6 +323,23 @@ int wmain(int argc, wchar_t* argv[])
         return 0;
     }
 
+    // 文件完整性自检通过后，调用一次 LauncherResource\INIBuild.exe
+    {
+        WCHAR inibuild_path[MAX_PATH] = {0};
+        WCHAR root_dir_copy[MAX_PATH] = {0};
+        wcscpy_s(root_dir_copy, root_dir);
+        swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", root_dir_copy);
+        if (GetFileAttributesW(inibuild_path) != INVALID_FILE_ATTRIBUTES) {
+            STARTUPINFOW si = { sizeof(si) };
+            PROCESS_INFORMATION pi = {};
+            if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+                WaitForSingleObject(pi.hProcess, INFINITE);
+                CloseHandle(pi.hProcess);
+                CloseHandle(pi.hThread);
+            }
+        }
+    }
+
     // Blacklist of forbidden process names
     const wchar_t* process_blacklist[] = {
         L"explorer.exe",
@@ -470,7 +487,7 @@ int wmain(int argc, wchar_t* argv[])
 
     // Check and automatically copy ReShade.ini
     WCHAR target_ini[MAX_PATH] = { 0 };
-    WCHAR source_ini[MAX_PATH] = { 0 };
+
     swprintf_s(target_ini, L"%s\\ReShade.ini", process_dir);
 
     // Get the injector root directory
@@ -478,6 +495,7 @@ int wmain(int argc, wchar_t* argv[])
     GetModuleFileNameW(nullptr, injector_dir, MAX_PATH);
     last_slash = wcsrchr(injector_dir, L'\\');
     if (last_slash) *last_slash = L'\0';
+    WCHAR source_ini[MAX_PATH] = { 0 };
     swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
 
     // Check if both tool files exist
