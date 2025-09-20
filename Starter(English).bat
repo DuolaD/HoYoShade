@@ -48,11 +48,14 @@ if %missing_file% equ 1 (
 
 set "filepath=%~dp0Reshade.ini"
 
-if exist "%filepath%" ( 
-    goto menu
-) else (
+if not exist "%filepath%" ( 
+    set missing_reshade_config=1
+)
+
+start "" /wait /b ".\LauncherResource\INIBuild.exe"
+
+if %missing_reshade_config% equ 1(
     cls
-    start "" /wait /b ".\LauncherResource\INIBuild.exe"
     :FileCheck
     cls
     echo Welcome to use HoYoShade starter!
