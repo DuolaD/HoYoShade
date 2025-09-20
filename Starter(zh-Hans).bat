@@ -47,10 +47,6 @@ if %missing_file% equ 1 (
     exit
 )
 
-if exist "%~dp0loader.exe.lnk" (
-    ren "%~dp0loader.exe.lnk" "ys_loader.exe.lnk"
-)
-
 set "filepath=%~dp0Reshade.ini"
 
 if exist "%filepath%" (
