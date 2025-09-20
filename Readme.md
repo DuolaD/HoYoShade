@@ -390,7 +390,7 @@ Thank you to all the collaborators for their dedication to the project!
             <td>
                 <h3>渊麒|ZelbertYQ</h3>
                 <a href="https://space.bilibili.com/435289515">
-                    <img src="Readme.md-image/ZelbertYQ-Logo.jpg" width="70" style="border-radius: 50%" alt="ZelbertYQ">
+                    <img src="https://avatars.githubusercontent.com/u/116244982?v=4" width="70" style="border-radius: 50%" alt="ZelbertYQ">
                 </a>
             </td>
             <td>
