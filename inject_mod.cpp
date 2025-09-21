@@ -323,7 +323,7 @@ int wmain(int argc, wchar_t* argv[])
         return 0;
     }
 
-    // 文件完整性自检通过后，调用一次 LauncherResource\INIBuild.exe
+    // After the file integrity self-check passes, call LauncherResource\INIBuild.exe once
     {
         WCHAR inibuild_path[MAX_PATH] = {0};
         WCHAR root_dir_copy[MAX_PATH] = {0};
