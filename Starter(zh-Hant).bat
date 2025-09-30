@@ -567,22 +567,22 @@ exit
 
 setlocal enabledelayedexpansion
 
-set ys_loader_exist=0
+set ys_client_exist=0
 set zzz_loader_exist=0
 
-if exist "%~dp0ys_loader.exe.lnk" (
-    set ys_loader_exist=1
+if exist "%~dp0ys_client.exe.lnk" (
+    set ys_client_exist=1
 )
 
 if exist "%~dp0zzz_loader.exe.lnk" (
     set zzz_loader_exist=1
 )
 
-if "!ys_loader_exist!"=="0" (
+if "!ys_client_exist!"=="0" (
     if "!zzz_loader_exist!"=="0" (
         set blender_recheck=0
-        echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
-        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名為 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk，然後再試一次。
+        echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_client.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名為 ys_client.exe.lnk 和/或 zzz_loader.exe.lnk，然後再試一次。
         pause
         goto menu
     )
@@ -595,7 +595,7 @@ if "!blender_recheck!"=="1" (
 set missing_curl=0
 
 set "current_dir=%~dp0"
-set "shortcut=%current_dir%ys_loader.exe.lnk"
+set "shortcut=%current_dir%ys_client.exe.lnk"
 set "target="
 for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"%shortcut%\").TargetPath"') do (
     set "target=%%i"
@@ -675,7 +675,7 @@ if "%missing_curl%" == "1" (
     echo\
 )
 echo 當前 Blender/留影機插件 注入器检测信息如下：
-if "!ys_loader_exist!"=="1" (
+if "!ys_client_exist!"=="1" (
     echo [原神版 Blender/留影機插件]：已加載
 ) else (
     echo [原神版 Blender/留影機插件]：未找到
@@ -719,7 +719,7 @@ if "%choice%"=="1" (
     echo\
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
     echo\
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
@@ -731,7 +731,7 @@ if "%choice%"=="1" (
     echo\
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口和Blender/留影機插件注入器窗口後重新運行啓動器重新選擇即可。
     echo\
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%choice%"=="4" (
@@ -753,7 +753,7 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe ZenlessZoneZero.exe
     exit
 ) else if "%choice%"=="5" (
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     goto blender_hook_menu
 ) else if "%choice%"=="6" (
     start "" "%~dp0zzz_loader.exe.lnk"

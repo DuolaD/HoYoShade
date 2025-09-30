@@ -565,22 +565,22 @@ exit
 
 setlocal enabledelayedexpansion
 
-set ys_loader_exist=0
+set ys_client_exist=0
 set zzz_loader_exist=0
 
-if exist "%~dp0ys_loader.exe.lnk" (
-    set ys_loader_exist=1
+if exist "%~dp0ys_client.exe.lnk" (
+    set ys_client_exist=1
 )
 
 if exist "%~dp0zzz_loader.exe.lnk" (
     set zzz_loader_exist=1
 )
 
-if "!ys_loader_exist!"=="0" (
+if "!ys_client_exist!"=="0" (
     if "!zzz_loader_exist!"=="0" (
         set blender_recheck=0
-        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.exe.lnk 和/或 zzz_loader.exe.lnk，然后再试一次。
+        echo 自检未通过，模组根目录下并没有找到名为 ys_client.exe.lnk 和/或 zzz_loader.exe.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.exe.lnk 和/或 zzz_loader.exe.lnk，然后再试一次。
         pause
         goto menu
     )
@@ -593,7 +593,7 @@ if "!blender_recheck!"=="1" (
 set missing_curl=0
 
 set "current_dir=%~dp0"
-set "shortcut=%current_dir%ys_loader.exe.lnk"
+set "shortcut=%current_dir%ys_client.exe.lnk"
 set "target="
 for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"%shortcut%\").TargetPath"') do (
     set "target=%%i"
@@ -673,7 +673,7 @@ if "%missing_curl%" == "1" (
     echo\
 )
 echo 当前 Blender/留影机插件 注入器检测信息如下：
-if "!ys_loader_exist!"=="1" (
+if "!ys_client_exist!"=="1" (
     echo [原神版 Blender/留影机插件]：已加载
 ) else (
     echo [原神版 Blender/留影机插件]：未找到
@@ -709,9 +709,9 @@ echo\
 if "%choice%"=="1" (
     goto ini_Reset
 ) else if "%choice%"=="2" (
-    if "!ys_loader_exist!"=="0" (
-        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
+    if "!ys_client_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -723,13 +723,13 @@ if "%choice%"=="1" (
     echo\
     echo 如果你选择了错误的注入目标，只需关闭此窗口和Blender/留影机插件注入器窗口后重新运行启动器重新选择即可。
     echo\
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
-    if "!ys_loader_exist!"=="0" (
-        echo 自检未通过，模组根目录下并没有找到名为 ys_loader.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_loader.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
+    if "!ys_client_exist!"=="0" (
+        echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10]刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -741,7 +741,7 @@ if "%choice%"=="1" (
     echo\
     echo 如果你选择了错误的注入目标，只需关闭此窗口和Blender/留影机插件注入器窗口后重新运行启动器重新选择即可。
     echo\
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%choice%"=="4" (
@@ -763,7 +763,7 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe ZenlessZoneZero.exe
     exit
 ) else if "%choice%"=="5" (
-    start "" "%~dp0ys_loader.exe.lnk"
+    start "" "%~dp0ys_client.exe.lnk"
     goto blender_hook_menu
 ) else if "%choice%"=="6" (
     start "" "%~dp0zzz_loader.exe.lnk"
