@@ -27,6 +27,7 @@
 */
 
 #include <stdio.h>
+#include <string>
 #include <Windows.h>
 #include <sddl.h>
 #include <AclAPI.h>
@@ -487,7 +488,6 @@ int wmain(int argc, wchar_t* argv[])
 
     // Check and automatically copy ReShade.ini
     WCHAR target_ini[MAX_PATH] = { 0 };
-
     swprintf_s(target_ini, L"%s\\ReShade.ini", process_dir);
 
     // Get the injector root directory
@@ -504,6 +504,85 @@ int wmain(int argc, wchar_t* argv[])
     bool skip_ini_gen = false;
     if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES) {
         skip_ini_gen = true;
+    }
+
+    // Corrected paths in ReShade.ini
+    if (!skip_ini_gen && GetFileAttributesW(target_ini) != INVALID_FILE_ATTRIBUTES) {
+        // Open ReShade.ini and read the contents
+        FILE* f = nullptr;
+        _wfopen_s(&f, target_ini, L"r, ccs=UTF-8");
+        if (f) {
+            wchar_t line[2048];
+            std::wstring new_content;
+            bool changed = false;
+            std::wstring injector_dir_w(injector_dir);
+            if (injector_dir_w.back() != L'\\') injector_dir_w += L'\\';
+            // Fields that need to be corrected
+            const wchar_t* keys[] = {
+                L"AddonPath=",
+                L"EffectSearchPaths=",
+                L"TextureSearchPaths=",
+                L"PresetPath=",
+                L"SavePath=",
+                L"EditorFont=",
+                L"Font=",
+                L"LatinFont="
+            };
+            const wchar_t* default_rel_paths[] = {
+                L"reshade-shaders\\Addons\\",
+                L"reshade-shaders\\Shaders\\**",
+                L"reshade-shaders\\Textures\\**",
+                L"Presets\\Mod OFF.ini",
+                L"ScreenShot\\",
+                L"InjectResource\\Fonts\\MiSans-Bold.ttf",
+                L"InjectResource\\Fonts\\MiSans-Bold.ttf",
+                L"InjectResource\\Fonts\\MiSans-Bold.ttf"
+            };
+            const int key_count = sizeof(keys)/sizeof(keys[0]);
+            while (fgetws(line, 2047, f)) {
+                std::wstring wline(line);
+                for (int i = 0; i < key_count; ++i) {
+                    size_t pos = wline.find(keys[i]);
+                    if (pos == 0) {
+                        size_t val_start = wcslen(keys[i]);
+                        std::wstring val = wline.substr(val_start);
+                        if (val.find(injector_dir_w) != 0) {
+                            // Correct directly to the standard path
+                            wline = std::wstring(keys[i]) + injector_dir_w + default_rel_paths[i];
+                            changed = true;
+                        }
+                        break;
+                    }
+                }
+                new_content += wline;
+                if (!new_content.empty() && new_content.back() != L'\n') new_content += L'\n';
+            }
+            fclose(f);
+            if (changed) {
+                // Write back in UTF-8 without BOM
+                FILE* wf = nullptr;
+                _wfopen_s(&wf, target_ini, L"wb");
+                if (wf) {
+                    // Convert wide string to UTF-8 (no BOM)
+                    std::string utf8_content;
+                    int len = WideCharToMultiByte(CP_UTF8, 0, new_content.c_str(), -1, nullptr, 0, nullptr, nullptr);
+                    if (len > 1) {
+                        utf8_content.resize(len - 1); // Exclude null terminator
+                        WideCharToMultiByte(CP_UTF8, 0, new_content.c_str(), -1, &utf8_content[0], len, nullptr, nullptr);
+                        fwrite(utf8_content.data(), 1, utf8_content.size(), wf);
+                    }
+                    fclose(wf);
+                }
+                // Call INIBuild.exe
+                STARTUPINFOW si = { sizeof(si) };
+                PROCESS_INFORMATION pi = {};
+                if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+                    WaitForSingleObject(pi.hProcess, INFINITE);
+                    CloseHandle(pi.hProcess);
+                    CloseHandle(pi.hThread);
+                }
+            }
+        }
     }
 
     if (!skip_ini_gen && GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
