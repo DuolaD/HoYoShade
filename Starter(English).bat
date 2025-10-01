@@ -233,6 +233,15 @@ if "%content%" == "1" (
     goto other
 ) else if "%content%" == "9" (
     exit
+) else if "%content%" == "STARWARD" (
+    reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
+    if %errorlevel%==0 (
+        echo starward:// protocol detected
+    ) else (
+        echo starward:// protocol not detected
+    )
+    pause
+    goto menu
 ) else (
     echo\
     echo Input error.

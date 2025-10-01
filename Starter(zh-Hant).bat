@@ -227,6 +227,15 @@ if "%content%" == "1" (
     goto blender_hook_check
 ) else if "%content%" == "9" (
     goto other
+) else if "%content%" == "STARWARD" (
+    reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
+    if %errorlevel%==0 (
+        echo ÒÑ™zœyµ½ starward:// …f×h
+    ) else (
+        echo Î´™zœyµ½ starward:// …f×h
+    )
+    pause
+    goto menu
 ) else if "%content%" == "10" (
     exit
 ) else (
