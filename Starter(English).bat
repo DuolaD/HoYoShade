@@ -72,19 +72,19 @@ if %missing_reshade_config% equ 1(
     echo\
     echo But if you have used ReShade in miHoYo / HoYoverse games before, you may need to delete ReShade.ini £¨required£© and ReShade.log £¨optional, but recommended£© first.
     echo For example:
-    echo - You have used HoYoShade V2.5.1 Stable or below.
+    echo - You have used HoYoShade V2 Stable or below.
     echo - You have used ReShade developed by others/yourself based on the official ReShade/HoYoShade.
     echo\
     echo How to find the root directory of the game process?
-    echo For HoYoPlay £¨HoYoVerse official new launcher£©:
+    echo For HoYoPlay £¨HoYoverse official new launcher£©:
     echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
     echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
     echo\
     echo For StarWard: Click the gear icon next to the Start button to view the root directory of the game process.
     echo Click the game process root directory to open it using the file explorer.
     echo\
-    echo Still not sure how to proceed?
-    echo You can check the user agreement and illustrated/video installation guide in the 'Tutorial' folder within the root directory of the mod.
+    echo Still confused? 
+    echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
     echo\
     pause
     goto menu
@@ -100,10 +100,11 @@ echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
 echo Current injection list: Public client injection list
+echo Note: Supports some non-public clients such as Beta/Creator Experience Server/Devkit
 echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
-echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
+echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
 REM I still prefer to be a person who pays silently behind the scenes XD.
 echo\
 echo *: This injection option is applicable to the Beta/Creator Experience server, 
@@ -405,9 +406,12 @@ echo Mod Version:V2.X.X Stable - NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
-echo Note! Generally, you only need to reset the ReShade.ini configuration file in the following two situations:
-echo - You moved the mod directory, or you renamed a folder within it.
+echo Note: In HoYoShade V3, resetting ReShade.ini is automatically detected and run in the background.
+echo In other words, you usually don't need to manually reset ReShade.ini.
+echo\
+echo Generally, you only need to reset the ReShade.ini configuration file in the following two situations:
 echo - The Releases interface of the repository clearly states that it is recommended/required to reset the ReShade.ini configuration file in order to enable new features/fix bugs.
+echo - HoYoShade developers/contributors explicitly ask you to do this.
 echo\
 echo Apart from this, you generally don't need to reset ReShade.ini.
 echo\
@@ -436,7 +440,7 @@ if "%content%" == "1" (
     echo otherwise HoYoShade will not work as expected.
     echo\
     echo How to find the root directory of the game process?
-    echo For HoYoPlay £¨HoYoVerse official new launcher£©:
+    echo For HoYoPlay £¨HoYoverse official new launcher£©:
     echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
     echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
     echo\
@@ -444,7 +448,7 @@ if "%content%" == "1" (
     echo Click the game process root directory to open it using the file explorer.
     echo\
     echo Still not sure how to proceed?
-    echo You can check the user agreement and illustrated/video installation guide in the 'Tutorial' folder within the root directory of the mod.
+    echo Still confused? You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
     echo\
     pause
     goto menu
@@ -462,10 +466,11 @@ echo\
 echo Please note that you need to copy Reshade.ini to the root directory of the game process before you can use this mod.
 echo\
 echo Current injection list: Test server client injection list
+echo Note: The current injection list only supports some non-public clients such as Beta/Creator Experience Server/Devkit, and does not support any public clients
 echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
-echo You can check the user agreement and illustrated installation guide in the Tutorial folder located in the mod root directory.  
+echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
 echo\
 echo The following client injection options can only be used for injecting into the test server client.
 echo\

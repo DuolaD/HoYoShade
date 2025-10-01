@@ -75,7 +75,7 @@ if %missing_reshade_config% equ 1(
     echo 但如果你曾經在 miHoYo（米哈遊）/ HoYoverse 遊戲中使用過ReShade
     echo 你可能需要先刪除ReShade.ini（必須）和 ReShade.log（非必須，但建議刪除）。
     echo 例如：
-    echo ·你曾經使用過 HoYoShade V2.5.1 Stable 及以下的版本。
+    echo ·你曾經使用過 HoYoShade V2 及以下的版本。
     echo ·你曾經使用過其他人/自行基於官方ReShade/HoYoShade二次開發的ReShade。
     echo\
     echo 如何找到遊戲進程根目錄？  
@@ -85,7 +85,7 @@ if %missing_reshade_config% equ 1(
     echo 對於StarWard:點擊開始啓動按鈕旁邊的齒輪圖標即可查看遊戲進程根目錄。  
     echo 點擊遊戲進程根目錄即可使用資源管理器打開遊戲進程根目錄。  
     echo\
-    echo 仍然不懂如何操作？你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
+    echo 仍然不懂如何操作？你可以在 https://hoyosha.de 中查看用戶協議和圖文安裝說明。
     echo\
     pause
     goto menu
@@ -102,9 +102,10 @@ echo 由[幻港之蝶]注入內核驅動
 echo\
 echo\
 echo 當前注入列表：公開客戶端注入列表
+echo 注意：支持部分Beta/創作者體驗服/Devkit等非公開客戶端
 echo\
 echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。
-echo 你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
+echo 你可以在 https://hoyosha.de 中查看用戶協議和圖文安裝說明。
 REM 我還是更願意當一個在背後默默付出的人 XD
 echo\
 echo *:該注入選項適用於Beta/創作者體驗服，但你可能需要向開發者獲取補丁方可注入。
@@ -400,9 +401,12 @@ echo 模組版本：V2.X.X Stable - NextVersion
 echo 開發者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入內核驅動
 echo\
-echo 注意！一般只有以下兩種情況，你才需要重置ReShade.ini配置文件：
-echo ·你移動了模組目錄，或者你對目錄中的文件夾進行了重命名操作。
+echo 注意：在HoYoShade V3中，重置ReShade.ini的操作是全自動檢測並後臺運行的。
+echo 也就是說，通常情況下你都不需要再手動進行重置ReShade.ini。
+echo
+echo 一般只有以下兩種情況，你才需要重置ReShade.ini配置文件：
 echo ·倉庫Releases界面中明確寫明瞭建議/必須重置ReShade.ini配置文件，以此開啓新功能/修復Bug。
+echo ·HoYoShade開發者/貢獻者明確要求你進行這個操作。
 echo\
 echo 除此之外，一般情況下你都不需要進行重置ReShade.ini操作。
 echo\
@@ -434,7 +438,7 @@ if "%content%" == "1" (
     echo 對於StarWard:點擊開始啓動按鈕旁邊的齒輪圖標即可查看遊戲進程根目錄。  
     echo 點擊遊戲進程根目錄即可使用資源管理器打開遊戲進程根目錄。  
     echo\
-    echo 仍然不懂如何操作？你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
+    echo 仍然不懂如何操作？你可以在 https://hoyosha.de 中查看用戶協議和圖文安裝說明。
     echo\
     pause
     goto menu
@@ -457,9 +461,10 @@ echo 開發者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入內核驅動
 echo\
 echo 當前注入列表：測試服客戶端注入列表
+echo 注意：當前注入列表僅支持部分Beta/創作者體驗服/Devkit等非公開客戶端，不支持任何公開客戶端
 echo\
 echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。
-echo 你可以在模組根目錄/Tutorial文件夾中查看用戶協議和圖文安裝說明。
+echo 你可以在 https://hoyosha.de 中查看用戶協議和圖文安裝說明。
 echo\
 echo 以下客戶端注入選項均只能用於注入至測試服客戶端。
 echo\

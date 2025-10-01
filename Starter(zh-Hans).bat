@@ -74,7 +74,7 @@ if %missing_reshade_config% equ 1(
     echo 但如果你曾经在 miHoYo（米哈游）/ HoYoverse 游戏中使用过ReShade，
     echo 你可能需要先删除ReShade.ini（必须）和 ReShade.log（非必须，但建议删除）。
     echo 例如：
-    echo ·你曾经使用过 HoYoShade V2.5.1 Stable 及以下的版本。
+    echo ·你曾经使用过 HoYoShade V2 及以下的版本。
     echo ·你曾经使用过其他人/自行基于官方ReShade/HoYoShade二次开发的ReShade。
     echo\
     echo 如何找到游戏进程根目录？  
@@ -84,7 +84,7 @@ if %missing_reshade_config% equ 1(
     echo 对于StarWard:点击开始启动按钮旁边的齿轮图标即可查看游戏进程根目录。  
     echo 点击游戏进程根目录即可使用资源管理器打开游戏进程根目录。  
     echo\
-    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文/视频安装说明。
+    echo 仍然不懂如何操作？你可以在 https://hoyosha.de 中查看用户协议和图文/视频安装说明。
     echo\
     pause
     goto menu
@@ -100,9 +100,10 @@ echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 当前注入列表：公开客户端注入列表
+echo 注意：支持部分Beta/创作者体验服/Devkit等非公开客户端
 echo\
 echo 本模组仅用于游戏画面调色使用，请遵守本Mod的用户协议和游戏及其开发/发行商相关条例。
-echo 你可以在模组根目录/Tutorial文件夹中查看用户协议和图文安装说明。
+echo 你可以在 https://hoyosha.de 中查看用户协议和图文/视频安装说明。
 REM 我还是更愿意当一个在背后默默付出的人 XD
 echo\
 echo *:该注入选项适用于Beta/创作者体验服，但你可能需要向开发者获取补丁方可注入。
@@ -398,9 +399,12 @@ echo 模组版本：V2.X.X Stable - NextVersion
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
-echo 注意！一般只有以下两种情况，你才需要重置ReShade.ini配置文件：
-echo ·你移动了模组目录，或者你对目录中的文件夹进行了重命名操作。
+echo 注意：在HoYoShade V3中，重置ReShade.ini的操作是全自动检测并后台运行的。
+echo 也就是说，通常情况下你都不需要再手动进行重置ReShade.ini。
+echo
+echo 一般只有以下两种情况，你才需要重置ReShade.ini配置文件：
 echo ·仓库Releases界面中明确写明了建议/必须重置ReShade.ini配置文件，以此开启新功能/修复Bug。
+echo ·HoYoShade开发者/贡献者明确要求你进行这个操作。
 echo\
 echo 除此之外，一般情况下你都不需要进行重置ReShade.ini操作。
 echo\
@@ -432,7 +436,7 @@ if "%content%" == "1" (
     echo 对于StarWard:点击开始启动按钮旁边的齿轮图标即可查看游戏进程根目录。  
     echo 点击游戏进程根目录即可使用资源管理器打开游戏进程根目录。  
     echo\
-    echo 仍然不懂如何操作？你可以在模组根目录/Tutorial文件夹中查看用户协议和图文/视频安装说明。
+    echo 仍然不懂如何操作？你可以在 https://hoyosha.de 中查看用户协议和图文/视频安装说明。
     echo\
     pause
     goto menu
@@ -455,9 +459,10 @@ echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 当前注入列表：测试服客户端注入列表
+echo 注意：当前注入列表仅支持部分Beta/创作者体验服/Devkit等非公开客户端，不支持任何公开客户端
 echo\
 echo 本模组仅用于游戏画面调色使用，请遵守本Mod的用户协议和游戏及其开发/发行商相关条例。
-echo 你可以在模组根目录/Tutorial文件夹中查看用户协议和图文安装说明。
+echo 你可以在 https://hoyosha.de 中查看用户协议和图文/视频安装说明。
 echo\
 echo 以下客户端注入选项均只能用于注入至测试服客户端。
 echo\
