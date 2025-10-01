@@ -29,7 +29,7 @@ if %missing_file% equ 1 (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：V2.X.X Stable - NextVersion
+    echo 模组版本：V3.X.X Stable - A new beginning
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
     echo 由[幻港之蝶]注入内核驱动
     echo\
@@ -61,7 +61,7 @@ if %missing_reshade_config% equ 1(
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：V2.X.X Stable - NextVersion
+    echo 模组版本：V3.X.X Stable - A new beginning
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
     echo 由[幻港之蝶]注入内核驱动
     echo\
@@ -95,7 +95,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -239,7 +239,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -295,7 +295,7 @@ title HoYoShade启动器(你已进入开发者选项！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -330,7 +330,7 @@ title HoYoShade启动器(你已进入自定义注入界面！！！)
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -365,7 +365,7 @@ echo\
 echo DuolaDStudio X ZelbertYQ x Ex_M
 echo 联合巨献
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo\
 echo HoYoShade基于ReShade官方插件和OpenHoYoShade框架二次开发，除效果库/预设之外的所有文件均遵守BSL-3开源协议在GitHub上开源。
 echo 你可以在Reshade.me网站中查看ReShade官方资讯。
@@ -395,7 +395,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -422,7 +422,7 @@ if "%content%" == "1" (
     cls
     echo 欢迎使用HoYoShade启动器！
     echo\
-    echo 模组版本：V2.X.X Stable - NextVersion
+    echo 模组版本：V3.X.X Stable - A new beginning
     echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
     echo 由[幻港之蝶]注入内核驱动
     echo\
@@ -454,7 +454,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -634,7 +634,7 @@ title HoYoShade启动器
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
@@ -666,7 +666,7 @@ set blender_recheck=0
 cls
 echo 欢迎使用HoYoShade启动器！
 echo\
-echo 模组版本：V2.X.X Stable - NextVersion
+echo 模组版本：V3.X.X Stable - A new beginning
 echo 开发者：DuolaDStudio X ZelbertYQ X Ex_M
 echo 由[幻港之蝶]注入内核驱动
 echo\
