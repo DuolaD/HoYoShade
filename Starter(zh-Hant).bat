@@ -118,8 +118,9 @@ echo [5]注入至崩壞：星穹鐵道（通用 公開/Beta/創作者體驗服客戶端）*
 echo [6]注入至絕區零（通用 公開客戶端）
 echo [7]切換至測試服客戶端注入列表
 echo [8]聯動Blender/留影機插件注入至原神/絕區零（公開客戶端）
-echo [9]其它選項
-echo [10]退出程序
+echo [9]聯動Starward啓動器注入HoYoShade
+echo [10]其它選項
+echo [11]退出程序
 
 echo\
 set /p "content=在此輸入選項前面的數字："
@@ -226,11 +227,9 @@ if "%content%" == "1" (
 ) else if "%content%" == "8" (
     goto blender_hook_check
 ) else if "%content%" == "9" (
-    goto other
-) else if "%content%" == "STARWARD" (
     reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
     if %errorlevel%==0 (
-        echo 已檢測到 starward:// 協議
+        goto starward_menu
     ) else (
         echo 未檢測到Starward URL協議，這是聯動Starward啓動器的必要條件。
         echo 請先在Starward啓動器 - 應用設置 - 高級 - URL協議界面中，將“註冊URL協議”開關設置爲開啓。
@@ -240,6 +239,8 @@ if "%content%" == "1" (
     pause
     goto menu
 ) else if "%content%" == "10" (
+    goto other
+) else if "%content%" == "11" (
     exit
 ) else (
     echo 輸入錯誤。
@@ -919,3 +920,154 @@ if "%choice%"=="1" (
     goto blender_hook_menu
 )
 
+:starward_menu
+title HoYoShade啓動器
+cls
+echo 歡迎使用HoYoShade啓動器！
+echo\
+echo 模組版本：V3.X.X Stable - A new beginning
+echo 開發者：DuolaDStudio X ZelbertYQ X Ex_M
+echo 由[幻港之蝶]注入內核驅動
+echo\
+echo 當前注入列表：聯動Starward啓動器注入列表
+echo 注意：當前注入列表不支持任何Beta/創作者體驗服/Devkit/私服等非公開客戶端
+echo 使用前，請先確保你已Starward啓動器安裝遊戲/已在Starward啓動器中綁定遊戲客戶端路徑。
+echo 並保持Apps設置/設定 - 進階 - URL協議 - 註冊URL協議開關保持開啓狀態。
+echo\
+echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。
+echo 你可以在 https://hoyosha.de 中查看用戶協議和圖文/視頻安裝說明。
+echo\
+echo [1]重置模組根目錄中的ReShade.ini
+echo [2]注入至原神（中國大陸 公開客戶端）
+echo [3]注入至原神（嗶哩嗶哩 公開客戶端）
+echo [4]注入至原神（國際服 公開客戶端）
+echo [5]注入至崩壞三（中國大陸 公開客戶端）
+echo [6]注入至崩壞三（國際服 公開客戶端）
+echo [7]注入至崩壞：星穹鐵道（中國大陸 公開客戶端）
+echo [8]注入至崩壞：星穹鐵道（嗶哩嗶哩 公開客戶端）
+echo [9]注入至崩壞：星穹鐵道（國際服 公開客戶端）
+echo [10]注入至絕區零（中國大陸 公開客戶端）
+echo [11]注入至絕區零（嗶哩嗶哩 公開客戶端）
+echo [12]注入至絕區零（國際服 公開客戶端）
+echo [13]返回主界面
+echo [14]其它選項
+echo [15]退出程序
+
+echo\
+set /p "content=在此輸入選項前面的數字："
+
+echo\
+
+if "%content%" == "1" (
+    goto ini_Reset
+) else if "%content%" == "2" (
+    cls
+    echo 你選擇的注入目標爲:原神（中國大陸 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe YuanShen.exe
+    start starward://startgame/hk4e_cn
+    exit
+) else if "%content%" == "3" (
+    cls
+    echo 你選擇的注入目標爲:原神（嗶哩嗶哩 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe YuanShen.exe
+    start starward://startgame/hk4e_bilibili
+    exit
+) else if "%content%" == "4" (
+    cls
+    echo 你選擇的注入目標爲:原神（國際服 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe GenshinImpact.exe
+    start starward://startgame/hk4e_global
+    exit
+) else if "%content%" == "5" (
+    cls
+    echo 你選擇的注入目標爲:崩壞三（中國大陸 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe BH3.exe
+    start starward://startgame/bh3_cn
+    exit
+) else if "%content%" == "6" (
+    cls
+    echo 你選擇的注入目標爲:崩壞三（國際服 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe BH3.exe
+    start starward://startgame/bh3_global
+    exit
+) else if "%content%" == "7" (
+    cls
+    echo 你選擇的注入目標爲:崩壞：星穹鐵道（中國大陸 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_cn
+    exit
+) else if "%content%" == "8" (
+    cls
+    echo 你選擇的注入目標爲:崩壞：星穹鐵道（嗶哩嗶哩 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_bilibili
+    exit
+) else if "%content%" == "9" (
+    cls
+    echo 你選擇的注入目標爲:崩壞：星穹鐵道（國際服 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_global
+    exit
+) else if "%content%" == "10" (
+    cls
+    echo 你選擇的注入目標爲:絕區零（中國大陸 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_cn
+    exit
+) else if "%content%" == "11" (
+    cls
+    echo 你選擇的注入目標爲:絕區零（嗶哩嗶哩 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_bilibili
+    exit
+) else if "%content%" == "12" (
+    cls
+    echo 你選擇的注入目標爲:絕區零（國際服 公開客戶端）
+    echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
+    echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_global
+    exit
+) else if "%content%" == "13" (
+    goto menu
+) else if "%content%" == "14" (
+    goto other
+) else if "%content%" == "15" (
+    exit
+) else (
+    echo 輸入錯誤。
+    timeout /t 2
+    goto starward_menu
+    )
+exit

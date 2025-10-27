@@ -116,9 +116,10 @@ echo [3]Inject into Genshin Impact £¨Global/Epic Games Store Public£¨REL£©/Beta/
 echo [4]Inject into Honkai Impact 3 £¨Universal Public£¨REL£©/Beta Client£©*
 echo [5]Inject into Honkai: Star Rail £¨Universal Public£¨REL£©/Beta/Creator Experience Client£©*
 echo [6]Inject into Zenless Zone Zero £¨Universal Public£¨REL£© Client£©
-echo [7]Switch to the test server client injection list.
-echo [8]Other options
-echo [9]Exit
+echo [7]Switch to the test server client injection list
+echo [8]Link Starward launcher to inject HoYoShade
+echo [9]Other options
+echo [10]Exit
 
 echo\
 set /p "content=Type the number here:"
@@ -232,11 +233,9 @@ if "%content%" == "1" (
 ) else if "%content%" == "8" (
     goto other
 ) else if "%content%" == "9" (
-    exit
-) else if "%content%" == "STARWARD" (
     reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
     if %errorlevel%==0 (
-        echo starward:// protocol detected
+        goto starward_menu
     ) else (
         echo The Starward URL protocol was not detected, which is a requirement for integrating with the Starward launcher.
         echo Please go to Starward launcher - APP Settings - Advanced - URL Protocol pages, and switch "Register URL Protocol" on.
@@ -245,6 +244,8 @@ if "%content%" == "1" (
     )
     pause
     goto menu
+) else if "%content%" == "10" (
+    exit
 ) else (
     echo\
     echo Input error.
@@ -597,5 +598,205 @@ if "%content%" == "1" (
     echo Input error.
     timeout /t 2
     goto menu
+    )
+exit
+
+:starward_menu
+title HoYoShade Starter
+cls
+echo Welcome to use HoYoShade starter!
+echo\
+echo Mod Version:V3.X.X Stable - A new beginning
+echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
+echo Powered by [The butterfly of Hong Kong]
+echo\
+echo Current injection list: Linked Starward launcher injection list
+echo 
+echo Note: The current injection list does not support any non-public clients.
+echo such as Beta/Creator Experience Server/Devkit/Private Server.
+echo Before using, please make sure you have installed the game using the Starward launcher,
+echo bound the game client path in the Starward launcher.
+echo and keep APP Settings - Advanced - URL Protocol - Register URL Protocol switch on.
+echo\
+echo This mod is only for color grading in-game scenes.  
+echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
+echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+echo\
+echo [1]Reset the ReShade.ini in the mod's root directory.
+echo [2]Inject into Genshin Impact£¨Mainland China Public£¨REL£©Client£©
+echo [3]Inject into Genshin Impact£¨BiliBil Public£¨REL£©Clien£©
+echo [4]Inject into Genshin Impact£¨Global Public£¨REL£©Clien£©
+echo [5]Inject into Honkai Impact 3£¨Mainland China Public£¨REL£©Clien£©
+echo [6]Inject into Honkai Impact 3£¨Global Public£¨REL£©Clien£©
+echo [7]Inject into Honkai: Star Rail£¨Mainland China Public£¨REL£©Clien£©
+echo [8]Inject into Honkai: Star Rail£¨BiliBil Public£¨REL£©Clien£©
+echo [9]Inject into Honkai: Star Rail£¨Global Public£¨REL£©Clien£©
+echo [10]Inject into Zenless Zone Zero£¨Mainland China Public£¨REL£©Clien£©
+echo [11]Inject into Zenless Zone Zero£¨BiliBil Public£¨REL£©Clien£©
+echo [12]Inject into Zenless Zone Zero£¨Global Public£¨REL£©Clien£©
+echo [13]Back to menu
+echo [14]Other options
+echo [15]Exit
+
+echo\
+set /p "content=Type the number here:"
+
+echo\
+
+if "%content%" == "1" (
+    goto ini_Reset
+) else if "%content%" == "2" (
+    cls
+    echo The injection target you selected is:Genshin Impact£¨Mainland China Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe YuanShen.exe
+    start starward://startgame/hk4e_cn
+    exit
+) else if "%content%" == "3" (
+    cls
+    echo The injection target you selected is:Genshin Impact£¨BiliBil Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe YuanShen.exe
+    start starward://startgame/hk4e_bilibili
+    exit
+) else if "%content%" == "4" (
+    cls
+    echo The injection target you selected is:Genshin Impact£¨Global Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe GenshinImpact.exe
+    start starward://startgame/hk4e_global
+    exit
+) else if "%content%" == "5" (
+    cls
+    echo The injection target you selected is:Honkai Impact 3£¨Mainland China Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe BH3.exe
+    start starward://startgame/bh3_cn
+    exit
+) else if "%content%" == "6" (
+    cls
+    echo The injection target you selected is:Honkai Impact 3£¨Global Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe BH3.exe
+    start starward://startgame/bh3_global
+    exit
+) else if "%content%" == "7" (
+    cls
+    echo The injection target you selected is:Honkai: Star Rail£¨Mainland China Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_cn
+    exit
+) else if "%content%" == "8" (
+    cls
+    echo The injection target you selected is:Honkai: Star Rail£¨BiliBil Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_bilibili
+    exit
+) else if "%content%" == "9" (
+    cls
+    echo The injection target you selected is:Honkai: Star Rail£¨Global Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe StarRail.exe
+    start starward://startgame/hkrpg_global
+    exit
+) else if "%content%" == "10" (
+    cls
+    echo The injection target you selected is:Zenless Zone Zero£¨Mainland China Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_cn
+    exit
+) else if "%content%" == "11" (
+    cls
+    echo The injection target you selected is:Zenless Zone Zero£¨BiliBil Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_bilibili
+    exit
+) else if "%content%" == "12" (
+    cls
+    echo The injection target you selected is:Zenless Zone Zero£¨Global Public£¨REL£©Clien£©
+    echo\
+    echo The injector is now started. If the Starward game client is configured correctly,
+    echo HoYoShade will launch Starward and inject ReShade into the client.
+    echo\
+    echo If you select the wrong injection target, just close this window/game window,
+    echo re-run the launcher, and re-select it.
+    echo\
+    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start starward://startgame/nap_global
+    exit
+) else if "%content%" == "13" (
+    goto menu
+) else if "%content%" == "14" (
+    goto other
+) else if "%content%" == "15" (
+    exit
+) else (
+    echo Input error.
+    timeout /t 2
+    goto starward_menu
     )
 exit
