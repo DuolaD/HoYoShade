@@ -238,7 +238,10 @@ if "%content%" == "1" (
     if %errorlevel%==0 (
         echo starward:// protocol detected
     ) else (
-        echo starward:// protocol not detected
+        echo The Starward URL protocol was not detected, which is a requirement for integrating with the Starward launcher.
+        echo Please go to Starward launcher - APP Settings - Advanced - URL Protocol pages, and switch "Register URL Protocol" on.
+        pause
+        goto menu
     )
     pause
     goto menu

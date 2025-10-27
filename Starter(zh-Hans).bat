@@ -230,7 +230,10 @@ if "%content%" == "1" (
     if %errorlevel%==0 (
         echo 已检测到 starward:// 协议
     ) else (
-        echo 未检测到 starward:// 协议
+        echo 未检测到Starward URL协议，这是联动Starward启动器的必要条件。
+        echo 请先在Starward启动器 - 应用设置 - 高级 - URL协议界面中，将“注册URL协议”开关设置为开启。
+        pause
+        goto menu
     )
     pause
     goto menu

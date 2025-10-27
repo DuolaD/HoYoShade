@@ -232,7 +232,10 @@ if "%content%" == "1" (
     if %errorlevel%==0 (
         echo 已檢測到 starward:// 協議
     ) else (
-        echo 未檢測到 starward:// 協議
+        echo 未檢測到Starward URL協議，這是聯動Starward啓動器的必要條件。
+        echo 請先在Starward啓動器 - 應用設置 - 高級 - URL協議界面中，將“註冊URL協議”開關設置爲開啓。
+        pause
+        goto menu
     )
     pause
     goto menu
