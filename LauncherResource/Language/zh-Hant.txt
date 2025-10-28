@@ -116,3 +116,11 @@ BETA_OPTION_6=6. 切換到公開客戶端注入列表
 BETA_OPTION_7=7. 更多選項
 BETA_OPTION_8=8. 退出程式
 INPUT_CHOICE=在此處輸入您的選擇前的數字：
+
+# Additional Client Warnings
+GENSHIN_GLOBAL_CLIENT_WARNING=此注入選項支援注入HoYoShade至原神（國際服 Beta/創作者體驗服客戶端）。
+BH3_CLIENT_WARNING=此注入選項支援注入HoYoShade至崩壞3（通用 測試/Beta客戶端）。
+STARRAIL_CLIENT_WARNING=此注入選項支援注入HoYoShade至崩壞：星穹鐵道（通用 測試/Beta/創作者體驗服客戶端）。
+ZZZ_PUBLIC_CLIENT_WARNING=此注入選項支援注入HoYoShade至絕區零（通用 正式服客戶端）。
+ZZZ_PUBLIC_CLIENT_NOTE=注意：此注入選項不支援任何 絕區零（測試前/內測（Beta）服）客戶端。
+ZZZ_PUBLIC_CLIENT_REDIRECT=如需注入測試服客戶端，請關閉此視窗並在HoYoShade啟動器中選擇公開客戶端注入清單選擇對應的客戶端。

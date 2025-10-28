@@ -9,6 +9,43 @@ DEVELOPER=开发者：DuolaDStudio X ZelbertYQ X Ex_M
 POWERED_BY=由[蝶泳之港]注入群提供
 PRESS_ANY_KEY=按任意键继续...
 
+# 语言检测和选择
+SYSTEM_LANGUAGE_DETECTED=检测到系统语言
+SELECT_PREFERRED_LANGUAGE=请选择您的首选语言：
+LANGUAGE_OPTION_1=1. 简体中文
+LANGUAGE_OPTION_2=2. 繁体中文
+LANGUAGE_OPTION_3=3. English
+LANGUAGE_SAVED=语言设置已保存。
+
+# 文件缺失错误
+MISSING_FILES_TITLE=缺少文件
+MISSING_FILES_DETECTED=检测到缺少必要文件！
+POSSIBLE_REASONS=可能的原因：
+REASON_1=1. 您下载的文件不完整
+REASON_2=2. 文件被杀毒软件误删
+REASON_3=3. 文件被移动到其他位置
+REASON_4=4. 下载过程中出现错误
+EXIT_MESSAGE=程序将退出，请重新下载完整的文件包。
+REDOWNLOAD_MESSAGE=建议从官方渠道重新下载。
+
+# 首次运行
+FIRST_TIME_TITLE=首次运行设置
+CONGRATULATIONS=恭喜！
+FIRST_TIME_DETECTED=检测到这是您首次运行HoYoShade启动器。
+FIRST_TIME_INFO=程序将自动为您配置必要的设置。
+AUTO_COPY_INFO=自动复制配置信息到游戏目录。
+PREVIOUS_USE_WARNING=如果您之前使用过其他ReShade模组，
+DELETE_FILES_INFO=请先删除游戏目录中的相关文件。
+EXAMPLES=示例：
+EXAMPLE_1=- dxgi.dll, d3d11.dll 等文件
+EXAMPLE_2=- reshade-shaders 文件夹
+FIND_DIRECTORY=查找游戏目录：
+HOYOPLAY_INFO=HoYoPlay用户：在启动器中点击游戏图标右上角的设置按钮
+OPEN_DIRECTORY=选择"打开游戏目录"
+STARWARD_INFO=Starward用户：在游戏卡片上右键选择"打开游戏目录"
+CLICK_DIRECTORY=或点击"游戏目录"按钮
+CONFUSED_INFO=如果您不确定如何操作，请参考教程文档。
+
 # 文件检查相关
 FILE_CHECK_TITLE=正在检查文件完整性...
 FILE_CHECK_RESHADE=检查 ReShade64.dll...
@@ -29,6 +66,30 @@ FIRST_TIME_CREATING=正在创建 ReShade.ini 配置文件...
 FIRST_TIME_SUCCESS=配置文件创建成功！
 FIRST_TIME_FAILED=配置文件创建失败，请检查权限设置。
 
+# 主菜单选项
+CURRENT_INJECTION_LIST=当前注入列表：公开客户端注入列表
+BETA_SUPPORT_NOTE=注意：支持部分Beta/创作者体验服/Devkit等非公开客户端
+
+MOD_PURPOSE=此模组仅用于游戏内场景色彩调整。请遵守模组的用户协议以及游戏和开发商/发行商的相关规定。
+USER_AGREEMENT_LINK=请访问 https://hoyosha.de 查看用户协议和图文/视频安装说明。
+
+BETA_INJECTION_NOTE=*：此注入选项适用于Beta/创作者体验服务器，但您可能需要从开发者处获取补丁进行注入。
+
+OPTION_1=重置模组目录中的ReShade.ini
+OPTION_2=注入原神（国服/B服公开/Devkit/Beta/创作者体验客户端）*
+OPTION_3=注入原神（国际服/Epic公开/Beta/创作者体验客户端）*
+OPTION_4=注入崩坏3（通用公开/Beta客户端）*
+OPTION_5=注入崩坏：星穹铁道（通用公开/Beta/创作者体验客户端）*
+OPTION_6=注入绝区零（通用公开客户端）
+OPTION_7=切换到测试服客户端注入列表
+OPTION_8=链接Blender/DaVinci等注入到原神/绝区零（公开客户端）
+OPTION_9=链接Starward启动器注入HoYoShade
+OPTION_10=更多选项
+OPTION_11=退出程序
+
+# 注入目标
+INJECTION_TARGET=注入目标：
+
 # 主菜单
 MAIN_MENU_TITLE=主菜单
 MAIN_MENU_OPTION_1=1. 原神
@@ -48,6 +109,13 @@ INJECTION_SUCCESS=注入程序启动成功！
 INJECTION_FAILED=注入程序启动失败！
 
 # 语言设置
+LANGUAGE_SETTINGS=语言设置
+CURRENT_LANGUAGE=当前语言：
+SELECT_LANGUAGE=选择语言：
+BACK_TO_MENU=返回主菜单
+LANGUAGE_CHANGED=语言已更改
+RESTART_REQUIRED=需要重启程序以应用更改
+
 LANGUAGE_SETTINGS_TITLE=语言设置
 LANGUAGE_SETTINGS_CURRENT=当前语言：
 LANGUAGE_SETTINGS_OPTION_1=1. 简体中文
@@ -58,6 +126,9 @@ LANGUAGE_SETTINGS_PROMPT=请选择语言 (1-4):
 LANGUAGE_SETTINGS_INVALID=无效选择，请输入 1-4 之间的数字。
 LANGUAGE_SETTINGS_CHANGED=语言设置已更改为：
 LANGUAGE_SETTINGS_SAVED=语言设置已保存。
+
+# 输入错误
+INPUT_ERROR=输入错误，请重新输入
 
 # 系统语言检测
 SYSTEM_LANGUAGE_DETECTED=检测到系统语言：
@@ -112,6 +183,14 @@ BETA_OPTION_6=6. 切换到公开客户端注入列表
 BETA_OPTION_7=7. 更多选项
 BETA_OPTION_8=8. 退出程序
 INPUT_CHOICE=在此处输入您的选择前的数字：
+
+# Additional Client Warnings
+GENSHIN_GLOBAL_CLIENT_WARNING=此注入选项支持注入HoYoShade至原神（国际服 Beta/创作者体验服客户端）。
+BH3_CLIENT_WARNING=此注入选项支持注入HoYoShade至崩坏3（通用 测试/Beta客户端）。
+STARRAIL_CLIENT_WARNING=此注入选项支持注入HoYoShade至崩坏：星穹铁道（通用 测试/Beta/创作者体验服客户端）。
+ZZZ_PUBLIC_CLIENT_WARNING=此注入选项支持注入HoYoShade至绝区零（通用 正式服客户端）。
+ZZZ_PUBLIC_CLIENT_NOTE=注意：此注入选项不支持任何 绝区零（测试前/内测（Beta）服）客户端。
+ZZZ_PUBLIC_CLIENT_REDIRECT=如需注入测试服客户端，请关闭此窗口并在HoYoShade启动器中选择公开客户端注入列表选择对应的客户端。
 
 INJECTION_TARGET_SELECTED=您选择的注入目标为：
 INJECTOR_STARTED=注入器现已启动。

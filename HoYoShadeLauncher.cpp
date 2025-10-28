@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <windows.h>
 #include <shlobj.h>
+#include <cstdio>
 
 #pragma comment(lib, "shell32.lib")
 #pragma comment(lib, "advapi32.lib")
@@ -36,6 +37,10 @@ private:
     
 public:
     HoYoShadeLauncher() {
+        // 设置控制台编码为UTF-8
+        SetConsoleOutputCP(CP_UTF8);
+        SetConsoleCP(CP_UTF8);
+        
         char buffer[MAX_PATH];
         GetModuleFileNameA(NULL, buffer, MAX_PATH);
         launcherPath = std::filesystem::path(buffer).parent_path().string();
@@ -127,15 +132,27 @@ public:
         languageStrings.clear();
         std::string filePath = languageDir + "\\" + language + ".txt";
         
-        std::ifstream file(filePath);
+        std::ifstream file(filePath, std::ios::binary);
         if (!file.is_open()) {
             filePath = languageDir + "\\English.txt";
-            file.open(filePath);
+            file.open(filePath, std::ios::binary);
         }
         
         if (file.is_open()) {
             std::string line;
             while (std::getline(file, line)) {
+                // 移除可能的BOM标记
+                if (!line.empty() && line[0] == '\xEF' && line.size() >= 3) {
+                    if (line[1] == '\xBB' && line[2] == '\xBF') {
+                        line = line.substr(3);
+                    }
+                }
+                
+                // 移除行尾的回车符
+                if (!line.empty() && line.back() == '\r') {
+                    line.pop_back();
+                }
+                
                 if (line.empty() || line[0] == '#') continue;
                 
                 size_t pos = line.find('=');
@@ -289,6 +306,43 @@ public:
     void performInjection(const std::string& target) {
         system("cls");
         std::cout << getString("INJECTION_TARGET") << " " << target << std::endl << std::endl;
+        
+        // 显示特定客户端的详细提示信息
+        if (target == "YuanShen.exe") {
+            std::cout << getString("DEVKIT_CLIENT_WARNING") << std::endl << std::endl;
+            std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_LAUNCHER_WARNING") << std::endl;
+            std::cout << getString("BETA_CLIENT_CLOSED_SOURCE") << std::endl;
+            std::cout << getString("BETA_CLIENT_CONTACT_DEV") << std::endl << std::endl;
+        } else if (target == "GenshinImpact.exe") {
+            std::cout << getString("GENSHIN_GLOBAL_CLIENT_WARNING") << std::endl << std::endl;
+            std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_LAUNCHER_WARNING") << std::endl;
+            std::cout << getString("BETA_CLIENT_CLOSED_SOURCE") << std::endl;
+            std::cout << getString("BETA_CLIENT_CONTACT_DEV") << std::endl << std::endl;
+        } else if (target == "BH3.exe") {
+            std::cout << getString("BH3_CLIENT_WARNING") << std::endl << std::endl;
+            std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl;
+            std::cout << getString("BETA_CLIENT_CLOSED_SOURCE") << std::endl;
+            std::cout << getString("BETA_CLIENT_CONTACT_DEV") << std::endl << std::endl;
+        } else if (target == "StarRail.exe") {
+            std::cout << getString("STARRAIL_CLIENT_WARNING") << std::endl << std::endl;
+            std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_LAUNCHER_WARNING") << std::endl;
+            std::cout << getString("BETA_CLIENT_CLOSED_SOURCE") << std::endl;
+            std::cout << getString("BETA_CLIENT_CONTACT_DEV") << std::endl << std::endl;
+        } else if (target == "ZenlessZoneZero.exe") {
+            std::cout << getString("ZZZ_PUBLIC_CLIENT_WARNING") << std::endl << std::endl;
+            std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+            std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl << std::endl;
+            std::cout << getString("ZZZ_PUBLIC_CLIENT_NOTE") << std::endl;
+            std::cout << getString("ZZZ_PUBLIC_CLIENT_REDIRECT") << std::endl << std::endl;
+        }
+        
         std::cout << getString("INJECTOR_STARTED") << std::endl;
         std::cout << getString("WRONG_TARGET_INFO") << std::endl << std::endl;
         std::cout << getString("IMPORTANT_LAUNCHER") << std::endl;
@@ -337,7 +391,7 @@ public:
         switch (choice) {
             case 1: {
                 std::string iniPath = launcherPath + "\\ReShade.ini";
-                std::filesystem::remove(iniPath);
+                remove(iniPath.c_str());
                 std::string command = "\"" + launcherPath + "\\LauncherResource\\INIBuild.exe\"";
                 system(command.c_str());
                 break;
@@ -466,7 +520,7 @@ public:
             switch (choice) {
                 case 1: {
                     std::string iniPath = launcherPath + "\\ReShade.ini";
-                    std::filesystem::remove(iniPath);
+                    remove(iniPath.c_str());
                     std::string command = "\"" + launcherPath + "\\LauncherResource\\INIBuild.exe\"";
                     system(command.c_str());
                     break;

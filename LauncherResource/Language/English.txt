@@ -116,3 +116,11 @@ BETA_OPTION_6=6. Switch to public client injection list
 BETA_OPTION_7=7. More options
 BETA_OPTION_8=8. Exit program
 INPUT_CHOICE=Enter the number before your choice here:
+
+# Additional Client Warnings
+GENSHIN_GLOBAL_CLIENT_WARNING=This injection option supports injecting HoYoShade into Genshin Impact [Global Beta/Creator Experience] clients.
+BH3_CLIENT_WARNING=This injection option supports injecting HoYoShade into Honkai Impact 3rd [Universal Test/Beta] clients.
+STARRAIL_CLIENT_WARNING=This injection option supports injecting HoYoShade into Honkai: Star Rail [Universal Test/Beta/Creator Experience] clients.
+ZZZ_PUBLIC_CLIENT_WARNING=This injection option supports injecting HoYoShade into Zenless Zone Zero [Universal Public] clients.
+ZZZ_PUBLIC_CLIENT_NOTE=Note: This injection option does not support any Zenless Zone Zero [Pre-release/Beta] clients.
+ZZZ_PUBLIC_CLIENT_REDIRECT=If you need to inject test server clients, please close this window and select the corresponding client from the public client injection list in HoYoShade launcher.
