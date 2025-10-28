@@ -84,6 +84,41 @@ ERROR_UNKNOWN=未知错误
 EXIT_MESSAGE=感谢使用HoYoShade启动器！
 EXIT_GOODBYE=再见！
 
+# 非公开注入客户端提示
+# Beta客户端注入提示
+BETA_CLIENT_LAUNCHER_REQUIRED=在注入此类客户端时，你必须使用官方来源提供的游戏启动器来启动游戏。
+BETA_CLIENT_NO_DIRECT_LAUNCH=你不能直接双击进程/进程快捷方式来启动游戏，否则可能会导致注入失败。
+BETA_CLIENT_NO_LAUNCHER_WARNING=但如果官方未向你提供启动器/你没有启动器且注入失败，你可能需要向开发者获取补丁进行注入。
+BETA_CLIENT_PATCH_REQUIRED=此补丁为闭源补丁，也不内置于HoYoShade中，你无法通过修改HoYoShadeSource代码实现注入功能。
+BETA_CLIENT_CLOSED_SOURCE=此补丁为闭源补丁，也不内置于HoYoShade中，你无法通过修改HoYoShadeSource代码实现注入功能。
+BETA_CLIENT_CONTACT_DEV=有关更多信息，请联系开发者 朵拉D（DuolaD ）（https://github.com/DuolaD） 以获取更多信息。
+DEVKIT_CLIENT_WARNING=本注入选项支持注入HoYoShade到【通用 全球史/DevKit/公测前内测（Beta）】客户端。
+ZZZ_BETA_CLIENT_WARNING=本注入选项支持注入HoYoShade到【通用 公测前内测（Beta）】客户端。
+
+# Beta客户端菜单
+BETA_INJECTION_LIST_TITLE=当前注入列表：测试服客户端注入列表
+BETA_INJECTION_LIST_NOTE=注意：当前注入列表仅支持部分Beta/Creator Experience服务器/Devkit等非公开客户端，不支持任何公开客户端
+BETA_CLIENT_ONLY_NOTE=以下客户端注入选项只能用于注入测试服客户端。
+BETA_CLIENT_NOT_LISTED_INFO=如果您想使用的测试服客户端不在此列表中，或者注入器未响应游戏启动，这说明：
+BETA_CLIENT_REASON_1=1：您想使用的测试服客户端注入选项与公开客户端注入选项通用，请先尝试使用公开客户端注入列表尝试注入。
+BETA_CLIENT_REASON_2=2：HoYoShade尚未适配您目前想使用的测试服客户端。
+BETA_CLIENT_CONTACT_INFO=如有疑问，请向我们的开发者在我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
+BETA_OPTION_1=1. 重置模组目录中的ReShade.ini
+BETA_OPTION_2=2. 注入原神【通用 全球史/DevKit/公测前内测（Beta）】客户端
+BETA_OPTION_3=3. 注入绝区零【通用 公测前内测（Beta）】客户端
+BETA_OPTION_4=4. 注入绝区零【通用 公测后内测（Beta）/创作者体验服】客户端
+BETA_OPTION_5=5. 注入崩坏：观测宇宙【通用 中国大陆/海外史 CB1 】客户端
+BETA_OPTION_6=6. 切换到公开客户端注入列表
+BETA_OPTION_7=7. 更多选项
+BETA_OPTION_8=8. 退出程序
+INPUT_CHOICE=在此处输入您的选择前的数字：
+
+INJECTION_TARGET_SELECTED=您选择的注入目标为：
+INJECTOR_STARTED=注入器现已启动。
+USE_LAUNCHER_TO_START=您现在可以使用启动器来启动游戏。注入器将同时注入。
+WRONG_TARGET_INSTRUCTION=如果您选择了错误的注入目标，只需关闭此窗口并重新启动启动器重新选择即可。
+CANNOT_DOUBLE_CLICK=您不能直接双击进程/进程快捷方式来启动游戏。否则注入将失败。
+
 # 其他
 LOADING=加载中...
 PLEASE_WAIT=请稍候...

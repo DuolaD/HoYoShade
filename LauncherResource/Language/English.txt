@@ -88,3 +88,31 @@ LANGUAGE_OPTION_1=1. Simplified Chinese
 LANGUAGE_OPTION_2=2. Traditional Chinese
 LANGUAGE_OPTION_3=3. English
 LANGUAGE_SAVED=Language setting saved
+
+# Beta Client Injection Prompts
+BETA_CLIENT_LAUNCHER_REQUIRED=When injecting such clients, you must use the game launcher provided by official sources to start the game.
+BETA_CLIENT_NO_DIRECT_LAUNCH=You cannot directly double-click the process/process shortcut to start the game, otherwise it may cause injection failure.
+BETA_CLIENT_NO_LAUNCHER_WARNING=But if the official didn't provide you with a launcher/you don't have a launcher and injection fails, you may need to obtain patches from developers for injection.
+BETA_CLIENT_PATCH_REQUIRED=This patch is a closed-source patch and is not built into HoYoShade. You cannot implement injection functionality by modifying HoYoShadeSource code.
+BETA_CLIENT_CLOSED_SOURCE=This patch is a closed-source patch and is not built into HoYoShade. You cannot implement injection functionality by modifying HoYoShadeSource code.
+BETA_CLIENT_CONTACT_DEV=For more information, please contact developer DuolaD (https://github.com/DuolaD) for more information.
+DEVKIT_CLIENT_WARNING=This injection option supports injecting HoYoShade into [Universal Global/DevKit/Pre-release Beta] clients.
+ZZZ_BETA_CLIENT_WARNING=This injection option supports injecting HoYoShade into [Universal Pre-release Beta] clients.
+
+# Beta Client Menu
+BETA_INJECTION_LIST_TITLE=Current injection list: Test server client injection list
+BETA_INJECTION_LIST_NOTE=Note: Current injection list only supports some Beta/Creator Experience servers/Devkit and other non-public clients, does not support any public clients
+BETA_CLIENT_ONLY_NOTE=The following client injection options can only be used for injecting test server clients.
+BETA_CLIENT_NOT_LISTED_INFO=If the test server client you want to use is not in this list, or the injector does not respond to game startup, this means:
+BETA_CLIENT_REASON_1=1: The test server client injection option you want to use is compatible with public client injection options, please try using the public client injection list first.
+BETA_CLIENT_REASON_2=2: HoYoShade has not yet adapted to the test server client you currently want to use.
+BETA_CLIENT_CONTACT_INFO=If you have any questions, please submit issues to our developers in our GitHub repository (https://github.com/DuolaD/HoYoShade).
+BETA_OPTION_1=1. Reset ReShade.ini in module directory
+BETA_OPTION_2=2. Inject Genshin Impact [Universal Global/DevKit/Pre-release Beta] client
+BETA_OPTION_3=3. Inject Zenless Zone Zero [Universal Pre-release Beta] client
+BETA_OPTION_4=4. Inject Zenless Zone Zero [Universal Post-release Beta/Creator Experience] client
+BETA_OPTION_5=5. Inject Honkai: Nexus Anima [Universal China/Global CB1] client
+BETA_OPTION_6=6. Switch to public client injection list
+BETA_OPTION_7=7. More options
+BETA_OPTION_8=8. Exit program
+INPUT_CHOICE=Enter the number before your choice here:

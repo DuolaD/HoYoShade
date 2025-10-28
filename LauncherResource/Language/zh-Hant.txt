@@ -88,3 +88,31 @@ LANGUAGE_OPTION_1=1. 簡體中文
 LANGUAGE_OPTION_2=2. 繁體中文  
 LANGUAGE_OPTION_3=3. English
 LANGUAGE_SAVED=語言設置已保存
+
+# Beta客戶端注入提示
+BETA_CLIENT_LAUNCHER_REQUIRED=在注入此類客戶端時，你必須使用官方來源提供的遊戲啟動器來啟動遊戲。
+BETA_CLIENT_NO_DIRECT_LAUNCH=你不能直接雙擊進程/進程快捷方式來啟動遊戲，否則可能會導致注入失敗。
+BETA_CLIENT_NO_LAUNCHER_WARNING=但如果官方未向你提供啟動器/你沒有啟動器且注入失敗，你可能需要向開發者獲取補丁進行注入。
+BETA_CLIENT_PATCH_REQUIRED=此補丁為閉源補丁，也不內置於HoYoShade中，你無法通過修改HoYoShadeSource代碼實現注入功能。
+BETA_CLIENT_CLOSED_SOURCE=此補丁為閉源補丁，也不內置於HoYoShade中，你無法通過修改HoYoShadeSource代碼實現注入功能。
+BETA_CLIENT_CONTACT_DEV=有關更多信息，請聯繫開發者 朵拉D（DuolaD ）（https://github.com/DuolaD） 以獲取更多信息。
+DEVKIT_CLIENT_WARNING=本注入選項支持注入HoYoShade到【通用 全球史/DevKit/公測前內測（Beta）】客戶端。
+ZZZ_BETA_CLIENT_WARNING=本注入選項支持注入HoYoShade到【通用 公測前內測（Beta）】客戶端。
+
+# Beta客戶端選單
+BETA_INJECTION_LIST_TITLE=當前注入列表：測試服客戶端注入列表
+BETA_INJECTION_LIST_NOTE=注意：當前注入列表僅支持部分Beta/Creator Experience服務器/Devkit等非公開客戶端，不支持任何公開客戶端
+BETA_CLIENT_ONLY_NOTE=以下客戶端注入選項只能用於注入測試服客戶端。
+BETA_CLIENT_NOT_LISTED_INFO=如果您想使用的測試服客戶端不在此列表中，或者注入器未響應遊戲啟動，這說明：
+BETA_CLIENT_REASON_1=1：您想使用的測試服客戶端注入選項與公開客戶端注入選項通用，請先嘗試使用公開客戶端注入列表嘗試注入。
+BETA_CLIENT_REASON_2=2：HoYoShade尚未適配您目前想使用的測試服客戶端。
+BETA_CLIENT_CONTACT_INFO=如有疑問，請向我們的開發者在我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）提交issues。
+BETA_OPTION_1=1. 重置模組目錄中的ReShade.ini
+BETA_OPTION_2=2. 注入原神【通用 全球史/DevKit/公測前內測（Beta）】客戶端
+BETA_OPTION_3=3. 注入絕區零【通用 公測前內測（Beta）】客戶端
+BETA_OPTION_4=4. 注入絕區零【通用 公測後內測（Beta）/創作者體驗服】客戶端
+BETA_OPTION_5=5. 注入崩壞：觀測宇宙【通用 中國大陸/海外史 CB1 】客戶端
+BETA_OPTION_6=6. 切換到公開客戶端注入列表
+BETA_OPTION_7=7. 更多選項
+BETA_OPTION_8=8. 退出程式
+INPUT_CHOICE=在此處輸入您的選擇前的數字：

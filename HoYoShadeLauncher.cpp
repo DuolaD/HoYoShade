@@ -18,6 +18,22 @@ private:
     std::string languageDir;
     std::string settingsFile;
     
+    // Helper function to convert UTF-8 string to wide string
+    std::wstring utf8ToWide(const std::string& utf8str) {
+        if (utf8str.empty()) return std::wstring();
+        
+        int size_needed = MultiByteToWideChar(CP_UTF8, 0, &utf8str[0], (int)utf8str.size(), NULL, 0);
+        std::wstring wstrTo(size_needed, 0);
+        MultiByteToWideChar(CP_UTF8, 0, &utf8str[0], (int)utf8str.size(), &wstrTo[0], size_needed);
+        return wstrTo;
+    }
+    
+    // Helper function to set console title with UTF-8 support
+    void setConsoleTitle(const std::string& title) {
+        std::wstring wideTitle = utf8ToWide(title);
+        SetConsoleTitleW(wideTitle.c_str());
+    }
+    
 public:
     HoYoShadeLauncher() {
         char buffer[MAX_PATH];
@@ -193,7 +209,7 @@ public:
     
     void showMissingFilesError() {
         system("cls");
-        SetConsoleTitleA(getString("MISSING_FILES_TITLE").c_str());
+        setConsoleTitle(getString("MISSING_FILES_TITLE"));
         
         std::cout << getString("MISSING_FILES_DETECTED") << std::endl << std::endl;
         std::cout << getString("POSSIBLE_REASONS") << std::endl;
@@ -219,7 +235,7 @@ public:
     
     void showFirstTimeMessage() {
         system("cls");
-        SetConsoleTitleA(getString("FIRST_TIME_TITLE").c_str());
+        setConsoleTitle(getString("FIRST_TIME_TITLE"));
         
         std::cout << getString("CONGRATULATIONS") << std::endl << std::endl;
         std::cout << getString("FIRST_TIME_DETECTED") << std::endl << std::endl;
@@ -242,7 +258,7 @@ public:
     
     void showMainMenu() {
         system("cls");
-        SetConsoleTitleA(getString("TITLE").c_str());
+        setConsoleTitle(getString("TITLE"));
         
         std::cout << getString("WELCOME") << std::endl;
         std::cout << getString("VERSION") << std::endl;
@@ -280,6 +296,102 @@ public:
         
         std::string command = "start \"\" /wait /b \"" + launcherPath + "\\inject.exe\" " + target;
         system(command.c_str());
+    }
+    
+    void showBetaClientMenu() {
+        system("cls");
+        setConsoleTitle(getString("TITLE"));
+        
+        std::cout << getString("WELCOME") << std::endl;
+        std::cout << getString("VERSION") << std::endl;
+        std::cout << getString("DEVELOPER") << std::endl;
+        std::cout << getString("POWERED_BY") << std::endl << std::endl;
+        
+        std::cout << getString("BETA_INJECTION_LIST_TITLE") << std::endl;
+        std::cout << getString("BETA_INJECTION_LIST_NOTE") << std::endl << std::endl;
+        
+        std::cout << getString("MOD_PURPOSE") << std::endl;
+        std::cout << getString("USER_AGREEMENT_LINK") << std::endl << std::endl;
+        
+        std::cout << getString("BETA_CLIENT_ONLY_NOTE") << std::endl << std::endl;
+        
+        std::cout << getString("BETA_CLIENT_NOT_LISTED_INFO") << std::endl;
+        std::cout << getString("BETA_CLIENT_REASON_1") << std::endl;
+        std::cout << getString("BETA_CLIENT_REASON_2") << std::endl;
+        std::cout << getString("BETA_CLIENT_CONTACT_INFO") << std::endl << std::endl;
+        
+        std::cout << getString("BETA_OPTION_1") << std::endl;
+        std::cout << getString("BETA_OPTION_2") << std::endl;
+        std::cout << getString("BETA_OPTION_3") << std::endl;
+        std::cout << getString("BETA_OPTION_4") << std::endl;
+        std::cout << getString("BETA_OPTION_5") << std::endl;
+        std::cout << getString("BETA_OPTION_6") << std::endl;
+        std::cout << getString("BETA_OPTION_7") << std::endl;
+        std::cout << getString("BETA_OPTION_8") << std::endl << std::endl;
+        
+        std::cout << getString("INPUT_CHOICE") << std::endl;
+        
+        int choice;
+        std::cin >> choice;
+        
+        switch (choice) {
+            case 1: {
+                std::string iniPath = launcherPath + "\\ReShade.ini";
+                std::filesystem::remove(iniPath);
+                std::string command = "\"" + launcherPath + "\\LauncherResource\\INIBuild.exe\"";
+                system(command.c_str());
+                break;
+            }
+            case 2:
+                performBetaInjection("Genshin.exe", "DEVKIT_CLIENT_WARNING");
+                break;
+            case 3:
+                performBetaInjection("ZZZ.exe", "ZZZ_BETA_CLIENT_WARNING");
+                break;
+            case 4:
+                performBetaInjection("ZenlessZoneZeroBeta.exe", "ZZZ_BETA_CLIENT_WARNING");
+                break;
+            case 5:
+                performBetaInjection("NexusAnima.exe", "");
+                break;
+            case 6:
+                return; // 返回主菜单
+            case 7:
+                std::cout << "更多选项 - 尚未实现" << std::endl;
+                system("pause");
+                break;
+            case 8:
+                exit(0);
+                break;
+            default:
+                std::cout << "输入错误" << std::endl;
+                system("pause");
+                break;
+        }
+    }
+    
+    void performBetaInjection(const std::string& target, const std::string& warningKey) {
+        system("cls");
+        
+        std::cout << getString("INJECTION_TARGET_SELECTED") << target << std::endl;
+        std::cout << getString("INJECTOR_STARTED") << std::endl;
+        std::cout << getString("USE_LAUNCHER_TO_START") << std::endl;
+        std::cout << getString("WRONG_TARGET_INSTRUCTION") << std::endl << std::endl;
+        
+        if (!warningKey.empty()) {
+            std::cout << getString(warningKey) << std::endl << std::endl;
+        }
+        
+        std::cout << getString("BETA_CLIENT_LAUNCHER_REQUIRED") << std::endl;
+        std::cout << getString("BETA_CLIENT_NO_DIRECT_LAUNCH") << std::endl;
+        std::cout << getString("BETA_CLIENT_NO_LAUNCHER_WARNING") << std::endl;
+        std::cout << getString("BETA_CLIENT_PATCH_REQUIRED") << std::endl;
+        std::cout << getString("BETA_CLIENT_CLOSED_SOURCE") << std::endl;
+        std::cout << getString("BETA_CLIENT_CONTACT_DEV") << std::endl << std::endl;
+        
+        std::string command = "start \"\" /wait /b \"" + launcherPath + "\\inject.exe\" " + target;
+        system(command.c_str());
+        exit(0);
     }
     
     void showLanguageSettings() {
@@ -375,8 +487,7 @@ public:
                     performInjection("ZenlessZoneZero.exe");
                     break;
                 case 7:
-                    std::cout << "Beta client injection list - Not implemented yet" << std::endl;
-                    system("pause");
+                    showBetaClientMenu();
                     break;
                 case 8:
                     std::cout << "Link other programs - Not implemented yet" << std::endl;
