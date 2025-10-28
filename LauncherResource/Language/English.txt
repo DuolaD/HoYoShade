@@ -1,0 +1,90 @@
+# HoYoShade Launcher - English Language Pack
+# Version: V3.X.X Stable - A new beginning
+
+# General Text
+TITLE=HoYoShade Launcher
+WELCOME=Welcome to HoYoShade Launcher!
+VERSION=Module Version: V3.X.X Stable - A new beginning
+DEVELOPER=Developer: DuolaDStudio X ZelbertYQ X Ex_M
+POWERED_BY=Powered by [Butterfly Harbor] Injection Group
+PRESS_ANY_KEY=Press any key to continue...
+INPUT_ERROR=Input error
+BACK_TO_MENU=Back to main menu
+EXIT=Exit program
+
+# File Check
+MISSING_FILES_TITLE=HoYoShade Launcher
+MISSING_FILES_DETECTED=We detected that the necessary files for "Open"HoYoShade framework injection are missing.
+POSSIBLE_REASONS=Possible reasons for this prompt:
+REASON_1=1: You didn't extract all files when extracting the archive.
+REASON_2=2: You didn't paste all files when performing an overlay update.
+REASON_3=3: Your system's antivirus/other programs identified "Open"HoYoShade as a virus and deleted some files.
+REASON_4=4: You accidentally/intentionally renamed some key files.
+EXIT_MESSAGE=After pressing any key, the launcher will exit.
+REDOWNLOAD_MESSAGE=If you want to continue running "Open"HoYoShade, please visit our GitHub repository (https://github.com/DuolaD/HoYoShade) to re-download the latest archive from the Releases page and extract all files.
+
+# First Time Use
+FIRST_TIME_TITLE=HoYoShade Launcher
+CONGRATULATIONS=Congratulations! You have successfully installed HoYoShade!
+FIRST_TIME_DETECTED=We detected this is the first time using this module, Reshade.ini has now been generated in the module directory.
+FIRST_TIME_INFO=If this is your first time using ReShade in miHoYo/HoYoverse games, you can continue now.
+AUTO_COPY_INFO=The injector will automatically detect and copy the configuration file "ReShade.ini" to the game process root directory.
+PREVIOUS_USE_WARNING=But if you have previously used ReShade in miHoYo/HoYoverse games
+DELETE_FILES_INFO=You may need to delete ReShade.ini (required) and ReShade.log (not required, but recommended) first.
+EXAMPLES=For example:
+EXAMPLE_1=You previously used HoYoShade V2 or lower versions.
+EXAMPLE_2=You previously used ReShade developed by others/yourself based on official ReShade/HoYoShade.
+FIND_DIRECTORY=How to find the game process root directory:
+HOYOPLAY_INFO=For HoYoPlay (miHoYo's official new launcher): Click the gear icon next to the start button - Game Settings to view the game process root directory.
+OPEN_DIRECTORY=Click 'Open Directory' to open the game process root directory with File Explorer.
+STARWARD_INFO=For StarWard: Click the gear icon next to the start button to view the game process root directory.
+CLICK_DIRECTORY=Click the game process root directory to open it with File Explorer.
+CONFUSED_INFO=Still confused? Please visit https://hoyosha.de to view the user agreement and illustrated/video installation instructions.
+
+# Main Menu
+CURRENT_INJECTION_LIST=Current injection list: Public client injection list
+BETA_SUPPORT_NOTE=Note: Supports some Beta/Creator Experience/Devkit and other non-public clients
+MOD_PURPOSE=This module is only for in-game scene color adjustment. Please comply with the Mod's user agreement and the relevant regulations of the game and developer/publisher.
+USER_AGREEMENT_LINK=Please visit https://hoyosha.de to view the user agreement and illustrated/video installation instructions.
+BETA_INJECTION_NOTE=*: This injection option is for Beta/Creator Experience servers, but you may need to obtain patches from developers for injection.
+
+# Menu Options
+OPTION_1=Reset ReShade.ini in module directory
+OPTION_2=Inject into Genshin Impact (China/Bilibili Public/Devkit/Beta/Creator Experience client)*
+OPTION_3=Inject into Genshin Impact (Global/Epic Public/Beta/Creator Experience client)*
+OPTION_4=Inject into Honkai Impact 3rd (Universal Public/Beta client)*
+OPTION_5=Inject into Honkai: Star Rail (Universal Public/Beta/Creator Experience client)*
+OPTION_6=Inject into Zenless Zone Zero (Universal Public client)
+OPTION_7=Switch to test server client injection list
+OPTION_8=Link Blender/DaVinci etc. injection into Genshin Impact/Zenless Zone Zero (Public client)
+OPTION_9=Link Starward launcher to inject HoYoShade
+OPTION_10=More options
+OPTION_11=Exit program
+
+# Injection Information
+INJECTION_TARGET=Your selected injection target is:
+INJECTOR_STARTED=The injector has now started, you can now use the launcher to start the game. The injector will inject simultaneously.
+WRONG_TARGET_INFO=If you selected the wrong injection target, just close this window and restart the launcher to reselect.
+IMPORTANT_LAUNCHER=Important: You must use a game launcher to start the game (whether it's an official launcher or third-party launcher),
+NO_DIRECT_LAUNCH=You cannot directly double-click the process/process shortcut to start the game. Otherwise injection will fail.
+INJECTION_SUPPORT=This injection option supports injecting HoYoShade into
+OFFICIAL_LAUNCHER_REQUIRED=When injecting such clients, you must use the game launcher provided by official sources to start the game.
+NO_DIRECT_CLICK=You cannot directly double-click the process/process shortcut to start the game, otherwise it may cause injection failure.
+NO_LAUNCHER_PATCH=But if the official didn't provide you with a launcher/you don't have a launcher and injection fails, you may need to obtain patches from developers for injection.
+CLOSED_SOURCE_PATCH=This patch is a closed-source patch and is not built into HoYoShade. You cannot implement injection functionality by modifying HoYoShadeSource code.
+CONTACT_DEVELOPER=For more information, please contact developer DuolaD (https://github.com/DuolaD) for more information.
+
+# Language Settings
+LANGUAGE_SETTINGS=Language Settings
+CURRENT_LANGUAGE=Current Language: English
+SELECT_LANGUAGE=Please select language:
+LANGUAGE_CHANGED=Language changed to English
+RESTART_REQUIRED=Restart launcher to apply changes
+
+# System Language Detection
+SYSTEM_LANGUAGE_DETECTED=System language detected
+SELECT_PREFERRED_LANGUAGE=Please select your preferred language:
+LANGUAGE_OPTION_1=1. Simplified Chinese
+LANGUAGE_OPTION_2=2. Traditional Chinese
+LANGUAGE_OPTION_3=3. English
+LANGUAGE_SAVED=Language setting saved

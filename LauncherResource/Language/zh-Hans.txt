@@ -1,0 +1,91 @@
+# HoYoShade 启动器 - 简体中文语言包
+# 版本: V3.X.X Stable - A new beginning
+
+# 通用文本
+TITLE=HoYoShade启动器
+WELCOME=欢迎使用HoYoShade启动器！
+VERSION=模组版本：V3.X.X Stable - A new beginning
+DEVELOPER=开发者：DuolaDStudio X ZelbertYQ X Ex_M
+POWERED_BY=由[蝶泳之港]注入群提供
+PRESS_ANY_KEY=按任意键继续...
+
+# 文件检查相关
+FILE_CHECK_TITLE=正在检查文件完整性...
+FILE_CHECK_RESHADE=检查 ReShade64.dll...
+FILE_CHECK_INJECT=检查 inject.exe...
+FILE_CHECK_INIBUILD=检查 INIBuild.exe...
+FILE_CHECK_SUCCESS=所有文件检查完成！
+FILE_MISSING_ERROR=错误：缺少必要文件！
+FILE_MISSING_RESHADE=- 缺少 ReShade64.dll
+FILE_MISSING_INJECT=- 缺少 inject.exe
+FILE_MISSING_INIBUILD=- 缺少 INIBuild.exe
+FILE_MISSING_INSTRUCTION=请确保所有必要文件都在正确位置。
+
+# 首次运行设置
+FIRST_TIME_TITLE=首次运行设置
+FIRST_TIME_MESSAGE=检测到这是您首次运行HoYoShade启动器。
+FIRST_TIME_INSTRUCTION=程序将自动为您配置ReShade设置文件。
+FIRST_TIME_CREATING=正在创建 ReShade.ini 配置文件...
+FIRST_TIME_SUCCESS=配置文件创建成功！
+FIRST_TIME_FAILED=配置文件创建失败，请检查权限设置。
+
+# 主菜单
+MAIN_MENU_TITLE=主菜单
+MAIN_MENU_OPTION_1=1. 原神
+MAIN_MENU_OPTION_2=2. 崩坏：星穹铁道
+MAIN_MENU_OPTION_3=3. 崩坏3
+MAIN_MENU_OPTION_4=4. 绝区零
+MAIN_MENU_OPTION_5=5. Starward链接
+MAIN_MENU_OPTION_6=6. 更多选项
+MAIN_MENU_OPTION_7=7. 退出
+MAIN_MENU_PROMPT=请选择一个选项 (1-7):
+MAIN_MENU_INVALID=无效选择，请输入 1-7 之间的数字。
+
+# 注入相关
+INJECTION_STARTING=正在启动注入程序...
+INJECTION_TARGET=目标游戏：
+INJECTION_SUCCESS=注入程序启动成功！
+INJECTION_FAILED=注入程序启动失败！
+
+# 语言设置
+LANGUAGE_SETTINGS_TITLE=语言设置
+LANGUAGE_SETTINGS_CURRENT=当前语言：
+LANGUAGE_SETTINGS_OPTION_1=1. 简体中文
+LANGUAGE_SETTINGS_OPTION_2=2. 繁体中文
+LANGUAGE_SETTINGS_OPTION_3=3. English
+LANGUAGE_SETTINGS_OPTION_4=4. 返回主菜单
+LANGUAGE_SETTINGS_PROMPT=请选择语言 (1-4):
+LANGUAGE_SETTINGS_INVALID=无效选择，请输入 1-4 之间的数字。
+LANGUAGE_SETTINGS_CHANGED=语言设置已更改为：
+LANGUAGE_SETTINGS_SAVED=语言设置已保存。
+
+# 系统语言检测
+SYSTEM_LANGUAGE_DETECTED=检测到系统语言：
+LANGUAGE_SELECTION_PROMPT=请选择您的首选语言：
+LANGUAGE_SELECTION_1=1. 简体中文
+LANGUAGE_SELECTION_2=2. 繁体中文  
+LANGUAGE_SELECTION_3=3. English
+LANGUAGE_SELECTION_INPUT=请输入您的选择 (1-3):
+LANGUAGE_SELECTION_INVALID=无效选择，请输入 1-3 之间的数字。
+LANGUAGE_SELECTION_SAVED=语言设置已保存。
+
+# 管理员权限
+ADMIN_REQUIRED=此程序需要管理员权限才能正常运行。
+ADMIN_REQUESTING=正在请求管理员权限...
+ADMIN_FAILED=无法获取管理员权限，程序将退出。
+
+# 错误信息
+ERROR_GENERAL=发生错误：
+ERROR_FILE_NOT_FOUND=文件未找到：
+ERROR_PERMISSION_DENIED=权限被拒绝：
+ERROR_UNKNOWN=未知错误
+
+# 退出信息
+EXIT_MESSAGE=感谢使用HoYoShade启动器！
+EXIT_GOODBYE=再见！
+
+# 其他
+LOADING=加载中...
+PLEASE_WAIT=请稍候...
+OPERATION_COMPLETED=操作完成。
+OPERATION_FAILED=操作失败。

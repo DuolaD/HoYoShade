@@ -1,0 +1,90 @@
+# HoYoShade 啟動器 - 繁體中文語言包
+# 版本: V3.X.X Stable - A new beginning
+
+# 通用文本
+TITLE=HoYoShade啟動器
+WELCOME=歡迎使用HoYoShade啟動器！
+VERSION=模組版本：V3.X.X Stable - A new beginning
+DEVELOPER=開發者：DuolaDStudio X ZelbertYQ X Ex_M
+POWERED_BY=由[蝶泳之港]注入群提供
+PRESS_ANY_KEY=按任意鍵繼續...
+INPUT_ERROR=輸入錯誤
+BACK_TO_MENU=返回主選單
+EXIT=退出程式
+
+# 文件檢查
+MISSING_FILES_TITLE=HoYoShade啟動器
+MISSING_FILES_DETECTED=我們檢測到"Open"HoYoShade框架注入的必要文件缺失。
+POSSIBLE_REASONS=出現這個提示的原因可能：
+REASON_1=1:你在解壓壓縮包時沒有解壓全部文件。
+REASON_2=2:你在進行覆蓋更新操作時沒有粘貼全部文件。
+REASON_3=3:你系統上的殺毒軟體/其他程式將"Open"HoYoShade識別為病毒然後刪除了某些文件。
+REASON_4=4:你意外/故意重新命名了部分關鍵文件。
+EXIT_MESSAGE=按任意鍵後，啟動器將退出。
+REDOWNLOAD_MESSAGE=如果你想繼續運行"Open"HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新的Releases頁面提供的壓縮包並解壓全部文件。
+
+# 首次使用
+FIRST_TIME_TITLE=HoYoShade啟動器
+CONGRATULATIONS=恭喜！你已成功安裝HoYoShade！
+FIRST_TIME_DETECTED=我們檢測到這是第一次使用本模組，Reshade.ini現已生成在模組的目錄下。
+FIRST_TIME_INFO=如果這是你第一次在 miHoYo（米哈遊）/ HoYoverse 遊戲中使用ReShade，現在可以繼續了。
+AUTO_COPY_INFO=注入器將自動檢測並複製配置文件"ReShade.ini"到遊戲進程根目錄。
+PREVIOUS_USE_WARNING=但如果你之前在 miHoYo（米哈遊）/ HoYoverse 遊戲中使用過ReShade
+DELETE_FILES_INFO=你可能需要先刪除ReShade.ini（必須）和 ReShade.log（非必須，但建議刪除）。
+EXAMPLES=例如：
+EXAMPLE_1=你之前使用過 HoYoShade V2 或更低的版本。
+EXAMPLE_2=你之前使用過其他人/你自己基於官方ReShade/HoYoShade二次開發的ReShade。
+FIND_DIRECTORY=如何找到遊戲進程根目錄：
+HOYOPLAY_INFO=對於HoYoPlay（米哈遊官方新啟動器）:點擊開始按鈕旁邊的齒輪圖標-遊戲設置即可查看遊戲進程根目錄。
+OPEN_DIRECTORY=點擊'打開所在目錄'即可使用資源管理器打開遊戲進程根目錄。
+STARWARD_INFO=對於StarWard:點擊開始按鈕旁邊的齒輪圖標即可查看遊戲進程根目錄。
+CLICK_DIRECTORY=點擊遊戲進程根目錄即可使用資源管理器打開遊戲進程根目錄。
+CONFUSED_INFO=仍然搞不清楚？請訪問 https://hoyosha.de 查看用戶協議和圖文/視頻安裝說明。
+
+# 主選單
+CURRENT_INJECTION_LIST=當前注入列表：公共客戶端注入列表
+BETA_SUPPORT_NOTE=注意：支持部分Beta/創作者體驗服/Devkit等非公共客戶端
+MOD_PURPOSE=本模組僅供遊戲內場景調色使用，請遵守Mod的用戶協議和遊戲及開發/發行商的相關規定。
+USER_AGREEMENT_LINK=請訪問 https://hoyosha.de 查看用戶協議和圖文/視頻安裝說明。
+BETA_INJECTION_NOTE=*:此注入選項適用於Beta/創作者體驗服等，但你可能需要向開發者獲取補丁進行注入。
+
+# 選單選項
+OPTION_1=重置模組目錄中的ReShade.ini
+OPTION_2=注入到原神（中國大陸/嗶哩嗶哩 公共/Devkit/Beta/創作者體驗服客戶端）*
+OPTION_3=注入到原神（國際服/Epic 公共/Beta/創作者體驗服客戶端）*
+OPTION_4=注入到崩壞3（通用 公共/Beta客戶端）*
+OPTION_5=注入到崩壞：星穹鐵道（通用 公共/Beta/創作者體驗服客戶端）*
+OPTION_6=注入到絕區零（通用 公共客戶端）
+OPTION_7=切換到測試服客戶端注入列表
+OPTION_8=鏈接Blender/達芬奇等注入到原神/絕區零（公共客戶端）
+OPTION_9=鏈接Starward啟動器注入HoYoShade
+OPTION_10=更多選項
+OPTION_11=退出程式
+
+# 注入信息
+INJECTION_TARGET=你選擇的注入目標為：
+INJECTOR_STARTED=注入器現已啟動，現在可以使用啟動器啟動遊戲。注入器將同時注入。
+WRONG_TARGET_INFO=如果你選擇了錯誤的注入目標，只需關閉此窗口後重新啟動啟動器重新選擇即可。
+IMPORTANT_LAUNCHER=重要：你必須使用一個遊戲啟動器來啟動遊戲（無論它是官方啟動器還是第三方啟動器），
+NO_DIRECT_LAUNCH=你不能直接雙擊進程/進程快捷方式來啟動遊戲。否則注入失敗。
+INJECTION_SUPPORT=本注入選項支持注入HoYoShade到
+OFFICIAL_LAUNCHER_REQUIRED=在注入此類客戶端時，你必須使用官方來源提供的遊戲啟動器來啟動遊戲。
+NO_DIRECT_CLICK=你不能直接雙擊進程/進程快捷方式來啟動遊戲，否則可能會導致注入失敗。
+NO_LAUNCHER_PATCH=但如果官方未向你提供啟動器/你沒有啟動器且注入失敗，你可能需要向開發者獲取補丁進行注入。
+CLOSED_SOURCE_PATCH=此補丁為閉源補丁，也不內置於HoYoShade中，你無法通過修改HoYoShadeSource代碼實現注入功能。
+CONTACT_DEVELOPER=有關更多信息，請聯繫開發者 朵拉D（DuolaD ）（https://github.com/DuolaD） 以獲取更多信息。
+
+# 語言設置
+LANGUAGE_SETTINGS=語言設置
+CURRENT_LANGUAGE=當前語言：繁體中文
+SELECT_LANGUAGE=請選擇語言：
+LANGUAGE_CHANGED=語言已更改為繁體中文
+RESTART_REQUIRED=重啟啟動器以應用更改
+
+# 系統語言檢測
+SYSTEM_LANGUAGE_DETECTED=檢測到系統語言
+SELECT_PREFERRED_LANGUAGE=請選擇你的首選語言：
+LANGUAGE_OPTION_1=1. 簡體中文
+LANGUAGE_OPTION_2=2. 繁體中文  
+LANGUAGE_OPTION_3=3. English
+LANGUAGE_SAVED=語言設置已保存
