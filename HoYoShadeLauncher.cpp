@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <map>
+#include <limits>
 #include <vector>
 #include <filesystem>
 #include <windows.h>
@@ -18,6 +19,10 @@ private:
     std::string launcherPath;
     std::string languageDir;
     std::string settingsFile;
+    
+    void openURL(const std::string& url) {
+        ShellExecuteA(NULL, "open", url.c_str(), NULL, NULL, SW_SHOWNORMAL);
+    }
     
     // Helper function to convert UTF-8 string to wide string
     std::wstring utf8ToWide(const std::string& utf8str) {
@@ -302,6 +307,164 @@ public:
         std::cout << "10. " << getString("OPTION_10") << std::endl;
         std::cout << "11. " << getString("OPTION_11") << std::endl;
     }
+
+    void showAboutHoYoShade() {
+        system("cls");
+        setConsoleTitle(getString("TITLE"));
+        std::cout << getString("WELCOME") << std::endl << std::endl;
+        std::cout << getString("VERSION") << std::endl;
+        std::cout << getString("DEVELOPER") << std::endl;
+        std::cout << getString("POWERED_BY") << std::endl << std::endl;
+
+        std::cout << getString("ABOUT_SLOGAN") << std::endl << std::endl;
+        std::cout << getString("ABOUT_DESC_1") << std::endl;
+        std::cout << getString("ABOUT_DESC_2") << std::endl << std::endl;
+        std::cout << getString("ABOUT_WARNING_BUY") << std::endl << std::endl;
+        std::cout << getString("ABOUT_THANKS_CYTEAM") << std::endl;
+        std::cout << getString("ABOUT_THANKS_CLOUDFLARE") << std::endl << std::endl;
+        std::cout << getString("PRESS_ANY_KEY") << std::endl;
+        system("pause");
+    }
+
+    void showDeveloperOptions() {
+        system("cls");
+        setConsoleTitle(getString("TITLE"));
+        std::cout << getString("WELCOME") << std::endl;
+        std::cout << std::endl << getString("VERSION") << std::endl;
+        std::cout << getString("DEVELOPER") << std::endl;
+        std::cout << getString("POWERED_BY") << std::endl << std::endl;
+
+        std::cout << getString("OTHER_DEV_WARNING_1") << std::endl;
+        std::cout << getString("OTHER_DEV_WARNING_2") << std::endl << std::endl;
+
+        std::cout << "1. " << getString("DEV_OPTION_1") << std::endl;
+        std::cout << "2. " << getString("DEV_OPTION_2") << std::endl;
+        std::cout << "3. " << getString("DEV_OPTION_3") << std::endl;
+        std::cout << "4. " << getString("DEV_OPTION_4") << std::endl;
+
+        std::cout << std::endl << getString("INPUT_CHOICE") << std::endl;
+        int choice;
+        std::cin >> choice;
+        switch (choice) {
+            case 1:
+                showCustomizeInject();
+                break;
+            case 2:
+                return; // 回主菜单
+            case 3:
+                showOtherInterfaces();
+                break;
+            case 4:
+                exit(0);
+            default:
+                std::cout << std::endl << getString("INPUT_ERROR") << std::endl;
+                Sleep(1500);
+                showDeveloperOptions();
+                break;
+        }
+    }
+
+    void showCustomizeInject() {
+        system("cls");
+        setConsoleTitle(getString("TITLE"));
+        std::cout << getString("WELCOME") << std::endl;
+        std::cout << std::endl << getString("VERSION") << std::endl;
+        std::cout << getString("DEVELOPER") << std::endl;
+        std::cout << getString("POWERED_BY") << std::endl << std::endl;
+
+        std::cout << getString("CUSTOMIZE_TITLE") << std::endl << std::endl;
+        std::cout << getString("CUSTOMIZE_WARN_1") << std::endl;
+        std::cout << getString("CUSTOMIZE_WARN_2") << std::endl << std::endl;
+        std::cout << getString("CUSTOMIZE_USAGE_1") << std::endl;
+        std::cout << getString("CUSTOMIZE_USAGE_2") << std::endl;
+        std::cout << getString("CUSTOMIZE_USAGE_3") << std::endl << std::endl;
+
+        std::cout << getString("CUSTOMIZE_PROMPT");
+        std::string content;
+        std::cout << getString("CUSTOMIZE_PROMPT");
+        std::getline(std::cin, content);
+        std::getline(std::cin, content);
+        std::cout << std::endl;
+        if (content == "\\exit") {
+            showDeveloperOptions();
+            return;
+        }
+
+        std::cout << getString("CUSTOMIZE_SELECTED") << content << ".exe" << std::endl;
+        std::cout << getString("CUSTOMIZE_ADMON_1") << std::endl;
+        std::cout << getString("CUSTOMIZE_ADMON_2") << std::endl << std::endl;
+
+        std::string command = "start \"\" /wait /b \"" + launcherPath + "\\inject.exe\" " + content + ".exe";
+        system(command.c_str());
+        exit(0);
+    }
+
+    void showOtherInterfaces() {
+        system("cls");
+        setConsoleTitle(getString("TITLE"));
+        
+        std::cout << getString("WELCOME") << std::endl;
+        std::cout << std::endl << getString("VERSION") << std::endl;
+        std::cout << getString("DEVELOPER") << std::endl;
+        std::cout << getString("POWERED_BY") << std::endl << std::endl;
+
+        std::cout << getString("OTHER_INFO_UPDATE") << std::endl;
+        std::cout << getString("OTHER_DEV_WARNING_1") << std::endl;
+        std::cout << getString("OTHER_DEV_WARNING_2") << std::endl << std::endl;
+        std::cout << getString("CYTEAM_NOTE") << std::endl;
+        std::cout << getString("CYTEAM_THANKS") << std::endl << std::endl;
+
+        std::cout << "[1]" << getString("OTHER_OPTION_1") << std::endl;
+        std::cout << "[2]" << getString("OTHER_OPTION_2") << std::endl;
+        std::cout << "[3]" << getString("OTHER_OPTION_3") << std::endl;
+        std::cout << "[4]" << getString("OTHER_OPTION_4") << std::endl;
+        std::cout << "[5]" << getString("OTHER_OPTION_5") << std::endl;
+        std::cout << "[6]" << getString("OTHER_OPTION_6") << std::endl;
+        std::cout << "[7]" << getString("OTHER_OPTION_7") << std::endl;
+        std::cout << "[8]" << getString("OTHER_OPTION_8") << std::endl;
+
+        std::cout << std::endl << getString("OTHER_PROMPT") << std::endl;
+        int choice;
+        std::cin >> choice;
+        if (choice == 1) {
+            openURL("https://github.com/DuolaD/HoYoShade/");
+            showOtherInterfaces();
+        } else if (choice == 2) {
+            openURL("https://d.cyteam.cn/");
+            showOtherInterfaces();
+        } else if (choice == 3) {
+            if (currentLanguage == "zh-Hans") {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Simplified.md#%E3%80%A2-%E8%B5%9E%E5%8A%A9");
+            } else if (currentLanguage == "zh-Hant") {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Traditional.md#%E3%80%A2-%E8%B4%8A%E5%8A%A9");
+            } else {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.md#%E3%80%A2-Donate");
+            }
+            showOtherInterfaces();
+        } else if (choice == 4) {
+            if (currentLanguage == "zh-Hans") {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Simplified.md#%E3%80%A2-%E8%81%94%E7%B3%BB%E6%88%91");
+            } else if (currentLanguage == "zh-Hant") {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Traditional.md#%E3%80%A2-%E8%81%AF%E7%B9%AB%E6%88%91");
+            } else {
+                openURL("https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.md#%E3%80%A2-Contant-Me");
+            }
+            showOtherInterfaces();
+        } else if (choice == 5) {
+            showAboutHoYoShade();
+            showOtherInterfaces();
+        } else if (choice == 6) {
+            showDeveloperOptions();
+        } else if (choice == 7) {
+            return; // 返回主菜单
+        } else if (choice == 8) {
+            exit(0);
+        } else {
+            std::cout << std::endl << getString("INPUT_ERROR") << std::endl;
+            Sleep(1500);
+            showOtherInterfaces();
+        }
+    }
     
     void performInjection(const std::string& target) {
         system("cls");
@@ -552,7 +715,7 @@ public:
                     system("pause");
                     break;
                 case 10:
-                    showLanguageSettings();
+                    showOtherInterfaces();
                     break;
                 case 11:
                     exit(0);

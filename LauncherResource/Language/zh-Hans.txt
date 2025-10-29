@@ -87,6 +87,48 @@ OPTION_9=链接Starward启动器注入HoYoShade
 OPTION_10=更多选项
 OPTION_11=退出程序
 
+# 其他界面
+OTHER_INFO_UPDATE=如果你需要检查版本更新，可以去我们的仓库查看是否有发布新版本。
+OTHER_DEV_WARNING_1=注意！开发者选项仅用于调试/错误检查用途。
+OTHER_DEV_WARNING_2=除非开发者明确要求你这样做，或者你非常清楚自己在做什么，否则请勿轻易使用！
+CYTEAM_NOTE=注意：CYteam 下载站在中国大陆提供国际版原神/崩坏：星穹铁道/HoYoLAB 的免费安装包以及私服资源。
+CYTEAM_THANKS=感谢 CYteam 提供下载站服务。
+OTHER_OPTION_1=访问我们的 GitHub 仓库
+OTHER_OPTION_2=访问 CYteam 提供的下载站服务
+OTHER_OPTION_3=赞助本项目
+OTHER_OPTION_4=联系我们
+OTHER_OPTION_5=关于 HoYoShade
+OTHER_OPTION_6=开发者选项
+OTHER_OPTION_7=返回主菜单
+OTHER_OPTION_8=退出
+OTHER_PROMPT=在此处输入选择前的数字：
+
+# 开发者选项
+DEV_OPTION_1=自定义注入
+DEV_OPTION_2=返回主菜单
+DEV_OPTION_3=返回“其他选项”页面
+DEV_OPTION_4=退出
+
+# 自定义注入
+CUSTOMIZE_TITLE=你已进入自定义注入界面！！！
+CUSTOMIZE_WARN_1=注意！此功能为开发者选项，不适用于正常游戏使用，可能导致未知错误或 Bug。
+CUSTOMIZE_WARN_2=除非开发者明确要求你这样做，或你非常清楚自己在做什么，否则请不要使用此功能对游戏内注入 Reshade。
+CUSTOMIZE_USAGE_1=使用方法：在下方输入目标程序文件名，不需要输入“.exe”扩展名，按回车确认。
+CUSTOMIZE_USAGE_2=当注入窗口出现且文本渲染就绪后，目标程序将开启。
+CUSTOMIZE_USAGE_3=输入“\\exit”可返回开发者选项界面。
+CUSTOMIZE_PROMPT=在此处输入：
+CUSTOMIZE_SELECTED=你选择的注入目标为：
+CUSTOMIZE_ADMON_1=请注意：注入无参数、无法使用开发者模式功能、不支持游戏内操作。注入将只进行一次。
+CUSTOMIZE_ADMON_2=如果你选择了错误的注入目标，请关闭此窗口后重新选择即可。
+
+# 关于
+ABOUT_SLOGAN=HoYo it,Great it.
+ABOUT_DESC_1=HoYoShade 基于官方 ReShade 与 OpenHoYoShade。除效果库/预设外的所有文件均为开源。
+ABOUT_DESC_2=全部源码可在 GitHub 获取。本模组免费且开源。
+ABOUT_WARNING_BUY=请注意：HoYoShade 是一个免费开源的模组。如果你购买了未经修改/二次开发的（Open）HoYoShade，请立即申请退款！该类商家的行为与所有开发者无关。
+ABOUT_THANKS_CYTEAM=致谢：CYTeam【HoYoShade 合作伙伴，在中国大陆提供下载站服务】
+ABOUT_THANKS_CLOUDFLARE=致谢：Cloudflare, Inc.
+
 # 注入目标
 INJECTION_TARGET=注入目标：
 

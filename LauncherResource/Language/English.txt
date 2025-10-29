@@ -61,6 +61,48 @@ OPTION_9=Link Starward launcher to inject HoYoShade
 OPTION_10=More options
 OPTION_11=Exit program
 
+# Other Interfaces
+OTHER_INFO_UPDATE=If you need to check for version updates, you can visit our repository to see if there are any new released versions.
+OTHER_DEV_WARNING_1=Note! Developer options are only for debugging/error checking purposes.
+OTHER_DEV_WARNING_2=Unless developers explicitly ask you to do so, or you are very clear about what you are doing, please do not use it lightly!
+CYTEAM_NOTE=Note: CYteam Download Station provides free installation packages for the international version of Genshin Impact/Honkai: Star Rail/HoYoLAB and private server resources in mainland China.
+CYTEAM_THANKS=Thanks to CYteam for providing the download station service.
+OTHER_OPTION_1=Visit our repository on GitHub
+OTHER_OPTION_2=Visit the download station service provided by CYteam
+OTHER_OPTION_3=Sponsor this project
+OTHER_OPTION_4=Contact us
+OTHER_OPTION_5=About HoYoShade
+OTHER_OPTION_6=Developer options
+OTHER_OPTION_7=Back to menu
+OTHER_OPTION_8=Exit
+OTHER_PROMPT=Type the number here:
+
+# Developer Options
+DEV_OPTION_1=Custom injection.
+DEV_OPTION_2=Back to menu
+DEV_OPTION_3=Back to Other options pages
+DEV_OPTION_4=Exit
+
+# Customize Injection
+CUSTOMIZE_TITLE=You have entered the custom injection interface!!!
+CUSTOMIZE_WARN_1=Note! This function is for developer options and is not suitable for normal game use. It may cause unknown errors/Bugs.
+CUSTOMIZE_WARN_2=Unless developers explicitly ask you to do so, or you are very clear about what you are doing, please do not use this function to inject Reshade in-game.
+CUSTOMIZE_USAGE_1=Usage: Type the target program filename below, DO NOT include '.exe', press Enter to confirm.
+CUSTOMIZE_USAGE_2=Wait until the injection window appears and text rendering is ready, then the target program will start.
+CUSTOMIZE_USAGE_3=Type '\\exit' to return to Developer Options.
+CUSTOMIZE_PROMPT=Type here:
+CUSTOMIZE_SELECTED=The injection target you selected is:
+CUSTOMIZE_ADMON_1=Please note: Injection has no parameters, developer mode functions are unavailable, and in-game operations are unsupported. Injection will only occur once.
+CUSTOMIZE_ADMON_2=If you selected an incorrect injection target, just close this window and reselect.
+
+# About
+ABOUT_SLOGAN=HoYo it,Great it.
+ABOUT_DESC_1=HoYoShade is based on official ReShade and OpenHoYoShade. All files except effect libraries/presets are open-source.
+ABOUT_DESC_2=All sources are available on GitHub. This mod is free and open-source.
+ABOUT_WARNING_BUY=Please note: HoYoShade is a free open-source mod. If you purchased (Open)HoYoShade without modifications/secondary development, please request a refund immediately! Such merchant actions are unrelated to all developers.
+ABOUT_THANKS_CYTEAM=Thanks: CYTeam [HoYoShade partners, providing free download station services in mainland China]
+ABOUT_THANKS_CLOUDFLARE=Thanks: Cloudflare, Inc.
+
 # Injection Information
 INJECTION_TARGET=Your selected injection target is:
 INJECTOR_STARTED=The injector has now started, you can now use the launcher to start the game. The injector will inject simultaneously.
