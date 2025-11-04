@@ -85,6 +85,7 @@ if %missing_reshade_config% equ 1(
     echo\
     echo Still confused? 
     echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+    echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
     echo\
     pause
     goto menu
@@ -105,6 +106,7 @@ echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
 REM I still prefer to be a person who pays silently behind the scenes XD.
 echo\
 echo *: This injection option is applicable to the Beta/Creator Experience server, 
@@ -462,6 +464,7 @@ if "%content%" == "1" (
     echo\
     echo Still not sure how to proceed?
     echo Still confused? You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+    echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
     echo\
     pause
     goto menu
@@ -484,6 +487,7 @@ echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
 echo\
 echo The following client injection options can only be used for injecting into the test server client.
 echo\
@@ -621,6 +625,7 @@ echo\
 echo This mod is only for color grading in-game scenes.  
 echo Please comply with the user agreement of this Mod and the relevant regulations of the game and its developers/publishers.
 echo You can find the user agreement and installation instructions with pictures and videos at https://hoyosha.de .
+echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
 echo [2]Inject into Genshin Impact£¨Mainland China Public£¨REL£©Client£©

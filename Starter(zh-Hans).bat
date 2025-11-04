@@ -85,6 +85,7 @@ if %missing_reshade_config% equ 1(
     echo µã»÷ÓÎÏ·½ø³Ì¸ùÄ¿Â¼¼´¿ÉÊ¹ÓÃ×ÊÔ´¹ÜÀíÆ÷´ò¿ªÓÎÏ·½ø³Ì¸ùÄ¿Â¼¡£  
     echo\
     echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
+    echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
     echo\
     pause
     goto menu
@@ -104,6 +105,7 @@ echo ×¢Òâ£ºÖ§³Ö²¿·ÖBeta/´´×÷ÕßÌåÑé·þ/DevkitµÈ·Ç¹«¿ª¿Í»§¶Ë
 echo\
 echo ±¾Ä£×é½öÓÃÓÚÓÎÏ·»­Ãæµ÷É«Ê¹ÓÃ£¬Çë×ñÊØ±¾ModµÄÓÃ»§Ð­ÒéºÍÓÎÏ·¼°Æä¿ª·¢/·¢ÐÐÉÌÏà¹ØÌõÀý¡£
 echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
+echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
 REM ÎÒ»¹ÊÇ¸üÔ¸Òâµ±Ò»¸öÔÚ±³ºóÄ¬Ä¬¸¶³öµÄÈË XD
 echo\
 echo *:¸Ã×¢ÈëÑ¡ÏîÊÊÓÃÓÚBeta/´´×÷ÕßÌåÑé·þ£¬µ«Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
@@ -450,6 +452,7 @@ if "%content%" == "1" (
     echo µã»÷ÓÎÏ·½ø³Ì¸ùÄ¿Â¼¼´¿ÉÊ¹ÓÃ×ÊÔ´¹ÜÀíÆ÷´ò¿ªÓÎÏ·½ø³Ì¸ùÄ¿Â¼¡£  
     echo\
     echo ÈÔÈ»²»¶®ÈçºÎ²Ù×÷£¿Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
+    echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
     echo\
     pause
     goto menu
@@ -476,6 +479,7 @@ echo ×¢Òâ£ºµ±Ç°×¢ÈëÁÐ±í½öÖ§³Ö²¿·ÖBeta/´´×÷ÕßÌåÑé·þ/DevkitµÈ·Ç¹«¿ª¿Í»§¶Ë£¬²»Ö§³ÖÈ
 echo\
 echo ±¾Ä£×é½öÓÃÓÚÓÎÏ·»­Ãæµ÷É«Ê¹ÓÃ£¬Çë×ñÊØ±¾ModµÄÓÃ»§Ð­ÒéºÍÓÎÏ·¼°Æä¿ª·¢/·¢ÐÐÉÌÏà¹ØÌõÀý¡£
 echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
+echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
 echo\
 echo ÒÔÏÂ¿Í»§¶Ë×¢ÈëÑ¡Ïî¾ùÖ»ÄÜÓÃÓÚ×¢ÈëÖÁ²âÊÔ·þ¿Í»§¶Ë¡£
 echo\
@@ -946,6 +950,7 @@ echo ²¢±£³ÖÓ¦ÓÃÉèÖÃ - ¸ß¼¶ - URLÐ­Òé - ×¢²áURLÐ­Òé¿ª¹Ø±£³Ö¿ªÆô×´Ì¬¡£
 echo\
 echo ±¾Ä£×é½öÓÃÓÚÓÎÏ·»­Ãæµ÷É«Ê¹ÓÃ£¬Çë×ñÊØ±¾ModµÄÓÃ»§Ð­ÒéºÍÓÎÏ·¼°Æä¿ª·¢/·¢ÐÐÉÌÏà¹ØÌõÀý¡£
 echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
+echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
 REM ÎÒ»¹ÊÇ¸üÔ¸Òâµ±Ò»¸öÔÚ±³ºóÄ¬Ä¬¸¶³öµÄÈË XD
 echo\
 echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
