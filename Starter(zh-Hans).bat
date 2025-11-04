@@ -110,17 +110,17 @@ REM ÎÒ»¹ÊÇ¸üÔ¸Òâµ±Ò»¸öÔÚ±³ºóÄ¬Ä¬¸¶³öµÄÈË XD
 echo\
 echo *:¸Ã×¢ÈëÑ¡ÏîÊÊÓÃÓÚBeta/´´×÷ÕßÌåÑé·þ£¬µ«Äã¿ÉÄÜÐèÒªÏò¿ª·¢Õß»ñÈ¡²¹¶¡·½¿É×¢Èë¡£
 echo\
-echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª/Devkit/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
-echo [3]×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ/Epic ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
-echo [4]×¢ÈëÖÁ±À»µÈý£¨Í¨ÓÃ ¹«¿ª/Beta¿Í»§¶Ë£©*
-echo [5]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
-echo [6]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
-echo [7]ÇÐ»»ÖÁ²âÊÔ·þ¿Í»§¶Ë×¢ÈëÁÐ±í
-echo [8]Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ/¾øÇøÁã£¨¹«¿ª¿Í»§¶Ë£©
-echo [9]Áª¶¯StarwardÆô¶¯Æ÷×¢ÈëHoYoShade
-echo [10]ÆäËüÑ¡Ïî
-echo [11]ÍË³ö³ÌÐò
+echo [1] ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
+echo [2] ×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª/Devkit/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [3] ×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ/Epic ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [4] ×¢ÈëÖÁ±À»µÈý£¨Í¨ÓÃ ¹«¿ª/Beta¿Í»§¶Ë£©*
+echo [5] ×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨Í¨ÓÃ ¹«¿ª/Beta/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©*
+echo [6] ×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
+echo [7] ÇÐ»»ÖÁ²âÊÔ·þ¿Í»§¶Ë×¢ÈëÁÐ±í
+echo [8] Áª¶¯Blender/ÁôÓ°»ú²å¼þ×¢ÈëÖÁÔ­Éñ/¾øÇøÁã£¨¹«¿ª¿Í»§¶Ë£©
+echo [9] Áª¶¯StarwardÆô¶¯Æ÷×¢ÈëHoYoShade
+echo [10] ÆäËüÑ¡Ïî
+echo [11] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
@@ -265,14 +265,14 @@ echo ×¢£ºCYteamÏÂÔØÕ¾³ýÁËÌá¹©±¾Ä£×éµÄ¾µÏñÏÂÔØÖ®Íâ£¬»¹ÔÚÖÐ¹ú´óÂ½µØÇøÌá¹©Ãâ·ÑµÄ¹ú¼
 echo ³ý´ËÖ®Íâ£¬CYteam»¹Ìá¹©Ò»Ð©°²×¿µÄ¸ã»ú×ÊÔ´¡£¸ÐÐËÈ¤µÄ¿ÉÒÔÈ¥¿´Ò»¿´~
 echo ¸ÐÐ»CYteamÌá¹©µÄÏÂÔØÕ¾·þÎñ
 echo\
-echo [1]·ÃÎÊÎÒÃÇµÄGitHub²Ö¿â
-echo [2]·ÃÎÊÓÉCYteamÌá¹©µÄÏÂÔØÕ¾·þÎñ
-echo [3]ÔÞÖú±¾Mod
-echo [4]ÁªÏµÎÒÃÇ
-echo [5]¹ØÓÚHoYoShade
-echo [6]¿ª·¢ÕßÑ¡Ïî
-echo [7]·µ»ØÖ÷½çÃæ
-echo [8]ÍË³ö³ÌÐò
+echo [1] ·ÃÎÊÎÒÃÇµÄGitHub²Ö¿â
+echo [2] ·ÃÎÊÓÉCYteamÌá¹©µÄÏÂÔØÕ¾·þÎñ
+echo [3] ÔÞÖú±¾Mod
+echo [4] ÁªÏµÎÒÃÇ
+echo [5] ¹ØÓÚHoYoShade
+echo [6] ¿ª·¢ÕßÑ¡Ïî
+echo [7] ·µ»ØÖ÷½çÃæ
+echo [8] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
@@ -316,10 +316,10 @@ echo ÓÉ[»Ã¸ÛÖ®µû]×¢ÈëÄÚºËÇý¶¯
 echo\
 echo ×¢Òâ£¡¿ª·¢ÕßÑ¡Ïî½öÓÃÓÚµ÷ÊÔ/¼ì²â´íÎóÐèÒª¡£³ý·Ç¿ª·¢ÕßÃ÷È·ÒªÇóÄãÕâÑù×ö£¬»òÕßÄãºÜÇå³þÖªµÀ×Ô¼ºÔÚ×öÊ²Ã´£¬·ñÔòÇëÎðÇáÒ×Ê¹ÓÃ£¡
 echo\
-echo [1]×Ô¶¨Òå×¢Èë
-echo [2]·µ»ØÖ÷½çÃæ
-echo [3]·µ»ØÆäËüÑ¡Ïî
-echo [4]ÍË³ö³ÌÐò
+echo [1] ×Ô¶¨Òå×¢Èë
+echo [2] ·µ»ØÖ÷½çÃæ
+echo [3] ·µ»ØÆäËüÑ¡Ïî
+echo [4] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
@@ -392,14 +392,14 @@ echo ÇëÁ¢¼´ÍË¿î£¡ÉÌ¼ÒÐÐÎªºÍËùÓÐ¿ª·¢ÕßÎÞ¹Ø£¡
 echo\
 echo ÏêÏ¸¿ª·¢Ãûµ¥£º
 echo -DuolaDStudio Hong Kong Ltd.
-echo   ¡ª¡ª¶ßÀ²DÃÎDuolaD[REÊÊÅä/´ó°æ±¾¸üÐÂ¿ª·¢/Æô¶¯Æ÷/Ô¤Éè]
-echo   ¡ª¡ªÁÕÄÝÌØLynetteNotFound[HoYoShadeÐ¡°æ±¾¸üÐÂ¿ª·¢/Î¬»¤]
-echo -Ex_M[¼¼ÊõÖ§³Ö/Ö¸µ¼/GUIÖÆ×÷]
-echo -ZelbertYQ[ÎÄµµÕ¾¼¼ÊõÖ§³Ö]
+echo   ¡ª¡ª¶ßÀ²DÃÎDuolaD[REÊÊÅä/´ó°æ±¾¸üÐÂ¿ª·¢/Æô¶¯Æ÷/Ô¤Éè] 
+echo   ¡ª¡ªÁÕÄÝÌØLynetteNotFound[HoYoShadeÐ¡°æ±¾¸üÐÂ¿ª·¢/Î¬»¤] 
+echo -Ex_M[¼¼ÊõÖ§³Ö/Ö¸µ¼/GUIÖÆ×÷] 
+echo -ZelbertYQ[ÎÄµµÕ¾¼¼ÊõÖ§³Ö] 
 echo\
 echo ÃùÐ»£º
-echo -CYTeam[HoYoShadeºÏ×÷»ï°é/Î¢ÈíÆóÒµ´¢´æ¼Æ»®Ìá¹©/¶¯Ì¬×ª¾²Ì¬Á´½Ó½â¾ö·½°¸]
-echo -Cloudflare, Inc.[ÓòÃûÍÐ¹ÜÓë¹ÜÀí]
+echo -CYTeam[HoYoShadeºÏ×÷»ï°é/Î¢ÈíÆóÒµ´¢´æ¼Æ»®Ìá¹©/¶¯Ì¬×ª¾²Ì¬Á´½Ó½â¾ö·½°¸] 
+echo -Cloudflare, Inc.[ÓòÃûÍÐ¹ÜÓë¹ÜÀí] 
 echo\
 echo ¸ÐÐ»ÓÐÄã£¡HoYoShadeÃ÷Ìì»á¸üºÃ£¡
 pause
@@ -426,8 +426,8 @@ echo\
 echo ÖØÖÃÍê±Ïºó£¬ÄãÐèÒªÖØÐÂÉ¾³ýÒÑ¾­¸´ÖÆµ½ÓÎÏ·½ø³Ì¸ùÄ¿Â¼ÏÂµÄReShade.iniÅäÖÃÎÄ¼þ£¬·ñÔòHoYoShade½«ÎÞ·¨°´ÕÕÔ¤ÆÚÕý³£¹¤×÷¡£
 echo ÊÇ·ñ¼ÌÐøÖØÖÃ²Ù×÷£¿
 echo\
-echo [1]ÊÇ
-echo [2]·ñ(·µ»ØÆô¶¯Æ÷Ö÷²Ëµ¥)
+echo [1] ÊÇ
+echo [2] ·ñ(·µ»ØÆô¶¯Æ÷Ö÷²Ëµ¥)
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
 
@@ -488,14 +488,14 @@ echo 1:ÄãÏëÊ¹ÓÃµÄ²âÊÔ·þ¿Í»§¶Ë×¢ÈëÑ¡ÏîÓë¹«¿ª¿Í»§¶Ë×¢ÈëÑ¡ÏîÍ¨ÓÃ£¬ÇëÏÈ³¢ÊÔÊ¹ÓÃ¹«¿ª¿
 echo 2:HoYoShadeÔÝÎ´ÊÊÅäÄãÄ¿Ç°ÕýÔÚÊ¹ÓÃµÄ²âÊÔ·þ¿Í»§¶Ë¡£
 echo ÈçÐèÊÊÅä£¬ÇëÔÚÎÒÃÇµÄ·ÃÎÊÎÒÃÇµÄGitHub²Ö¿â£¨https://github.com/DuolaD/HoYoShade£©Ìá½»issues¡£
 echo\
-echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ DevKit/¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
-echo [3]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
-echo [4]×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âºóÄÚ²â£¨Beta£©/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
-echo [5]×¢ÈëÖÁ±À»µ£ºÒòÔµ¾«Áé£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/¹ú¼Ê·þ CB1 ¿Í»§¶Ë£©
-echo [6]ÇÐ»»ÖÁ¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±í
-echo [7]ÆäËüÑ¡Ïî
-echo [8]ÍË³ö³ÌÐò
+echo [1] ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
+echo [2] ×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ DevKit/¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
+echo [3] ×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âÇ°ÄÚ²â£¨Beta£©¿Í»§¶Ë£©
+echo [4] ×¢ÈëÖÁ¾øÇøÁã£¨Í¨ÓÃ ¹«²âºóÄÚ²â£¨Beta£©/´´×÷ÕßÌåÑé·þ¿Í»§¶Ë£©
+echo [5] ×¢ÈëÖÁ±À»µ£ºÒòÔµ¾«Áé£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/¹ú¼Ê·þ CB1 ¿Í»§¶Ë£©
+echo [6] ÇÐ»»ÖÁ¹«¿ª¿Í»§¶Ë×¢ÈëÁÐ±í
+echo [7] ÆäËüÑ¡Ïî
+echo [8] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
@@ -661,8 +661,8 @@ echo Õâ¿ÉÄÜ»áµ¼ÖÂ±¾ModµÄÁª¶¯×¢Èë¹¦ÄÜºÍBlender/ÁôÓ°»ú²å¼þÎÞ·¨ÔÚÄãËùÔÚµÄ¹ú¼Ò¼°µØÇø
 echo\
 echo ÊÇ·ñÈ·ÈÏ³¢ÊÔ¼ÌÐø²Ù×÷£¿
 echo\
-echo [1]ÊÇ
-echo [2]·ñ£¨·µ»ØÆô¶¯Æ÷Ö÷²Ëµ¥£©
+echo [1] ÊÇ
+echo [2] ·ñ£¨·µ»ØÆô¶¯Æ÷Ö÷²Ëµ¥£©
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
 if "%content%" == "1" (
@@ -696,14 +696,14 @@ if "%missing_curl%" == "1" (
 )
 echo µ±Ç° Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢ÈçÏÂ£º
 if "!ys_client_exist!"=="1" (
-    echo [Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ]£ºÒÑ¼ÓÔØ
+    echo [Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ] £ºÒÑ¼ÓÔØ
 ) else (
-    echo [Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ]£ºÎ´ÕÒµ½
+    echo [Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ] £ºÎ´ÕÒµ½
 )
 if "!zzz_loader_exist!"=="1" (
-    echo [¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ]£ºÒÑ¼ÓÔØ
+    echo [¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ] £ºÒÑ¼ÓÔØ
 ) else (
-    echo [¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ]£ºÎ´ÕÒµ½
+    echo [¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ] £ºÎ´ÕÒµ½
 )
 echo\
 echo µ±Ç°ÎÒÃÇ¼ì²âµ½ÄãµÄËùÔÚ¹ú¼Ò/µØÇøÎª£º%country_code% ¡£
@@ -711,20 +711,25 @@ echo\
 echo ×¢Òâ£ºÈç¹ûÄãÊ¹ÓÃÁª¶¯×¢Èë¹¦ÄÜ£¬ÐèÒªÑ¡ÔñÄãÔÚBlender/ÁôÓ°»ú²å¼þÖÐ°ó¶¨µÄ¶ÔÓ¦·þÎñÆ÷µÄ¿Í»§¶Ë£¬·ñÔòReShadeÎÞ·¨Õý³£×¢Èë¡£
 echo Èç¹ûÕâÊÇÄãµÚÒ»´ÎÆô¶¯Blender/ÁôÓ°»ú²å¼þ£¬ÇëÈ·±£ÔÚ´Ë´¦Ñ¡ÔñµÄÄ¿±ê¿Í»§¶ËºÍÄã½ÓÏÂÀ´ÔÚBlender/ÁôÓ°»ú²å¼þÖÐ°ó¶¨µÄÄ¿±ê¿Í»§¶ËÒ»ÖÂ£¬·ñÔòReShadeÎÞ·¨Õý³£×¢Èë¡£
 echo\
-echo ×¢Òâ£ºÑ¡Ïî[9]½ö¸¶·Ñ°æ/×÷Õß°æÎÞÈË»ú¿ÉÓÃ¡£
+echo ×¢Òâ£ºÑ¡Ïî[9] ½ö¸¶·Ñ°æ/×÷Õß°æÎÞÈË»ú¿ÉÓÃ¡£
 echo\
-echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]Áª¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ Ô­Éñ£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
-echo [3]Áª¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ Ô­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ/Epic ¹«¿ª ¿Í»§¶Ë£©
-echo [4]Áª¶¯ ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
-echo [5]½öÆô¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ
-echo [6]½öÆô¶¯ ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ
-echo [7]Í¬²½µ±Ç°ÏµÍ³Ê±¼äÒÔÐÞ¸´ÏµÍ³Ê±¼ä²»Í¬²½µÄÌáÊ¾
-echo [8]É¾³ýconfigÎÄ¼þÒÔÖØÐÂÖ¸ÏòÆäËü¿Í»§¶Ë£¨ÔÝÊ±½öÖ§³Ö¶Ô Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ½øÐÐ²Ù×÷£©
-echo [9]É¾³ýcookies.jsonÎÄ¼þÒÔÐÞ¸´×¢ÈëÊ±¡°ÕËºÅÎ´µÇÂ¼¡±µÄ±¨´íÌáÊ¾£¨ÔÝÊ±½öÖ§³Ö¶Ô Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ½øÐÐ²Ù×÷£©
-echo [10]Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢
-echo [11]·µ»ØÖ÷½çÃæ
-echo [12]ÍË³ö³ÌÐò
+echo ÔÚµ±Ç°HoYoShade°æ±¾ÖÐ£º
+echo Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ½öÖ§³ÖV2°æ±¾¡£
+echo ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ ½öÖ§³ÖV1°æ±¾¡£
+echo ÆäËû°æ±¾µÄ Blender/ÁôÓ°»ú²å¼þ ½«²»ÊÜÖ§³Ö¡£
+echo\
+echo [1] ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
+echo [2] Áª¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ Ô­Éñ£¨Í¨ÓÃ ÖÐ¹ú´óÂ½/ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
+echo [3] Áª¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ Ô­Éñ£¨Í¨ÓÃ ¹ú¼Ê·þ/Epic ¹«¿ª ¿Í»§¶Ë£©
+echo [4] Áª¶¯ ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÖÁ ¾øÇøÁã£¨Í¨ÓÃ ¹«¿ª¿Í»§¶Ë£©
+echo [5] ½öÆô¶¯ Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ
+echo [6] ½öÆô¶¯ ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ
+echo [7] Í¬²½µ±Ç°ÏµÍ³Ê±¼äÒÔÐÞ¸´ÏµÍ³Ê±¼ä²»Í¬²½µÄÌáÊ¾
+echo [8] É¾³ý config ÎÄ¼þÒÔÖØÐÂÖ¸ÏòÆäËü¿Í»§¶Ë
+echo [9] É¾³ý cookies.json/cookie.txt ÎÄ¼þÒÔÐÞ¸´×¢ÈëÊ±¡°ÕËºÅÎ´µÇÂ¼¡±µÄ±¨´íÌáÊ¾
+echo [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢
+echo [11] ·µ»ØÖ÷½çÃæ
+echo [12] ÍË³ö³ÌÐò
 echo\
 set /p "choice=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
 echo\
@@ -733,7 +738,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="2" (
     if "!ys_client_exist!"=="0" (
         echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª ys_client.lnk µÄ¿ì½Ý·½Ê½¡£
-        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10]Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
         pause
         goto blender_hook_menu
     )
@@ -751,7 +756,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="3" (
     if "!ys_client_exist!"=="0" (
         echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª ys_client.lnk µÄ¿ì½Ý·½Ê½¡£
-        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10]Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
         pause
         goto blender_hook_menu
     )
@@ -769,7 +774,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="4" (
     if "!zzz_loader_exist!"=="0" (
         echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª zzz_loader.lnk µÄ¿ì½Ý·½Ê½¡£
-        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª zzz_loader.lnk £¬È»ºóÑ¡Ôñ [10]Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+        echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª zzz_loader.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
         pause
         goto blender_hook_menu
     )
@@ -833,6 +838,43 @@ if "%choice%"=="1" (
     pause
     goto blender_hook_menu
 ) else if "%choice%"=="8" (
+    :blender_select_config_target
+    cls
+    echo ÇëÑ¡ÔñÒª²Ù×÷µÄ²å¼þ°æ±¾£º
+    echo [1]  Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ
+    echo [2]  ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ
+    echo [3]  ·µ»ØÖ÷²Ëµ¥
+    echo\
+    set /p "blver=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
+    if "!blver!"=="1" (
+        if "!ys_client_exist!"=="0" (
+            echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª ys_client.lnk µÄ¿ì½Ý·½Ê½¡£
+            echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0ys_client.exe.lnk"
+    ) else if "!blver!"=="2" (
+        if "!zzz_loader_exist!"=="0" (
+            echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª zzz_loader.lnk µÄ¿ì½Ý·½Ê½¡£
+            echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª zzz_loader.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0zzz_loader.exe.lnk"
+    ) else if "!blver!"=="3" (
+        goto blender_hook_menu
+    ) else (
+        echo\
+        echo ÊäÈë´íÎó¡£
+        timeout /t 2
+        goto blender_select_config_target
+    )
+    set "target="
+    for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"!shortcut!\").TargetPath"') do (
+        set "target=%%i"
+    )
+    for %%i in ("!target!") do set "target_dir=%%~dpi"
     set "fileToDelete=config"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
@@ -850,8 +892,8 @@ if "%choice%"=="1" (
       echo ÄãÈ·¶¨ÄãÒª¼ÌÐøÉ¾³ýconfigÎÄ¼þÂð£¿
       echo É¾³ýºóÄãÐèÒªÖØÐÂÆô¶¯Ò»´Î¿Í»§¶ËÒÔ´ËÈÃÎÞÈË»úÖØÐÂ»ñÈ¡ÓÎÏ·½ø³Ì¸ùÄ¿Â¼¡£
       echo\
-      echo [1]ÊÇ
-      echo [2]·ñ£¨·µ»ØÖ÷²Ëµ¥£©
+      echo [1] ÊÇ
+      echo [2] ·ñ£¨·µ»ØÖ÷²Ëµ¥£©
       echo\
       set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
       if "!content!" == "1" (
@@ -877,12 +919,51 @@ if "%choice%"=="1" (
       )
     )
 ) else if "%choice%"=="9" ( 
-    set "fileToDelete=cookies.json"
+    :blender_select_cookies_target
+    cls
+    echo ÇëÑ¡ÔñÒª²Ù×÷µÄ²å¼þ°æ±¾£º
+    echo [1]  Ô­Éñ°æ Blender/ÁôÓ°»ú²å¼þ
+    echo [2]  ¾øÇøÁã°æ Blender/ÁôÓ°»ú²å¼þ
+    echo [3]  ·µ»ØÖ÷²Ëµ¥
+    echo\
+    set /p "blver=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
+    if "!blver!"=="1" (
+        if "!ys_client_exist!"=="0" (
+            echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª ys_client.lnk µÄ¿ì½Ý·½Ê½¡£
+            echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª ys_client.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0ys_client.exe.lnk"
+        set "cookie_filename=cookie.txt"
+    ) else if "!blver!"=="2" (
+        if "!zzz_loader_exist!"=="0" (
+            echo ×Ô¼ìÎ´Í¨¹ý£¬Ä£×é¸ùÄ¿Â¼ÏÂ²¢Ã»ÓÐÕÒµ½ÃûÎª zzz_loader.lnk µÄ¿ì½Ý·½Ê½¡£
+            echo ÇëÔÚÄ£×é¸ùÄ¿Â¼ÏÂ´´½¨Ö¸Ïò loader.exe µÄ¿ì½Ý·½Ê½£¬ÃüÃûÎª zzz_loader.lnk £¬È»ºóÑ¡Ôñ [10] Ë¢ÐÂ Blender/ÁôÓ°»ú²å¼þ ×¢ÈëÆ÷¼ì²âÐÅÏ¢£¬ÔÙÊÔÒ»´Î¡£
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0zzz_loader.exe.lnk"
+        set "cookie_filename=cookies.json"
+    ) else if "!blver!"=="3" (
+        goto blender_hook_menu
+    ) else (
+        echo\
+        echo ÊäÈë´íÎó¡£
+        timeout /t 2
+        goto blender_select_cookies_target
+    )
+    set "target="
+    for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"!shortcut!\").TargetPath"') do (
+        set "target=%%i"
+    )
+    for %%i in ("!target!") do set "target_dir=%%~dpi"
+    set "fileToDelete=!cookie_filename!"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
-    set "filePath=!target_dir!\cookies.json"
+    set "filePath=!target_dir!\!cookie_filename!"
     if not exist "!filePath!" (
-      echo ×Ô¼ìÊ§°Ü£¬cookies.jsonÎÄ¼þ²»´æÔÚÓÚÎÞÈË»úÄ£×éÄ¿Â¼ÏÂ¡£
+      echo ×Ô¼ìÊ§°Ü£¬!cookie_filename! ÎÄ¼þ²»´æÔÚÓÚÎÞÈË»úÄ£×éÄ¿Â¼ÏÂ¡£
       echo Õâ¿ÉÄÜÊÇÒòÎªÄãÊ¹ÓÃµÄÊÇÃâ·Ñ°æÎÞÈË»ú£¬»òÕßÄãÖ¸ÏòÁËÒ»¸ö´íÎóµÄloader.exeÎÄ¼þ¡£
       echo\
       echo °´ÏÂÈÎÒâ¼üºó·µ»ØÖ÷²Ëµ¥¡£
@@ -891,11 +972,11 @@ if "%choice%"=="1" (
     ) else (
       :blender_delete_cookiesjson
       cls
-      echo ÄãÈ·¶¨ÄãÒª¼ÌÐøÉ¾³ýcookies.jsonÎÄ¼þÂð£¿
+      echo ÄãÈ·¶¨ÄãÒª¼ÌÐøÉ¾³ý !cookie_filename! ÎÄ¼þÂð£¿
       echo É¾³ýºóÄãÐèÒªÖØÐÂÉ¨ÂëÒÔµÇÂ¼ßÙÁ¨ßÙÁ¨ÕËºÅ¡£
       echo\
-      echo [1]ÊÇ
-      echo [2]·ñ£¨·µ»ØÖ÷²Ëµ¥£©
+      echo [1] ÊÇ
+      echo [2] ·ñ£¨·µ»ØÖ÷²Ëµ¥£©
       echo\
       set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"
       if "!content!" == "1" (
@@ -905,7 +986,7 @@ if "%choice%"=="1" (
           if exist "!filePath!" (
               echo É¾³ýÊ§°Ü£¬¿ÉÄÜÊÇÎÄ¼þ±»Õ¼ÓÃ»òÂ·¾¶´íÎó¡£
           ) else (
-              echo ÒÑ³É¹¦É¾³ýcookies.jsonÎÄ¼þ¡£
+              echo ÒÑ³É¹¦É¾³ý !cookie_filename! ÎÄ¼þ¡£
           )
           echo\
           echo °´ÏÂÈÎÒâ¼üºó·µ»ØÖ÷²Ëµ¥¡£
@@ -953,21 +1034,21 @@ echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ»§Ð­ÒéºÍÍ¼ÎÄ/ÊÓÆµ°²×°ËµÃ÷¡£
 echo Î»ÓÚÖÐ¹ú´óÂ½£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄ·ÃÎÊÌåÑé¡£
 REM ÎÒ»¹ÊÇ¸üÔ¸Òâµ±Ò»¸öÔÚ±³ºóÄ¬Ä¬¸¶³öµÄÈË XD
 echo\
-echo [1]ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
-echo [3]×¢ÈëÖÁÔ­Éñ£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
-echo [4]×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
-echo [5]×¢ÈëÖÁ±À»µÈý£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
-echo [6]×¢ÈëÖÁ±À»µÈý£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
-echo [7]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
-echo [8]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
-echo [9]×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
-echo [10]×¢ÈëÖÁ¾øÇøÁã£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
-echo [11]×¢ÈëÖÁ¾øÇøÁã£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
-echo [12]×¢ÈëÖÁ¾øÇøÁã£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
-echo [13]·µ»ØÖ÷½çÃæ
-echo [14]ÆäËüÑ¡Ïî
-echo [15]ÍË³ö³ÌÐò
+echo [1] ÖØÖÃÄ£×é¸ùÄ¿Â¼ÖÐµÄReShade.ini
+echo [2] ×¢ÈëÖÁÔ­Éñ£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
+echo [3] ×¢ÈëÖÁÔ­Éñ£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
+echo [4] ×¢ÈëÖÁÔ­Éñ£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
+echo [5] ×¢ÈëÖÁ±À»µÈý£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
+echo [6] ×¢ÈëÖÁ±À»µÈý£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
+echo [7] ×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
+echo [8] ×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
+echo [9] ×¢ÈëÖÁ±À»µ£ºÐÇñ·ÌúµÀ£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
+echo [10] ×¢ÈëÖÁ¾øÇøÁã£¨ÖÐ¹ú´óÂ½ ¹«¿ª¿Í»§¶Ë£©
+echo [11] ×¢ÈëÖÁ¾øÇøÁã£¨ßÙÁ¨ßÙÁ¨ ¹«¿ª¿Í»§¶Ë£©
+echo [12] ×¢ÈëÖÁ¾øÇøÁã£¨¹ú¼Ê·þ ¹«¿ª¿Í»§¶Ë£©
+echo [13] ·µ»ØÖ÷½çÃæ
+echo [14] ÆäËüÑ¡Ïî
+echo [15] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÊäÈëÑ¡ÏîÇ°ÃæµÄÊý×Ö£º"

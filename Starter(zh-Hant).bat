@@ -693,19 +693,19 @@ if "%missing_curl%" == "1" (
     echo 我們檢測到當前操作系統中並不包含curl組件，這會導致地區檢測功能無法工作。
     echo\
     echo 你仍然可以繼續使用此Mod的聯動注入功能。
-    echo 但如果你並不處於中国大陆/港澳台/新加坡地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
+    echo 但如果你並不處於中國大陸/港澳臺/新加坡地區，可能會導致本Mod的聯動注入功能和Blender/留影機插件無法在你所在的國家及地區獲得完整技術支持,或不予對你提供任何技術支持。
     echo\
 )
-echo 當前 Blender/留影機插件 注入器检测信息如下：
+echo 當前 Blender/留影機插件 注入器檢測信息如下：
 if "!ys_client_exist!"=="1" (
-    echo [原神版 Blender/留影機插件]：已加載
+    echo [原神版 Blender/留影機插件] ：已加載
 ) else (
-    echo [原神版 Blender/留影機插件]：未找到
+    echo [原神版 Blender/留影機插件] ：未找到
 )
 if "!zzz_loader_exist!"=="1" (
-    echo [絕區零版 Blender/留影機插件]：已加載
+    echo [絕區零版 Blender/留影機插件] ：已加載
 ) else (
-    echo [絕區零版 Blender/留影機插件]：未找到
+    echo [絕區零版 Blender/留影機插件] ：未找到
 )
 echo\
 echo 當前我們檢測到你的所在國家/地區爲：%country_code% 。
@@ -713,26 +713,37 @@ echo\
 echo 注意：如果你使用聯動注入功能，需要選擇你在Blender/留影機插件中綁定的對應服務器的客戶端，否則ReShade無法正常注入。
 echo 如果這是你第一次啓動Blender/留影機插件，請確保在此處選擇的目標客戶端和你接下來在Blender/留影機插件中綁定的目標客戶端一致，否則ReShade無法正常注入。
 echo\
-echo 注意：選項[9]僅付費版/作者版無人機可用。
+echo 注意：選項[9] 僅付費版/作者版無人機可用。
 echo\
-echo [1]重置模組根目錄中的ReShade.ini
-echo [2]聯動 原神版 Blender/留影機插件 注入至 原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
-echo [3]聯動 原神版 Blender/留影機插件 注入至 原神（通用 國際服/Epic 公開 客戶端）
-echo [4]聯動 絕區零版 Blender/留影機插件 注入至 絕區零（通用 公開客戶端）
-echo [5]僅啓動 原神版 Blender/留影機插件
-echo [6]僅啓動 絕區零版 Blender/留影機插件
-echo [7]同步當前系統時間以修復系統時間不同步的提示
-echo [8]刪除config文件以重新指向其它客戶端（暫時僅支持對 原神版 Blender/留影機插件 進行操作）
-echo [9]刪除cookies.json文件以修復注入時“賬號未登錄”的報錯提示（暫時僅支持對 原神版 Blender/留影機插件 進行操作）
-echo [10]刷新 Blender/留影機插件 注入器檢測信息
-echo [11]返回主界面
-echo [12]退出程序
+echo 在當前HoYoShade版本中：
+echo 原神版 Blender/留影機插件 僅支持V2版本。
+echo 絕區零版 Blender/留影機插件 僅支持V1版本。
+echo 其他版本的 Blender/留影機插件 將不受支持。
+echo\
+echo [1] 重置模組根目錄中的ReShade.ini
+echo [2] 聯動 原神版 Blender/留影機插件 注入至 原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
+echo [3] 聯動 原神版 Blender/留影機插件 注入至 原神（通用 國際服/Epic 公開 客戶端）
+echo [4] 聯動 絕區零版 Blender/留影機插件 注入至 絕區零（通用 公開客戶端）
+echo [5] 僅啓動 原神版 Blender/留影機插件
+echo [6] 僅啓動 絕區零版 Blender/留影機插件
+echo [7] 同步當前系統時間以修復系統時間不同步的提示
+echo [8] 刪除 config 文件以重新指向其它客戶端
+echo [9] 刪除 cookies.json/cookie.txt 文件以修復注入時“賬號未登錄”的報錯提示
+echo [10] 刷新 Blender/留影機插件 注入器檢測信息
+echo [11] 返回主界面
+echo [12] 退出程序
 echo\
 set /p "choice=在此輸入選項前面的數字："
 echo\
 if "%choice%"=="1" (
     goto ini_Reset
 ) else if "%choice%"=="2" (
+    if "!ys_client_exist!"=="0" (
+        echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_client.lnk 的快捷方式。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 ys_client.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+        pause
+        goto blender_hook_menu
+    )
     echo 你選擇的注入目標爲:原神（通用 中國大陸/嗶哩嗶哩 公開客戶端）
     echo\
     echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
@@ -745,6 +756,12 @@ if "%choice%"=="1" (
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%choice%"=="3" (
+    if "!ys_client_exist!"=="0" (
+        echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_client.lnk 的快捷方式。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 ys_client.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+        pause
+        goto blender_hook_menu
+    )
     echo 你選擇的注入目標爲:原神（通用 國際服/Epic 公開 客戶端）
     echo\
     echo ReShade和Blender/留影機插件注入器現已啓動。請不要關閉本窗口。
@@ -759,7 +776,7 @@ if "%choice%"=="1" (
 ) else if "%choice%"=="4" (
     if "!zzz_loader_exist!"=="0" (
         echo 自檢未通過，模組根目錄下並沒有找到名爲 zzz_loader.lnk 的快捷方式。
-        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 zzz_loader.lnk ，然後退出並重新進入此界面，再試一次。
+        echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 zzz_loader.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
         pause
         goto blender_hook_menu
     )
@@ -816,13 +833,50 @@ if "%choice%"=="1" (
     echo 你可以優先檢查設備主板BIOS的電池電量（通常爲CR2032，電壓低於2V說明電池電量耗盡）。
     echo 如果電壓過低，請嘗試更換全新的電池，並在BIOS中設置正確的時間，然後使用本功能同步系統時間。
     echo\
-    echo 如果更換電池後故障依舊/當前設備因相關條款無法自行更換，請聯繫你的設備製造商/第三方維修機構尋求幫助。
+    echo 如果更換電池後故障依舊/當前設備因相關條款無法自行更換，請聯繫Blender/留影機插件開發者/你的設備製造商/第三方維修機構尋求幫助。
     echo\
     echo ========================
     echo\
     pause
     goto blender_hook_menu
 ) else if "%choice%"=="8" (
+    :blender_select_config_target
+    cls
+    echo 請選擇要操作的插件版本：
+    echo [1]  原神版 Blender/留影機插件
+    echo [2]  絕區零版 Blender/留影機插件
+    echo [3]  返回主菜單
+    echo\
+    set /p "blver=在此輸入選項前面的數字："
+    if "!blver!"=="1" (
+        if "!ys_client_exist!"=="0" (
+            echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_client.lnk 的快捷方式。
+            echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 ys_client.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0ys_client.exe.lnk"
+    ) else if "!blver!"=="2" (
+        if "!zzz_loader_exist!"=="0" (
+            echo 自檢未通過，模組根目錄下並沒有找到名爲 zzz_loader.lnk 的快捷方式。
+            echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 zzz_loader.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0zzz_loader.exe.lnk"
+    ) else if "!blver!"=="3" (
+        goto blender_hook_menu
+    ) else (
+        echo\
+        echo 輸入錯誤。
+        timeout /t 2
+        goto blender_select_config_target
+    )
+    set "target="
+    for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"!shortcut!\").TargetPath"') do (
+        set "target=%%i"
+    )
+    for %%i in ("!target!") do set "target_dir=%%~dpi"
     set "fileToDelete=config"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
@@ -840,8 +894,8 @@ if "%choice%"=="1" (
       echo 你確定你要繼續刪除config文件嗎？
       echo 刪除後你需要重新啓動一次客戶端以此讓無人機重新獲取遊戲進程根目錄。
       echo\
-      echo [1]是
-      echo [2]否（返回主菜單）
+      echo [1] 是
+      echo [2] 否（返回主菜單）
       echo\
       set /p "content=在此輸入選項前面的數字："
       if "!content!" == "1" (
@@ -867,12 +921,51 @@ if "%choice%"=="1" (
       )
     )
 ) else if "%choice%"=="9" ( 
-    set "fileToDelete=cookies.json"
+    :blender_select_cookies_target
+    cls
+    echo 請選擇要操作的插件版本：
+    echo [1]  原神版 Blender/留影機插件
+    echo [2]  絕區零版 Blender/留影機插件
+    echo [3]  返回主菜單
+    echo\
+    set /p "blver=在此輸入選項前面的數字："
+    if "!blver!"=="1" (
+        if "!ys_client_exist!"=="0" (
+            echo 自檢未通過，模組根目錄下並沒有找到名爲 ys_client.lnk 的快捷方式。
+            echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 ys_client.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0ys_client.exe.lnk"
+        set "cookie_filename=cookie.txt"
+    ) else if "!blver!"=="2" (
+        if "!zzz_loader_exist!"=="0" (
+            echo 自檢未通過，模組根目錄下並沒有找到名爲 zzz_loader.lnk 的快捷方式。
+            echo 請在模組根目錄下創建指向 loader.exe 的快捷方式，命名爲 zzz_loader.lnk ，然後選擇 [10] 刷新 Blender/留影機插件 注入器檢測信息，再試一次。
+            pause
+            goto blender_hook_menu
+        )
+        set "shortcut=%~dp0zzz_loader.exe.lnk"
+        set "cookie_filename=cookies.json"
+    ) else if "!blver!"=="3" (
+        goto blender_hook_menu
+    ) else (
+        echo\
+        echo 輸入錯誤。
+        timeout /t 2
+        goto blender_select_cookies_target
+    )
+    set "target="
+    for /f "delims=" %%i in ('powershell -noprofile -command "(New-Object -ComObject WScript.Shell).CreateShortcut(\"!shortcut!\").TargetPath"') do (
+        set "target=%%i"
+    )
+    for %%i in ("!target!") do set "target_dir=%%~dpi"
+    set "fileToDelete=!cookie_filename!"
     set "target_dir=!target_dir!\"
     set "target_dir=!target_dir:~0,-1!"
-    set "filePath=!target_dir!\cookies.json"
+    set "filePath=!target_dir!\!cookie_filename!"
     if not exist "!filePath!" (
-      echo 自檢失敗，cookies.json文件不存在於無人機模組目錄下。
+      echo 自檢失敗，!cookie_filename! 文件不存在於無人機模組目錄下。
       echo 這可能是因爲你使用的是免費版無人機，或者你指向了一個錯誤的loader.exe文件。
       echo\
       echo 按下任意鍵後返回主菜單。
@@ -881,11 +974,11 @@ if "%choice%"=="1" (
     ) else (
       :blender_delete_cookiesjson
       cls
-      echo 你確定你要繼續刪除cookies.json文件嗎？
+      echo 你確定你要繼續刪除 !cookie_filename! 文件嗎？
       echo 刪除後你需要重新掃碼以登錄嗶哩嗶哩賬號。
       echo\
-      echo [1]是
-      echo [2]否（返回主菜單）
+      echo [1] 是
+      echo [2] 否（返回主菜單）
       echo\
       set /p "content=在此輸入選項前面的數字："
       if "!content!" == "1" (
@@ -895,7 +988,7 @@ if "%choice%"=="1" (
           if exist "!filePath!" (
               echo 刪除失敗，可能是文件被佔用或路徑錯誤。
           ) else (
-              echo 已成功刪除cookies.json文件。
+              echo 已成功刪除 !cookie_filename! 文件。
           )
           echo\
           echo 按下任意鍵後返回主菜單。
@@ -916,7 +1009,7 @@ if "%choice%"=="1" (
     goto blender_hook_check
 ) else if "%choice%"=="11" (
     goto menu
-) else if "%choice%"=="12" (
+) else if "%choice%"=="2" (
     exit
 ) else (
     echo 輸入錯誤。
