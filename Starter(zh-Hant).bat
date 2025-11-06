@@ -263,18 +263,13 @@ echo\
 echo 如果你需要檢查版本更新，可以去訪問我們的倉庫查看是否有發行更新版本
 echo 注意！開發者選項僅用於調試/檢測錯誤需要。除非開發者明確要求你這樣做，或者你很清楚知道自己在做什麼，否則請勿輕易使用！
 echo\
-echo 注：CYteam下載站除了提供本模組的鏡像下載之外，還在中國大陸地區提供免費的國際服原神/崩鐵/HoYoLAB安裝包和私服資源。
-echo 除此之外，CYteam還提供一些安卓的搞機資源。感興趣的可以去看一看~
-echo 感謝CYteam提供的下載站服務
-echo\
 echo [1]訪問我們的GitHub倉庫
-echo [2]訪問由CYteam提供的下載站服務
-echo [3]贊助本Mod
-echo [4]聯繫我們
-echo [5]關於HoYoShade
-echo [6]開發者選項
-echo [7]返回主界面
-echo [8]退出程序
+echo [2]贊助本Mod
+echo [3]聯繫我們
+echo [4]關於HoYoShade
+echo [5]開發者選項
+echo [6]返回主界面
+echo [7]退出程序
 
 echo\
 set /p "content=在此輸入選項前面的數字："
@@ -283,21 +278,18 @@ if "%content%" == "1" (
     start "" "https://github.com/DuolaD/HoYoShade/"
     goto other
 ) else if "%content%" == "2" (
-    start "" "https://d.cyteam.cn/"
-    goto other
-) else if "%content%" == "3" (
     start "" "https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Traditional.md#%E3%80%A2-%E8%B4%8A%E5%8A%A9"
     goto other
-) else if "%content%" == "4" (
+) else if "%content%" == "3" (
     start "" "https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.Chinese_Traditional.md#%E3%80%A2-%E8%81%AF%E7%B9%AB%E6%88%91"
     goto other
-) else if "%content%" == "5" (
+) else if "%content%" == "4" (
     goto about_HoYoShade
-) else if "%content%" == "6" (
+) else if "%content%" == "5" (
     goto develop
-) else if "%content%" == "7" (
+) else if "%content%" == "6" (
     goto menu
-) else if "%content%" == "8" (
+) else if "%content%" == "7" (
     exit
 ) else (
     echo\

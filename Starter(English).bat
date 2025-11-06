@@ -269,17 +269,13 @@ echo If you need to check for version updates, you can visit our repository to s
 echo Note! Developer options are only for debugging/error checking purposes. 
 echo Unless developers explicitly ask you to do so, or you are very clear about what you are doing, please do not use it lightly!
 echo\
-echo Note: CYteam Download Station provides free installation packages for the international version of Genshin Impact/Honkai: Star Rail/HoYoLAB and private server resources in mainland China.
-echo Thanks to CYteam for providing the download station service.
-echo\
 echo [1]Visit our repository on GitHub
-echo [2]Visit the download station service provided by CYteam
-echo [3]Sponsor this project
-echo [4]Contact us
-echo [5]About HoYoShade
-echo [6]developer options
-echo [7]Back to menu
-echo [8]Exit
+echo [2]Sponsor this project
+echo [3]Contact us
+echo [4]About HoYoShade
+echo [5]developer options
+echo [6]Back to menu
+echo [7]Exit
 
 echo\
 set /p "content=Type the number here:"
@@ -288,21 +284,18 @@ if "%content%" == "1" (
     start "" "https://github.com/DuolaD/HoYoShade/"
     goto other
 ) else if "%content%" == "2" (
-    start "" "https://d.cyteam.cn/"
-    goto other
-) else if "%content%" == "3" (
     start "" "https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.md#%E3%80%A2-Donate"
     goto other
-) else if "%content%" == "4" (
+) else if "%content%" == "3" (
     start "" "https://github.com/DuolaD/HoYoShade/blob/V2.X.X-Stable/Readme.md#%E3%80%A2-Contant-Me"
     goto other
-) else if "%content%" == "5" (
+) else if "%content%" == "4" (
     goto about_HoYoShade
-) else if "%content%" == "6" (
+) else if "%content%" == "5" (
     goto develop
-) else if "%content%" == "7" (
+) else if "%content%" == "6" (
     goto menu
-) else if "%content%" == "8" (
+) else if "%content%" == "7" (
     exit
 ) else (
     echo\
