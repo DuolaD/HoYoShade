@@ -501,10 +501,11 @@ echo [1]Reset the ReShade.ini in the mod's root directory.
 echo [2]Inject into Genshin Impact £¨Universal Global Devkit/Beta Client Before Public£¨REL£©£©
 echo [3]Inject into Zenless Zone Zero £¨Universal Beta Client Before Public£¨REL£©£©
 echo [4]Inject into Zenless Zone Zero £¨Universal Beta Client After Public£¨REL£©£©
-echo [5]Inject into Honkai: Nexus Anima £¨Universal CN/OS CB1 Client£©
-echo [6]Switch to the public client injection list
-echo [7]Other options
-echo [8]Exit
+echo [5]Inject into Honkai: Nexus Anima £¨Universal CN/OS CBT1 Client£©
+echo [6]Inject into Petit Planet £¨Universal CN/OS CBT1/Devkit Client£©
+echo [7]Switch to the public client injection list
+echo [8]Other options
+echo [9]Exit
 
 echo\
 set /p "content=Type the number here:"
@@ -592,10 +593,27 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe NexusAnima.exe
     exit
 ) else if "%content%" == "6" (
-    goto menu
+    cls
+    echo The injection target you selected is:Petit Planet £¨Universal CN/OS CBT1/Devkit Client£©
+    echo The injector has now started.
+    echo You can now use the launcher to start the game. The injector will be injected simultaneously.
+    echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
+    echo\
+    echo Important: You must use the game launcher provided to you by the official source to start the game.
+    echo Do not directly double-click the process/process shortcut to start the game. Otherwise, it may lead to injection failure.
+    echo If the official source has not provided you with a launcher/you do not have a launcher,
+    echo you may need to obtain a patch from the developers for injection.
+    echo This patch is a closed-source patch and is not built into HoYoShade.
+    echo You cannot achieve the injection function by modifying the HoYoShade source code.
+    echo For more information, please contact the developer DuolaD £¨https://github.com/DuolaD£© to get more information.
+    echo\
+    start "" /wait /b inject.exe PetitPlanet.exe
+    exit
 ) else if "%content%" == "7" (
-    goto other
+    goto menu
 ) else if "%content%" == "8" (
+    goto other
+) else if "%content%" == "9" (
     exit
 ) else (
     echo\

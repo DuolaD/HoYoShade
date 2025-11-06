@@ -113,11 +113,11 @@ echo\
 echo *:Ô“×¢Èëßxí—ßmÓÃì¶Beta/„“×÷Õßówòž·þ£¬µ«Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
 echo\
 echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_/Devkit/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
-echo [3]×¢ÈëÖÁÔ­Éñ£¨‡øëH·þ/Epic ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
-echo [4]×¢ÈëÖÁ±À‰ÄÈý£¨Í¨ÓÃ ¹«é_/Beta¿Í‘ô¶Ë£©*
-echo [5]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
-echo [6]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«é_¿Í‘ô¶Ë£©
+echo [2]×¢ÈëÖÁ Ô­Éñ£¨ÖÐ‡ø´óê‘/†ôÁ¨†ôÁ¨ ¹«é_/Devkit/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [3]×¢ÈëÖÁ Ô­Éñ£¨‡øëH·þ/Epic ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [4]×¢ÈëÖÁ ±À‰ÄÈý£¨Í¨ÓÃ ¹«é_/Beta¿Í‘ô¶Ë£©*
+echo [5]×¢ÈëÖÁ ±À‰Ä£ºÐÇñ·èFµÀ£¨Í¨ÓÃ ¹«é_/Beta/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©*
+echo [6]×¢ÈëÖÁ ½^…^Áã£¨Í¨ÓÃ ¹«é_¿Í‘ô¶Ë£©
 echo [7]ÇÐ“QÖÁœyÔ‡·þ¿Í‘ô¶Ë×¢ÈëÁÐ±í
 echo [8]Â“„ÓBlender/ÁôÓ°™C²å¼þ×¢ÈëÖÁÔ­Éñ/½^…^Áã£¨¹«é_¿Í‘ô¶Ë£©
 echo [9]Â“„ÓStarward†™„ÓÆ÷×¢ÈëHoYoShade
@@ -480,7 +480,7 @@ echo ®”Ç°×¢ÈëÁÐ±í£ºœyÔ‡·þ¿Í‘ô¶Ë×¢ÈëÁÐ±í
 echo ×¢Òâ£º®”Ç°×¢ÈëÁÐ±íƒHÖ§³Ö²¿·ÖBeta/„“×÷Õßówòž·þ/DevkitµÈ·Ç¹«é_¿Í‘ô¶Ë£¬²»Ö§³ÖÈÎºÎ¹«é_¿Í‘ô¶Ë
 echo\
 echo ±¾Ä£½MƒHÓÃì¶ß[‘ò®‹ÃæÕ{É«Ê¹ÓÃ£¬Õˆ×ñÊØ±¾ModµÄÓÃ‘ô…f×hºÍß[‘ò¼°Æäé_°l/°lÐÐÉÌÏàêP—lÀý¡£
-echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ°²ÑbÕfÃ÷¡£
+echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ/Ò•îl°²ÑbÕfÃ÷¡£
 echo Î»ì¶ÖÐ‡ø´óê‘£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄÔL†–ówòž¡£
 echo\
 echo ÒÔÏÂ¿Í‘ô¶Ë×¢Èëßxí—¾ùÖ»ÄÜÓÃì¶×¢ÈëÖÁœyÔ‡·þ¿Í‘ô¶Ë¡£
@@ -490,14 +490,15 @@ echo 1:ÄãÏëÊ¹ÓÃµÄœyÔ‡·þ¿Í‘ô¶Ë×¢Èëßxí—Åc¹«é_¿Í‘ô¶Ë×¢Èëßxí—Í¨ÓÃ£¬ÕˆÏÈ‡ŸÔ‡Ê¹ÓÃ¹«é_¿
 echo 2:HoYoShade•ºÎ´ßmÅäÄãÄ¿Ç°ÕýÔÚÊ¹ÓÃµÄœyÔ‡·þ¿Í‘ô¶Ë¡£
 echo ÈçÐèßmÅä£¬ÕˆÔÚÎÒ‚ƒµÄÔL†–ÎÒ‚ƒµÄGitHub‚}Žì£¨https://github.com/DuolaD/HoYoShade£©Ìá½»issues¡£
 echo\
-echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨Í¨ÓÃ ‡øëH·þ DevKit/¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
-echo [3]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
-echo [4]×¢ÈëÖÁ½^…^Áã£¨Í¨ÓÃ ¹«œyááƒÈœy£¨Beta£©/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
-echo [5]×¢ÈëÖÁ±À‰Ä£ºÒò¾‰¾«ì`£¨Í¨ÓÃ ÖÐ‡ø´óê‘/‡øëH·þ CB1 ¿Í‘ô¶Ë£©
-echo [6]ÇÐ“QÖÁ¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±í
-echo [7]ÆäËüßxí—
-echo [8]ÍË³ö³ÌÐò
+echo [1] ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
+echo [2] ×¢ÈëÖÁ Ô­Éñ£¨Í¨ÓÃ ‡øëH·þ DevKit/¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+echo [3] ×¢ÈëÖÁ ½^…^Áã£¨Í¨ÓÃ ¹«œyÇ°ƒÈœy£¨Beta£©¿Í‘ô¶Ë£©
+echo [4] ×¢ÈëÖÁ ½^…^Áã£¨Í¨ÓÃ ¹«œyááƒÈœy£¨Beta£©/„“×÷Õßówòž·þ¿Í‘ô¶Ë£©
+echo [5] ×¢ÈëÖÁ ±À‰Ä£ºÒò¾‰¾«ì`£¨Í¨ÓÃ ÖÐ‡ø´óê‘/‡øëH·þ CBT1 ¿Í‘ô¶Ë£©
+echo [6] ×¢ÈëÖÁ ÐÇ²¼·YµØ£¨Í¨ÓÃ ÖÐ‡ø´óê‘/‡øëH·þ CBT1/Devkit ¿Í‘ô¶Ë£©
+echo [7] ÇÐ“QÖÁ¹«é_¿Í‘ô¶Ë×¢ÈëÁÐ±í
+echo [8] ÆäËüßxí—
+echo [9] ÍË³ö³ÌÐò
 
 echo\
 set /p "content=ÔÚ´ËÝ”Èëßxí—Ç°ÃæµÄ”µ×Ö£º"
@@ -572,10 +573,24 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe NexusAnima.exe
     exit
 ) else if "%content%" == "6" (
-    goto menu
+    cls
+    echo Äãßx“ñµÄ×¢ÈëÄ¿˜Ë ‘:ÐÇ²¼·YµØ£¨Í¨ÓÃ ÖÐ‡ø´óê‘/‡øëH·þ CBT1/Devkit ¿Í‘ô¶Ë£©
+    echo ×¢ÈëÆ÷¬FÒÑ†™„Ó£¬Äã¬FÔÚ¿ÉÒÔÊ¹ÓÃ†™„ÓÆ÷†™„Óß[‘òÁË¡£×¢ÈëÆ÷•þÒ»ã×¢Èë¡£
+    echo Èç¹ûÄãßx“ñÁËåeÕ`µÄ×¢ÈëÄ¿˜Ë£¬Ö»ÐèêPé]´Ë´°¿ÚááÖØÐÂß\ÐÐ†™„ÓÆ÷ÖØÐÂßx“ñ¼´¿É¡£
+    echo\
+    echo ÖØÒª£ºÄã±ØíšÒªÊ¹ÓÃ¹Ù·½ÏòÄãÌá¹©µÄß[‘ò†™„ÓÆ÷í†™„Óß[‘ò£¬
+    echo ²»ÄÜÖ±½Óëp“ôß\ÐÐßM³Ì/ßM³Ì¿ì½Ý·½Ê½ÒÔ†™„Óß[‘ò¡£·ñ„t¿ÉÄÜ•þŒ§ÖÂ×¢ÈëÊ§”¡¡£
+    echo Èç¹û¹Ù·½Î´ÏòÄãÌá¹©†™„ÓÆ÷/Äã›]ÓÐ†™„ÓÆ÷£¬Äã¿ÉÄÜÐèÒªÏòé_°lÕß«@È¡Ña¶¡·½¿É×¢Èë¡£
+    echo ´ËÑa¶¡ ‘é]Ô´Ña¶¡ÇÒK²»ƒÈÖÃì¶HoYoShadeÖÐ£¬ÄãŸo·¨Í¨ß^¸ü¸ÄHoYoShadeÔ´´ú´aíŒ¬F×¢Èë¹¦ÄÜ¡£
+    echo ÓÐêP¸ü¶àÐÅÏ¢£¬ÕˆÂ“ÀMé_°lÕß ¶ßÀ²D‰ôDuolaD £¨https://github.com/DuolaD£© ÒÔ«@È¡¸ü¶àÐÅÏ¢¡£
+    echo\
+    start "" /wait /b inject.exe PetitPlanet.exe
+    exit
 ) else if "%content%" == "7" (
-    goto other
+    goto menu
 ) else if "%content%" == "8" (
+    goto other
+) else if "%content%" == "9" (
     exit
 ) else (
     echo\
@@ -1036,17 +1051,17 @@ echo Äã¿ÉÒÔÔÚ https://hoyosha.de ÖÐ²é¿´ÓÃ‘ô…f×hºÍˆDÎÄ/Ò•îl°²ÑbÕfÃ÷¡£
 echo Î»ì¶ÖÐ‡ø´óê‘£¿ https://cn.hoyosha.de ¿ÉÒÔÌá¹©¸ü¼ÑµÄÔL†–ówòž¡£
 echo\
 echo [1]ÖØÖÃÄ£½M¸ùÄ¿ä›ÖÐµÄReShade.ini
-echo [2]×¢ÈëÖÁÔ­Éñ£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
-echo [3]×¢ÈëÖÁÔ­Éñ£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
-echo [4]×¢ÈëÖÁÔ­Éñ£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
-echo [5]×¢ÈëÖÁ±À‰ÄÈý£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
-echo [6]×¢ÈëÖÁ±À‰ÄÈý£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
-echo [7]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
-echo [8]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
-echo [9]×¢ÈëÖÁ±À‰Ä£ºÐÇñ·èFµÀ£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
-echo [10]×¢ÈëÖÁ½^…^Áã£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
-echo [11]×¢ÈëÖÁ½^…^Áã£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
-echo [12]×¢ÈëÖÁ½^…^Áã£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
+echo [2]†™„ÓÓÎ‘òK×¢ÈëÖÁ Ô­Éñ£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
+echo [3]†™„ÓÓÎ‘òK×¢ÈëÖÁ Ô­Éñ£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
+echo [4]†™„ÓÓÎ‘òK×¢ÈëÖÁ Ô­Éñ£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
+echo [5]†™„ÓÓÎ‘òK×¢ÈëÖÁ ±À‰ÄÈý£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
+echo [6]†™„ÓÓÎ‘òK×¢ÈëÖÁ ±À‰ÄÈý£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
+echo [7]†™„ÓÓÎ‘òK×¢ÈëÖÁ ±À‰Ä£ºÐÇñ·èFµÀ£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
+echo [8]†™„ÓÓÎ‘òK×¢ÈëÖÁ ±À‰Ä£ºÐÇñ·èFµÀ£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
+echo [9]†™„ÓÓÎ‘òK×¢ÈëÖÁ ±À‰Ä£ºÐÇñ·èFµÀ£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
+echo [10]†™„ÓÓÎ‘òK×¢ÈëÖÁ ½^…^Áã£¨ÖÐ‡ø´óê‘ ¹«é_¿Í‘ô¶Ë£©
+echo [11]†™„ÓÓÎ‘òK×¢ÈëÖÁ ½^…^Áã£¨†ôÁ¨†ôÁ¨ ¹«é_¿Í‘ô¶Ë£©
+echo [12]†™„ÓÓÎ‘òK×¢ÈëÖÁ ½^…^Áã£¨‡øëH·þ ¹«é_¿Í‘ô¶Ë£©
 echo [13]·µ»ØÖ÷½çÃæ
 echo [14]ÆäËüßxí—
 echo [15]ÍË³ö³ÌÐò

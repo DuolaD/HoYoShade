@@ -111,11 +111,11 @@ echo\
 echo *:该注入选项适用于Beta/创作者体验服，但你可能需要向开发者获取补丁方可注入。
 echo\
 echo [1] 重置模组根目录中的ReShade.ini
-echo [2] 注入至原神（中国大陆/哔哩哔哩 公开/Devkit/Beta/创作者体验服客户端）*
-echo [3] 注入至原神（国际服/Epic 公开/Beta/创作者体验服客户端）*
-echo [4] 注入至崩坏三（通用 公开/Beta客户端）*
-echo [5] 注入至崩坏：星穹铁道（通用 公开/Beta/创作者体验服客户端）*
-echo [6] 注入至绝区零（通用 公开客户端）
+echo [2] 注入至 原神（中国大陆/哔哩哔哩 公开/Devkit/Beta/创作者体验服客户端）*
+echo [3] 注入至 原神（国际服/Epic 公开/Beta/创作者体验服客户端）*
+echo [4] 注入至 崩坏三（通用 公开/Beta客户端）*
+echo [5] 注入至 崩坏：星穹铁道（通用 公开/Beta/创作者体验服客户端）*
+echo [6] 注入至 绝区零（通用 公开客户端）
 echo [7] 切换至测试服客户端注入列表
 echo [8] 联动Blender/留影机插件注入至原神/绝区零（公开客户端）
 echo [9] 联动Starward启动器注入HoYoShade
@@ -489,13 +489,14 @@ echo 2:HoYoShade暂未适配你目前正在使用的测试服客户端。
 echo 如需适配，请在我们的访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）提交issues。
 echo\
 echo [1] 重置模组根目录中的ReShade.ini
-echo [2] 注入至原神（通用 国际服 DevKit/公测前内测（Beta）客户端）
-echo [3] 注入至绝区零（通用 公测前内测（Beta）客户端）
-echo [4] 注入至绝区零（通用 公测后内测（Beta）/创作者体验服客户端）
-echo [5] 注入至崩坏：因缘精灵（通用 中国大陆/国际服 CB1 客户端）
-echo [6] 切换至公开客户端注入列表
-echo [7] 其它选项
-echo [8] 退出程序
+echo [2] 注入至 原神（通用 国际服 DevKit/公测前内测（Beta）客户端）
+echo [3] 注入至 绝区零（通用 公测前内测（Beta）客户端）
+echo [4] 注入至 绝区零（通用 公测后内测（Beta）/创作者体验服客户端）
+echo [5] 注入至 崩坏：因缘精灵（通用 中国大陆/国际服 CBT1 客户端）
+echo [6] 注入至 星布谷地（通用 中国大陆/国际服 CBT1/Devkit 客户端）
+echo [7] 切换至公开客户端注入列表
+echo [8] 其它选项
+echo [9] 退出程序
 
 echo\
 set /p "content=在此输入选项前面的数字："
@@ -570,10 +571,24 @@ if "%content%" == "1" (
     start "" /wait /b inject.exe NexusAnima.exe
     exit
 ) else if "%content%" == "6" (
-    goto menu
+    cls
+    echo 你选择的注入目标为:星布谷地（通用 中国大陆/国际服 CBT1/Devkit 客户端）
+    echo 注入器现已启动，你现在可以使用启动器启动游戏了。注入器会一并注入。
+    echo 如果你选择了错误的注入目标，只需关闭此窗口后重新运行启动器重新选择即可。
+    echo\
+    echo 重要：你必须要使用官方向你提供的游戏启动器来启动游戏，
+    echo 不能直接双击运行进程/进程快捷方式以启动游戏。否则可能会导致注入失败。
+    echo 如果官方未向你提供启动器/你没有启动器，你可能需要向开发者获取补丁方可注入。
+    echo 此补丁为闭源补丁且并不内置于HoYoShade中，你无法通过更改HoYoShade源代码来实现注入功能。
+    echo 有关更多信息，请联系开发者 哆啦D夢DuolaD （https://github.com/DuolaD） 以获取更多信息。
+    echo\
+    start "" /wait /b inject.exe PetitPlanet.exe
+    exit
 ) else if "%content%" == "7" (
-    goto other
+    goto menu
 ) else if "%content%" == "8" (
+    goto other
+) else if "%content%" == "9" (
     exit
 ) else (
     echo\
@@ -1035,17 +1050,17 @@ echo 位于中国大陆？ https://cn.hoyosha.de 可以提供更佳的访问体验。
 REM 我还是更愿意当一个在背后默默付出的人 XD
 echo\
 echo [1] 重置模组根目录中的ReShade.ini
-echo [2] 注入至原神（中国大陆 公开客户端）
-echo [3] 注入至原神（哔哩哔哩 公开客户端）
-echo [4] 注入至原神（国际服 公开客户端）
-echo [5] 注入至崩坏三（中国大陆 公开客户端）
-echo [6] 注入至崩坏三（国际服 公开客户端）
-echo [7] 注入至崩坏：星穹铁道（中国大陆 公开客户端）
-echo [8] 注入至崩坏：星穹铁道（哔哩哔哩 公开客户端）
-echo [9] 注入至崩坏：星穹铁道（国际服 公开客户端）
-echo [10] 注入至绝区零（中国大陆 公开客户端）
-echo [11] 注入至绝区零（哔哩哔哩 公开客户端）
-echo [12] 注入至绝区零（国际服 公开客户端）
+echo [2] 启动游戏并注入至 原神（中国大陆 公开客户端）
+echo [3] 启动游戏并注入至 原神（哔哩哔哩 公开客户端）
+echo [4] 启动游戏并注入至 原神（国际服 公开客户端）
+echo [5] 启动游戏并注入至 崩坏三（中国大陆 公开客户端）
+echo [6] 启动游戏并注入至 崩坏三（国际服 公开客户端）
+echo [7] 启动游戏并注入至 崩坏：星穹铁道（中国大陆 公开客户端）
+echo [8] 启动游戏并注入至 崩坏：星穹铁道（哔哩哔哩 公开客户端）
+echo [9] 启动游戏并注入至 崩坏：星穹铁道（国际服 公开客户端）
+echo [10] 启动游戏并注入至 绝区零（中国大陆 公开客户端）
+echo [11] 启动游戏并注入至 绝区零（哔哩哔哩 公开客户端）
+echo [12] 启动游戏并注入至 绝区零（国际服 公开客户端）
 echo [13] 返回主界面
 echo [14] 其它选项
 echo [15] 退出程序
