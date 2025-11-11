@@ -47,15 +47,14 @@ if %missing_file% equ 1 (
     exit
 )
 
-set "filepath=%~dp0Reshade.ini"
-
-if not exist "%filepath%" ( 
-    set missing_reshade_config=1
+set "missing_reshade_config=0"
+if not exist "%filepath%" (
+    set "missing_reshade_config=1"
 )
 
 start "" /wait /b ".\LauncherResource\INIBuild.exe"
 
-if %missing_reshade_config% equ 1(
+if "%missing_reshade_config%"=="1" (
     cls
     :FileCheck
     cls
