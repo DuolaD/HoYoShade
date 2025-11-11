@@ -48,6 +48,7 @@ if %missing_file% equ 1 (
     exit
 )
 
+set "filepath=%~dp0ReShade.ini"
 set "missing_reshade_config=0"
 if not exist "%filepath%" (
     set "missing_reshade_config=1"
@@ -1070,7 +1071,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe YuanShen.exe
+    start "" /b inject.exe YuanShen.exe
     start starward://startgame/hk4e_cn
     exit
 ) else if "%content%" == "3" (
@@ -1079,7 +1080,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe YuanShen.exe
+    start "" /b inject.exe YuanShen.exe
     start starward://startgame/hk4e_bilibili
     exit
 ) else if "%content%" == "4" (
@@ -1088,7 +1089,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe GenshinImpact.exe
+    start "" /b inject.exe GenshinImpact.exe
     start starward://startgame/hk4e_global
     exit
 ) else if "%content%" == "5" (
@@ -1097,7 +1098,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe BH3.exe
+    start "" /b inject.exe BH3.exe
     start starward://startgame/bh3_cn
     exit
 ) else if "%content%" == "6" (
@@ -1106,7 +1107,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe BH3.exe
+    start "" /b inject.exe BH3.exe
     start starward://startgame/bh3_global
     exit
 ) else if "%content%" == "7" (
@@ -1115,7 +1116,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe StarRail.exe
+    start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_cn
     exit
 ) else if "%content%" == "8" (
@@ -1124,7 +1125,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe StarRail.exe
+    start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_bilibili
     exit
 ) else if "%content%" == "9" (
@@ -1133,7 +1134,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe StarRail.exe
+    start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_global
     exit
 ) else if "%content%" == "10" (
@@ -1142,7 +1143,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start "" /b inject.exe ZenlessZoneZero.exe
     start starward://startgame/nap_cn
     exit
 ) else if "%content%" == "11" (
@@ -1151,7 +1152,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start "" /b inject.exe ZenlessZoneZero.exe
     start starward://startgame/nap_bilibili
     exit
 ) else if "%content%" == "12" (
@@ -1160,7 +1161,7 @@ if "%content%" == "1" (
     echo 注入器現已啓動。如果Starward的遊戲客戶端設置無誤，HoYoShade將會拉起Starward啓動遊戲，並注入ReShade至客戶端中。
     echo 如果你選擇了錯誤的注入目標，只需關閉此窗口/遊戲窗口後重新運行啓動器，重新選擇即可。
     echo\
-    start "" /wait /b inject.exe ZenlessZoneZero.exe
+    start "" /b inject.exe ZenlessZoneZero.exe
     start starward://startgame/nap_global
     exit
 ) else if "%content%" == "13" (
