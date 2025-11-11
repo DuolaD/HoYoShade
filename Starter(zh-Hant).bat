@@ -6,9 +6,9 @@ chcp 936
 title HoYoShade†™„ÓÆ÷
 cls
 
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+fltmc >nul 2>&1
+if errorlevel 1 (
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
     exit /b
 )
 

@@ -5,9 +5,9 @@ chcp 936
 title HoYoShade Starter
 cls
 
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+fltmc >nul 2>&1
+if errorlevel 1 (
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
     exit /b
 )
 
@@ -32,16 +32,16 @@ if %missing_file% equ 1 (
     echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo Powered by [The butterfly of Hong Kong]
     echo\
-    echo We have detected that the necessary files for £®Open£©HoYoShade framework injection are missing.
+    echo We have detected that the necessary files for ùùOpenùùHoYoShade framework injection are missing.
     echo\
     echo Possible reasons for this message include:
     echo 1:You did not extract all files from the compressed package.
     echo 2:You did not paste all files during an update operation.
-    echo 3:Your antivirus software/other programs mistakenly identified £®Open£©HoYoShade as a virus and deleted some files.
+    echo 3:Your antivirus software/other programs mistakenly identified ùùOpenùùHoYoShade as a virus and deleted some files.
     echo 4:You accidentally or intentionally renamed some critical files.
     echo\
     echo After pressing any key, the launcher will exit.
-    echo If you want to continue running £®Open£©HoYoShade, please visit our GitHub repository £®https://github.com/DuolaD/HoYoShade£© to re-download the latest compressed package from the Releases page and extract all files.
+    echo If you want to continue running ùùOpenùùHoYoShade, please visit our GitHub repository ùùhttps://github.com/DuolaD/HoYoShadeùù to re-download the latest compressed package from the Releases page and extract all files.
     pause
     exit
 )
@@ -63,19 +63,19 @@ if "%missing_reshade_config%"=="1" (
     echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo Powered by [The butterfly of Hong Kong]
     echo\
-    echo Congratulations£°You have successfully installed HoYoShade£°
+    echo CongratulationsùùYou have successfully installed HoYoShadeùù
     echo We have detected that this is your first time using this mod. Reshade.ini has been generated in the root directory of the mod.
     echo\
     echo If this is your first time using ReShade in a miHoYo / HoYoverse game, you can now continue.
-    echo The injector will automatically detect and copy the configuration file £®ReShade.ini£© to the game process root directory.
+    echo The injector will automatically detect and copy the configuration file ùùReShade.iniùù to the game process root directory.
     echo\
-    echo But if you have used ReShade in miHoYo / HoYoverse games before, you may need to delete ReShade.ini £®required£© and ReShade.log £®optional, but recommended£© first.
+    echo But if you have used ReShade in miHoYo / HoYoverse games before, you may need to delete ReShade.ini ùùrequiredùù and ReShade.log ùùoptional, but recommendedùù first.
     echo For example:
     echo - You have used HoYoShade V2 Stable or below.
     echo - You have used ReShade developed by others/yourself based on the official ReShade/HoYoShade.
     echo\
     echo How to find the root directory of the game process?
-    echo For HoYoPlay £®HoYoverse official new launcher£©:
+    echo For HoYoPlay ùùHoYoverse official new launcherùù:
     echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
     echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
     echo\
@@ -112,11 +112,11 @@ echo *: This injection option is applicable to the Beta/Creator Experience serve
 echo but you may need to obtain a patch from the developers for injection.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact £®CN/BiliBil Public£®REL£©/Devkit/Beta/Creator Experience Client£©*
-echo [3]Inject into Genshin Impact £®Global/Epic Games Store Public£®REL£©/Beta/Creator Experience Client£©*
-echo [4]Inject into Honkai Impact 3 £®Universal Public£®REL£©/Beta Client£©*
-echo [5]Inject into Honkai: Star Rail £®Universal Public£®REL£©/Beta/Creator Experience Client£©*
-echo [6]Inject into Zenless Zone Zero £®Universal Public£®REL£© Client£©
+echo [2]Inject into Genshin Impact ùùCN/BiliBil PublicùùRELùù/Devkit/Beta/Creator Experience Clientùù*
+echo [3]Inject into Genshin Impact ùùGlobal/Epic Games Store PublicùùRELùù/Beta/Creator Experience Clientùù*
+echo [4]Inject into Honkai Impact 3 ùùUniversal PublicùùRELùù/Beta Clientùù*
+echo [5]Inject into Honkai: Star Rail ùùUniversal PublicùùRELùù/Beta/Creator Experience Clientùù*
+echo [6]Inject into Zenless Zone Zero ùùUniversal PublicùùRELùù Clientùù
 echo [7]Switch to the test server client injection list
 echo [8]Link Starward launcher to inject HoYoShade
 echo [9]Other options
@@ -128,102 +128,102 @@ set /p "content=Type the number here:"
 if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
-    echo The injection target you selected is:Genshin Impact £®CN/BiliBil Public£®REL£©/Devkit/Beta/Creator Experience Client£©
+    echo The injection target you selected is:Genshin Impact ùùCN/BiliBil PublicùùRELùù/Devkit/Beta/Creator Experience Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Important: You must use a game launcher to start the game £®whether it is the official launcher or a third-party launcher£©,
+    echo Important: You must use a game launcher to start the game ùùwhether it is the official launcher or a third-party launcherùù,
     echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
     echo\
     echo\
-    echo This injection option supports injecting HoYoShade into Genshin Impact £®CN/BiliBil Devkit/Beta/Creator Experience Client£©.
+    echo This injection option supports injecting HoYoShade into Genshin Impact ùùCN/BiliBil Devkit/Beta/Creator Experience Clientùù.
     echo\
     echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
     echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
     echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, 
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe YuanShen.exe
     exit
 ) else if "%content%" == "3" (
     cls
-    echo The injection target you selected is:Genshin Impact £®Global/Epic Games Store Public£®REL£©/Beta/Creator Experience Client£©
+    echo The injection target you selected is:Genshin Impact ùùGlobal/Epic Games Store PublicùùRELùù/Beta/Creator Experience Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Important: You must use a game launcher to start the game £®whether it is the official launcher or a third-party launcher£©,
+    echo Important: You must use a game launcher to start the game ùùwhether it is the official launcher or a third-party launcherùù,
     echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
     echo\
     echo\
-    echo This injection option supports injecting HoYoShade into Genshin Impact £®Global Beta/Creator Experience Client£©.
+    echo This injection option supports injecting HoYoShade into Genshin Impact ùùGlobal Beta/Creator Experience Clientùù.
     echo\
     echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
     echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
     echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, 
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe GenshinImpact.exe
     exit
 ) else if "%content%" == "4" (
     cls
-    echo The injection target you selected is:Honkai Impact 3 £®Universal Public£®REL£©/Beta Client£©
+    echo The injection target you selected is:Honkai Impact 3 ùùUniversal PublicùùRELùù/Beta Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Important: You must use a game launcher to start the game £®whether it is the official launcher or a third-party launcher£©,
+    echo Important: You must use a game launcher to start the game ùùwhether it is the official launcher or a third-party launcherùù,
     echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
     echo\
     echo\
-    echo This injection option supports injecting HoYoShade into Honkai Impact 3 £®Universal Beta Client£©
+    echo This injection option supports injecting HoYoShade into Honkai Impact 3 ùùUniversal Beta Clientùù
     echo\
     echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
     echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
     echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, 
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe BH3.exe
     exit
 ) else if "%content%" == "5" (
     cls
-    echo The injection target you selected is:Honkai: Star Rail £®Universal Public£®REL£©/Beta/Creator Experience Client£©
+    echo The injection target you selected is:Honkai: Star Rail ùùUniversal PublicùùRELùù/Beta/Creator Experience Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Important: You must use a game launcher to start the game £®whether it is the official launcher or a third-party launcher£©,
+    echo Important: You must use a game launcher to start the game ùùwhether it is the official launcher or a third-party launcherùù,
     echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
     echo\
     echo\
-    echo This injection option supports injecting HoYoShade into Honkai: Star Rail £®Universal Beta/Creator Experience Client£©
+    echo This injection option supports injecting HoYoShade into Honkai: Star Rail ùùUniversal Beta/Creator Experience Clientùù
     echo\
     echo When injecting into such clients, you must use the game launcher provided to you by the official source to start the game.
     echo You cannot directly double-click the process/process shortcut to start the game, otherwise it may lead to injection failure.
     echo However, if the official source has not provided you with a launcher/you do not have a launcher and the injection fails, 
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade. You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe StarRail.exe
     exit
 ) else if "%content%" == "6" (
-    echo The injection target you selected is:Zenless Zone Zero £®Universal Public£®REL£© Client£©
+    echo The injection target you selected is:Zenless Zone Zero ùùUniversal PublicùùRELùù Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Important: You must use a game launcher to start the game £®whether it is the official launcher or a third-party launcher£©,
+    echo Important: You must use a game launcher to start the game ùùwhether it is the official launcher or a third-party launcherùù,
     echo You cannot directly double-click the process/process shortcut to start the game. Otherwise, the injection will fail.
     echo\
-    echo Note: This injection option is not applicable to any Zenless Zone Zero £®pre-public test £®Beta£©/internal test £®Beta£©£© clients.
+    echo Note: This injection option is not applicable to any Zenless Zone Zero ùùpre-public test ùùBetaùù/internal test ùùBetaùùùù clients.
     echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, 
     echo and select the corresponding client in the public client injection list.
     echo
@@ -391,12 +391,12 @@ echo please request a refund immediately! The actions of the merchants are unrel
 echo\
 echo Developer list:
 echo -DuolaDStudio Hong Kong Ltd.
-echo   °™°™DuolaD[RE adaptation/major version update development/launcher/presets]
-echo   °™°™¡’ƒ›ÃÿLynetteNotFound[HoYoShade minor version update development/maintenance.]
+echo   ùùùùDuolaD[RE adaptation/major version update development/launcher/presets]
+echo   ùùùùùùùùùùLynetteNotFound[HoYoShade minor version update development/maintenance.]
 echo Ex_M[Technical support/guidance/GUI develop]
 echo ZelbertYQ[Documentation Website Technical Support]
 echo\
-echo Thanks£∫
+echo Thanksùù
 echo -CYTeam[HoYoShade partners/Microsoft enterprise storage plan provision/dynamic to static linking solutions]
 echo -Cloudflare, Inc.[Domain hosting and management]
 echo\
@@ -447,7 +447,7 @@ if "%content%" == "1" (
     echo otherwise HoYoShade will not work as expected.
     echo\
     echo How to find the root directory of the game process?
-    echo For HoYoPlay £®HoYoverse official new launcher£©:
+    echo For HoYoPlay ùùHoYoverse official new launcherùù:
     echo Click the "More" icon next to the Start button - Game Settings to view the root directory of the game process.
     echo Click 'Open Directory' to open the root directory of the game process using the file explorer.
     echo\
@@ -490,11 +490,11 @@ echo 2:HoYoShade has not yet been adapted to the test server client you are curr
 echo For adaptation, please visit our GitHub repository (https://github.com/DuolaD/HoYoShade) to submit issues.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact £®Universal Global Devkit/Beta Client Before Public£®REL£©£©
-echo [3]Inject into Zenless Zone Zero £®Universal Beta Client Before Public£®REL£©£©
-echo [4]Inject into Zenless Zone Zero £®Universal Beta Client After Public£®REL£©£©
-echo [5]Inject into Honkai: Nexus Anima £®Universal CN/OS CBT1 Client£©
-echo [6]Inject into Petit Planet £®Universal CN/OS CBT1/Devkit Client£©
+echo [2]Inject into Genshin Impact ùùUniversal Global Devkit/Beta Client Before PublicùùRELùùùù
+echo [3]Inject into Zenless Zone Zero ùùUniversal Beta Client Before PublicùùRELùùùù
+echo [4]Inject into Zenless Zone Zero ùùUniversal Beta Client After PublicùùRELùùùù
+echo [5]Inject into Honkai: Nexus Anima ùùUniversal CN/OS CBT1 Clientùù
+echo [6]Inject into Petit Planet ùùUniversal CN/OS CBT1/Devkit Clientùù
 echo [7]Switch to the public client injection list
 echo [8]Other options
 echo [9]Exit
@@ -506,12 +506,12 @@ if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
     cls
-    echo The injection target you selected is:Genshin Impact £®Universal Global Devkit/Beta Client Before Public£®REL£©£©
+    echo The injection target you selected is:Genshin Impact ùùUniversal Global Devkit/Beta Client Before PublicùùRELùùùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Note: This injection option is not applicable to any Genshin Impact £®Public£®REL£©/Beta after Public£®REL£©£© clients.
+    echo Note: This injection option is not applicable to any Genshin Impact ùùPublicùùRELùù/Beta after PublicùùRELùùùù clients.
     echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, 
     echo and select the corresponding client in the public client injection list.
     echo\
@@ -521,18 +521,18 @@ if "%content%" == "1" (
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade.
     echo You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe Genshin.exe
     exit
 ) else if "%content%" == "3" (
     cls
-    echo The injection target you selected is:Zenless Zone Zero £®Universal Beta Client Before Public£®REL£©£©
+    echo The injection target you selected is:Zenless Zone Zero ùùUniversal Beta Client Before PublicùùRELùùùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Note: This injection option is not applicable to any Zenless Zone Zero £®Universal Beta Client After Public£®REL£©£©.
+    echo Note: This injection option is not applicable to any Zenless Zone Zero ùùUniversal Beta Client After PublicùùRELùùùù.
     echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, 
     echo and select the corresponding client in the public client injection list.
     echo\
@@ -542,18 +542,18 @@ if "%content%" == "1" (
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade.
     echo You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe ZZZ.exe
     exit
 ) else if "%content%" == "4" (
     cls
-    echo The injection target you selected is:Zenless Zone Zero £®Universal Beta Client After Public£®REL£©£©
+    echo The injection target you selected is:Zenless Zone Zero ùùUniversal Beta Client After PublicùùRELùùùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
     echo\
-    echo Note: This injection option is not applicable to any Zenless Zone Zero £®Universal Beta Client Before Public£®REL£©£©.
+    echo Note: This injection option is not applicable to any Zenless Zone Zero ùùUniversal Beta Client Before PublicùùRELùùùù.
     echo If you need to inject into such clients, please close the window and restart the HoYoShade launcher, 
     echo and select the corresponding client in the public client injection list.
     echo\
@@ -563,13 +563,13 @@ if "%content%" == "1" (
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade.
     echo You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe ZenlessZoneZeroBeta.exe
     exit
 ) else if "%content%" == "5" (
     cls
-    echo The injection target you selected is:Honkai: Nexus Anima £®Universal CN/OS CB1 Client£©
+    echo The injection target you selected is:Honkai: Nexus Anima ùùUniversal CN/OS CB1 Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
@@ -580,13 +580,13 @@ if "%content%" == "1" (
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade.
     echo You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe NexusAnima.exe
     exit
 ) else if "%content%" == "6" (
     cls
-    echo The injection target you selected is:Petit Planet £®Universal CN/OS CBT1/Devkit Client£©
+    echo The injection target you selected is:Petit Planet ùùUniversal CN/OS CBT1/Devkit Clientùù
     echo The injector has now started.
     echo You can now use the launcher to start the game. The injector will be injected simultaneously.
     echo If you selected the wrong injection target, simply close this window and restart the starter to choose again.
@@ -597,7 +597,7 @@ if "%content%" == "1" (
     echo you may need to obtain a patch from the developers for injection.
     echo This patch is a closed-source patch and is not built into HoYoShade.
     echo You cannot achieve the injection function by modifying the HoYoShade source code.
-    echo For more information, please contact the developer DuolaD £®https://github.com/DuolaD£© to get more information.
+    echo For more information, please contact the developer DuolaD ùùhttps://github.com/DuolaDùù to get more information.
     echo\
     start "" /wait /b inject.exe PetitPlanet.exe
     exit
@@ -638,17 +638,17 @@ echo You can find the user agreement and installation instructions with pictures
 echo Live in Mainland China? https://cn.hoyosha.de can provide a better access experience.
 echo\
 echo [1]Reset the ReShade.ini in the mod's root directory.
-echo [2]Inject into Genshin Impact£®Mainland China Public£®REL£©Client£©
-echo [3]Inject into Genshin Impact£®BiliBil Public£®REL£©Clien£©
-echo [4]Inject into Genshin Impact£®Global Public£®REL£©Clien£©
-echo [5]Inject into Honkai Impact 3£®Mainland China Public£®REL£©Clien£©
-echo [6]Inject into Honkai Impact 3£®Global Public£®REL£©Clien£©
-echo [7]Inject into Honkai: Star Rail£®Mainland China Public£®REL£©Clien£©
-echo [8]Inject into Honkai: Star Rail£®BiliBil Public£®REL£©Clien£©
-echo [9]Inject into Honkai: Star Rail£®Global Public£®REL£©Clien£©
-echo [10]Inject into Zenless Zone Zero£®Mainland China Public£®REL£©Clien£©
-echo [11]Inject into Zenless Zone Zero£®BiliBil Public£®REL£©Clien£©
-echo [12]Inject into Zenless Zone Zero£®Global Public£®REL£©Clien£©
+echo [2]Inject into Genshin ImpactùùMainland China PublicùùRELùùClientùù
+echo [3]Inject into Genshin ImpactùùBiliBil PublicùùRELùùClienùù
+echo [4]Inject into Genshin ImpactùùGlobal PublicùùRELùùClienùù
+echo [5]Inject into Honkai Impact 3ùùMainland China PublicùùRELùùClienùù
+echo [6]Inject into Honkai Impact 3ùùGlobal PublicùùRELùùClienùù
+echo [7]Inject into Honkai: Star RailùùMainland China PublicùùRELùùClienùù
+echo [8]Inject into Honkai: Star RailùùBiliBil PublicùùRELùùClienùù
+echo [9]Inject into Honkai: Star RailùùGlobal PublicùùRELùùClienùù
+echo [10]Inject into Zenless Zone ZeroùùMainland China PublicùùRELùùClienùù
+echo [11]Inject into Zenless Zone ZeroùùBiliBil PublicùùRELùùClienùù
+echo [12]Inject into Zenless Zone ZeroùùGlobal PublicùùRELùùClienùù
 echo [13]Back to menu
 echo [14]Other options
 echo [15]Exit
@@ -662,7 +662,7 @@ if "%content%" == "1" (
     goto ini_Reset
 ) else if "%content%" == "2" (
     cls
-    echo The injection target you selected is:Genshin Impact£®Mainland China Public£®REL£©Clien£©
+    echo The injection target you selected is:Genshin ImpactùùMainland China PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -675,7 +675,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "3" (
     cls
-    echo The injection target you selected is:Genshin Impact£®BiliBil Public£®REL£©Clien£©
+    echo The injection target you selected is:Genshin ImpactùùBiliBil PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -688,7 +688,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "4" (
     cls
-    echo The injection target you selected is:Genshin Impact£®Global Public£®REL£©Clien£©
+    echo The injection target you selected is:Genshin ImpactùùGlobal PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -701,7 +701,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "5" (
     cls
-    echo The injection target you selected is:Honkai Impact 3£®Mainland China Public£®REL£©Clien£©
+    echo The injection target you selected is:Honkai Impact 3ùùMainland China PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -714,7 +714,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "6" (
     cls
-    echo The injection target you selected is:Honkai Impact 3£®Global Public£®REL£©Clien£©
+    echo The injection target you selected is:Honkai Impact 3ùùGlobal PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -727,7 +727,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "7" (
     cls
-    echo The injection target you selected is:Honkai: Star Rail£®Mainland China Public£®REL£©Clien£©
+    echo The injection target you selected is:Honkai: Star RailùùMainland China PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -740,7 +740,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "8" (
     cls
-    echo The injection target you selected is:Honkai: Star Rail£®BiliBil Public£®REL£©Clien£©
+    echo The injection target you selected is:Honkai: Star RailùùBiliBil PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -753,7 +753,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "9" (
     cls
-    echo The injection target you selected is:Honkai: Star Rail£®Global Public£®REL£©Clien£©
+    echo The injection target you selected is:Honkai: Star RailùùGlobal PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -766,7 +766,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "10" (
     cls
-    echo The injection target you selected is:Zenless Zone Zero£®Mainland China Public£®REL£©Clien£©
+    echo The injection target you selected is:Zenless Zone ZeroùùMainland China PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -779,7 +779,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "11" (
     cls
-    echo The injection target you selected is:Zenless Zone Zero£®BiliBil Public£®REL£©Clien£©
+    echo The injection target you selected is:Zenless Zone ZeroùùBiliBil PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
@@ -792,7 +792,7 @@ if "%content%" == "1" (
     exit
 ) else if "%content%" == "12" (
     cls
-    echo The injection target you selected is:Zenless Zone Zero£®Global Public£®REL£©Clien£©
+    echo The injection target you selected is:Zenless Zone ZeroùùGlobal PublicùùRELùùClienùù
     echo\
     echo The injector is now started. If the Starward game client is configured correctly,
     echo HoYoShade will launch Starward and inject ReShade into the client.
