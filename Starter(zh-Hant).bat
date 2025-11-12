@@ -1035,7 +1035,7 @@ echo 由[幻港之蝶]注入內核驅動
 echo\
 echo 當前注入列表：聯動Starward啓動器注入列表
 echo 注意：當前注入列表不支持任何Beta/創作者體驗服/Devkit/私服等非公開客戶端
-echo 使用前，請先確保你已Starward啓動器安裝遊戲/已在Starward啓動器中綁定遊戲客戶端路徑。
+echo 使用前，請先確保你已在Starward啓動器安裝遊戲/已在Starward啓動器中綁定遊戲客戶端路徑。
 echo 並保持Apps設置/設定 - 進階 - URL協議 - 註冊URL協議開關保持開啓狀態。
 echo\
 echo 本模組僅用於遊戲畫面調色使用，請遵守本Mod的用戶協議和遊戲及其開發/發行商相關條例。

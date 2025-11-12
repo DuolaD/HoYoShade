@@ -1033,7 +1033,7 @@ echo 由[幻港之蝶]注入内核驱动
 echo\
 echo 当前注入列表：联动Starward启动器注入列表
 echo 注意：当前注入列表不支持任何Beta/创作者体验服/Devkit/私服等非公开客户端
-echo 使用前，请先确保你已Starward启动器安装游戏/已在Starward启动器中绑定游戏客户端路径。
+echo 使用前，请先确保你已在Starward启动器安装游戏/已在Starward启动器中绑定游戏客户端路径。
 echo 并保持应用设置 - 高级 - URL协议 - 注册URL协议开关保持开启状态。
 echo\
 echo 本模组仅用于游戏画面调色使用，请遵守本Mod的用户协议和游戏及其开发/发行商相关条例。
