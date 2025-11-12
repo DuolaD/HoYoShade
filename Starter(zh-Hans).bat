@@ -1072,6 +1072,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe YuanShen.exe
     start starward://startgame/hk4e_cn
+    start starward://playtime/hk4e_cn
     exit
 ) else if "%content%" == "3" (
     cls
@@ -1081,6 +1082,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe YuanShen.exe
     start starward://startgame/hk4e_bilibili
+    start starward://playtime/hk4e_bilibili
     exit
 ) else if "%content%" == "4" (
     cls
@@ -1090,6 +1092,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe GenshinImpact.exe
     start starward://startgame/hk4e_global
+    start starward://playtime/hk4e_global
     exit
 ) else if "%content%" == "5" (
     cls
@@ -1099,6 +1102,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe BH3.exe
     start starward://startgame/bh3_cn
+    start starward://playtime/bh3_cn
     exit
 ) else if "%content%" == "6" (
     cls
@@ -1108,6 +1112,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe BH3.exe
     start starward://startgame/bh3_global
+    start starward://playtime/bh3_global
     exit
 ) else if "%content%" == "7" (
     cls
@@ -1117,6 +1122,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_cn
+    start starward://playtime/hkrpg_cn
     exit
 ) else if "%content%" == "8" (
     cls
@@ -1126,6 +1132,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_bilibili
+    start starward://playtime/hkrpg_bilibili
     exit
 ) else if "%content%" == "9" (
     cls
@@ -1135,6 +1142,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe StarRail.exe
     start starward://startgame/hkrpg_global
+    start starward://playtime/hkrpg_global
     exit
 ) else if "%content%" == "10" (
     cls
@@ -1144,6 +1152,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe ZenlessZoneZero.exe
     start starward://startgame/nap_cn
+    start starward://playtime/nap_cn
     exit
 ) else if "%content%" == "11" (
     cls
@@ -1152,7 +1161,8 @@ if "%content%" == "1" (
     echo 如果你选择了错误的注入目标，只需关闭此窗口/游戏窗口后重新运行启动器，重新选择即可。
     echo\
     start "" /b inject.exe ZenlessZoneZero.exe
-    start starward://startgame/nap_bilibili
+    start starward://startgame/nap_bilibili 
+    start starward://playtime/nap_bilibili
     exit
 ) else if "%content%" == "12" (
     cls
@@ -1162,6 +1172,7 @@ if "%content%" == "1" (
     echo\
     start "" /b inject.exe ZenlessZoneZero.exe
     start starward://startgame/nap_global
+    start starward://playtime/nap_global
     exit
 ) else if "%content%" == "13" (
     goto menu
