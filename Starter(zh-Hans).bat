@@ -744,8 +744,8 @@ if "%choice%"=="1" (
     goto ini_Reset
 ) else if "%choice%"=="2" (
     if "!ys_client_exist!"=="0" (
-        echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
+        echo 自检未通过，模组根目录下并没有找到名为 ys_client.exe.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.exe.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -762,8 +762,8 @@ if "%choice%"=="1" (
     exit
 ) else if "%choice%"=="3" (
     if "!ys_client_exist!"=="0" (
-        echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
-        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
+        echo 自检未通过，模组根目录下并没有找到名为 ys_client.exe.lnk 的快捷方式。
+        echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.exe.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
         pause
         goto blender_hook_menu
     )
@@ -855,8 +855,8 @@ if "%choice%"=="1" (
     set /p "blver=在此输入选项前面的数字："
     if "!blver!"=="1" (
         if "!ys_client_exist!"=="0" (
-            echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
-            echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
+            echo 自检未通过，模组根目录下并没有找到名为 ys_client.exe.lnk 的快捷方式。
+            echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.exe.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
             pause
             goto blender_hook_menu
         )
@@ -936,8 +936,8 @@ if "%choice%"=="1" (
     set /p "blver=在此输入选项前面的数字："
     if "!blver!"=="1" (
         if "!ys_client_exist!"=="0" (
-            echo 自检未通过，模组根目录下并没有找到名为 ys_client.lnk 的快捷方式。
-            echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
+            echo 自检未通过，模组根目录下并没有找到名为 ys_client.exe.lnk 的快捷方式。
+            echo 请在模组根目录下创建指向 loader.exe 的快捷方式，命名为 ys_client.exe.lnk ，然后选择 [10] 刷新 Blender/留影机插件 注入器检测信息，再试一次。
             pause
             goto blender_hook_menu
         )
