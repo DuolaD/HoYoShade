@@ -28,7 +28,7 @@ if %missing_file% equ 1 (
     cls
     echo Welcome to use HoYoShade starter!
     echo\
-    echo Mod Version:V3.0.0-Beta.1
+    echo Mod Version:V3.0.0-NextVersion
     echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo Powered by [The butterfly of Hong Kong]
     echo\
@@ -60,7 +60,7 @@ if "%missing_reshade_config%"=="1" (
     cls
     echo Welcome to use HoYoShade starter!
     echo\
-    echo Mod Version:V3.0.0-Beta.1
+    echo Mod Version:V3.0.0-NextVersion
     echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo Powered by [The butterfly of Hong Kong]
     echo\
@@ -96,7 +96,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -261,7 +261,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -310,7 +310,7 @@ title HoYoShade Starter (You have entered developer options!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -346,7 +346,7 @@ title HoYoShade Starter(You have entered the custom injection interface!!!)
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -380,7 +380,7 @@ echo\
 echo DuolaDStudio X ZelbertYQ x Ex_M
 echo Joint contributions.
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo\
 echo HoYoShade is based on the official ReShade plugins and the OpenHoYoShade framework for secondary development. 
 echo All files except for effect libraries/presets are open-sourced on GitHub under the BSL-3 open-source license.
@@ -410,7 +410,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -439,7 +439,7 @@ if "%content%" == "1" (
     cls
     echo Welcome to use HoYoShade starter!
     echo\
-    echo Mod Version:V3.0.0-Beta.1
+    echo Mod Version:V3.0.0-NextVersion
     echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
     echo Powered by [The butterfly of Hong Kong]
     echo\
@@ -468,7 +468,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
@@ -621,7 +621,7 @@ title HoYoShade Starter
 cls
 echo Welcome to use HoYoShade starter!
 echo\
-echo Mod Version:V3.0.0-Beta.1
+echo Mod Version:V3.0.0-NextVersion
 echo Developer:DuolaDStudio X ZelbertYQ X Ex_M
 echo Powered by [The butterfly of Hong Kong]
 echo\
