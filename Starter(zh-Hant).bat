@@ -735,7 +735,7 @@ echo [5] 僅啓動 原神版 Blender/留影機插件
 echo [6] 僅啓動 絕區零版 Blender/留影機插件
 echo [7] 同步當前系統時間以修復系統時間不同步的提示
 echo [8] 刪除 config 文件以重新指向其它客戶端
-echo [9] 刪除 cookies.json/cookie.txt 文件以修復注入時“賬號未登錄”的報錯提示
+echo [9] 刪除 cookies.json 文件以修復注入時“賬號未登錄”的報錯提示
 echo [10] 刷新 Blender/留影機插件 注入器檢測信息
 echo [11] 返回主界面
 echo [12] 退出程序
@@ -944,7 +944,7 @@ if "%choice%"=="1" (
             goto blender_hook_menu
         )
         set "shortcut=%~dp0ys_client.exe.lnk"
-        set "cookie_filename=cookie.txt"
+        set "cookie_filename=cookies.json"
     ) else if "!blver!"=="2" (
         if "!zzz_loader_exist!"=="0" (
             echo 自檢未通過，模組根目錄下並沒有找到名爲 zzz_loader.lnk 的快捷方式。
