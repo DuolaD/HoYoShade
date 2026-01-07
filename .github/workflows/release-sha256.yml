@@ -1,0 +1,54 @@
+name: Attach SHA256 Checksums to Release
+
+on:
+  release:
+    types: [published]
+
+jobs: 
+  sha256:
+    name: Compute and upload SHA256 checksums
+    runs-on:  ubuntu-latest
+    permissions: 
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          release_tag="${GITHUB_REF_NAME}"
+          echo "Processing release: $release_tag"
+          mkdir -p assets
+          # Download all assets from the release tag
+          gh release download "$release_tag" --repo "${{ github.repository }}" --dir "assets" --clobber
+          ls -la assets
+
+      - name: Generate .sha256 files
+        run: |
+          set -euo pipefail
+          cd assets
+          # Generate sha256 for each downloaded file
+          for f in *; do
+            if [[ -f "$f" && "$f" != *.sha256 ]]; then
+              echo "Calculating sha256 for $f"
+              sha256sum "$f" | awk '{printf "%s", $1}' > "${f}.sha256"
+            fi
+          done
+
+      - name: Upload .sha256 files to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          release_tag="${GITHUB_REF_NAME}"
+          cd assets
+          shopt -s nullglob
+          files=(*.sha256)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No .sha256 files were generated" >&2
+            exit 1
+          fi
+          gh release upload "$release_tag" "${files[@]}" --repo "${{ github.repository }}" --clobber
