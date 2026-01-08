@@ -35,10 +35,17 @@
 #include <fcntl.h>
 #include <io.h>
 #include <conio.h>
+#include <thread>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
 #pragma comment(lib, "User32.lib")
+
+// Custom error codes for HoYoShade injector
+#define INJECTION_ERROR_FILE_INTEGRITY       1001  // File integrity check failed.
+#define INJECTION_ERROR_BLACKLIST_PROCESS    1002  // Blacklist process
+#define INJECTION_ERROR_INVALID_PARAM        1003  // Invalid parameters.  
+#define INJECTION_ERROR_MISSING_EXE_SUFFIX   1004  // The process name does not end with .exe.
 
 // Structure for multilingual support
 struct language_strings
@@ -222,232 +229,12 @@ static DWORD WINAPI loading_thread_func(loading_data* arg)
 }
 #endif
 
-int wmain(int argc, wchar_t* argv[])
+// 后台注入线程函数
+static void background_injection_thread(const wchar_t* process_name, std::wstring root_directory)
 {
-    if (GetConsoleWindow() == NULL) {
-        AllocConsole();
-        FILE* fp;
-        freopen_s(&fp, "CONOUT$", "w", stdout);
-        freopen_s(&fp, "CONOUT$", "w", stderr);
-        freopen_s(&fp, "CONIN$", "r", stdin);
-    }
-    ShowWindow(GetConsoleWindow(), SW_SHOW);
-
-    // Set console output to Unicode mode
-    _setmode(_fileno(stdout), _O_U16TEXT);
-    _setmode(_fileno(stderr), _O_U16TEXT);
-
-    // Get the string table for current language
     const language_strings* lang = get_language_strings();
-
-
-    const wchar_t* name = nullptr;
-    bool is_shortcut = false;
-    bool valid_param = false;
-    if (argc != 2)
-    {
-        wprintf(lang->usage, argv[0]);
-        return 0;
-    }
-    // Parameter self-check: shortcut or custom process name
-    if (_wcsicmp(argv[1], L"-YS") == 0) { name = L"YuanShen.exe"; is_shortcut = true; valid_param = true; }
-    else if (_wcsicmp(argv[1], L"-GI") == 0) { name = L"GenshinImpact.exe"; is_shortcut = true; valid_param = true; }
-    else if (_wcsicmp(argv[1], L"-HSR") == 0) { name = L"StarRail.exe"; is_shortcut = true; valid_param = true; }
-    else if (_wcsicmp(argv[1], L"-ZZZ") == 0) { name = L"ZenlessZoneZero.exe"; is_shortcut = true; valid_param = true; }
-    else if (_wcsicmp(argv[1], L"-BH3") == 0) { name = L"BH3.exe"; is_shortcut = true; valid_param = true; }
-    else {
-        const wchar_t* temp = wcsrchr(argv[1], L'\\');
-        if (temp)
-            name = temp + 1;
-        else
-            name = argv[1];
-        // Check if the custom process name ends with .exe
-        size_t len = wcslen(name);
-        if (len > 4 && _wcsicmp(name + len - 4, L".exe") == 0)
-            valid_param = true;
-        else {
-            wprintf(lang->missing_exe_suffix);
-            return 0;
-        }
-    }
-    // Check whether the parameters are legal
-    if (!valid_param) {
-        wprintf(lang->invalid_param);
-        return 0;
-    }
-
-    // File integrity self-check logic
-    WCHAR root_dir[MAX_PATH] = {0};
-    GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
-    WCHAR* last_slash = wcsrchr(root_dir, L'\\');
-    if (last_slash) *last_slash = L'\0';
-    const wchar_t* check_files[] = {
-        L"inject.exe",
-        L"ReShade64.dll",
-        L"InjectResource",
-        L"LauncherResource",
-        L"reshade-shaders",
-        L"Presets",
-        L"LauncherResource\\INIBuild.exe",
-        L"InjectResource\\Fonts\\MiSans-Bold.ttf"
-    };
-    bool missing = false;
-    for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
-    {
-        WCHAR full_path[MAX_PATH*2] = {0};
-        swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
-        if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
-        {
-            missing = true;
-            break;
-        }
-    }
-    if (missing)
-    {
-        LANGID langID = GetUserDefaultUILanguage();
-        if (PRIMARYLANGID(langID) == LANG_CHINESE)
-        {
-            if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
-            {
-                wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n按下任意键后注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
-            }
-            else
-            {
-                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
-            }
-        }
-        else
-        {
-            wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nPress any key to exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
-        }
-        _getwch();
-        return 0;
-    }
-
-    // After the file integrity self-check passes, call LauncherResource\INIBuild.exe once
-    {
-        WCHAR inibuild_path[MAX_PATH] = {0};
-        WCHAR root_dir_copy[MAX_PATH] = {0};
-        wcscpy_s(root_dir_copy, root_dir);
-        swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", root_dir_copy);
-        if (GetFileAttributesW(inibuild_path) != INVALID_FILE_ATTRIBUTES) {
-            STARTUPINFOW si = { sizeof(si) };
-            PROCESS_INFORMATION pi = {};
-            if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
-                WaitForSingleObject(pi.hProcess, INFINITE);
-                CloseHandle(pi.hProcess);
-                CloseHandle(pi.hThread);
-            }
-        }
-    }
-
-    // Blacklist of forbidden process names
-    const wchar_t* process_blacklist[] = {
-        L"explorer.exe",
-        L"cmd.exe",
-        L"powershell.exe",
-        L"conhost.exe",
-        L"taskmgr.exe",
-        L"svchost.exe",
-        L"lsass.exe",
-        L"csrss.exe",
-        L"wininit.exe",
-        L"winlogon.exe",
-        L"Client-Win64-Shipping.exe"
-    };
-    const int blacklist_count = sizeof(process_blacklist) / sizeof(process_blacklist[0]);
-    for (int i = 0; i < blacklist_count; ++i) {
-        if (_wcsicmp(name, process_blacklist[i]) == 0) {
-            LANGID langID = GetUserDefaultUILanguage();
-            if (PRIMARYLANGID(langID) == LANG_CHINESE) {
-                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED) {
-                    wprintf(L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n按下任意键退出。\n", name);
-                } else {
-                    wprintf(L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n按下任意鍵退出。\n", name);
-                }
-            } else {
-                wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again. \n\nPress any key to exit. \n", name);
-            }
-            _getwch();
-            return 0;
-        }
-    }
-
-
-    while (true) {
-        bool found = false;
-        DWORD found_pid = 0;
-        const scoped_handle snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-        PROCESSENTRY32W process = { sizeof(process) };
-        for (BOOL next = Process32FirstW(snapshot, &process); next; next = Process32NextW(snapshot, &process)) {
-            if (_wcsicmp(process.szExeFile, name) == 0) {
-                found = true;
-                found_pid = process.th32ProcessID;
-                break;
-            }
-        }
-        if (!found) break;
-        // Try to kill process
-        HANDLE hProc = OpenProcess(PROCESS_TERMINATE, FALSE, found_pid);
-        if (hProc) {
-            TerminateProcess(hProc, 0);
-            CloseHandle(hProc);
-        }
-        Sleep(1); // Sleep a bit to not overburden the CPU
-    }
-
-    // Quick parameter integrity check
-    if (is_shortcut)
-    {
-        WCHAR root_dir[MAX_PATH] = {0};
-        GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
-        WCHAR* last_slash = wcsrchr(root_dir, L'\\');
-        if (last_slash) *last_slash = L'\0';
-        const wchar_t* check_files[] = {
-            L"inject.exe",
-            L"ReShade64.dll",
-            L"InjectResource",
-            L"LauncherResource",
-            L"reshade-shaders",
-            L"Presets",
-            L"LauncherResource\\INIBuild.exe",
-            L"InjectResource\\Fonts\\MiSans-Bold.ttf"
-        };
-        bool missing = false;
-        for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
-        {
-            WCHAR full_path[MAX_PATH*2] = {0};
-            swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
-            if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
-            {
-                missing = true;
-                break;
-            }
-        }
-        if (missing)
-        {
-            LANGID langID = GetUserDefaultUILanguage();
-            if (PRIMARYLANGID(langID) == LANG_CHINESE)
-            {
-                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
-                {
-                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n按下任意键后注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
-                }
-                else
-                {
-                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n按下任意鍵後注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
-                }
-            }
-            else
-            {
-                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nPress any key to exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
-            }
-            _getwch();
-            return 0;
-        }
-    }
-
-    wprintf(lang->waiting, name);
+    
+    wprintf(lang->waiting, process_name);
 
     DWORD pid = 0;
 
@@ -459,14 +246,14 @@ int wmain(int argc, wchar_t* argv[])
         PROCESSENTRY32W process = { sizeof(process) };
         for (BOOL next = Process32FirstW(snapshot, &process); next; next = Process32NextW(snapshot, &process))
         {
-            if (_wcsicmp(process.szExeFile, name) == 0)
+            if (_wcsicmp(process.szExeFile, process_name) == 0)
             {
                 pid = process.th32ProcessID;
                 break;
             }
         }
 
-        Sleep(1); // Sleep a bit to not overburden the CPU
+        Sleep(100); // Sleep a bit to not overburden the CPU
     }
 
     wprintf(lang->found, pid);
@@ -490,11 +277,9 @@ int wmain(int argc, wchar_t* argv[])
     WCHAR target_ini[MAX_PATH] = { 0 };
     swprintf_s(target_ini, L"%s\\ReShade.ini", process_dir);
 
-    // Get the injector root directory
-    WCHAR injector_dir[MAX_PATH] = { 0 };
-    GetModuleFileNameW(nullptr, injector_dir, MAX_PATH);
-    last_slash = wcsrchr(injector_dir, L'\\');
-    if (last_slash) *last_slash = L'\0';
+    WCHAR injector_dir[MAX_PATH];
+    wcscpy_s(injector_dir, root_directory.c_str());
+    
     WCHAR source_ini[MAX_PATH] = { 0 };
     swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
 
@@ -586,24 +371,13 @@ int wmain(int argc, wchar_t* argv[])
     }
 
     if (!skip_ini_gen && GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
-        // ReShade.ini does not exist, run two programs to generate it first
-        const wchar_t* tools[] = {
-            L"LauncherResource\\INIBuild.exe",
-        };
-
-        for (int i = 0; i < 2; ++i) {
-            WCHAR tool_path[MAX_PATH] = { 0 };
-            swprintf_s(tool_path, L"%s\\%s", injector_dir, tools[i]);
-
-            STARTUPINFOW si = { sizeof(si) };
-            PROCESS_INFORMATION pi = {};
-
-            // Start the program
-            if (CreateProcessW(tool_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
-                WaitForSingleObject(pi.hProcess, INFINITE);
-                CloseHandle(pi.hProcess);
-                CloseHandle(pi.hThread);
-            }
+        // ReShade.ini does not exist, run INIBuild to generate it
+        STARTUPINFOW si = { sizeof(si) };
+        PROCESS_INFORMATION pi = {};
+        if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+            WaitForSingleObject(pi.hProcess, INFINITE);
+            CloseHandle(pi.hProcess);
+            CloseHandle(pi.hThread);
         }
 
         // Try copying ReShade.ini again
@@ -625,7 +399,7 @@ int wmain(int argc, wchar_t* argv[])
     {
         wprintf(lang->failed_open);
         wprintf(L"\nDebug: GetLastError: %lu\n", GetLastError());
-        return GetLastError();
+        return;
     }
 
     // Check process architecture
@@ -638,25 +412,20 @@ int wmain(int argc, wchar_t* argv[])
 #endif
     {
         wprintf(lang->arch_mismatch);
-        return ERROR_IMAGE_MACHINE_TYPE_MISMATCH;
+        return;
     }
 
     loading_data arg;
-#if 0
-    GetCurrentDirectoryW(MAX_PATH, arg.load_path);
-#else
-    // Use module directory, since current directory points to target executable directory when drag'n'dropping a target executable onto the injector
     GetModuleFileNameW(nullptr, arg.load_path, MAX_PATH);
     if (wchar_t* const load_path_filename = wcsrchr(arg.load_path, L'\\'))
         *load_path_filename = '\0';
-#endif
     wcscat_s(arg.load_path, L"\\");
     wcscat_s(arg.load_path, remote_is_wow64 ? L"ReShade32.dll" : L"ReShade64.dll");
 
     if (GetFileAttributesW(arg.load_path) == INVALID_FILE_ATTRIBUTES)
     {
         wprintf(lang->failed_find, arg.load_path);
-        return ERROR_FILE_NOT_FOUND;
+        return;
     }
 
     // Make sure the DLL has permissions set up for 'ALL_APPLICATION_PACKAGES'
@@ -688,7 +457,7 @@ int wmain(int argc, wchar_t* argv[])
         )
     {
         wprintf(lang->failed_allocate);
-        return GetLastError();
+        return;
     }
 
     // Execute 'LoadLibrary' in target application
@@ -696,7 +465,7 @@ int wmain(int argc, wchar_t* argv[])
     if (load_thread == nullptr)
     {
         wprintf(lang->failed_execute);
-        return GetLastError();
+        return;
     }
 
     // Wait for loading to finish and clean up parameter memory afterwards
@@ -713,16 +482,236 @@ int wmain(int argc, wchar_t* argv[])
 #endif
     {
         wprintf(lang->success);
-        return 0;
     }
     else
     {
 #if RESHADE_LOADING_THREAD_FUNC
         wprintf(lang->failed_load, exit_code);
-        return exit_code;
 #else
         wprintf(lang->failed_load, 0);
-        return ERROR_MOD_NOT_FOUND;
 #endif
     }
+}
+
+int wmain(int argc, wchar_t* argv[])
+{
+    if (GetConsoleWindow() == NULL) {
+        AllocConsole();
+        FILE* fp;
+        freopen_s(&fp, "CONOUT$", "w", stdout);
+        freopen_s(&fp, "CONOUT$", "w", stderr);
+        freopen_s(&fp, "CONIN$", "r", stdin);
+    }
+    ShowWindow(GetConsoleWindow(), SW_SHOW);
+
+    // Set console output to Unicode mode
+    _setmode(_fileno(stdout), _O_U16TEXT);
+    _setmode(_fileno(stderr), _O_U16TEXT);
+
+    // Get the string table for current language
+    const language_strings* lang = get_language_strings();
+
+
+    const wchar_t* name = nullptr;
+    bool is_shortcut = false;
+    bool valid_param = false;
+    if (argc != 2)
+    {
+        wprintf(lang->usage, argv[0]);
+        return 0;
+    }
+    // Parameter self-check: shortcut or custom process name
+    if (_wcsicmp(argv[1], L"-YS") == 0) { name = L"YuanShen.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-GI") == 0) { name = L"GenshinImpact.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-HSR") == 0) { name = L"StarRail.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-ZZZ") == 0) { name = L"ZenlessZoneZero.exe"; is_shortcut = true; valid_param = true; }
+    else if (_wcsicmp(argv[1], L"-BH3") == 0) { name = L"BH3.exe"; is_shortcut = true; valid_param = true; }
+    else {
+        const wchar_t* temp = wcsrchr(argv[1], L'\\');
+        if (temp)
+            name = temp + 1;
+        else
+            name = argv[1];
+        // Check if the custom process name ends with .exe
+        size_t len = wcslen(name);
+        if (len > 4 && _wcsicmp(name + len - 4, L".exe") == 0)
+            valid_param = true;
+        else {
+            wprintf(lang->missing_exe_suffix);
+            return INJECTION_ERROR_MISSING_EXE_SUFFIX;
+        }
+    }
+    // Check whether the parameters are legal
+    if (!valid_param) {
+        wprintf(lang->invalid_param);
+        return INJECTION_ERROR_INVALID_PARAM;
+    }
+
+    // File integrity self-check logic
+    WCHAR root_dir[MAX_PATH] = {0};
+    GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
+    WCHAR* last_slash = wcsrchr(root_dir, L'\\');
+    if (last_slash) *last_slash = L'\0';
+    const wchar_t* check_files[] = {
+        L"inject.exe",
+        L"ReShade64.dll",
+        L"InjectResource",
+        L"LauncherResource",
+        L"reshade-shaders",
+        L"Presets",
+        L"LauncherResource\\INIBuild.exe",
+        L"InjectResource\\Fonts\\MiSans-Bold.ttf"
+    };
+    bool missing = false;
+    for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
+    {
+        WCHAR full_path[MAX_PATH*2] = {0};
+        swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
+        if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
+        {
+            missing = true;
+            break;
+        }
+    }
+    if (missing)
+    {
+        LANGID langID = GetUserDefaultUILanguage();
+        if (PRIMARYLANGID(langID) == LANG_CHINESE)
+        {
+            if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
+            {
+                wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
+            }
+            else
+            {
+                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+            }
+        }
+        else
+        {
+            wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
+        }
+        return INJECTION_ERROR_FILE_INTEGRITY;
+    }
+
+    // After the file integrity self-check passes, call LauncherResource\INIBuild.exe once
+    {
+        WCHAR inibuild_path[MAX_PATH] = {0};
+        WCHAR root_dir_copy[MAX_PATH] = {0};
+        wcscpy_s(root_dir_copy, root_dir);
+        swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", root_dir_copy);
+        if (GetFileAttributesW(inibuild_path) != INVALID_FILE_ATTRIBUTES) {
+            STARTUPINFOW si = { sizeof(si) };
+            PROCESS_INFORMATION pi = {};
+            if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+                WaitForSingleObject(pi.hProcess, INFINITE);
+                CloseHandle(pi.hProcess);
+                CloseHandle(pi.hThread);
+            }
+        }
+    }
+
+    // Blacklist of forbidden process names
+    const wchar_t* process_blacklist[] = {
+        L"explorer.exe",
+        L"cmd.exe",
+        L"powershell.exe",
+        L"conhost.exe",
+        L"taskmgr.exe",
+        L"svchost.exe",
+        L"lsass.exe",
+        L"csrss.exe",
+        L"wininit.exe",
+        L"winlogon.exe",
+        L"Client-Win64-Shipping.exe"
+    };
+    const int blacklist_count = sizeof(process_blacklist) / sizeof(process_blacklist[0]);
+    for (int i = 0; i < blacklist_count; ++i) {
+        if (_wcsicmp(name, process_blacklist[i]) == 0) {
+            LANGID langID = GetUserDefaultUILanguage();
+            if (PRIMARYLANGID(langID) == LANG_CHINESE) {
+                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED) {
+                    wprintf(L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n");
+                } else {
+                    wprintf(L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n");
+                }
+            } else {
+                wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again.\n\n");
+            }
+            return INJECTION_ERROR_BLACKLIST_PROCESS;
+        }
+    }
+
+    // Kill any existing process with the same name
+    while (true) {
+        bool found = false;
+        DWORD found_pid = 0;
+        const scoped_handle snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+        PROCESSENTRY32W process = { sizeof(process) };
+        for (BOOL next = Process32FirstW(snapshot, &process); next; next = Process32NextW(snapshot, &process)) {
+            if (_wcsicmp(process.szExeFile, name) == 0) {
+                found = true;
+                found_pid = process.th32ProcessID;
+                break;
+            }
+        }
+        if (!found) break;
+        // Try to kill process
+        HANDLE hProc = OpenProcess(PROCESS_TERMINATE, FALSE, found_pid);
+        if (hProc) {
+            TerminateProcess(hProc, 0);
+            CloseHandle(hProc);
+        }
+        Sleep(1); // Sleep a bit to not overburden the CPU
+    }
+
+    // Quick parameter integrity check (for shortcut mode)
+    if (is_shortcut)
+    {
+        WCHAR root_dir_check[MAX_PATH] = {0};
+        GetModuleFileNameW(nullptr, root_dir_check, MAX_PATH);
+        WCHAR* last_slash_check = wcsrchr(root_dir_check, L'\\');
+        if (last_slash_check) *last_slash_check = L'\0';
+        
+        bool missing_quick = false;
+        for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
+        {
+            WCHAR full_path[MAX_PATH*2] = {0};
+            swprintf_s(full_path, L"%s\\%s", root_dir_check, check_files[i]);
+            if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
+            {
+                missing_quick = true;
+                break;
+            }
+        }
+        if (missing_quick)
+        {
+            LANGID langID = GetUserDefaultUILanguage();
+            if (PRIMARYLANGID(langID) == LANG_CHINESE)
+            {
+                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
+                {
+                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
+                }
+                else
+                {
+                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+                }
+            }
+            else
+            {
+                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
+            }
+            return INJECTION_ERROR_FILE_INTEGRITY;
+        }
+    }
+
+    // All checks passed, creating a background thread to perform the injection.
+    // The main process immediately returns 0, telling the launcher that it can continue launching the game.
+    std::wstring root_dir_str(root_dir);
+    std::thread injection_thread(background_injection_thread, name, root_dir_str);
+    injection_thread.detach(); // Detach the thread and let it run in the background.
+
+    // Returning 0 immediately indicates that initialization was successful, and the launcher can proceed with starting the game.
+    return 0;
 }
