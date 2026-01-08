@@ -584,7 +584,7 @@ int wmain(int argc, wchar_t* argv[])
             }
             else
             {
-                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
             }
         }
         else
@@ -707,11 +707,11 @@ int wmain(int argc, wchar_t* argv[])
     }
 
     // All checks passed, creating a background thread to perform the injection.
-    // The main process immediately returns 0, telling the launcher that it can continue launching the game.
+    // The main thread will wait for the injection to complete.
     std::wstring root_dir_str(root_dir);
     std::thread injection_thread(background_injection_thread, name, root_dir_str);
-    injection_thread.detach(); // Detach the thread and let it run in the background.
+    injection_thread.join(); // Wait for the injection thread to complete.
 
-    // Returning 0 immediately indicates that initialization was successful, and the launcher can proceed with starting the game.
+    // Returning 0 indicates that the injection process completed (success/failure is logged to console).
     return 0;
 }
