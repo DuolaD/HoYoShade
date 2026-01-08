@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-/*
- * Modify by GitHub@DuolaD
- * Copyright (C) 2025 DuolaD
- * SPDX-License-Identifier: BSD-3-Clause
- */
+ /*
+  * Modify by GitHub@DuolaD
+  * Copyright (C) 2025 DuolaD
+  * SPDX-License-Identifier: BSD-3-Clause
+  */
 
-/*
-* This source code is modded version. If you want to use the original version, please visit: https://github.com/crosire/reshade/blob/main/tools/injector.cpp
-*/
+  /*
+  * This source code is modded version. If you want to use the original version, please visit: https://github.com/crosire/reshade/blob/main/tools/injector.cpp
+  */
 
-/*
-* Project:The butterfly of Hong Kong
-*/
+  /*
+  * Project:The butterfly of Hong Kong
+  */
 
-/*
-* ⌈The butterfly of Hong Kong⌋ is a official ReShade injector-based injector. Depth development for all miHoYo/HoYoverse Corporation public/non-public game client.
-* Developers: DuolaDStudio X ZelbertYQ X Ex_M
-* Based on BSD-3-Clause license. 
-* 
-* Re-distribution in the name of the original author without the written consent of the main contributor, or failure to comply with the BSD-3 open source agreement,
-* may result in the relevant person receiving a warning under the US DMCA or applicable laws in other countries and regions.
-*/
+  /*
+  * ⌈The butterfly of Hong Kong⌋ is a official ReShade injector-based injector. Depth development for all miHoYo/HoYoverse Corporation public/non-public game client.
+  * Developers: DuolaDStudio X ZelbertYQ X Ex_M
+  * Based on BSD-3-Clause license.
+  *
+  * Re-distribution in the name of the original author without the written consent of the main contributor, or failure to comply with the BSD-3 open source agreement,
+  * may result in the relevant person receiving a warning under the US DMCA or applicable laws in other countries and regions.
+  */
 
 #include <stdio.h>
 #include <string>
@@ -41,11 +41,18 @@
 #pragma comment(lib, "Advapi32.lib")
 #pragma comment(lib, "User32.lib")
 
-// Custom error codes for HoYoShade injector
+  // Custom error codes for HoYoShade injector
 #define INJECTION_ERROR_FILE_INTEGRITY       1001  // File integrity check failed.
 #define INJECTION_ERROR_BLACKLIST_PROCESS    1002  // Blacklist process
 #define INJECTION_ERROR_INVALID_PARAM        1003  // Invalid parameters.  
 #define INJECTION_ERROR_MISSING_EXE_SUFFIX   1004  // The process name does not end with .exe.
+
+// Success code indicating injector is ready and waiting for game process
+#define INJECTION_READY                      9999  // Initialization successful, ready to inject
+
+// Special marker for launcher communication (output to stderr, not visible in normal console)
+// Using stderr because it's redirected by launcher but not displayed in console by default
+#define INJECTION_READY_MARKER               "HOYOSHADE_READY:9999"
 
 // Structure for multilingual support
 struct language_strings
@@ -163,9 +170,11 @@ struct scoped_handle
     HANDLE handle;
 
     scoped_handle() :
-        handle(INVALID_HANDLE_VALUE) {}
+        handle(INVALID_HANDLE_VALUE) {
+    }
     scoped_handle(HANDLE handle) :
-        handle(handle) {}
+        handle(handle) {
+    }
     scoped_handle(scoped_handle&& other) :
         handle(other.handle) {
         other.handle = NULL;
@@ -233,7 +242,7 @@ static DWORD WINAPI loading_thread_func(loading_data* arg)
 static void background_injection_thread(const wchar_t* process_name, std::wstring root_directory)
 {
     const language_strings* lang = get_language_strings();
-    
+
     wprintf(lang->waiting, process_name);
 
     DWORD pid = 0;
@@ -279,7 +288,7 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
 
     WCHAR injector_dir[MAX_PATH];
     wcscpy_s(injector_dir, root_directory.c_str());
-    
+
     WCHAR source_ini[MAX_PATH] = { 0 };
     swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
 
@@ -323,7 +332,7 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
                 L"InjectResource\\Fonts\\MiSans-Bold.ttf",
                 L"InjectResource\\Fonts\\MiSans-Bold.ttf"
             };
-            const int key_count = sizeof(keys)/sizeof(keys[0]);
+            const int key_count = sizeof(keys) / sizeof(keys[0]);
             while (fgetws(line, 2047, f)) {
                 std::wstring wline(line);
                 for (int i = 0; i < key_count; ++i) {
@@ -383,10 +392,12 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
         // Try copying ReShade.ini again
         if (CopyFileW(source_ini, target_ini, FALSE)) {
             wprintf(lang->copy_ini_success);
-        } else {
+        }
+        else {
             wprintf(lang->copy_ini_fail, GetLastError());
         }
-    } else if (!skip_ini_gen) {
+    }
+    else if (!skip_ini_gen) {
         wprintf(lang->ini_exists);
     }
 
@@ -495,22 +506,37 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
 
 int wmain(int argc, wchar_t* argv[])
 {
-    if (GetConsoleWindow() == NULL) {
+    // Check if we're being launched with redirected output (from launcher)
+    // In this case, don't create a console window
+    bool hasConsole = GetConsoleWindow() != NULL;
+    bool outputRedirected = GetFileType(GetStdHandle(STD_OUTPUT_HANDLE)) != FILE_TYPE_CHAR;
+    
+    // Only allocate console if we don't have one AND output is not redirected
+    // (output is redirected when launched from GUI launcher)
+    if (!hasConsole && !outputRedirected) {
         AllocConsole();
         FILE* fp;
         freopen_s(&fp, "CONOUT$", "w", stdout);
         freopen_s(&fp, "CONOUT$", "w", stderr);
         freopen_s(&fp, "CONIN$", "r", stdin);
+        ShowWindow(GetConsoleWindow(), SW_SHOW);
     }
-    ShowWindow(GetConsoleWindow(), SW_SHOW);
+    else if (hasConsole && !outputRedirected) {
+        ShowWindow(GetConsoleWindow(), SW_SHOW);
+    }
+    // If output is redirected (from launcher), don't create/show any console
 
-    // Set console output to Unicode mode
-    _setmode(_fileno(stdout), _O_U16TEXT);
-    _setmode(_fileno(stderr), _O_U16TEXT);
+    // Set console output to Unicode mode (only if output is not redirected)
+    if (!outputRedirected) {
+        _setmode(_fileno(stdout), _O_U16TEXT);
+        _setmode(_fileno(stderr), _O_U16TEXT);
+    }
 
     // Get the string table for current language
     const language_strings* lang = get_language_strings();
-
+    
+    // Store outputRedirected for later use (to decide whether to output READY marker)
+    bool launchedFromGUI = outputRedirected;
 
     const wchar_t* name = nullptr;
     bool is_shortcut = false;
@@ -548,7 +574,7 @@ int wmain(int argc, wchar_t* argv[])
     }
 
     // File integrity self-check logic
-    WCHAR root_dir[MAX_PATH] = {0};
+    WCHAR root_dir[MAX_PATH] = { 0 };
     GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
     WCHAR* last_slash = wcsrchr(root_dir, L'\\');
     if (last_slash) *last_slash = L'\0';
@@ -563,9 +589,9 @@ int wmain(int argc, wchar_t* argv[])
         L"InjectResource\\Fonts\\MiSans-Bold.ttf"
     };
     bool missing = false;
-    for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
+    for (int i = 0; i < sizeof(check_files) / sizeof(check_files[0]); ++i)
     {
-        WCHAR full_path[MAX_PATH*2] = {0};
+        WCHAR full_path[MAX_PATH * 2] = { 0 };
         swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
         if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
         {
@@ -584,7 +610,7 @@ int wmain(int argc, wchar_t* argv[])
             }
             else
             {
-                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
             }
         }
         else
@@ -596,8 +622,8 @@ int wmain(int argc, wchar_t* argv[])
 
     // After the file integrity self-check passes, call LauncherResource\INIBuild.exe once
     {
-        WCHAR inibuild_path[MAX_PATH] = {0};
-        WCHAR root_dir_copy[MAX_PATH] = {0};
+        WCHAR inibuild_path[MAX_PATH] = { 0 };
+        WCHAR root_dir_copy[MAX_PATH] = { 0 };
         wcscpy_s(root_dir_copy, root_dir);
         swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", root_dir_copy);
         if (GetFileAttributesW(inibuild_path) != INVALID_FILE_ATTRIBUTES) {
@@ -632,10 +658,12 @@ int wmain(int argc, wchar_t* argv[])
             if (PRIMARYLANGID(langID) == LANG_CHINESE) {
                 if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED) {
                     wprintf(L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n");
-                } else {
+                }
+                else {
                     wprintf(L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n");
                 }
-            } else {
+            }
+            else {
                 wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again.\n\n");
             }
             return INJECTION_ERROR_BLACKLIST_PROCESS;
@@ -668,15 +696,15 @@ int wmain(int argc, wchar_t* argv[])
     // Quick parameter integrity check (for shortcut mode)
     if (is_shortcut)
     {
-        WCHAR root_dir_check[MAX_PATH] = {0};
+        WCHAR root_dir_check[MAX_PATH] = { 0 };
         GetModuleFileNameW(nullptr, root_dir_check, MAX_PATH);
         WCHAR* last_slash_check = wcsrchr(root_dir_check, L'\\');
         if (last_slash_check) *last_slash_check = L'\0';
-        
+
         bool missing_quick = false;
-        for (int i = 0; i < sizeof(check_files)/sizeof(check_files[0]); ++i)
+        for (int i = 0; i < sizeof(check_files) / sizeof(check_files[0]); ++i)
         {
-            WCHAR full_path[MAX_PATH*2] = {0};
+            WCHAR full_path[MAX_PATH * 2] = { 0 };
             swprintf_s(full_path, L"%s\\%s", root_dir_check, check_files[i]);
             if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
             {
@@ -695,7 +723,7 @@ int wmain(int argc, wchar_t* argv[])
                 }
                 else
                 {
-                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解壓全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
+                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
                 }
             }
             else
@@ -706,11 +734,24 @@ int wmain(int argc, wchar_t* argv[])
         }
     }
 
-    // All checks passed, creating a background thread to perform the injection.
-    // The main thread will wait for the injection to complete.
+    // ========================================
+    // All validation checks passed!
+    // If launched from GUI launcher (output redirected), output the ready marker.
+    // If launched from CMD (output not redirected), just proceed normally.
+    // ========================================
+    
+    // Only output ready marker when launched from GUI launcher
+    // This way CMD users won't see the marker at all
+    if (launchedFromGUI) {
+        // Output ready marker to stderr (ASCII mode for easy parsing by launcher)
+        fflush(stderr);
+        fprintf(stderr, "%s\n", INJECTION_READY_MARKER);
+        fflush(stderr);
+    }
+
+    // Now wait for game process and perform injection
     std::wstring root_dir_str(root_dir);
-    std::thread injection_thread(background_injection_thread, name, root_dir_str);
-    injection_thread.join(); // Wait for the injection thread to complete.
+    background_injection_thread(name, root_dir_str);
 
     // Returning 0 indicates that the injection process completed (success/failure is logged to console).
     return 0;
