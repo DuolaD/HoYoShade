@@ -1,0 +1,136 @@
+name: Build and Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-release:
+    name: Build, Package and Release
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Compile C++ Binaries
+        shell: cmd
+        run: |
+          echo "Compiling INIBuild..."
+          cl /EHsc /std:c++17 /source-charset:utf-8 LauncherResource\INIBuild.cpp /Fe:INIBuild.exe /link /subsystem:console
+          
+          echo "Compiling inject_mod..."
+          cl /EHsc /std:c++17 /source-charset:utf-8 inject_mod.cpp /Fe:inject.exe /link /subsystem:console
+
+      - name: Prepare HoYoShade Package
+        shell: pwsh
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          $dist = "HoYoShade_dist"
+          New-Item -ItemType Directory -Force -Path $dist
+          
+          # Create empty folders
+          New-Item -ItemType Directory -Force -Path "$dist\ScreenShot"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Addons"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Shaders"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Textures"
+          
+          # Copy InjectResource
+          Copy-Item -Path "InjectResource" -Destination "$dist" -Recurse
+          
+          # Get Presets
+          git clone --depth 1 https://github.com/HoYoShade-Dev/HoYoShade.Presets.git "$dist\Presets"
+          if (Test-Path "$dist\Presets\.git") { Remove-Item "$dist\Presets\.git" -Recurse -Force }
+          
+          # LauncherResource & Compiled exe
+          New-Item -ItemType Directory -Force -Path "$dist\LauncherResource"
+          Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
+          
+          # Root files
+          Copy-Item -Path "inject.exe" -Destination "$dist\"
+          Copy-Item -Path "LICENSE" -Destination "$dist\"
+          Copy-Item -Path "ReShade_LICENSE" -Destination "$dist\"
+          Copy-Item -Path "ReShade64.dll" -Destination "$dist\"
+          
+          # Bat renaming
+          Copy-Item -Path "Starter(zh-Hans).bat" -Destination "$dist\简体中文启动器.bat"
+          Copy-Item -Path "Starter(zh-Hant).bat" -Destination "$dist\繁體中文注入器.bat"
+          Copy-Item -Path "Starter(English).bat" -Destination "$dist\HoYoShade Starter.bat"
+          
+          # Zip
+          $zipName = "HoYoShade-$tag.zip"
+          7z a -tzip $zipName ".\$dist\*"
+          Write-Output "Created $zipName"
+
+      - name: Prepare OpenHoYoShade Package
+        shell: pwsh
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          $dist = "OpenHoYoShade_dist"
+          New-Item -ItemType Directory -Force -Path $dist
+          
+          # Create empty folders (Presets is empty here)
+          New-Item -ItemType Directory -Force -Path "$dist\ScreenShot"
+          New-Item -ItemType Directory -Force -Path "$dist\Presets"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Addons"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Shaders"
+          New-Item -ItemType Directory -Force -Path "$dist\reshade-shaders\Textures"
+          
+          # Copy InjectResource
+          Copy-Item -Path "InjectResource" -Destination "$dist" -Recurse
+          
+          # LauncherResource & Compiled exe & Source
+          New-Item -ItemType Directory -Force -Path "$dist\LauncherResource"
+          Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
+          Copy-Item -Path "LauncherResource\INIBuild.cpp" -Destination "$dist\LauncherResource\"
+          
+          # Root files
+          Copy-Item -Path "inject.exe" -Destination "$dist\"
+          Copy-Item -Path "inject_mod.cpp" -Destination "$dist\"
+          Copy-Item -Path "LICENSE" -Destination "$dist\"
+          Copy-Item -Path "ReShade_LICENSE" -Destination "$dist\"
+          Copy-Item -Path "ReShade64.dll" -Destination "$dist\"
+          
+          # Bat (Original names)
+          Copy-Item -Path "Starter(zh-Hans).bat" -Destination "$dist\"
+          Copy-Item -Path "Starter(zh-Hant).bat" -Destination "$dist\"
+          Copy-Item -Path "Starter(English).bat" -Destination "$dist\"
+          
+          # Zip
+          $zipName = "OpenHoYoShade-$tag.zip"
+          7z a -tzip $zipName ".\$dist\*"
+          Write-Output "Created $zipName"
+
+      - name: Generate Checksums
+        shell: bash
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          # We expect two zip files in current directory
+          files=("HoYoShade-${tag}.zip" "OpenHoYoShade-${tag}.zip")
+          
+          for f in "${files[@]}"; do
+            if [ -f "$f" ]; then
+              echo "Calculating sha256 for $f"
+              sha256sum "$f" | awk '{printf "%s", $1}' > "${f}.sha256"
+            else
+              echo "Error: File $f not found" >&2
+              exit 1
+            fi
+          done
+          ls -la *.zip *.sha256
+
+      - name: Upload Assets to Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+           tag="${GITHUB_REF_NAME}"
+           gh release upload "$tag" \
+             "HoYoShade-${tag}.zip" "HoYoShade-${tag}.zip.sha256" \
+             "OpenHoYoShade-${tag}.zip" "OpenHoYoShade-${tag}.zip.sha256" \
+             --repo "${{ github.repository }}" \
+             --clobber
