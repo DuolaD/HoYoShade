@@ -476,6 +476,7 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
     if (load_thread == nullptr)
     {
         wprintf(lang->failed_execute);
+        wprintf(L"\nDebug: GetLastError: %lu\n", GetLastError());
         return;
     }
 
