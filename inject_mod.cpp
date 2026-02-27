@@ -238,6 +238,97 @@ static DWORD WINAPI loading_thread_func(loading_data* arg)
 }
 #endif
 
+// Helper function to recursively delete a directory
+static void recursive_delete_directory(const std::wstring& path)
+{
+    WIN32_FIND_DATAW find_data;
+    HANDLE find_handle = FindFirstFileW((path + L"\\*").c_str(), &find_data);
+
+    if (find_handle == INVALID_HANDLE_VALUE)
+        return;
+
+    do
+    {
+        if (wcscmp(find_data.cFileName, L".") != 0 && wcscmp(find_data.cFileName, L"..") != 0)
+        {
+            std::wstring file_path = path + L"\\" + find_data.cFileName;
+
+            if (find_data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+            {
+                recursive_delete_directory(file_path);
+            }
+            else
+            {
+                SetFileAttributesW(file_path.c_str(), FILE_ATTRIBUTE_NORMAL);
+                DeleteFileW(file_path.c_str());
+            }
+        }
+    } while (FindNextFileW(find_handle, &find_data));
+
+    FindClose(find_handle);
+    RemoveDirectoryW(path.c_str());
+}
+
+// Helper function to check if a string ends with a suffix
+static bool ends_with(const std::wstring& str, const std::wstring& suffix)
+{
+    if (str.length() < suffix.length())
+        return false;
+    return _wcsicmp(str.c_str() + str.length() - suffix.length(), suffix.c_str()) == 0;
+}
+
+// Function to perform cleanup after injection
+static void perform_cleanup(const std::wstring& process_dir)
+{
+    if (process_dir.empty()) return;
+
+    // 1. Delete specific files
+    const wchar_t* files_to_delete[] = {
+        L"opengl32.dll",
+        L"opengl64.dll",
+        L"ReShade32.dll",
+        L"ReShade64.dll"
+    };
+
+    for (const auto& file : files_to_delete)
+    {
+        std::wstring file_path = process_dir + L"\\" + file;
+        if (GetFileAttributesW(file_path.c_str()) != INVALID_FILE_ATTRIBUTES)
+        {
+            SetFileAttributesW(file_path.c_str(), FILE_ATTRIBUTE_NORMAL);
+            DeleteFileW(file_path.c_str());
+        }
+    }
+
+    // 2. Delete files with specific suffixes (*.addon32, *.addon64)
+    WIN32_FIND_DATAW find_data;
+    HANDLE find_handle = FindFirstFileW((process_dir + L"\\*").c_str(), &find_data);
+    if (find_handle != INVALID_HANDLE_VALUE)
+    {
+        do
+        {
+            if (!(find_data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
+            {
+                std::wstring filename = find_data.cFileName;
+                if (ends_with(filename, L".addon32") || ends_with(filename, L".addon64"))
+                {
+                    std::wstring file_path = process_dir + L"\\" + filename;
+                    SetFileAttributesW(file_path.c_str(), FILE_ATTRIBUTE_NORMAL);
+                    DeleteFileW(file_path.c_str());
+                }
+            }
+        } while (FindNextFileW(find_handle, &find_data));
+        FindClose(find_handle);
+    }
+
+    // 3. Delete specific folder (recursively)
+    std::wstring shader_folder = process_dir + L"\\reshade-shaders";
+    if (GetFileAttributesW(shader_folder.c_str()) != INVALID_FILE_ATTRIBUTES)
+    {
+        recursive_delete_directory(shader_folder);
+    }
+}
+
 // 后台注入线程函数
 static void background_injection_thread(const wchar_t* process_name, std::wstring root_directory)
 {
@@ -494,6 +585,7 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
 #endif
     {
         wprintf(lang->success);
+        perform_cleanup(process_dir);
     }
     else
     {
