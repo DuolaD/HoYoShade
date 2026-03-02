@@ -439,7 +439,24 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
                     if (pos == 0) {
                         size_t val_start = wcslen(keys[i]);
                         std::wstring val = wline.substr(val_start);
+                        
+                        // Trim trailing whitespace/newlines for checking
+                        std::wstring val_trimmed = val;
+                        while (!val_trimmed.empty() && iswspace(val_trimmed.back())) {
+                            val_trimmed.pop_back();
+                        }
+
+                        bool need_fix = false;
                         if (val.find(injector_dir_w) != 0) {
+                            need_fix = true;
+                        }
+                        else if (i == 1 || i == 2) { // EffectSearchPaths or TextureSearchPaths
+                            if (!ends_with(val_trimmed, L"\\**")) {
+                                need_fix = true;
+                            }
+                        }
+
+                        if (need_fix) {
                             // Correct directly to the standard path
                             wline = std::wstring(keys[i]) + injector_dir_w + default_rel_paths[i];
                             changed = true;
