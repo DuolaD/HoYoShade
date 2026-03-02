@@ -74,6 +74,8 @@ struct language_strings
     const wchar_t* ini_exists;
     const wchar_t* invalid_param;
     const wchar_t* missing_exe_suffix;
+    const wchar_t* file_integrity_error;
+    const wchar_t* process_blacklist_error;
 };
 
 // Language string table
@@ -94,7 +96,9 @@ static const language_strings english_strings = {
     L"\nWarning: Failed to copy ReShade.ini (error code: %lu).\n",
     L"\nReShade.ini already exists in target process directory, no need to copy.\n",
     L"\nError: Invalid parameter! Please use a valid shortcut or specify a process name ending with .exe.\n",
-    L"\nError: Custom process name must end with .exe!\n"
+    L"\nError: Custom process name must end with .exe!\n",
+    L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n",
+    L"[Error] This process name is a blacklisted process name. Please change the target process name and try again.\n\n"
 };
 
 static const language_strings simplified_chinese_strings = {
@@ -114,7 +118,9 @@ static const language_strings simplified_chinese_strings = {
     L"\n警告: 无法复制 ReShade.ini（错误码: %lu）。\n",
     L"\n目标进程目录已存在 ReShade.ini，无需复制。\n",
     L"\n错误：参数无效！请使用有效的快捷方式或指定以.exe结尾的进程名。\n",
-    L"\n错误：自定义进程名必须以.exe结尾！\n"
+    L"\n错误：自定义进程名必须以.exe结尾！\n",
+    L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n",
+    L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n"
 };
 
 static const language_strings traditional_chinese_strings = {
@@ -134,7 +140,9 @@ static const language_strings traditional_chinese_strings = {
     L"\n警告: 無法複製 ReShade.ini（錯誤碼: %lu）。\n",
     L"\n目標進程目錄已存在 ReShade.ini，無需複製。\n",
     L"\n錯誤：參數無效！請使用有效的快捷方式或指定以.exe結尾的進程名。\n",
-    L"\n錯誤：自定義進程名必須以.exe結尾！\n"
+    L"\n錯誤：自定義進程名必須以.exe結尾！\n",
+    L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n",
+    L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n"
 };
 
 // Get the language strings corresponding to current system language settings
@@ -329,7 +337,7 @@ static void perform_cleanup(const std::wstring& process_dir)
     }
 }
 
-// 后台注入线程函数
+// Background injection thread function
 static void background_injection_thread(const wchar_t* process_name, std::wstring root_directory)
 {
     const language_strings* lang = get_language_strings();
@@ -697,22 +705,7 @@ int wmain(int argc, wchar_t* argv[])
     }
     if (missing)
     {
-        LANGID langID = GetUserDefaultUILanguage();
-        if (PRIMARYLANGID(langID) == LANG_CHINESE)
-        {
-            if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
-            {
-                wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
-            }
-            else
-            {
-                wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
-            }
-        }
-        else
-        {
-            wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
-        }
+        wprintf(lang->file_integrity_error);
         return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
     }
 
@@ -750,18 +743,7 @@ int wmain(int argc, wchar_t* argv[])
     const int blacklist_count = sizeof(process_blacklist) / sizeof(process_blacklist[0]);
     for (int i = 0; i < blacklist_count; ++i) {
         if (_wcsicmp(name, process_blacklist[i]) == 0) {
-            LANGID langID = GetUserDefaultUILanguage();
-            if (PRIMARYLANGID(langID) == LANG_CHINESE) {
-                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED) {
-                    wprintf(L"[错误] 此进程名为黑名单进程名，请更换其它目标进程名后再试。\n\n");
-                }
-                else {
-                    wprintf(L"[錯誤] 此進程名爲黑名單進程名，請更換其它目標進程名後再試。\n\n");
-                }
-            }
-            else {
-                wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again.\n\n");
-            }
+            wprintf(lang->process_blacklist_error);
             return enable_custom_error_codes ? INJECTION_ERROR_BLACKLIST_PROCESS : 0;
         }
     }
@@ -810,22 +792,7 @@ int wmain(int argc, wchar_t* argv[])
         }
         if (missing_quick)
         {
-            LANGID langID = GetUserDefaultUILanguage();
-            if (PRIMARYLANGID(langID) == LANG_CHINESE)
-            {
-                if (SUBLANGID(langID) == SUBLANG_CHINESE_SIMPLIFIED)
-                {
-                    wprintf(L"欢迎使用HoYoShade注入器！\n\n开发者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我们检测到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出现这个提示的原因可能有：\n1:你在解压压缩包时没有解压全部文件。\n2:你在进行覆盖更新操作的时候没有粘贴全部文件。\n3:你系统上的杀毒软件/其它程序误将（Open）HoYoShade识别为病毒，然后删除了某些文件。\n4:你无意/有意重命名了部分关键文件。\n\n注入器将会退出运行。\n如果你想继续运行（Open）HoYoShade，请访问我们的GitHub仓库（https://github.com/DuolaD/HoYoShade）重新下载最新版Releases界面中提供的压缩包，并解压全部文件。\n\n");
-                }
-                else
-                {
-                    wprintf(L"歡迎使用HoYoShade注入器！\n\n開發者：DuolaDStudio X ZelbertYQ X Ex_M\n\n我們檢測到（Open）HoYoShade框架注入所需的必要文件不存在。\n\n出現這個提示的原因可能有：\n1:你在解壓壓縮包時沒有解压全部文件。\n2:你在進行覆蓋更新操作的時候沒有粘貼全部文件。\n3:你系統上的殺毒軟件/其它程序誤將（Open）HoYoShade識別為病毒，然後刪除了某些文件。\n4:你無意/有意重命名了部分關鍵文件。\n\n注入器將會退出運行。\n如果你想繼續運行（Open）HoYoShade，請訪問我們的GitHub倉庫（https://github.com/DuolaD/HoYoShade）重新下載最新版Releases界面中提供的壓缩包，並解壓全部文件。\n\n");
-                }
-            }
-            else
-            {
-                wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
-            }
+            wprintf(lang->file_integrity_error);
             return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
         }
     }
