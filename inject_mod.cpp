@@ -37,6 +37,8 @@
 #include <conio.h>
 #include <thread>
 #include <vector>
+#include <map>
+#include <sstream>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
@@ -286,6 +288,87 @@ static bool ends_with(const std::wstring& str, const std::wstring& suffix)
     return _wcsicmp(str.c_str() + str.length() - suffix.length(), suffix.c_str()) == 0;
 }
 
+// Helper function to process PreprocessorDefinitions
+static std::wstring update_preprocessor_definitions(const std::wstring& line) {
+    const std::wstring prefix = L"PreprocessorDefinitions=";
+    if (line.find(prefix) != 0) return line;
+
+    std::wstring content = line.substr(prefix.length());
+    // Remove trailing newline for processing
+    std::wstring newline_suffix;
+    while (!content.empty() && (content.back() == L'\r' || content.back() == L'\n')) {
+        newline_suffix.insert(0, 1, content.back());
+        content.pop_back();
+    }
+
+    std::vector<std::wstring> definitions;
+    std::wstringstream ss(content);
+    std::wstring item;
+    while (std::getline(ss, item, L',')) {
+        definitions.push_back(item);
+    }
+    // Handle case where last item is empty or stream state (getline might consume trailing comma differently if not careful, but splitting by comma usually works)
+    
+    // Map to store key-value pairs and keep track of keys order
+    std::vector<std::wstring> keys_order;
+    std::map<std::wstring, std::wstring> def_map;
+    
+    for (const auto& def : definitions) {
+        size_t eq_pos = def.find(L'=');
+        std::wstring key, val;
+        if (eq_pos != std::wstring::npos) {
+            key = def.substr(0, eq_pos);
+            val = def.substr(eq_pos + 1);
+        } else {
+            key = def;
+        }
+        
+        // Only add if not already present (first occurrence wins or last? usually unique)
+        if (def_map.find(key) == def_map.end()) {
+            keys_order.push_back(key);
+            def_map[key] = val;
+        }
+    }
+
+    // Required updates
+    struct ReqDef { std::wstring key; std::wstring val; };
+    std::vector<ReqDef> requirements = {
+        {L"RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN", L"1"},
+        {L"RESHADE_DEPTH_INPUT_IS_REVERSED", L"1"},
+        {L"RESHADE_DEPTH_INPUT_IS_LOGARITHMIC", L"0"}
+    };
+
+    bool modified = false;
+    for (const auto& req : requirements) {
+        if (def_map.find(req.key) == def_map.end()) {
+            keys_order.push_back(req.key);
+            def_map[req.key] = req.val;
+            modified = true;
+        } else {
+            if (def_map[req.key] != req.val) {
+                def_map[req.key] = req.val;
+                modified = true;
+            }
+        }
+    }
+
+    if (!modified) return line;
+
+    std::wstringstream out;
+    out << prefix;
+    for (size_t i = 0; i < keys_order.size(); ++i) {
+        out << keys_order[i];
+        if (!def_map[keys_order[i]].empty()) {
+            out << L"=" << def_map[keys_order[i]];
+        }
+        if (i < keys_order.size() - 1) {
+            out << L",";
+        }
+    }
+    out << newline_suffix;
+    return out.str();
+}
+
 // Function to perform cleanup after injection
 static void perform_cleanup(const std::wstring& process_dir)
 {
@@ -413,11 +496,14 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
             }
             fclose(f);
 
-            bool bypass_check = false;
+            bool bypass_effect_check = false;
+            bool bypass_depth_check = false;
             for (const auto& l : lines) {
                 if (l.find(L"HoYoShade_BypassEffectCheck=1") != std::wstring::npos) {
-                    bypass_check = true;
-                    break;
+                    bypass_effect_check = true;
+                }
+                if (l.find(L"HoYoShade_BypassDepthCheck=1") != std::wstring::npos) {
+                    bypass_depth_check = true;
                 }
             }
 
@@ -449,7 +535,8 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
             const int key_count = sizeof(keys) / sizeof(keys[0]);
             
             for (auto& wline : lines) {
-                if (!bypass_check) {
+                // 1. Path fixing logic (EffectSearchPaths, TextureSearchPaths, etc.)
+                if (!bypass_effect_check) {
                     for (int i = 0; i < key_count; ++i) {
                         size_t pos = wline.find(keys[i]);
                         if (pos == 0) {
@@ -481,6 +568,18 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
                         }
                     }
                 }
+
+                // 2. Depth check fixing logic (PreprocessorDefinitions)
+                if (!bypass_depth_check) {
+                    if (wline.find(L"PreprocessorDefinitions=") == 0) {
+                        std::wstring updated_line = update_preprocessor_definitions(wline);
+                        if (updated_line != wline) {
+                            wline = updated_line;
+                            changed = true;
+                        }
+                    }
+                }
+
                 new_content += wline;
                 if (!new_content.empty() && new_content.back() != L'\n') new_content += L'\n';
             }
