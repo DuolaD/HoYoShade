@@ -599,6 +599,9 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
 
 int wmain(int argc, wchar_t* argv[])
 {
+    // Whether to output custom error codes
+    bool enable_custom_error_codes = true;
+
     // Check if we're being launched with redirected output (from launcher)
     // In this case, don't create a console window
     bool hasConsole = GetConsoleWindow() != NULL;
@@ -657,13 +660,13 @@ int wmain(int argc, wchar_t* argv[])
             valid_param = true;
         else {
             wprintf(lang->missing_exe_suffix);
-            return INJECTION_ERROR_MISSING_EXE_SUFFIX;
+            return enable_custom_error_codes ? INJECTION_ERROR_MISSING_EXE_SUFFIX : 0;
         }
     }
     // Check whether the parameters are legal
     if (!valid_param) {
         wprintf(lang->invalid_param);
-        return INJECTION_ERROR_INVALID_PARAM;
+        return enable_custom_error_codes ? INJECTION_ERROR_INVALID_PARAM : 0;
     }
 
     // File integrity self-check logic
@@ -710,7 +713,7 @@ int wmain(int argc, wchar_t* argv[])
         {
             wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
         }
-        return INJECTION_ERROR_FILE_INTEGRITY;
+        return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
     }
 
     // After the file integrity self-check passes, call LauncherResource\INIBuild.exe once
@@ -759,7 +762,7 @@ int wmain(int argc, wchar_t* argv[])
             else {
                 wprintf(L"[Error] This process name is a blacklisted process name. Please change the target process name and try again.\n\n");
             }
-            return INJECTION_ERROR_BLACKLIST_PROCESS;
+            return enable_custom_error_codes ? INJECTION_ERROR_BLACKLIST_PROCESS : 0;
         }
     }
 
@@ -823,7 +826,7 @@ int wmain(int argc, wchar_t* argv[])
             {
                 wprintf(L"Welcome to HoYoShade Injector!\n\nDevelopers: DuolaDStudio X ZelbertYQ X Ex_M\n\nWe detected that some required files for (Open)HoYoShade injection are missing.\n\nPossible reasons for this message:\n1: You did not extract all files from the zip package.\n2: You did not copy all files when updating/overwriting.\n3: Your antivirus/other software mistakenly deleted some files.\n4: You accidentally or intentionally renamed some key files.\n\nThe injector will exit.\nIf you want to continue using (Open)HoYoShade, please visit our GitHub (https://github.com/DuolaD/HoYoShade) and download the latest release zip, then extract all files.\n\n");
             }
-            return INJECTION_ERROR_FILE_INTEGRITY;
+            return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
         }
     }
 
