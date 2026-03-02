@@ -36,6 +36,7 @@
 #include <io.h>
 #include <conio.h>
 #include <thread>
+#include <vector>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
@@ -405,7 +406,21 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
         FILE* f = nullptr;
         _wfopen_s(&f, target_ini, L"r, ccs=UTF-8");
         if (f) {
+            std::vector<std::wstring> lines;
             wchar_t line[2048];
+            while (fgetws(line, 2047, f)) {
+                lines.emplace_back(line);
+            }
+            fclose(f);
+
+            bool bypass_check = false;
+            for (const auto& l : lines) {
+                if (l.find(L"HoYoShade_BypassEffectCheck=1") != std::wstring::npos) {
+                    bypass_check = true;
+                    break;
+                }
+            }
+
             std::wstring new_content;
             bool changed = false;
             std::wstring injector_dir_w(injector_dir);
@@ -432,42 +447,44 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
                 L"InjectResource\\Fonts\\MiSans-Bold.ttf"
             };
             const int key_count = sizeof(keys) / sizeof(keys[0]);
-            while (fgetws(line, 2047, f)) {
-                std::wstring wline(line);
-                for (int i = 0; i < key_count; ++i) {
-                    size_t pos = wline.find(keys[i]);
-                    if (pos == 0) {
-                        size_t val_start = wcslen(keys[i]);
-                        std::wstring val = wline.substr(val_start);
-                        
-                        // Trim trailing whitespace/newlines for checking
-                        std::wstring val_trimmed = val;
-                        while (!val_trimmed.empty() && iswspace(val_trimmed.back())) {
-                            val_trimmed.pop_back();
-                        }
+            
+            for (auto& wline : lines) {
+                if (!bypass_check) {
+                    for (int i = 0; i < key_count; ++i) {
+                        size_t pos = wline.find(keys[i]);
+                        if (pos == 0) {
+                            size_t val_start = wcslen(keys[i]);
+                            std::wstring val = wline.substr(val_start);
+                            
+                            // Trim trailing whitespace/newlines for checking
+                            std::wstring val_trimmed = val;
+                            while (!val_trimmed.empty() && iswspace(val_trimmed.back())) {
+                                val_trimmed.pop_back();
+                            }
 
-                        bool need_fix = false;
-                        if (val.find(injector_dir_w) != 0) {
-                            need_fix = true;
-                        }
-                        else if (i == 1 || i == 2) { // EffectSearchPaths or TextureSearchPaths
-                            if (!ends_with(val_trimmed, L"\\**")) {
+                            bool need_fix = false;
+                            if (val.find(injector_dir_w) != 0) {
                                 need_fix = true;
                             }
-                        }
+                            else if (i == 1 || i == 2) { // EffectSearchPaths or TextureSearchPaths
+                                if (!ends_with(val_trimmed, L"\\**")) {
+                                    need_fix = true;
+                                }
+                            }
 
-                        if (need_fix) {
-                            // Correct directly to the standard path
-                            wline = std::wstring(keys[i]) + injector_dir_w + default_rel_paths[i];
-                            changed = true;
+                            if (need_fix) {
+                                // Correct directly to the standard path
+                                wline = std::wstring(keys[i]) + injector_dir_w + default_rel_paths[i];
+                                changed = true;
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
                 new_content += wline;
                 if (!new_content.empty() && new_content.back() != L'\n') new_content += L'\n';
             }
-            fclose(f);
+
             if (changed) {
                 // Write back in UTF-8 without BOM
                 FILE* wf = nullptr;
