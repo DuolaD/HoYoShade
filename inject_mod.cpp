@@ -379,7 +379,8 @@ static void perform_cleanup(const std::wstring& process_dir)
         L"opengl32.dll",
         L"opengl64.dll",
         L"ReShade32.dll",
-        L"ReShade64.dll"
+        L"ReShade64.dll",
+        L"inject.exe"
     };
 
     for (const auto& file : files_to_delete)
