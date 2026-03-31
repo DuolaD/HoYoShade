@@ -60,6 +60,7 @@
 // Product name and developers for easy modification
 #define PRODUCT_NAME_W L"HoYoShade"
 #define DEVELOPERS_W L"DuolaDStudio X ZelbertYQ X Ex_M"
+#define ENABLE_CUSTOM_ERROR_CODES true
 
 // Structure for multilingual support
 struct language_strings
@@ -746,7 +747,7 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
 int wmain(int argc, wchar_t* argv[])
 {
     // Whether to output custom error codes
-    bool enable_custom_error_codes = true;
+    bool enable_custom_error_codes = ENABLE_CUSTOM_ERROR_CODES;
 
     // Check if we're being launched with redirected output (from launcher)
     // In this case, don't create a console window
