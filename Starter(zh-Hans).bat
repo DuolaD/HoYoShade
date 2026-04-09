@@ -228,16 +228,14 @@ if "%content%" == "1" (
     goto blender_hook_check
 ) else if "%content%" == "9" (
     reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
-    if %errorlevel%==0 (
-        goto starward_menu
-    ) else (
+    if errorlevel 1 (
         echo 未检测到Starward URL协议，这是联动Starward启动器的必要条件。
         echo 请先在Starward启动器 - 应用设置 - 高级 - URL协议界面中，将“注册URL协议”开关设置为开启。
         pause
         goto menu
+    ) else (
+        goto starward_menu
     )
-    pause
-    goto menu
 ) else if "%content%" == "10" (
     goto other
 ) else if "%content%" == "11" (
@@ -330,7 +328,6 @@ if "%content%" == "1" (
     timeout /t 2
     goto develop
 )
-goto develop@echo off
 
 :customize_inject
 title HoYoShade启动器(你已进入自定义注入界面！！！)
@@ -586,7 +583,7 @@ if "%content%" == "1" (
     echo\
     echo 输入错误。
     timeout /t 2
-    goto menu
+    goto beta_client_inject_choice_menu
     )
 exit
 
@@ -1014,7 +1011,7 @@ if "%choice%"=="1" (
     goto blender_hook_check
 ) else if "%choice%"=="11" (
     goto menu
-) else if "%choice%"=="2" (
+) else if "%choice%"=="12" (
     exit
 ) else (
     echo 输入错误。

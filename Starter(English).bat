@@ -233,19 +233,17 @@ if "%content%" == "1" (
 ) else if "%content%" == "7" (
     goto beta_client_inject_choice_menu
 ) else if "%content%" == "8" (
-    goto other
-) else if "%content%" == "9" (
     reg query "HKEY_CLASSES_ROOT\starward" >nul 2>&1
-    if %errorlevel%==0 (
-        goto starward_menu
-    ) else (
+    if errorlevel 1 (
         echo The Starward URL protocol was not detected, which is a requirement for integrating with the Starward launcher.
         echo Please go to Starward launcher - APP Settings - Advanced - URL Protocol pages, and switch "Register URL Protocol" on.
         pause
         goto menu
+    ) else (
+        goto starward_menu
     )
-    pause
-    goto menu
+) else if "%content%" == "9" (
+    goto other
 ) else if "%content%" == "10" (
     exit
 ) else (
@@ -339,7 +337,6 @@ if "%content%" == "1" (
     timeout /t 2
     goto develop
 )
-goto develop@echo off
 
 :customize_inject
 title HoYoShade Starter(You have entered the custom injection interface!!!)
@@ -435,7 +432,6 @@ set /p "content=Type the number here:"
 
 if "%content%" == "1" (
     start "" /wait ".\LauncherResource\INIBuild.exe"
-    :File_Reset
     cls
     echo Welcome to use HoYoShade starter!
     echo\
@@ -461,6 +457,13 @@ if "%content%" == "1" (
     echo\
     pause
     goto menu
+) else if "%content%" == "2" (
+    goto menu
+) else (
+    echo\
+    echo Input error.
+    timeout /t 2
+    goto ini_Reset
 )
 
 :beta_client_inject_choice_menu
@@ -612,7 +615,7 @@ if "%content%" == "1" (
     echo\
     echo Input error.
     timeout /t 2
-    goto menu
+    goto beta_client_inject_choice_menu
     )
 exit
 
