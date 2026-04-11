@@ -49,6 +49,7 @@ jobs:
           # LauncherResource & Compiled exe
           New-Item -ItemType Directory -Force -Path "$dist\LauncherResource"
           Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
+          Copy-Item -Path "LauncherResource\AddonWhitelist.txt" -Destination "$dist\LauncherResource\"
           
           # Root files
           Copy-Item -Path "inject.exe" -Destination "$dist\"
@@ -86,6 +87,7 @@ jobs:
           # LauncherResource & Compiled exe & Source
           New-Item -ItemType Directory -Force -Path "$dist\LauncherResource"
           Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
+          Copy-Item -Path "LauncherResource\AddonWhitelist.txt" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\INIBuild.cpp" -Destination "$dist\LauncherResource\"
           
           # Root files

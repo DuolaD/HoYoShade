@@ -1,0 +1,14 @@
+# Add-on file name whitelist for INIBuild
+# One file name per line, case-insensitive match.
+# Add-ons listed here will NOT be written into DisabledAddons.
+# Example:
+# AutoHDR.addon64
+
+screenshot_to_clipboard.addon64
+
+MartysMods_LUTManager.addon32
+MartysMods_LUTManager.addon64
+MartysMods_ParallaxDOF.addon32
+MartysMods_ParallaxDOF.addon64
+MartysMods_ReGradePlus.addon32
+MartysMods_ReGradePlus.addon64
