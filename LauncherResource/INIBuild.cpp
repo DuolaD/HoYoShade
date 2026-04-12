@@ -121,46 +121,6 @@ const char* try_read_exported_cstr_ptr(const FARPROC symbol) {
     return value;
 }
 
-bool try_copy_cstr_seh(const char* src, char* dst, const size_t dstSize, size_t& outLen) {
-    if (src == nullptr || dst == nullptr || dstSize == 0) {
-        return false;
-    }
-
-    __try {
-        for (size_t i = 0; i + 1 < dstSize; ++i) {
-            const unsigned char c = static_cast<unsigned char>(src[i]);
-            dst[i] = static_cast<char>(c);
-            if (c == '\0') {
-                outLen = i;
-                return true;
-            }
-        }
-    }
-    __except (EXCEPTION_EXECUTE_HANDLER) {
-        return false;
-    }
-
-    dst[dstSize - 1] = '\0';
-    outLen = dstSize - 1;
-    return true;
-}
-
-bool looks_like_text(const char* s, const size_t len) {
-    if (s == nullptr || len == 0) {
-        return false;
-    }
-
-    size_t printable = 0;
-    for (size_t i = 0; i < len; ++i) {
-        const unsigned char c = static_cast<unsigned char>(s[i]);
-        if (c == '\t' || c == '\r' || c == '\n' || (c >= 0x20 && c < 0x7F)) {
-            ++printable;
-        }
-    }
-
-    return printable * 100 >= len * 80;
-}
-
 bool get_exported_string(const std::filesystem::path& addonPath, const char* exportName, std::string& outValue) {
     const HMODULE module = LoadLibraryExW(addonPath.wstring().c_str(), nullptr, DONT_RESOLVE_DLL_REFERENCES);
     if (module == nullptr) {
@@ -170,28 +130,12 @@ bool get_exported_string(const std::filesystem::path& addonPath, const char* exp
     bool ok = false;
     const FARPROC symbol = GetProcAddress(module, exportName);
     if (symbol != nullptr) {
-        char buffer[2048] = {};
-        size_t length = 0;
-
-        // 1) ReShade/common form: export is 'const char *NAME' so symbol points to a pointer.
         const char* value = try_read_exported_cstr_ptr(symbol);
-        if (value != nullptr && try_copy_cstr_seh(value, buffer, sizeof(buffer), length) && looks_like_text(buffer, length)) {
-            const std::string trimmed = trim_copy(std::string(buffer, length));
+        if (value != nullptr) {
+            const std::string trimmed = trim_copy(value);
             if (!trimmed.empty()) {
                 outValue = trimmed;
                 ok = true;
-            }
-        }
-
-        // 2) Compatibility form: export may be 'const char NAME[]', so symbol itself is c-string address.
-        if (!ok) {
-            const char* direct = reinterpret_cast<const char*>(symbol);
-            if (try_copy_cstr_seh(direct, buffer, sizeof(buffer), length) && looks_like_text(buffer, length)) {
-                const std::string trimmed = trim_copy(std::string(buffer, length));
-                if (!trimmed.empty()) {
-                    outValue = trimmed;
-                    ok = true;
-                }
             }
         }
     }
@@ -218,24 +162,24 @@ bool get_file_info_string(const std::filesystem::path& addonPath, const wchar_t*
         WORD codePage;
     };
 
+    WORD language = 0x0400;
+    WORD codePage = 0x04b0;
+
     LangAndCodePage* translation = nullptr;
     UINT translationSize = 0;
-    std::wstring query;
-
     if (VerQueryValueW(buffer.data(), L"\\VarFileInfo\\Translation", reinterpret_cast<LPVOID*>(&translation), &translationSize) &&
         translationSize >= sizeof(LangAndCodePage)) {
-        wchar_t subBlock[128] = {};
-        swprintf_s(subBlock, L"\\StringFileInfo\\%04x%04x\\%s", translation[0].language, translation[0].codePage, fieldName);
-        query = subBlock;
-    } else {
-        wchar_t subBlock[128] = {};
-        swprintf_s(subBlock, L"\\StringFileInfo\\040904b0\\%s", fieldName);
-        query = subBlock;
+        // Follow ReShade behavior and use the first translation available.
+        language = translation[0].language;
+        codePage = translation[0].codePage;
     }
+
+    wchar_t subBlock[128] = {};
+    swprintf_s(subBlock, L"\\StringFileInfo\\%04x%04x\\%s", language, codePage, fieldName);
 
     LPWSTR versionText = nullptr;
     UINT versionTextSize = 0;
-    if (!VerQueryValueW(buffer.data(), query.c_str(), reinterpret_cast<LPVOID*>(&versionText), &versionTextSize) ||
+    if (!VerQueryValueW(buffer.data(), subBlock, reinterpret_cast<LPVOID*>(&versionText), &versionTextSize) ||
         versionText == nullptr || versionTextSize == 0) {
         return false;
     }
@@ -260,36 +204,23 @@ bool get_file_info_string(const std::filesystem::path& addonPath, const wchar_t*
 bool get_file_product_name(const std::filesystem::path& addonPath, std::string& outValue) {
     return get_file_info_string(addonPath, L"ProductName", outValue);
 }
-
-bool get_file_version_string(const std::filesystem::path& addonPath, std::string& outValue) {
-    return get_file_info_string(addonPath, L"ProductVersion", outValue);
-}
 #endif
 
 std::string resolve_addon_label(const std::filesystem::path& addonPath) {
-    std::string label;
+    std::string label = trim_copy(addonPath.stem().u8string());
 
 #ifdef _WIN32
-    if (get_exported_string(addonPath, "NAME", label)) {
-        return label;
+    std::string overrideValue;
+    if (get_file_product_name(addonPath, overrideValue)) {
+        label = overrideValue;
     }
 
-    // ReShade uses ProductName as initial display name before export overrides.
-    if (get_file_product_name(addonPath, label)) {
-        return label;
-    }
-
-    if (get_exported_string(addonPath, "VERSION", label)) {
-        return label;
-    }
-
-    if (get_file_version_string(addonPath, label)) {
-        return label;
+    if (get_exported_string(addonPath, "NAME", overrideValue)) {
+        label = overrideValue;
     }
 #endif
 
-    const std::string stem = trim_copy(addonPath.stem().u8string());
-    return stem.empty() ? addonPath.filename().u8string() : stem;
+    return label.empty() ? addonPath.filename().u8string() : label;
 }
 
 std::string build_disabled_addons_value(const std::filesystem::path& addonsDir, const std::unordered_set<std::string>& whitelist) {
