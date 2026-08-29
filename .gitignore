@@ -40,3 +40,6 @@
 
 # ReShade config file
 ReShade.ini
+
+# Ignore Temp directory contents
+Temp/
