@@ -57,11 +57,6 @@ jobs:
           Copy-Item -Path "ReShade_LICENSE" -Destination "$dist\"
           Copy-Item -Path "ReShade64.dll" -Destination "$dist\"
           
-          # Bat renaming
-          Copy-Item -Path "Starter(zh-Hans).bat" -Destination "$dist\简体中文启动器.bat"
-          Copy-Item -Path "Starter(zh-Hant).bat" -Destination "$dist\繁體中文注入器.bat"
-          Copy-Item -Path "Starter(English).bat" -Destination "$dist\HoYoShade Starter.bat"
-          
           # Zip
           $zipName = "HoYoShade-$tag.zip"
           7z a -tzip $zipName ".\$dist\*"
@@ -96,11 +91,6 @@ jobs:
           Copy-Item -Path "LICENSE" -Destination "$dist\"
           Copy-Item -Path "ReShade_LICENSE" -Destination "$dist\"
           Copy-Item -Path "ReShade64.dll" -Destination "$dist\"
-          
-          # Bat (Original names)
-          Copy-Item -Path "Starter(zh-Hans).bat" -Destination "$dist\"
-          Copy-Item -Path "Starter(zh-Hant).bat" -Destination "$dist\"
-          Copy-Item -Path "Starter(English).bat" -Destination "$dist\"
           
           # Zip
           $zipName = "OpenHoYoShade-$tag.zip"
