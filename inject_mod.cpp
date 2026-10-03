@@ -836,6 +836,7 @@ int wmain(int argc, wchar_t* argv[])
         L"reshade-shaders",
         L"Presets",
         L"LauncherResource\\INIBuild.exe",
+        L"LauncherResource\\Sample.ini",
         L"InjectResource\\Fonts\\MiSans-Bold.ttf"
     };
     bool missing = false;
