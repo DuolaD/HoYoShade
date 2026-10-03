@@ -295,87 +295,6 @@ static bool ends_with(const std::wstring& str, const std::wstring& suffix)
     return _wcsicmp(str.c_str() + str.length() - suffix.length(), suffix.c_str()) == 0;
 }
 
-// Helper function to process PreprocessorDefinitions
-static std::wstring update_preprocessor_definitions(const std::wstring& line) {
-    const std::wstring prefix = L"PreprocessorDefinitions=";
-    if (line.find(prefix) != 0) return line;
-
-    std::wstring content = line.substr(prefix.length());
-    // Remove trailing newline for processing
-    std::wstring newline_suffix;
-    while (!content.empty() && (content.back() == L'\r' || content.back() == L'\n')) {
-        newline_suffix.insert(0, 1, content.back());
-        content.pop_back();
-    }
-
-    std::vector<std::wstring> definitions;
-    std::wstringstream ss(content);
-    std::wstring item;
-    while (std::getline(ss, item, L',')) {
-        definitions.push_back(item);
-    }
-    // Handle case where last item is empty or stream state (getline might consume trailing comma differently if not careful, but splitting by comma usually works)
-    
-    // Map to store key-value pairs and keep track of keys order
-    std::vector<std::wstring> keys_order;
-    std::map<std::wstring, std::wstring> def_map;
-    
-    for (const auto& def : definitions) {
-        size_t eq_pos = def.find(L'=');
-        std::wstring key, val;
-        if (eq_pos != std::wstring::npos) {
-            key = def.substr(0, eq_pos);
-            val = def.substr(eq_pos + 1);
-        } else {
-            key = def;
-        }
-        
-        // Only add if not already present (first occurrence wins or last? usually unique)
-        if (def_map.find(key) == def_map.end()) {
-            keys_order.push_back(key);
-            def_map[key] = val;
-        }
-    }
-
-    // Required updates
-    struct ReqDef { std::wstring key; std::wstring val; };
-    std::vector<ReqDef> requirements = {
-        {L"RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN", L"1"},
-        {L"RESHADE_DEPTH_INPUT_IS_REVERSED", L"1"},
-        {L"RESHADE_DEPTH_INPUT_IS_LOGARITHMIC", L"0"}
-    };
-
-    bool modified = false;
-    for (const auto& req : requirements) {
-        if (def_map.find(req.key) == def_map.end()) {
-            keys_order.push_back(req.key);
-            def_map[req.key] = req.val;
-            modified = true;
-        } else {
-            if (def_map[req.key] != req.val) {
-                def_map[req.key] = req.val;
-                modified = true;
-            }
-        }
-    }
-
-    if (!modified) return line;
-
-    std::wstringstream out;
-    out << prefix;
-    for (size_t i = 0; i < keys_order.size(); ++i) {
-        out << keys_order[i];
-        if (!def_map[keys_order[i]].empty()) {
-            out << L"=" << def_map[keys_order[i]];
-        }
-        if (i < keys_order.size() - 1) {
-            out << L",";
-        }
-    }
-    out << newline_suffix;
-    return out.str();
-}
-
 // Function to perform cleanup after injection
 static void perform_cleanup(const std::wstring& process_dir)
 {
@@ -476,174 +395,40 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
         CloseHandle(hProcess);
     }
 
-    // Check and automatically copy ReShade.ini
+    // Check and maintain ReShade.ini via LauncherResource\INIBuild.exe
     if (enable_copy_reshade_ini)
     {
-        WCHAR target_ini[MAX_PATH] = { 0 };
-        swprintf_s(target_ini, L"%s\\ReShade.ini", process_dir);
-
-        WCHAR injector_dir[MAX_PATH];
-        wcscpy_s(injector_dir, root_directory.c_str());
-
-        WCHAR source_ini[MAX_PATH] = { 0 };
-        swprintf_s(source_ini, L"%s\\ReShade.ini", injector_dir);
-
-        // Check if both tool files exist
         WCHAR inibuild_path[MAX_PATH] = { 0 };
-        swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", injector_dir);
-        bool skip_ini_gen = false;
-        if (GetFileAttributesW(inibuild_path) == INVALID_FILE_ATTRIBUTES) {
-            skip_ini_gen = true;
-        }
+        swprintf_s(inibuild_path, L"%s\\LauncherResource\\INIBuild.exe", root_directory.c_str());
 
-        // Corrected paths in ReShade.ini
-        if (!skip_ini_gen && GetFileAttributesW(target_ini) != INVALID_FILE_ATTRIBUTES) {
-            // Open ReShade.ini and read the contents
-            FILE* f = nullptr;
-            _wfopen_s(&f, target_ini, L"r, ccs=UTF-8");
-            if (f) {
-                std::vector<std::wstring> lines;
-                wchar_t line[2048];
-                while (fgetws(line, 2047, f)) {
-                    lines.emplace_back(line);
-                }
-                fclose(f);
+        if (GetFileAttributesW(inibuild_path) != INVALID_FILE_ATTRIBUTES)
+        {
+            WCHAR cmd_line[MAX_PATH * 3] = { 0 };
+            swprintf_s(cmd_line, L"\"%s\" \"%s\"", inibuild_path, process_dir);
 
-                bool bypass_effect_check = false;
-                bool bypass_depth_check = false;
-                for (const auto& l : lines) {
-                    if (l.find(L"HoYoShade_BypassEffectCheck=1") != std::wstring::npos) {
-                        bypass_effect_check = true;
-                    }
-                    if (l.find(L"HoYoShade_BypassDepthCheck=1") != std::wstring::npos) {
-                        bypass_depth_check = true;
-                    }
-                }
-
-                std::wstring new_content;
-                bool changed = false;
-                std::wstring injector_dir_w(injector_dir);
-                if (injector_dir_w.back() != L'\\') injector_dir_w += L'\\';
-                // Fields that need to be corrected
-                const wchar_t* keys[] = {
-                    L"AddonPath=",
-                    L"EffectSearchPaths=",
-                    L"TextureSearchPaths=",
-                    L"PresetPath=",
-                    L"SavePath=",
-                    L"EditorFont=",
-                    L"Font=",
-                    L"LatinFont="
-                };
-                const wchar_t* default_rel_paths[] = {
-                    L"reshade-shaders\\Addons\\",
-                    L"reshade-shaders\\Shaders\\**",
-                    L"reshade-shaders\\Textures\\**",
-                    L"Presets\\Mod OFF.ini",
-                    L"ScreenShot\\",
-                    L"InjectResource\\Fonts\\MiSans-Bold.ttf",
-                    L"InjectResource\\Fonts\\MiSans-Bold.ttf",
-                    L"InjectResource\\Fonts\\MiSans-Bold.ttf"
-                };
-                const int key_count = sizeof(keys) / sizeof(keys[0]);
-                
-                for (auto& wline : lines) {
-                    // 1. Path fixing logic (EffectSearchPaths, TextureSearchPaths, etc.)
-                    if (!bypass_effect_check) {
-                        for (int i = 0; i < key_count; ++i) {
-                            size_t pos = wline.find(keys[i]);
-                            if (pos == 0) {
-                                size_t val_start = wcslen(keys[i]);
-                                std::wstring val = wline.substr(val_start);
-                                
-                                // Trim trailing whitespace/newlines for checking
-                                std::wstring val_trimmed = val;
-                                while (!val_trimmed.empty() && iswspace(val_trimmed.back())) {
-                                    val_trimmed.pop_back();
-                                }
-
-                                bool need_fix = false;
-                                if (val.find(injector_dir_w) != 0) {
-                                    need_fix = true;
-                                }
-                                else if (i == 1 || i == 2) { // EffectSearchPaths or TextureSearchPaths
-                                    if (!ends_with(val_trimmed, L"\\**")) {
-                                        need_fix = true;
-                                    }
-                                }
-
-                                if (need_fix) {
-                                    // Correct directly to the standard path
-                                    wline = std::wstring(keys[i]) + injector_dir_w + default_rel_paths[i];
-                                    changed = true;
-                                }
-                                break;
-                            }
-                        }
-                    }
-
-                    // 2. Depth check fixing logic (PreprocessorDefinitions)
-                    if (!bypass_depth_check) {
-                        if (wline.find(L"PreprocessorDefinitions=") == 0) {
-                            std::wstring updated_line = update_preprocessor_definitions(wline);
-                            if (updated_line != wline) {
-                                wline = updated_line;
-                                changed = true;
-                            }
-                        }
-                    }
-
-                    new_content += wline;
-                    if (!new_content.empty() && new_content.back() != L'\n') new_content += L'\n';
-                }
-
-                if (changed) {
-                    // Write back in UTF-8 without BOM
-                    FILE* wf = nullptr;
-                    _wfopen_s(&wf, target_ini, L"wb");
-                    if (wf) {
-                        // Convert wide string to UTF-8 (no BOM)
-                        std::string utf8_content;
-                        int len = WideCharToMultiByte(CP_UTF8, 0, new_content.c_str(), -1, nullptr, 0, nullptr, nullptr);
-                        if (len > 1) {
-                            utf8_content.resize(len - 1); // Exclude null terminator
-                            WideCharToMultiByte(CP_UTF8, 0, new_content.c_str(), -1, &utf8_content[0], len, nullptr, nullptr);
-                            fwrite(utf8_content.data(), 1, utf8_content.size(), wf);
-                        }
-                        fclose(wf);
-                    }
-                    // Call INIBuild.exe
-                    STARTUPINFOW si = { sizeof(si) };
-                    PROCESS_INFORMATION pi = {};
-                    if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
-                        WaitForSingleObject(pi.hProcess, INFINITE);
-                        CloseHandle(pi.hProcess);
-                        CloseHandle(pi.hThread);
-                    }
-                }
-            }
-        }
-
-        if (!skip_ini_gen && GetFileAttributesW(target_ini) == INVALID_FILE_ATTRIBUTES) {
-            // ReShade.ini does not exist, run INIBuild to generate it
             STARTUPINFOW si = { sizeof(si) };
             PROCESS_INFORMATION pi = {};
-            if (CreateProcessW(inibuild_path, nullptr, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi)) {
+            if (CreateProcessW(nullptr, cmd_line, nullptr, nullptr, FALSE, 0, nullptr, nullptr, &si, &pi))
+            {
                 WaitForSingleObject(pi.hProcess, INFINITE);
+                DWORD exit_code = 0;
+                GetExitCodeProcess(pi.hProcess, &exit_code);
                 CloseHandle(pi.hProcess);
                 CloseHandle(pi.hThread);
-            }
 
-            // Try copying ReShade.ini again
-            if (CopyFileW(source_ini, target_ini, FALSE)) {
-                wprintf(lang->copy_ini_success);
+                if (exit_code == 0)
+                {
+                    wprintf(lang->copy_ini_success);
+                }
+                else
+                {
+                    wprintf(lang->copy_ini_fail, exit_code);
+                }
             }
-            else {
+            else
+            {
                 wprintf(lang->copy_ini_fail, GetLastError());
             }
-        }
-        else if (!skip_ini_gen) {
-            wprintf(lang->ini_exists);
         }
     }
 
