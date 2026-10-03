@@ -1,0 +1,21 @@
+# File and directory integrity checklist for HoYoShade
+# Lines starting with '#' or ';' are treated as comments. Empty lines are ignored.
+# Paths are relative to the HoYoShade root directory.
+
+# Executables & Core Libraries
+inject.exe
+ReShade64.dll
+
+# Core Directories
+InjectResource
+LauncherResource
+reshade-shaders
+Presets
+
+# Launcher Components & Configuration
+LauncherResource\INIBuild.exe
+LauncherResource\Sample.ini
+LauncherResource\FileList.txt
+
+# Fonts
+InjectResource\Fonts\MiSans-Bold.ttf

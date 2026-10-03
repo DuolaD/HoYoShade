@@ -51,6 +51,7 @@ jobs:
           Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\AddonWhitelist.txt" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\Sample.ini" -Destination "$dist\LauncherResource\"
+          Copy-Item -Path "LauncherResource\FileList.txt" -Destination "$dist\LauncherResource\"
           
           # Root files
           Copy-Item -Path "inject.exe" -Destination "$dist\"
@@ -85,6 +86,7 @@ jobs:
           Copy-Item -Path "INIBuild.exe" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\AddonWhitelist.txt" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\Sample.ini" -Destination "$dist\LauncherResource\"
+          Copy-Item -Path "LauncherResource\FileList.txt" -Destination "$dist\LauncherResource\"
           Copy-Item -Path "LauncherResource\INIBuild.cpp" -Destination "$dist\LauncherResource\"
           
           # Root files

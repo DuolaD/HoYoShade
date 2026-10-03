@@ -39,6 +39,7 @@
 #include <vector>
 #include <map>
 #include <sstream>
+#include <fstream>
 
 #define RESHADE_LOADING_THREAD_FUNC 1
 #pragma comment(lib, "Advapi32.lib")
@@ -751,6 +752,89 @@ static void background_injection_thread(const wchar_t* process_name, std::wstrin
     }
 }
 
+// Helper function to check file integrity against LauncherResource\FileList.txt
+static bool check_file_integrity(const std::wstring& root_dir)
+{
+    std::wstring filelist_path = root_dir + L"\\LauncherResource\\FileList.txt";
+    if (GetFileAttributesW(filelist_path.c_str()) == INVALID_FILE_ATTRIBUTES)
+    {
+        return false;
+    }
+
+    std::ifstream file(filelist_path, std::ios::binary);
+    if (!file.is_open())
+    {
+        return false;
+    }
+
+    std::string line;
+    bool has_entries = false;
+    while (std::getline(file, line))
+    {
+        // Strip UTF-8 BOM if present on the first line
+        if (!has_entries && line.size() >= 3 &&
+            static_cast<unsigned char>(line[0]) == 0xEF &&
+            static_cast<unsigned char>(line[1]) == 0xBB &&
+            static_cast<unsigned char>(line[2]) == 0xBF)
+        {
+            line = line.substr(3);
+        }
+
+        // Trim trailing whitespace and newlines
+        while (!line.empty() && (line.back() == '\r' || line.back() == '\n' || line.back() == ' ' || line.back() == '\t'))
+        {
+            line.pop_back();
+        }
+
+        // Trim leading whitespace
+        size_t start = 0;
+        while (start < line.size() && (line[start] == ' ' || line[start] == '\t'))
+        {
+            start++;
+        }
+        if (start > 0)
+        {
+            line = line.substr(start);
+        }
+
+        // Skip empty lines and comments
+        if (line.empty() || line[0] == '#' || line[0] == ';')
+        {
+            continue;
+        }
+
+        has_entries = true;
+
+        // Convert UTF-8 line to wide string
+        int wlen = MultiByteToWideChar(CP_UTF8, 0, line.c_str(), -1, nullptr, 0);
+        if (wlen <= 1)
+        {
+            continue;
+        }
+        std::wstring witem(wlen - 1, L'\0');
+        MultiByteToWideChar(CP_UTF8, 0, line.c_str(), -1, &witem[0], wlen);
+
+        // Normalize path separators: convert '/' to '\'
+        for (auto& ch : witem)
+        {
+            if (ch == L'/') ch = L'\\';
+        }
+
+        std::wstring full_path = root_dir + L"\\" + witem;
+        if (GetFileAttributesW(full_path.c_str()) == INVALID_FILE_ATTRIBUTES)
+        {
+            return false;
+        }
+    }
+
+    if (!has_entries)
+    {
+        return false;
+    }
+
+    return true;
+}
+
 int wmain(int argc, wchar_t* argv[])
 {
     // Whether to output custom error codes
@@ -828,29 +912,8 @@ int wmain(int argc, wchar_t* argv[])
     GetModuleFileNameW(nullptr, root_dir, MAX_PATH);
     WCHAR* last_slash = wcsrchr(root_dir, L'\\');
     if (last_slash) *last_slash = L'\0';
-    const wchar_t* check_files[] = {
-        L"inject.exe",
-        L"ReShade64.dll",
-        L"InjectResource",
-        L"LauncherResource",
-        L"reshade-shaders",
-        L"Presets",
-        L"LauncherResource\\INIBuild.exe",
-        L"LauncherResource\\Sample.ini",
-        L"InjectResource\\Fonts\\MiSans-Bold.ttf"
-    };
-    bool missing = false;
-    for (int i = 0; i < sizeof(check_files) / sizeof(check_files[0]); ++i)
-    {
-        WCHAR full_path[MAX_PATH * 2] = { 0 };
-        swprintf_s(full_path, L"%s\\%s", root_dir, check_files[i]);
-        if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
-        {
-            missing = true;
-            break;
-        }
-    }
-    if (missing)
+
+    if (!check_file_integrity(root_dir))
     {
         wprintf(lang->file_integrity_error);
         return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
@@ -916,32 +979,6 @@ int wmain(int argc, wchar_t* argv[])
             CloseHandle(hProc);
         }
         Sleep(1); // Sleep a bit to not overburden the CPU
-    }
-
-    // Quick parameter integrity check (for shortcut mode)
-    if (is_shortcut)
-    {
-        WCHAR root_dir_check[MAX_PATH] = { 0 };
-        GetModuleFileNameW(nullptr, root_dir_check, MAX_PATH);
-        WCHAR* last_slash_check = wcsrchr(root_dir_check, L'\\');
-        if (last_slash_check) *last_slash_check = L'\0';
-
-        bool missing_quick = false;
-        for (int i = 0; i < sizeof(check_files) / sizeof(check_files[0]); ++i)
-        {
-            WCHAR full_path[MAX_PATH * 2] = { 0 };
-            swprintf_s(full_path, L"%s\\%s", root_dir_check, check_files[i]);
-            if (GetFileAttributesW(full_path) == INVALID_FILE_ATTRIBUTES)
-            {
-                missing_quick = true;
-                break;
-            }
-        }
-        if (missing_quick)
-        {
-            wprintf(lang->file_integrity_error);
-            return enable_custom_error_codes ? INJECTION_ERROR_FILE_INTEGRITY : 0;
-        }
     }
 
     // ========================================
